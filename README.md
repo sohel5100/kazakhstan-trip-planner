@@ -25,3 +25,15 @@ Run any standard static file server:
 python3 -m http.server 8000
 ```
 Open [http://localhost:8000](http://localhost:8000) in your browser.
+
+## Photo credits
+
+Place photos are from [Wikimedia Commons](https://commons.wikimedia.org/) under their Creative Commons licenses; see each file's Commons page for author and license:
+
+- Kok Tobe: `Вид на Кок-Тобе на Юг на закате с дрона.jpg`
+- Zenkov (Ascension) Cathedral: `Zenkov cathedral.jpg`
+- Green Bazaar: `Kok bazar.jpg`
+- Medeu: `Медеу, Алматы, 2023 жылғы қаңтар (1).jpg`
+- Charyn Canyon: `Charyn Canyon, Kazakhstan 03.jpg`
+- Kolsai Lakes: `First Kolsay lake 2023.jpg`
+- Zhibek Zholy: `Алматы, троллейбус на Жибек Жолы у базара (1).jpg`

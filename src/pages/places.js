@@ -1,6 +1,6 @@
-import { places, itinerary } from '../data/trip.js';
-import { getItineraryPlaceIds, saveItineraryPlaceIds } from '../data/itinerary-state.js';
-import { pageHeader, icon } from '../components/shared.js';
+import { places, itinerary } from '../data/trip.js?v=18';
+import { getItineraryPlaceIds, saveItineraryPlaceIds } from '../data/itinerary-state.js?v=18';
+import { pageHeader, icon } from '../components/shared.js?v=18';
 
 let activeCategoryFilter = 'all';
 

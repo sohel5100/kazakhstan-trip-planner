@@ -1,11 +1,11 @@
-import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js';
+import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=18';
 
 export {
   exchangeRates,
   currencySymbols,
   toINR,
   formatCurrency
-} from './currency.js';
+} from './currency.js?v=18';
 
 export const tripMeta = {
   title: 'Kazakhstan Adventure',
@@ -86,7 +86,7 @@ export const flight = {
   duration: '3h 30m (Outbound) · 3h 35m (Return)',
   status: 'Confirmed Direct Flights',
   bookingReference: 'Air Astana KC908 / KC907',
-  observedFareINR: 23500
+  observedFareINR: 48043
 };
 
 export const expenseCategories = [
@@ -104,14 +104,14 @@ export const defaultExpenses = [
   {
     id: 'exp-del-ala-flight',
     title: 'Roundtrip Flights: Delhi (DEL) ↔ Almaty (ALA)',
-    amount: 23500,
+    amount: 47243,
     currency: 'INR',
     category: 'flights',
     status: 'paid',
     paymentMethod: 'Card',
-    date: '2026-11-07',
-    country: 'Kazakhstan',
-    note: 'Direct Air Astana KC908 (DEL→ALA, 12:10) & KC907 (ALA→DEL, 07:05)'
+    date: '2026-10-30',
+    country: 'India',
+    note: 'Direct Air Astana KC908 (DEL→ALA, 12:10) & KC907 (ALA→DEL, 07:05) · fare, taxes & booking fee (₹48,043 paid in total incl. insurance)'
   },
   {
     id: 'exp-almaty-hotel',
@@ -188,14 +188,14 @@ export const defaultExpenses = [
   {
     id: 'exp-kazakh-insurance',
     title: 'Travel & Medical Health Insurance Policy',
-    amount: 900,
+    amount: 800,
     currency: 'INR',
     category: 'visa',
-    status: 'estimated',
+    status: 'paid',
     paymentMethod: 'Card',
-    date: '2026-11-01',
-    country: 'Kazakhstan',
-    note: 'Comprehensive travel medical policy covering alpine excursions'
+    date: '2026-10-30',
+    country: 'India',
+    note: 'Bought with the flight booking; covers Nov 7–14'
   },
   {
     id: 'exp-airport-taxi-departure',
@@ -223,7 +223,7 @@ export const places = [
     lat: 43.2339,
     lng: 76.9764,
     tags: ['Must-see', 'Viewpoint', 'Sunset'],
-    image: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=900&q=80',
+    image: './assets/places/kok-tobe.jpg',
     whyGo: 'The signature view of Almaty. Take the cable car from Dostyk Ave up to the hill, visit the Beatles monument, and watch the city light up against the mountain backdrop.'
   },
   {
@@ -237,7 +237,7 @@ export const places = [
     lat: 43.2588,
     lng: 76.9537,
     tags: ['Iconic', 'Culture', 'Free'],
-    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=900&q=80',
+    image: './assets/places/zenkov-cathedral.jpg',
     whyGo: 'One of the tallest wooden churches in the world. Its pastel candy colors and peaceful setting in Panfilov Park make it Almaty’s most beloved cultural landmark.'
   },
   {
@@ -251,7 +251,7 @@ export const places = [
     lat: 43.2638,
     lng: 76.9554,
     tags: ['Food', 'Market', 'Souvenirs'],
-    image: 'https://images.unsplash.com/photo-1533900298318-6b8da08a523e?auto=format&fit=crop&w=900&q=80',
+    image: './assets/places/green-bazaar.jpg',
     whyGo: 'The sensory heart of Almaty. Friendly vendors offer generous samples of dried apricots, smoked cheese (kurt), local honey, and Almaty apples (Aport).'
   },
   {
@@ -265,7 +265,7 @@ export const places = [
     lat: 43.1578,
     lng: 77.0592,
     tags: ['Mountains', 'Snow', 'Highlights'],
-    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=900&q=80',
+    image: './assets/places/medeu-shymbulak.jpg',
     whyGo: 'Just 30 minutes from downtown by bus #12 or Yandex taxi. Step straight from modern city life into crisp alpine air, dramatic snow peaks, and warm chalet cafes.'
   },
   {
@@ -279,7 +279,7 @@ export const places = [
     lat: 43.3516,
     lng: 79.0808,
     tags: ['Day Excursion', 'Landscape', 'Geology'],
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80',
+    image: './assets/places/charyn-canyon.jpg',
     whyGo: 'An unmissable day trip. Hike down between 300-meter-high sedimentary formations through the Valley of Castles to the rushing glacial riverbank.'
   },
   {
@@ -293,7 +293,7 @@ export const places = [
     lat: 42.9833,
     lng: 78.3333,
     tags: ['Alpine Lakes', 'Wilderness', 'Bucket List'],
-    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=900&q=80',
+    image: './assets/places/kolsai-kaindy-lakes.jpg',
     whyGo: 'Known as the "Pearls of the Northern Tian Shan". The ghostly tree trunks emerging from the turquoise waters of Lake Kaindy are like nowhere else on earth.'
   },
   {
@@ -307,7 +307,7 @@ export const places = [
     lat: 43.2625,
     lng: 76.9458,
     tags: ['Evening', 'Stroll', 'Cafes'],
-    image: 'https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=900&q=80',
+    image: './assets/places/arbat-pedestrian.jpg',
     whyGo: 'Great place to soak in local Almaty evening atmosphere, grab Kazakh samsa or tea, and buy local handicrafts.'
   }
 ];

@@ -1,5 +1,5 @@
-import { tripMeta } from '../data/trip.js';
-import { formatDate, pageHeader, icon } from '../components/shared.js';
+import { tripMeta } from '../data/trip.js?v=18';
+import { formatDate, pageHeader, icon } from '../components/shared.js?v=18';
 
 export const packingStorageKey = 'fieldnotes-kazakhstan-packing-v1';
 
@@ -114,7 +114,7 @@ export function renderPacking() {
       <div class="weather-box">
         <span class="weather-icon">🏙️</span>
         <div>
-          <strong>Almaty City (Nov 6–12)</strong>
+          <strong>Almaty City (Nov 7–14)</strong>
           <small>Day: 6°C to 11°C · Night: -2°C to 3°C · Crisp autumn air</small>
         </div>
       </div>

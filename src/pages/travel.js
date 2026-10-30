@@ -1,5 +1,5 @@
-import { flights, tripMeta } from '../data/trip.js';
-import { pageHeader, icon } from '../components/shared.js';
+import { flights, tripMeta } from '../data/trip.js?v=18';
+import { pageHeader, icon } from '../components/shared.js?v=18';
 
 export function renderTravel() {
   const ob = flights.outbound;
@@ -126,6 +126,47 @@ export function renderTravel() {
         <span>Flight Status</span>
         <strong>✓ ${ret.status} (${ret.flightCode})</strong>
       </div>
+    </section>
+
+    <!-- TICKET RULES: baggage, cancellation & changes (applies to both flights) -->
+    <section class="ticket-rules" aria-label="Ticket rules">
+      <p class="eyebrow">TICKET RULES · BOTH FLIGHTS</p>
+      <h2>Baggage, refunds & changes</h2>
+
+      <div class="rules-grid">
+        <div class="rule-item">
+          <span>Baggage</span>
+          <strong>8 kg cabin + 1 piece check-in</strong>
+        </div>
+        <div class="rule-item">
+          <span>Aircraft & class</span>
+          <strong>Airbus A321 · Economy Basic</strong>
+        </div>
+        <div class="rule-item">
+          <span>Terminals</span>
+          <strong>DEL T3 ↔ ALA T2</strong>
+        </div>
+      </div>
+
+      <div class="rules-deadline">
+        <strong>Deadline: 7 Nov, 08:10 AM</strong>
+        <span>After this the ticket can't be rescheduled. Decide on any change before then.</span>
+      </div>
+
+      <div class="rules-grid two">
+        <div class="rule-item">
+          <span>Cancel (refund)</span>
+          <strong>₹8,001 airline charge</strong>
+          <small>+ ₹799 booking-agent fee, per person, per flight</small>
+        </div>
+        <div class="rule-item">
+          <span>Reschedule</span>
+          <strong>₹8,001 + fare difference</strong>
+          <small>+ ₹799 booking-agent fee, per person, per flight</small>
+        </div>
+      </div>
+
+      <p class="rules-note">Charges are indicative and depend on airline policy. Your PNR and passenger details are on your ticket PDF, not here.</p>
     </section>
 
     <!-- CITY & MOUNTAIN TRANSPORT -->

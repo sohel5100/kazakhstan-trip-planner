@@ -1,6 +1,6 @@
-import { getItineraryPlaceIds, saveItineraryPlaceIds } from './data/itinerary-state.js';
-import { itinerary } from './data/trip.js';
-import { getExchangeRate, convertCurrency } from './data/currency.js';
+import { getItineraryPlaceIds, saveItineraryPlaceIds } from './data/itinerary-state.js?v=18';
+import { itinerary } from './data/trip.js?v=18';
+import { getExchangeRate, convertCurrency } from './data/currency.js?v=18';
 import {
   getConverterState,
   renderExpenses,
@@ -10,13 +10,13 @@ import {
   setActiveStatus,
   setConverterState,
   toggleAddForm
-} from './pages/expenses.js';
-import { renderHome } from './pages/home.js?v=7';
-import { renderItinerary } from './pages/itinerary.js?v=7';
-import { renderPlaces, setActiveCategory as setPlaceCategory } from './pages/places.js?v=7';
-import { renderTravel } from './pages/travel.js?v=7';
-import { renderPacking, packingGroups, packingStorageKey, getPackingChecked } from './pages/packing.js?v=7';
-import { renderPrep, getEmergencyCity, setEmergencyCity, getPhraseCategory, setPhraseCategory } from './pages/prep.js?v=7';
+} from './pages/expenses.js?v=18';
+import { renderHome } from './pages/home.js?v=18';
+import { renderItinerary } from './pages/itinerary.js?v=18';
+import { renderPlaces, setActiveCategory as setPlaceCategory } from './pages/places.js?v=18';
+import { renderTravel } from './pages/travel.js?v=18';
+import { renderPacking, packingGroups, packingStorageKey, getPackingChecked } from './pages/packing.js?v=18';
+import { renderPrep, getEmergencyCity, setEmergencyCity, getPhraseCategory, setPhraseCategory } from './pages/prep.js?v=18';
 
 const pages = {
   home: renderHome,
@@ -38,6 +38,10 @@ export function currentPage() {
 export function render(options = {}) {
   const page = currentPage();
   root.innerHTML = pages[page]();
+
+  // Home day strip: bring today's card into view
+  const todayChip = root.querySelector('.day-chip.is-today');
+  if (todayChip) todayChip.parentElement.scrollLeft = todayChip.offsetLeft - todayChip.parentElement.offsetLeft;
 
   document.querySelectorAll('[data-page]').forEach(link => {
     const active = link.dataset.page === page;
@@ -89,6 +93,19 @@ document.addEventListener('click', event => {
       : [...ids, placeId];
     saveItineraryPlaceIds(next);
     render({ scroll: false });
+    return;
+  }
+
+  // Home day chips / "today's plan": open the itinerary at that day
+  const gotoDay = event.target.closest('[data-goto-day]');
+  if (gotoDay) {
+    event.preventDefault();
+    const target = `day-${gotoDay.dataset.gotoDay}`;
+    if (currentPage() !== 'itinerary') {
+      history.pushState(null, '', '#itinerary');
+      render({ scroll: false });
+    }
+    document.getElementById(target)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     return;
   }
 

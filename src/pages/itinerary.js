@@ -1,6 +1,6 @@
-import { itinerary, places, tripMeta } from '../data/trip.js';
-import { getItineraryPlaceIds, saveItineraryPlaceIds } from '../data/itinerary-state.js';
-import { pageHeader, icon, formatDate } from '../components/shared.js';
+import { itinerary, places, tripMeta } from '../data/trip.js?v=18';
+import { getItineraryPlaceIds, saveItineraryPlaceIds } from '../data/itinerary-state.js?v=18';
+import { pageHeader, icon, formatDate } from '../components/shared.js?v=18';
 
 export function renderItinerary() {
   const defaultIds = itinerary.flatMap(day => day.placeIds || []);

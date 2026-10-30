@@ -1,10 +1,127 @@
-import { tripMeta, flights, places, itinerary } from '../data/trip.js';
-import { formatDate, icon } from '../components/shared.js';
+import { tripMeta, flights, itinerary } from '../data/trip.js?v=18';
+import { formatDate, icon } from '../components/shared.js?v=18';
+import { packingGroups, getPackingChecked } from './packing.js?v=18';
+import { getConverterState } from './expenses.js?v=18';
+import { convertCurrency } from '../data/currency.js?v=18';
+
+const DAY_MS = 24 * 60 * 60 * 1000;
+
+// Today's date as YYYY-MM-DD on this phone. `?today=2026-11-09` overrides it for testing.
+function todayISO() {
+  const override = new URLSearchParams(window.location.search).get('today');
+  if (override && /^\d{4}-\d{2}-\d{2}$/.test(override)) return override;
+  const now = new Date();
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+}
+
+function daysBetween(fromISO, toISO) {
+  return Math.round((new Date(`${toISO}T12:00:00`) - new Date(`${fromISO}T12:00:00`)) / DAY_MS);
+}
+
+// Minutes since midnight for the start of an event time like "04:15 PM – 05:00 PM".
+function eventStartMinutes(time) {
+  const match = /(\d{1,2}):(\d{2})\s*(AM|PM)/i.exec(time || '');
+  if (!match) return null;
+  let hours = Number(match[1]) % 12;
+  if (match[3].toUpperCase() === 'PM') hours += 12;
+  return hours * 60 + Number(match[2]);
+}
+
+function nextEvent(day) {
+  const override = new URLSearchParams(window.location.search).get('time');
+  const now = new Date();
+  const nowMinutes = override && /^\d{2}:\d{2}$/.test(override)
+    ? Number(override.slice(0, 2)) * 60 + Number(override.slice(3))
+    : now.getHours() * 60 + now.getMinutes();
+  return day.events.find(ev => (eventStartMinutes(ev.time) ?? -1) >= nowMinutes - 30) || null;
+}
+
+function packingProgress() {
+  const checked = getPackingChecked();
+  const all = packingGroups.flatMap(group => group.items);
+  return { done: all.filter(item => checked[item.id]).length, total: all.length };
+}
+
+function statusCard(today) {
+  const ob = flights.outbound;
+  const ret = flights.return;
+  const daysToGo = daysBetween(today, tripMeta.startDate);
+  const tripDay = itinerary.find(day => day.date === today);
+
+  // Before the trip: countdown + what to sort out
+  if (daysToGo > 0) {
+    const pack = packingProgress();
+    const changeDeadlinePassed = daysBetween(today, '2026-11-07') < 0;
+    return `
+      <section class="status-card" aria-label="Trip status">
+        <p class="eyebrow light">BEFORE YOU FLY</p>
+        <div class="countdown">
+          <strong>${daysToGo}</strong>
+          <span>${daysToGo === 1 ? 'day' : 'days'} to go</span>
+        </div>
+        <p class="status-line">${ob.airline} ${ob.flightNumber} · ${formatDate(tripMeta.startDate, { weekday: 'short', month: 'short', day: 'numeric' })} · departs DEL T3 at ${ob.departureTime} PM</p>
+        <div class="status-todo">
+          <a href="#packing" data-page="packing" class="status-todo-item">
+            <span>Packing</span>
+            <strong>${pack.done}/${pack.total} packed</strong>
+          </a>
+          <a href="#travel" data-page="travel" class="status-todo-item ${changeDeadlinePassed ? '' : 'warn'}">
+            <span>Ticket changes</span>
+            <strong>${changeDeadlinePassed ? 'No longer allowed' : 'Until 7 Nov, 08:10 AM'}</strong>
+          </a>
+        </div>
+      </section>
+    `;
+  }
+
+  // During the trip: today's plan and what's next
+  if (tripDay) {
+    const upcoming = nextEvent(tripDay);
+    const isLastDay = tripDay.date === tripMeta.endDate;
+    return `
+      <section class="status-card" aria-label="Today">
+        <p class="eyebrow light">TODAY · DAY ${tripDay.dayNumber} OF ${itinerary.length} · ${formatDate(tripDay.date, { weekday: 'short', month: 'short', day: 'numeric' })}</p>
+        <h2>${tripDay.title}</h2>
+        ${isLastDay ? `
+          <div class="next-up urgent">
+            <span>Flight home</span>
+            <strong>${ret.flightNumber} departs ALA T2 at ${ret.departureTime} AM</strong>
+            <small>Taxi from the hotel by 04:45 AM. Web check-in beforehand.</small>
+          </div>
+        ` : upcoming ? `
+          <div class="next-up">
+            <span>Next · ${upcoming.time}</span>
+            <strong>${upcoming.title}</strong>
+            <small>${upcoming.description}</small>
+          </div>
+        ` : `
+          <div class="next-up">
+            <span>Done for today</span>
+            <strong>Nothing else planned. Rest up!</strong>
+          </div>
+        `}
+        <a href="#itinerary" class="status-cta" data-goto-day="${tripDay.dayNumber}">See all of today's plan →</a>
+      </section>
+    `;
+  }
+
+  // After the trip
+  return `
+    <section class="status-card" aria-label="Trip status">
+      <p class="eyebrow light">TRIP COMPLETE</p>
+      <h2>Welcome home!</h2>
+      <p class="status-line">${tripMeta.dates} · ${itinerary.length} days in Kazakhstan.</p>
+      <a href="#expenses" class="status-cta" data-page="expenses">Review what you spent →</a>
+    </section>
+  `;
+}
 
 export function renderHome() {
-  const savedCount = places.length;
-  const firstDay = itinerary[0];
-  const ob = flights.outbound;
+  const today = todayISO();
+  const todayDay = itinerary.find(day => day.date === today);
+  const converter = getConverterState();
+  const convertedINR = convertCurrency(converter.amount, 'KZT', 'INR');
+  const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=Golden+Square+Almaty+Kazakhstan';
 
   return `
     <section class="welcome-row">
@@ -22,7 +139,50 @@ export function renderHome() {
       </div>
     </section>
 
-    <!-- Hero Card with Tian Shan Mountain Art -->
+    ${statusCard(today)}
+
+    <!-- Quick actions: big tap targets for phone use -->
+    <nav class="quick-actions" aria-label="Quick actions">
+      <a href="#itinerary" ${todayDay ? `data-goto-day="${todayDay.dayNumber}"` : 'data-page="itinerary"'} class="quick-action">${icon('clock')}<span>${todayDay ? "Today's plan" : 'Day plan'}</span></a>
+      <a href="#travel" data-page="travel" class="quick-action">${icon('plane')}<span>Flights</span></a>
+      <a href="tel:112" class="quick-action sos"><b aria-hidden="true">SOS</b><span>Call 112</span></a>
+      <a href="${mapsUrl}" target="_blank" rel="noreferrer" class="quick-action">${icon('bed')}<span>Hotel area</span></a>
+      <a href="#prep" data-page="prep" class="quick-action"><b aria-hidden="true">Аа</b><span>Phrases</span></a>
+      <a href="#packing" data-page="packing" class="quick-action">${icon('walk')}<span>Packing</span></a>
+    </nav>
+
+    <!-- Quick tenge → rupee converter -->
+    <section class="home-converter" aria-label="Tenge to rupee converter">
+      <label for="converter-input-amount">Price in tenge</label>
+      <div class="home-converter-row">
+        <div class="conv-input-wrap">
+          <span class="conv-currency-prefix">₸</span>
+          <input type="number" id="converter-input-amount" class="converter-big-input" value="${converter.amount}" min="0" step="any" inputmode="decimal" placeholder="5000" />
+        </div>
+        <span class="home-converter-eq" aria-hidden="true">=</span>
+        <strong id="converter-inr-result">₹${convertedINR.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong>
+      </div>
+      <small>1 ₸ ≈ ₹0.21 · roughly divide by 5</small>
+    </section>
+
+    <!-- Swipeable 8-day strip -->
+    <section class="day-strip-section" aria-label="All days">
+      <div class="panel-heading">
+        <h2>Your ${itinerary.length} days</h2>
+        <a class="text-link" href="#itinerary" data-page="itinerary">Full plan <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="day-strip">
+        ${itinerary.map(day => `
+          <a href="#itinerary" class="day-chip ${day.date === today ? 'is-today' : ''}" data-goto-day="${day.dayNumber}">
+            <span>${formatDate(day.date, { weekday: 'short' })} ${formatDate(day.date, { day: 'numeric' })}</span>
+            <strong>Day ${day.dayNumber}</strong>
+            <small>${day.title}</small>
+          </a>
+        `).join('')}
+      </div>
+    </section>
+
+    <!-- Desktop-only artwork -->
     <section class="hero-card" aria-label="Trip introduction">
       <div class="hero-art" aria-hidden="true">
         <div class="sun-disc"></div>
@@ -39,105 +199,6 @@ export function renderHome() {
           Explore 8-day plan <span aria-hidden="true">→</span>
         </a>
       </div>
-      <div class="hero-index" aria-hidden="true">01 <span>/ 08</span></div>
-    </section>
-
-    <!-- Quick Stats -->
-    <section class="quick-stats" aria-label="Trip snapshot">
-      <article class="stat-card">
-        <span class="stat-icon peach">${icon('pin')}</span>
-        <div>
-          <strong>${savedCount} Places</strong>
-          <span>Almaty & Nature</span>
-        </div>
-        <a href="#places" data-page="places" aria-label="View saved places">↗</a>
-      </article>
-
-      <article class="stat-card">
-        <span class="stat-icon lilac">${icon('plane')}</span>
-        <div>
-          <strong>Air Astana</strong>
-          <span>DEL ↔ ALA Direct</span>
-        </div>
-        <a href="#travel" data-page="travel" aria-label="View flight details">↗</a>
-      </article>
-
-      <article class="stat-card">
-        <span class="stat-icon green">${icon('wallet')}</span>
-        <div>
-          <strong>1 KZT ≈ ₹0.21</strong>
-          <span>Live KZT Converter</span>
-        </div>
-        <a href="#expenses" data-page="expenses" aria-label="View currency converter">↗</a>
-      </article>
-    </section>
-
-    <!-- Dashboard Grid: First Day Preview & Outbound Flight Details -->
-    <section class="dashboard-grid">
-      <div class="panel itinerary-preview">
-        <div class="panel-heading">
-          <div>
-            <p class="eyebrow">UP NEXT · DAY 1</p>
-            <h2>Arrival in Almaty</h2>
-          </div>
-          <a class="text-link" href="#itinerary" data-page="itinerary">Full itinerary <span aria-hidden="true">→</span></a>
-        </div>
-        <div class="day-preview">
-          <div class="day-date">
-            <span>NOV</span>
-            <strong>07</strong>
-          </div>
-          <div class="day-details">
-            <h3>${firstDay.title}</h3>
-            <p>Air Astana KC908 lands 15:10 ALA · Evening walk on Arbat pedestrian promenade</p>
-            <div class="day-tags">
-              <span class="tag">Direct Flight</span>
-              <span class="tag tag-muted">14-Day Visa-Free</span>
-            </div>
-          </div>
-          <span class="day-arrow" aria-hidden="true">↗</span>
-        </div>
-      </div>
-
-      <div class="panel flight-preview">
-        <div class="panel-heading">
-          <div>
-            <p class="eyebrow">OUTBOUND FLIGHT</p>
-            <h2>Air Astana KC908</h2>
-          </div>
-          <a class="round-link" href="#travel" data-page="travel" aria-label="Open flight details">↗</a>
-        </div>
-        <div class="flight-time">
-          <div>
-            <span class="label-small">DEPARTURE · DEL (T3)</span>
-            <strong>${ob.departureTime} <small>PM</small></strong>
-            <span>Sat, Nov 7, 2026</span>
-          </div>
-          <div class="flight-route" aria-hidden="true">
-            <i></i>
-            <span>✈</span>
-            <i></i>
-          </div>
-          <div class="flight-destination">
-            <span class="label-small">ARRIVAL · ALA</span>
-            <strong>${ob.arrivalTime} <small>PM</small></strong>
-            <span>Almaty · ${ob.duration}</span>
-          </div>
-        </div>
-        <div class="flight-note">
-          <span class="status-dot"></span>${ob.airline} ${ob.flightNumber} · Direct · Meals & Inflight Media
-        </div>
-      </div>
-    </section>
-
-    <!-- Return Flight & Highlights Preview Row -->
-    <section class="inspiration-row">
-      <div>
-        <p class="eyebrow">CONFIRMED RETURN FLIGHT</p>
-        <h2>Sat, Nov 14 · Air Astana KC907 (07:05 ALA → 11:10 DEL)</h2>
-        <p>Morning direct flight lands back at Delhi Terminal 3 before lunch. 8 memorable days across Kazakhstan.</p>
-      </div>
-      <a class="button button-outline" href="#travel" data-page="travel">View flight details <span aria-hidden="true">→</span></a>
     </section>
   `;
 }
