@@ -14,7 +14,7 @@ import {
 import { renderHome } from './pages/home.js?v=18';
 import { renderItinerary } from './pages/itinerary.js?v=18';
 import { renderPlaces, setActiveCategory as setPlaceCategory } from './pages/places.js?v=18';
-import { renderTravel } from './pages/travel.js?v=18';
+import { renderTravel } from './pages/travel.js?v=21';
 import { renderPacking, packingGroups, packingStorageKey, getPackingChecked } from './pages/packing.js?v=18';
 import { renderPrep, getEmergencyCity, setEmergencyCity, getPhraseCategory, setPhraseCategory } from './pages/prep.js?v=18';
 

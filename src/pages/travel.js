@@ -1,6 +1,54 @@
 import { flights, tripMeta } from '../data/trip.js?v=18';
 import { pageHeader, icon } from '../components/shared.js?v=18';
 
+// Getting around Almaty: key facts first, so they're easy to scan on a phone
+const transportGuide = [
+  {
+    badge: '🚕',
+    name: 'Yandex Go',
+    useFor: 'Taxis, including the airport run',
+    facts: [
+      ['Airport → hotel', '3,500 – 4,500 ₸ <small>≈ ₹735 – ₹945</small>'],
+      ['City ride', '800 – 1,500 ₸ <small>≈ ₹170 – ₹315</small>'],
+      ['Pay', 'Card in the app, or cash']
+    ],
+    tip: 'Fare is fixed upfront, so no bargaining with drivers at the airport.',
+    link: { label: 'Get Yandex Go', href: 'https://go.yandex/en_kz/' }
+  },
+  {
+    badge: '🗺️',
+    name: '2GIS',
+    useFor: 'Offline map, walking and bus routes',
+    facts: [
+      ['Works offline', 'Yes, download the Almaty map first'],
+      ['Shows', 'Live buses and exact building entrances']
+    ],
+    tip: 'Download the Almaty map on Wi-Fi before you fly.',
+    link: { label: 'Open 2GIS Almaty', href: 'https://2gis.kz/almaty' }
+  },
+  {
+    badge: 'Ⓜ️',
+    name: 'Almaty Metro',
+    useFor: 'Quick rides across the city centre',
+    facts: [
+      ['Fare', '100 ₸ per ride <small>≈ ₹21</small>'],
+      ['Pay', 'Tap any contactless card at the gate']
+    ],
+    tip: 'Worth a ride just to see the marble and mosaic stations.'
+  },
+  {
+    badge: '🚡',
+    name: 'Medeu & Shymbulak',
+    useFor: 'Getting up into the mountains',
+    facts: [
+      ['Bus to Medeu', '#12 from Hotel Kazakhstan, Dostyk Ave'],
+      ['How often', 'About every 15 min · 100 ₸'],
+      ['Gondola', 'Medeu → Shymbulak → Talgar Pass (3,200m), 3 stages']
+    ],
+    link: { label: 'Bus stop on Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Hotel+Kazakhstan+Dostyk+Avenue+Almaty' }
+  }
+];
+
 export function renderTravel() {
   const ob = flights.outbound;
   const ret = flights.return;
@@ -179,42 +227,28 @@ export function renderTravel() {
         </div>
       </div>
 
-      <div class="option-list">
-        <article class="option-card">
-          <span class="option-number">01</span>
-          <div>
-            <h3>Yandex Go (Taxis & Airport Transfers)</h3>
-            <p class="muted">The primary ride-hailing app in Kazakhstan. Airport to Golden Square is ~3,500 – 4,500 ₸ (₹735 – ₹945); city trips ~800 – 1,500 ₸ (₹170 – ₹315). Link your Visa/Mastercard or pay cash.</p>
-          </div>
-          <span class="tag">Taxi App</span>
-        </article>
-
-        <article class="option-card">
-          <span class="option-number">02</span>
-          <div>
-            <h3>2GIS App (Offline Navigation & Buses)</h3>
-            <p class="muted">Essential offline city map. Shows exact building entrance gates (pod'yezd), real-time bus locations, and offline route finding across Almaty.</p>
-          </div>
-          <span class="tag">Offline 3D Map</span>
-        </article>
-
-        <article class="option-card">
-          <span class="option-number">03</span>
-          <div>
-            <h3>Almaty Metro System</h3>
-            <p class="muted">Deep, spotless underground network with traditional Kazakh marble & mosaics. Flat 100 ₸ (~₹21) fare — tap any contactless card directly at turnstiles.</p>
-          </div>
-          <span class="tag">100 ₸ (~₹21)</span>
-        </article>
-
-        <article class="option-card">
-          <span class="option-number">04</span>
-          <div>
-            <h3>Mountain Transport: Medeu & Shymbulak</h3>
-            <p class="muted">Bus #12 departs every 15 min from Hotel Kazakhstan (Dostyk Ave) straight to Medeu base (100 ₸). 3-stage gondola links Medeu up to Shymbulak and Talgar Pass (3,200m).</p>
-          </div>
-          <span class="tag">Alpine Cable Car</span>
-        </article>
+      <div class="transport-list">
+        ${transportGuide.map(item => `
+          <article class="transport-card">
+            <header class="transport-head">
+              <span class="transport-icon" aria-hidden="true">${item.badge}</span>
+              <div>
+                <h3>${item.name}</h3>
+                <p>${item.useFor}</p>
+              </div>
+            </header>
+            <dl class="transport-facts">
+              ${item.facts.map(([label, value]) => `
+                <div>
+                  <dt>${label}</dt>
+                  <dd>${value}</dd>
+                </div>
+              `).join('')}
+            </dl>
+            ${item.tip ? `<p class="transport-tip">${item.tip}</p>` : ''}
+            ${item.link ? `<a class="transport-link" href="${item.link.href}" target="_blank" rel="noreferrer">${item.link.label} ↗</a>` : ''}
+          </article>
+        `).join('')}
       </div>
     </section>
   `;
