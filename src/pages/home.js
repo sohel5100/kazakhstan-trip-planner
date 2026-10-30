@@ -141,6 +141,18 @@ export function renderHome() {
 
     ${statusCard(today)}
 
+    <!-- Live weather: Almaty city + Shymbulak, filled in by loadHomeWeather() -->
+    <section class="weather-card" id="home-weather" aria-label="Almaty weather" aria-live="polite">
+      <div class="wx-now">
+        <span class="wx-emoji" aria-hidden="true">🌤️</span>
+        <div>
+          <p class="eyebrow">ALMATY WEATHER NOW</p>
+          <strong class="wx-temp">--°</strong>
+          <span class="wx-cond">Loading live weather…</span>
+        </div>
+      </div>
+    </section>
+
     <!-- One-tap actions you'd need on the ground (navigation lives in the tab bar) -->
     <section class="quick-actions" aria-label="Quick actions">
       <a href="${hotelDirectionsUrl}" target="_blank" rel="noreferrer" class="quick-action">
@@ -150,14 +162,6 @@ export function renderHome() {
       <a href="https://go.yandex/en_kz/" target="_blank" rel="noreferrer" class="quick-action">
         <span class="qa-icon" aria-hidden="true">🚕</span>
         <span class="qa-text"><strong>Book a taxi</strong><small>Open Yandex Go</small></span>
-      </a>
-      <a href="https://2gis.kz/almaty" target="_blank" rel="noreferrer" class="quick-action">
-        <span class="qa-icon" aria-hidden="true">🗺️</span>
-        <span class="qa-text"><strong>Offline map</strong><small>Open 2GIS Almaty</small></span>
-      </a>
-      <a href="https://open-meteo.com/en/docs#latitude=43.24&longitude=76.95" target="_blank" rel="noreferrer" class="quick-action" id="home-weather">
-        <span class="qa-icon" aria-hidden="true">🌤️</span>
-        <span class="qa-text"><strong>Almaty weather</strong><small>Loading…</small></span>
       </a>
     </section>
 
@@ -213,35 +217,109 @@ export function renderHome() {
   `;
 }
 
-// Live Almaty weather for the home card (Open-Meteo, no API key). Cached for 15 minutes.
+// Live weather (Open-Meteo, no API key): Almaty city + Shymbulak, 16-day forecast. Cached 15 min.
 const WEATHER_LABELS = [
   [[0], '☀️', 'Clear'], [[1, 2], '🌤️', 'Partly cloudy'], [[3], '☁️', 'Cloudy'],
   [[45, 48], '🌫️', 'Fog'], [[51, 53, 55, 56, 57], '🌦️', 'Drizzle'],
   [[61, 63, 65, 66, 67, 80, 81, 82], '🌧️', 'Rain'], [[71, 73, 75, 77, 85, 86], '🌨️', 'Snow'],
   [[95, 96, 99], '⛈️', 'Thunderstorm']
 ];
+const weatherLabel = code => {
+  const [, emoji, label] = WEATHER_LABELS.find(([codes]) => codes.includes(code)) || [[], '🌡️', 'Unknown'];
+  return { emoji, label };
+};
+const deg = value => `${Math.round(value)}°`;
+const clock = iso => iso.slice(11, 16);
+
+function whatToWear(feelsLike) {
+  if (feelsLike <= -5) return 'Thermals, down jacket, gloves & hat';
+  if (feelsLike <= 2) return 'Warm layers, insulated jacket, hat';
+  if (feelsLike <= 10) return 'Sweater + jacket; layer up for evenings';
+  return 'Light layers; bring a jacket for evenings';
+}
+
 let weatherCache = null;
 
 export async function loadHomeWeather() {
-  const card = document.querySelector('#home-weather');
-  if (!card) return;
+  if (!document.querySelector('#home-weather')) return;
   try {
     if (!weatherCache || Date.now() - weatherCache.at > 15 * 60 * 1000) {
-      const url = 'https://api.open-meteo.com/v1/forecast?latitude=43.24&longitude=76.95'
-        + '&current=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min'
-        + '&forecast_days=1&timezone=Asia%2FAlmaty';
-      const data = await (await fetch(url)).json();
-      weatherCache = { at: Date.now(), data };
+      const url = 'https://api.open-meteo.com/v1/forecast?latitude=43.24,43.128&longitude=76.95,77.081'
+        + '&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,relative_humidity_2m'
+        + '&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset'
+        + '&forecast_days=16&timezone=Asia%2FAlmaty';
+      const [city, mountain] = await (await fetch(url)).json();
+      weatherCache = { at: Date.now(), city, mountain };
     }
-    const { current, daily } = weatherCache.data;
-    const [, emoji, label] = WEATHER_LABELS.find(([codes]) => codes.includes(current.weather_code)) || [[], '🌡️', 'Now'];
+    const { city, mountain } = weatherCache;
     const el = document.querySelector('#home-weather');
     if (!el) return;
-    el.querySelector('.qa-icon').textContent = emoji;
-    el.querySelector('strong').textContent = `Almaty ${Math.round(current.temperature_2m)}°C`;
-    el.querySelector('small').textContent = `${label} · ${Math.round(daily.temperature_2m_min[0])}° to ${Math.round(daily.temperature_2m_max[0])}° today`;
+
+    const now = city.current;
+    const nowLabel = weatherLabel(now.weather_code);
+    const mtLabel = weatherLabel(mountain.current.weather_code);
+    const daily = city.daily;
+    const t = 0; // today's index
+
+    // Forecast strip: trip days when the forecast reaches them, otherwise the next 7 days
+    const tripIdx = daily.time
+      .map((date, i) => (date >= tripMeta.startDate && date <= tripMeta.endDate ? i : -1))
+      .filter(i => i >= 0 && daily.temperature_2m_max[i] != null && daily.temperature_2m_min[i] != null);
+    const showTrip = tripIdx.length > 0;
+    const idx = showTrip ? tripIdx : daily.time.slice(0, 7).map((_, i) => i).filter(i => daily.temperature_2m_max[i] != null);
+
+    el.innerHTML = `
+      <div class="wx-now">
+        <span class="wx-emoji" aria-hidden="true">${nowLabel.emoji}</span>
+        <div>
+          <p class="eyebrow">ALMATY WEATHER NOW</p>
+          <strong class="wx-temp">${deg(now.temperature_2m)}<small>C</small></strong>
+          <span class="wx-cond">${nowLabel.label} · feels like ${deg(now.apparent_temperature)}</span>
+        </div>
+      </div>
+
+      <div class="wx-stats">
+        <div><span>Today</span><strong>${deg(daily.temperature_2m_min[t])} / ${deg(daily.temperature_2m_max[t])}</strong></div>
+        <div><span>Rain chance</span><strong>${daily.precipitation_probability_max[t] ?? 0}%</strong></div>
+        <div><span>Wind</span><strong>${Math.round(now.wind_speed_10m)} km/h</strong></div>
+        <div><span>Humidity</span><strong>${now.relative_humidity_2m}%</strong></div>
+        <div><span>Sunrise</span><strong>${clock(daily.sunrise[t])}</strong></div>
+        <div><span>Sunset</span><strong>${clock(daily.sunset[t])}</strong></div>
+      </div>
+
+      <div class="wx-mountain">
+        <span aria-hidden="true">🏔️</span>
+        <p><strong>Shymbulak (${Math.round(mountain.elevation).toLocaleString('en-IN')}m): ${deg(mountain.current.temperature_2m)}C</strong>
+        ${mtLabel.label} · feels like ${deg(mountain.current.apparent_temperature)} · today ${deg(mountain.daily.temperature_2m_min[t])} / ${deg(mountain.daily.temperature_2m_max[t])}</p>
+      </div>
+
+      <p class="wx-wear"><span>👕 Wear today:</span> ${whatToWear(now.apparent_temperature)}</p>
+
+      <div class="wx-forecast-head">
+        <h3>${showTrip ? 'Forecast for your trip' : 'Next 7 days'}</h3>
+        <small>${showTrip && tripIdx.length < itinerary.length ? `${tripIdx.length} of ${itinerary.length} trip days available so far` : 'Almaty city'}</small>
+      </div>
+      <div class="wx-forecast">
+        ${idx.map(i => {
+          const label = weatherLabel(daily.weather_code[i]);
+          const date = daily.time[i];
+          const tripDay = itinerary.find(day => day.date === date);
+          return `
+            <div class="wx-day">
+              <span>${formatDate(date, { weekday: 'short' })} ${formatDate(date, { day: 'numeric' })}</span>
+              <b aria-hidden="true">${label.emoji}</b>
+              <strong>${deg(daily.temperature_2m_max[i])}</strong>
+              <small>${deg(daily.temperature_2m_min[i])}</small>
+              <em>💧${daily.precipitation_probability_max[i] ?? 0}%</em>
+              ${tripDay ? `<i>Day ${tripDay.dayNumber}</i>` : ''}
+            </div>
+          `;
+        }).join('')}
+      </div>
+      <small class="wx-source">Live from Open-Meteo · updates every 15 min</small>
+    `;
   } catch {
-    const el = document.querySelector('#home-weather small');
-    if (el) el.textContent = 'Tap for forecast';
+    const cond = document.querySelector('#home-weather .wx-cond');
+    if (cond) cond.textContent = 'Weather unavailable offline. Check again when connected.';
   }
 }

@@ -11,7 +11,7 @@ import {
   setConverterState,
   toggleAddForm
 } from './pages/expenses.js?v=18';
-import { renderHome, loadHomeWeather } from './pages/home.js?v=23';
+import { renderHome, loadHomeWeather } from './pages/home.js?v=25';
 import { renderItinerary } from './pages/itinerary.js?v=18';
 import { renderPlaces, setActiveCategory as setPlaceCategory } from './pages/places.js?v=18';
 import { renderTravel } from './pages/travel.js?v=21';

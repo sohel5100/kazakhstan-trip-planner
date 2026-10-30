@@ -2677,3 +2677,216 @@ button {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* ============================================================
+   Home: big live weather card
+   ============================================================ */
+.weather-card {
+  background: linear-gradient(160deg, #eaf1f4 0%, #f6f3ea 100%);
+  border: 1px solid #dde6e8;
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 14px;
+  display: grid;
+  gap: 14px;
+}
+
+.wx-now {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.wx-now .eyebrow {
+  margin: 0 0 2px;
+}
+
+.wx-emoji {
+  font-size: 46px;
+  line-height: 1;
+}
+
+.wx-temp {
+  display: block;
+  font: 600 44px/1 var(--serif);
+  font-variant-numeric: lining-nums;
+  color: var(--ink);
+}
+
+.wx-cond {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #56625b;
+}
+
+.wx-stats {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.wx-stats > div {
+  display: grid;
+  gap: 2px;
+  padding: 9px 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .75);
+}
+
+.wx-stats span {
+  font-size: 11px;
+  color: #7a837d;
+}
+
+.wx-stats strong {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.wx-mountain {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #2f4f4a;
+  color: #dbe5df;
+}
+
+.wx-mountain > span {
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.wx-mountain p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.wx-mountain strong {
+  display: block;
+  font-size: 15px;
+  color: #fff;
+}
+
+.wx-wear {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.wx-wear span {
+  font-weight: 700;
+}
+
+.wx-forecast-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.wx-forecast-head h3 {
+  font: 500 18px var(--serif);
+  margin: 0;
+}
+
+.wx-forecast-head small {
+  font-size: 11px;
+  color: #7a837d;
+}
+
+.wx-forecast {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(72px, 1fr);
+  gap: 8px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 4px;
+}
+
+.wx-day {
+  scroll-snap-align: start;
+  display: grid;
+  justify-items: center;
+  gap: 3px;
+  padding: 10px 6px;
+  border-radius: 11px;
+  background: rgba(255, 255, 255, .85);
+  text-align: center;
+}
+
+.wx-day > span {
+  font-size: 11px;
+  font-weight: 700;
+  color: #a08160;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.wx-day b {
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.wx-day strong {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.wx-day small {
+  font-size: 12px;
+  color: #7a837d;
+}
+
+.wx-day em {
+  font-style: normal;
+  font-size: 11px;
+  color: #3b6f8c;
+}
+
+.wx-day i {
+  font-style: normal;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--green);
+  background: #eaf0e8;
+  border-radius: 10px;
+  padding: 2px 6px;
+}
+
+.wx-source {
+  font-size: 11px;
+  color: #8a928c;
+}
+
+@media (max-width: 800px) {
+  .weather-card {
+    padding: 16px;
+  }
+  .wx-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .wx-forecast {
+    grid-auto-columns: 74px;
+    margin-right: -16px;
+    padding-right: 16px;
+  }
+}
+
+.wx-temp small {
+  font: 500 22px var(--sans);
+  color: #6f7973;
+  vertical-align: top;
+  margin-left: 2px;
+}
+
+.quick-actions {
+  grid-template-columns: 1fr 1fr;
+}
