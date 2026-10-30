@@ -121,7 +121,7 @@ export function renderHome() {
   const todayDay = itinerary.find(day => day.date === today);
   const converter = getConverterState();
   const convertedINR = convertCurrency(converter.amount, 'KZT', 'INR');
-  const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=Golden+Square+Almaty+Kazakhstan';
+  const hotelDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${tripMeta.stayAreaCoordinates}`;
 
   return `
     <section class="welcome-row">
@@ -141,15 +141,25 @@ export function renderHome() {
 
     ${statusCard(today)}
 
-    <!-- Quick actions: big tap targets for phone use -->
-    <nav class="quick-actions" aria-label="Quick actions">
-      <a href="#itinerary" ${todayDay ? `data-goto-day="${todayDay.dayNumber}"` : 'data-page="itinerary"'} class="quick-action">${icon('clock')}<span>${todayDay ? "Today's plan" : 'Day plan'}</span></a>
-      <a href="#travel" data-page="travel" class="quick-action">${icon('plane')}<span>Flights</span></a>
-      <a href="tel:112" class="quick-action sos"><b aria-hidden="true">SOS</b><span>Call 112</span></a>
-      <a href="${mapsUrl}" target="_blank" rel="noreferrer" class="quick-action">${icon('bed')}<span>Hotel area</span></a>
-      <a href="#prep" data-page="prep" class="quick-action"><b aria-hidden="true">Аа</b><span>Phrases</span></a>
-      <a href="#packing" data-page="packing" class="quick-action">${icon('walk')}<span>Packing</span></a>
-    </nav>
+    <!-- One-tap actions you'd need on the ground (navigation lives in the tab bar) -->
+    <section class="quick-actions" aria-label="Quick actions">
+      <a href="${hotelDirectionsUrl}" target="_blank" rel="noreferrer" class="quick-action">
+        <span class="qa-icon" aria-hidden="true">🏨</span>
+        <span class="qa-text"><strong>Back to hotel</strong><small>Directions to Golden Square</small></span>
+      </a>
+      <a href="https://go.yandex/en_kz/" target="_blank" rel="noreferrer" class="quick-action">
+        <span class="qa-icon" aria-hidden="true">🚕</span>
+        <span class="qa-text"><strong>Book a taxi</strong><small>Open Yandex Go</small></span>
+      </a>
+      <a href="https://2gis.kz/almaty" target="_blank" rel="noreferrer" class="quick-action">
+        <span class="qa-icon" aria-hidden="true">🗺️</span>
+        <span class="qa-text"><strong>Offline map</strong><small>Open 2GIS Almaty</small></span>
+      </a>
+      <a href="https://open-meteo.com/en/docs#latitude=43.24&longitude=76.95" target="_blank" rel="noreferrer" class="quick-action" id="home-weather">
+        <span class="qa-icon" aria-hidden="true">🌤️</span>
+        <span class="qa-text"><strong>Almaty weather</strong><small>Loading…</small></span>
+      </a>
+    </section>
 
     <!-- Quick tenge → rupee converter -->
     <section class="home-converter" aria-label="Tenge to rupee converter">
@@ -201,4 +211,37 @@ export function renderHome() {
       </div>
     </section>
   `;
+}
+
+// Live Almaty weather for the home card (Open-Meteo, no API key). Cached for 15 minutes.
+const WEATHER_LABELS = [
+  [[0], '☀️', 'Clear'], [[1, 2], '🌤️', 'Partly cloudy'], [[3], '☁️', 'Cloudy'],
+  [[45, 48], '🌫️', 'Fog'], [[51, 53, 55, 56, 57], '🌦️', 'Drizzle'],
+  [[61, 63, 65, 66, 67, 80, 81, 82], '🌧️', 'Rain'], [[71, 73, 75, 77, 85, 86], '🌨️', 'Snow'],
+  [[95, 96, 99], '⛈️', 'Thunderstorm']
+];
+let weatherCache = null;
+
+export async function loadHomeWeather() {
+  const card = document.querySelector('#home-weather');
+  if (!card) return;
+  try {
+    if (!weatherCache || Date.now() - weatherCache.at > 15 * 60 * 1000) {
+      const url = 'https://api.open-meteo.com/v1/forecast?latitude=43.24&longitude=76.95'
+        + '&current=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min'
+        + '&forecast_days=1&timezone=Asia%2FAlmaty';
+      const data = await (await fetch(url)).json();
+      weatherCache = { at: Date.now(), data };
+    }
+    const { current, daily } = weatherCache.data;
+    const [, emoji, label] = WEATHER_LABELS.find(([codes]) => codes.includes(current.weather_code)) || [[], '🌡️', 'Now'];
+    const el = document.querySelector('#home-weather');
+    if (!el) return;
+    el.querySelector('.qa-icon').textContent = emoji;
+    el.querySelector('strong').textContent = `Almaty ${Math.round(current.temperature_2m)}°C`;
+    el.querySelector('small').textContent = `${label} · ${Math.round(daily.temperature_2m_min[0])}° to ${Math.round(daily.temperature_2m_max[0])}° today`;
+  } catch {
+    const el = document.querySelector('#home-weather small');
+    if (el) el.textContent = 'Tap for forecast';
+  }
 }

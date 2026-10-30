@@ -11,7 +11,7 @@ import {
   setConverterState,
   toggleAddForm
 } from './pages/expenses.js?v=18';
-import { renderHome } from './pages/home.js?v=18';
+import { renderHome, loadHomeWeather } from './pages/home.js?v=23';
 import { renderItinerary } from './pages/itinerary.js?v=18';
 import { renderPlaces, setActiveCategory as setPlaceCategory } from './pages/places.js?v=18';
 import { renderTravel } from './pages/travel.js?v=21';
@@ -38,6 +38,8 @@ export function currentPage() {
 export function render(options = {}) {
   const page = currentPage();
   root.innerHTML = pages[page]();
+
+  if (page === 'home') loadHomeWeather();
 
   // Home day strip: bring today's card into view
   const todayChip = root.querySelector('.day-chip.is-today');
