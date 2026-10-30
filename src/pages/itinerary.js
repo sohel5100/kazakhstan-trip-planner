@@ -1,7 +1,7 @@
-import { itinerary, places, tripMeta } from '../data/trip.js?v=18';
-import { getItineraryPlaceIds } from '../data/itinerary-state.js?v=18';
-import { icon, formatDate } from '../components/shared.js?v=18';
-import { getWeather, forecastFor } from '../data/weather.js?v=18';
+import { itinerary, places, tripMeta } from '../data/trip.js?v=31';
+import { getItineraryPlaceIds } from '../data/itinerary-state.js?v=31';
+import { icon, formatDate } from '../components/shared.js?v=31';
+import { getWeather, forecastFor } from '../data/weather.js?v=31';
 
 // Which day is open. Defaults to today during the trip, otherwise Day 1.
 let selectedDay = null;
@@ -24,6 +24,35 @@ function currentDay() {
     selectedDay = today ? today.dayNumber : itinerary[0].dayNumber;
   }
   return itinerary.find(day => day.dayNumber === selectedDay) || itinerary[0];
+}
+
+// Emoji per event type, used when an event has no icon of its own
+const EVENT_ICONS = {
+  flight: '✈️', arrival: '🛬', airport: '🛫', transfer: '🚕', departure: '🚐', return: '↩️',
+  sight: '📸', culture: '🏛️', museum: '🏛️', market: '🛒', shopping: '🛍️', food: '🍽️',
+  dinner: '🍽️', breakfast: '☕', sunset: '🌇', alpine: '🚡', hike: '🥾', nature: '🌲',
+  walk: '🚶', evening: '🌙', morning: '⏰', spa: '♨️', rest: '🛌', tour: '🚐', show: '🎶'
+};
+
+// Practical rows under an event: getting there, tickets, cost, tips, bad-weather swap, links
+function eventDetails(ev) {
+  const rows = [
+    ['🚕', 'Getting there', ev.getThere],
+    ['🎟️', 'Tickets', ev.tickets],
+    ['💰', 'Cost', ev.cost],
+    ['💡', 'Tip', ev.tip],
+    ['☔', 'If weather is bad', ev.backup]
+  ].filter(([, , value]) => value);
+  const links = ev.links || [];
+  if (!rows.length && !links.length) return '';
+  return `
+    <dl class="ev-details">
+      ${rows.map(([emoji, label, value]) => `
+        <div><dt><span aria-hidden="true">${emoji}</span> ${label}</dt><dd>${value}</dd></div>
+      `).join('')}
+    </dl>
+    ${links.length ? `<div class="ev-links">${links.map(link => `<a href="${link.href}" target="_blank" rel="noreferrer">${link.label} ↗</a>`).join('')}</div>` : ''}
+  `;
 }
 
 export function renderItinerary() {
@@ -69,21 +98,36 @@ export function renderItinerary() {
         <div class="itin-weather" aria-live="polite"></div>
       </header>
 
+      ${day.bring || day.weatherNote ? `
+        <div class="day-notes">
+          ${day.weatherNote ? `<p><span aria-hidden="true">🌡️</span><span><strong>Weather & timing:</strong> ${day.weatherNote}</span></p>` : ''}
+          ${day.bring ? `<p><span aria-hidden="true">🎒</span><span><strong>Bring:</strong> ${day.bring}</span></p>` : ''}
+        </div>
+      ` : ''}
+
       <ol class="timeline-list">
         ${day.events.map(ev => `
           <li class="tl-item type-${ev.type}">
-            <span class="tl-dot" aria-hidden="true"></span>
+            <span class="tl-icon" aria-hidden="true">${ev.icon || EVENT_ICONS[ev.type] || '📍'}</span>
             <div class="tl-body">
               <div class="tl-time">
                 <strong>${ev.time}</strong>
                 <span class="event-tag">${ev.type}</span>
               </div>
               <h3>${ev.title}</h3>
-              <p>${ev.description}</p>
+              ${ev.description ? `<p>${ev.description}</p>` : ''}
+              ${eventDetails(ev)}
             </div>
           </li>
         `).join('')}
       </ol>
+
+      ${day.planB ? `
+        <div class="plan-b">
+          <strong><span aria-hidden="true">☔</span> Plan B (bad weather or closure)</strong>
+          <p>${day.planB}</p>
+        </div>
+      ` : ''}
 
       ${dayPlaces.length > 0 ? `
         <div class="day-places-box">

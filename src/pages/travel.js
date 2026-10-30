@@ -1,5 +1,6 @@
-import { flights, tripMeta } from '../data/trip.js?v=18';
-import { pageHeader, icon } from '../components/shared.js?v=18';
+import { flights, tripMeta } from '../data/trip.js?v=31';
+import { pageHeader, icon } from '../components/shared.js?v=31';
+import { hotels } from '../data/guide.js?v=31';
 
 // Getting around Almaty: key facts first, so they're easy to scan on a phone
 const transportGuide = [
@@ -160,7 +161,7 @@ export function renderTravel() {
       <div class="fare-options">
         <div class="fare-option">
           <span>Airport Taxi Departure</span>
-          <strong>04:45 AM from Hotel</strong>
+          <strong>04:00 AM from Hotel</strong>
         </div>
         <div class="fare-option">
           <span>Arrival at Delhi (T3)</span>
@@ -168,7 +169,7 @@ export function renderTravel() {
         </div>
       </div>
 
-      <p class="baggage-note">Early morning flight. Yandex Go ride from Golden Square to ALA takes ~25 mins. Clear immigration and be home in India before lunch!</p>
+      <p class="baggage-note">Early morning flight: leave the hotel at 04:00 — the drive to Terminal 2 takes ~20–25 min at that hour, and the airport advises arriving 3 hours before. Back in Delhi before lunch.</p>
 
       <div class="ticket-footnote">
         <span>Flight Status</span>
@@ -184,7 +185,8 @@ export function renderTravel() {
       <div class="rules-grid">
         <div class="rule-item">
           <span>Baggage</span>
-          <strong>8 kg cabin + 1 piece check-in</strong>
+          <strong>Cabin 8 kg + check-in 23 kg</strong>
+          <small>1 cabin bag (56×45×25 cm) + 1 checked bag up to 23 kg (Air Astana Economy, per piece)</small>
         </div>
         <div class="rule-item">
           <span>Aircraft & class</span>
@@ -215,6 +217,35 @@ export function renderTravel() {
       </div>
 
       <p class="rules-note">Charges are indicative and depend on airline policy. Your PNR and passenger details are on your ticket PDF, not here.</p>
+    </section>
+
+    <!-- WHERE TO STAY -->
+    <section class="travel-section" style="margin-top:32px;">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">WHERE TO STAY · 7 NIGHTS</p>
+          <h2>🏨 Hotels worth booking</h2>
+          <p class="muted">Best value is the Panfilov / Green Bazaar side of the centre; Dostyk hotels cost 47,000–77,000 ₸ a night.</p>
+        </div>
+      </div>
+      <div class="hotel-list">
+        ${hotels.map(h => `
+          <article class="hotel-card">
+            <div class="hotel-top">
+              <h3>${h.name}</h3>
+              <span class="hotel-badge">${h.badge}</span>
+            </div>
+            <p class="hotel-area">📍 ${h.area}</p>
+            <dl class="transport-facts">
+              <div><dt>Price</dt><dd>${h.price}</dd></div>
+              <div><dt>Reviews</dt><dd>${h.rating}</dd></div>
+            </dl>
+            <p class="hotel-note">👍 ${h.good}</p>
+            <p class="hotel-note warn">⚠️ ${h.watch}</p>
+            <a class="transport-link" href="${h.map}" target="_blank" rel="noreferrer">See on Maps ↗</a>
+          </article>
+        `).join('')}
+      </div>
     </section>
 
     <!-- CITY & MOUNTAIN TRANSPORT -->

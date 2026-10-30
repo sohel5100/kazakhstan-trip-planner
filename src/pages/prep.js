@@ -1,6 +1,6 @@
-import { pageHeader, icon } from '../components/shared.js?v=18';
-import { emergencyContacts } from '../data/emergency.js?v=18';
-import { handyPhrases, phraseCategories } from '../data/phrases.js?v=18';
+import { pageHeader, icon } from '../components/shared.js?v=31';
+import { emergencyContacts } from '../data/emergency.js?v=31';
+import { handyPhrases, phraseCategories } from '../data/phrases.js?v=31';
 
 const source = (href, label) => `<a class="source-link" href="${href}" target="_blank" rel="noreferrer">${label} <span aria-hidden="true">↗</span></a>`;
 

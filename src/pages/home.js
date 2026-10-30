@@ -1,9 +1,9 @@
-import { tripMeta, flights, itinerary } from '../data/trip.js?v=18';
-import { formatDate, icon } from '../components/shared.js?v=18';
-import { packingGroups, getPackingChecked } from './packing.js?v=18';
-import { getConverterState } from './expenses.js?v=18';
-import { convertCurrency } from '../data/currency.js?v=18';
-import { getWeather, weatherLabel } from '../data/weather.js?v=18';
+import { tripMeta, flights, itinerary } from '../data/trip.js?v=31';
+import { formatDate, icon } from '../components/shared.js?v=31';
+import { packingGroups, getPackingChecked } from './packing.js?v=31';
+import { getConverterState } from './expenses.js?v=31';
+import { convertCurrency } from '../data/currency.js?v=31';
+import { getWeather, weatherLabel } from '../data/weather.js?v=31';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -87,7 +87,7 @@ function statusCard(today) {
           <div class="next-up urgent">
             <span>Flight home</span>
             <strong>${ret.flightNumber} departs ALA T2 at ${ret.departureTime} AM</strong>
-            <small>Taxi from the hotel by 04:45 AM. Web check-in beforehand.</small>
+            <small>Leave the hotel at 04:00 AM. Check in online the day before.</small>
           </div>
         ` : upcoming ? `
           <div class="next-up">
@@ -158,7 +158,7 @@ export function renderHome() {
     <section class="quick-actions" aria-label="Quick actions">
       <a href="${hotelDirectionsUrl}" target="_blank" rel="noreferrer" class="quick-action">
         <span class="qa-icon" aria-hidden="true">🏨</span>
-        <span class="qa-text"><strong>Back to hotel</strong><small>Directions to Golden Square</small></span>
+        <span class="qa-text"><strong>Back to hotel</strong><small>Directions to the centre</small></span>
       </a>
       <a href="https://go.yandex/en_kz/" target="_blank" rel="noreferrer" class="quick-action">
         <span class="qa-icon" aria-hidden="true">🚕</span>
