@@ -3,6 +3,7 @@ import { formatDate, icon } from '../components/shared.js?v=18';
 import { packingGroups, getPackingChecked } from './packing.js?v=18';
 import { getConverterState } from './expenses.js?v=18';
 import { convertCurrency } from '../data/currency.js?v=18';
+import { getWeather, weatherLabel } from '../data/weather.js?v=18';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -217,17 +218,6 @@ export function renderHome() {
   `;
 }
 
-// Live weather (Open-Meteo, no API key): Almaty city + Shymbulak, 16-day forecast. Cached 15 min.
-const WEATHER_LABELS = [
-  [[0], '☀️', 'Clear'], [[1, 2], '🌤️', 'Partly cloudy'], [[3], '☁️', 'Cloudy'],
-  [[45, 48], '🌫️', 'Fog'], [[51, 53, 55, 56, 57], '🌦️', 'Drizzle'],
-  [[61, 63, 65, 66, 67, 80, 81, 82], '🌧️', 'Rain'], [[71, 73, 75, 77, 85, 86], '🌨️', 'Snow'],
-  [[95, 96, 99], '⛈️', 'Thunderstorm']
-];
-const weatherLabel = code => {
-  const [, emoji, label] = WEATHER_LABELS.find(([codes]) => codes.includes(code)) || [[], '🌡️', 'Unknown'];
-  return { emoji, label };
-};
 const deg = value => `${Math.round(value)}°`;
 const clock = iso => iso.slice(11, 16);
 
@@ -238,20 +228,10 @@ function whatToWear(feelsLike) {
   return 'Light layers; bring a jacket for evenings';
 }
 
-let weatherCache = null;
-
 export async function loadHomeWeather() {
   if (!document.querySelector('#home-weather')) return;
   try {
-    if (!weatherCache || Date.now() - weatherCache.at > 15 * 60 * 1000) {
-      const url = 'https://api.open-meteo.com/v1/forecast?latitude=43.24,43.128&longitude=76.95,77.081'
-        + '&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,relative_humidity_2m'
-        + '&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset'
-        + '&forecast_days=16&timezone=Asia%2FAlmaty';
-      const [city, mountain] = await (await fetch(url)).json();
-      weatherCache = { at: Date.now(), city, mountain };
-    }
-    const { city, mountain } = weatherCache;
+    const { city, mountain } = await getWeather();
     const el = document.querySelector('#home-weather');
     if (!el) return;
 

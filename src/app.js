@@ -11,8 +11,8 @@ import {
   setConverterState,
   toggleAddForm
 } from './pages/expenses.js?v=18';
-import { renderHome, loadHomeWeather } from './pages/home.js?v=25';
-import { renderItinerary } from './pages/itinerary.js?v=18';
+import { renderHome, loadHomeWeather } from './pages/home.js?v=26';
+import { renderItinerary, setSelectedDay, loadItineraryWeather } from './pages/itinerary.js?v=27';
 import { renderPlaces, setActiveCategory as setPlaceCategory } from './pages/places.js?v=18';
 import { renderTravel } from './pages/travel.js?v=21';
 import { renderPacking, packingGroups, packingStorageKey, getPackingChecked } from './pages/packing.js?v=18';
@@ -40,6 +40,10 @@ export function render(options = {}) {
   root.innerHTML = pages[page]();
 
   if (page === 'home') loadHomeWeather();
+  if (page === 'itinerary') loadItineraryWeather();
+
+  const activeTab = root.querySelector('.day-tab.active');
+  if (activeTab) activeTab.parentElement.scrollLeft = activeTab.offsetLeft - activeTab.parentElement.offsetLeft - 16;
 
   // Home day strip: bring today's card into view
   const todayChip = root.querySelector('.day-chip.is-today');
@@ -98,16 +102,23 @@ document.addEventListener('click', event => {
     return;
   }
 
-  // Home day chips / "today's plan": open the itinerary at that day
+  // Home day chips / "today's plan": open the itinerary on that day
   const gotoDay = event.target.closest('[data-goto-day]');
   if (gotoDay) {
     event.preventDefault();
-    const target = `day-${gotoDay.dataset.gotoDay}`;
-    if (currentPage() !== 'itinerary') {
-      history.pushState(null, '', '#itinerary');
-      render({ scroll: false });
-    }
-    document.getElementById(target)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setSelectedDay(gotoDay.dataset.gotoDay);
+    if (currentPage() !== 'itinerary') history.pushState(null, '', '#itinerary');
+    render({ scroll: true });
+    return;
+  }
+
+  // Itinerary day tabs and previous/next buttons
+  const dayTab = event.target.closest('[data-day-tab]');
+  if (dayTab) {
+    setSelectedDay(dayTab.dataset.dayTab);
+    render({ scroll: false });
+    const tabs = document.querySelector('.day-tabs');
+    if (tabs && tabs.getBoundingClientRect().top < 0) tabs.scrollIntoView({ block: 'start' });
     return;
   }
 

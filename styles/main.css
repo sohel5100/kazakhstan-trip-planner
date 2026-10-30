@@ -2890,3 +2890,349 @@ button {
 .quick-actions {
   grid-template-columns: 1fr 1fr;
 }
+
+/* ============================================================
+   Itinerary v2: day tabs, one day at a time, timeline
+   ============================================================ */
+.itin-top {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.itin-top .eyebrow {
+  margin: 0;
+}
+
+.itin-top h1 {
+  font: 500 34px/1.1 var(--serif);
+  margin: 0;
+}
+
+.itin-base {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 11px;
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.itin-base > span:first-child {
+  font-size: 20px;
+}
+
+.itin-base > span:nth-child(2) {
+  display: grid;
+  min-width: 0;
+}
+
+.itin-base small {
+  font-size: 11px;
+  color: #7a837d;
+}
+
+.itin-base strong {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itin-base b {
+  margin-left: auto;
+  font-size: 13px;
+  color: var(--green);
+  white-space: nowrap;
+}
+
+.day-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(64px, 1fr);
+  gap: 6px;
+  overflow-x: auto;
+  padding: 8px 0;
+  margin-bottom: 12px;
+  background: var(--paper);
+  scrollbar-width: none;
+}
+
+.day-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.day-tab {
+  display: grid;
+  justify-items: center;
+  gap: 1px;
+  padding: 8px 4px;
+  border-radius: 11px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.day-tab span {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #a08160;
+}
+
+.day-tab strong {
+  font: 600 20px/1.1 var(--serif);
+}
+
+.day-tab small {
+  font-size: 11px;
+  color: #7a837d;
+}
+
+.day-tab.is-today {
+  border-color: #9fb7a2;
+}
+
+.day-tab.active {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+
+.day-tab.active span,
+.day-tab.active small {
+  color: #d4ddd5;
+}
+
+.itin-day {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.itin-day-head {
+  padding: 16px 18px;
+  background: #f9f8f3;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  gap: 6px;
+}
+
+.itin-day-meta {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #7a837d;
+}
+
+.today-pill {
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--green);
+  border-radius: 20px;
+  padding: 2px 8px;
+}
+
+.itin-day-head h2 {
+  font: 500 23px/1.2 var(--serif);
+  margin: 0;
+}
+
+.itin-day-sub {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #5d6a60;
+}
+
+.itin-weather {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.itin-weather:empty {
+  display: none;
+}
+
+.wx-chip {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #e8f0f3;
+  color: #2f5566;
+}
+
+.wx-chip-mountain {
+  background: #2f4f4a;
+  color: #fff;
+}
+
+.wx-chip.muted-chip {
+  font-weight: 500;
+  background: #f1f1ec;
+  color: #7a837d;
+}
+
+.timeline-list {
+  list-style: none;
+  margin: 0;
+  padding: 16px 18px 6px;
+}
+
+.tl-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 16px 1fr;
+  gap: 12px;
+  padding-bottom: 18px;
+}
+
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 16px;
+  bottom: 0;
+  border-left: 2px solid #e6e9e2;
+}
+
+.tl-item:last-child::before {
+  display: none;
+}
+
+.tl-dot {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid #8baf91;
+  position: relative;
+  z-index: 1;
+}
+
+.tl-item.type-flight .tl-dot { border-color: #1a56a0; }
+.tl-item.type-food .tl-dot { border-color: #c27a12; }
+.tl-item.type-culture .tl-dot,
+.tl-item.type-sight .tl-dot { border-color: #7b3fbf; }
+.tl-item.type-nature .tl-dot,
+.tl-item.type-sunset .tl-dot { border-color: #2e8b57; }
+.tl-item.type-transfer .tl-dot,
+.tl-item.type-transport .tl-dot { border-color: #a0703a; }
+.tl-item.type-evening .tl-dot { border-color: #1a1a2e; }
+
+.tl-time {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.tl-time strong {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.tl-item.type-flight .event-tag { background: #e8f0fe; color: #1a56a0; }
+.tl-item.type-food .event-tag { background: #fef3e2; color: #8a5205; }
+.tl-item.type-culture .event-tag,
+.tl-item.type-sight .event-tag { background: #f3e8ff; color: #6b21a8; }
+.tl-item.type-nature .event-tag { background: #dcfce7; color: #166534; }
+.tl-item.type-transport .event-tag { background: #fee2e2; color: #991b1b; }
+.tl-item.type-evening .event-tag { background: #1a1a2e; color: #c4b5fd; }
+.tl-item.type-arrival .event-tag { background: #e7efe9; color: #315a4b; }
+.tl-item.type-transfer .event-tag { background: #f1ece2; color: #7a5b33; }
+
+.tl-body h3 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 4px 0 4px;
+  color: var(--ink);
+}
+
+.tl-body p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #5d6a60;
+}
+
+.day-pager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.day-pager-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  font-size: 18px;
+  color: var(--green);
+  cursor: pointer;
+  text-align: left;
+}
+
+.day-pager-btn span {
+  display: grid;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.day-pager-btn small {
+  font-size: 11px;
+  font-weight: 500;
+  color: #7a837d;
+}
+
+.day-pager-btn.next {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+/* Home weather: stack the forecast heading on phones */
+@media (max-width: 800px) {
+  .wx-forecast-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .itin-top h1 {
+    font-size: 30px;
+  }
+  .day-tabs {
+    grid-auto-columns: 62px;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .itin-day-head,
+  .timeline-list {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
