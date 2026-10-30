@@ -196,8 +196,8 @@ export function renderPrep() {
         <div class="prep-task">
           <span class="task-marker">03</span>
           <div>
-            <h3>Travel Health Insurance</h3>
-            <p>Comprehensive travel health insurance covering alpine excursions and emergency medical evacuation is strongly recommended for mountain visits (Medeu, Shymbulak 3,200m, and Charyn Canyon).</p>
+            <h3>Travel Health Insurance ✓ Done</h3>
+            <p>Bought with your flight booking and valid Nov 7–14. Keep the policy PDF offline on your phone; its emergency helpline is on the certificate.</p>
           </div>
         </div>
       </article>

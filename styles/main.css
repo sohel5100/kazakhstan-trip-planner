@@ -2452,3 +2452,38 @@ button {
     padding-right: 16px;
   }
 }
+
+/* Phone: transport cards stack (number + tag on top, then full-width text) */
+@media (max-width: 580px) {
+  .page-root .option-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "num tag"
+      "body body";
+    align-items: center;
+    gap: 8px 10px;
+    padding: 14px 16px;
+  }
+  .page-root .option-card .option-number {
+    grid-area: num;
+    font-size: 15px;
+  }
+  .page-root .option-card > div {
+    grid-area: body;
+  }
+  .page-root .option-card .tag {
+    grid-area: tag;
+    justify-self: end;
+    margin-left: 0;
+  }
+  .page-root .option-card h3 {
+    font-size: 17px;
+    line-height: 1.3;
+  }
+  .page-root .option-card p {
+    font-size: 13px;
+    line-height: 1.55;
+    margin-top: 6px;
+  }
+}
