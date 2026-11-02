@@ -1,11 +1,11 @@
-import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=31';
+import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=32';
 
 export {
   exchangeRates,
   currencySymbols,
   toINR,
   formatCurrency
-} from './currency.js?v=31';
+} from './currency.js?v=32';
 
 export const tripMeta = {
   title: 'Kazakhstan Adventure',
@@ -21,9 +21,9 @@ export const tripMeta = {
   visaStatus: '14-Day Visa-Free (Indian Passport)',
   currencyCode: 'KZT',
   currencySymbol: '₸',
-  stayAreaName: 'Central Almaty (Panfilov Park / Golden Square)',
-  stayAreaNote: 'Walkable centre near the metro, Green Bazaar, Panfilov Park and the Kok Tobe cable car.',
-  stayAreaCoordinates: '43.2389,76.9455',
+  stayAreaName: 'Airbnb near Dostyk Ave (Golden Square)',
+  stayAreaNote: 'Nov 7–12. Navat, Nedelka and Starbucks a short walk away; Kok Tobe cable car ~15–20 min walk south on Dostyk; Almaly and Abay metro ~10–15 min walk.',
+  stayAreaCoordinates: '43.2485,76.9585',
   flightRoute: 'Delhi (DEL) ↔ Almaty (ALA) direct (Air Astana)',
   flightDuration: '3h 30m – 3h 35m direct'
 };
@@ -126,16 +126,28 @@ export const defaultExpenses = [
     "note": "Bought with the flight booking; covers Nov 7–14"
   },
   {
+    "id": "exp-airbnb",
+    "title": "Airbnb near Dostyk Ave, Nov 7–12 (5 nights) — add price",
+    "amount": 0,
     "currency": "KZT",
+    "category": "stay",
     "status": "estimated",
     "paymentMethod": "Card",
-    "country": "Kazakhstan",
-    "id": "exp-almaty-hotel",
-    "title": "Hotel, 7 nights (e.g. Renion Almaty, ~37,600 ₸/night)",
-    "amount": 263200,
-    "category": "stay",
     "date": "2026-11-07",
-    "note": "Researched rate for 7–14 Nov, room only. Cheaper backup: Voyage (~26,000 ₸/night)"
+    "country": "Kazakhstan",
+    "note": "Request pending on Airbnb; replace with the total shown in your booking"
+  },
+  {
+    "id": "exp-stay-nov12",
+    "title": "Stay for Nov 12–13 (2 nights) — not booked yet",
+    "amount": 75200,
+    "currency": "KZT",
+    "category": "stay",
+    "status": "estimated",
+    "paymentMethod": "Card",
+    "date": "2026-11-12",
+    "country": "Kazakhstan",
+    "note": "Estimate at ~37,600 ₸/night (Renion); Voyage ~26,000 ₸, Hotel Kazakhstan ~50,300 ₸"
   },
   {
     "currency": "KZT",
@@ -429,8 +441,8 @@ export const itinerary = [
     "title": "Fly to Almaty & settle in",
     "subtitle": "Land at 15:10, sort out SIM, cash and taxi at the airport, then an easy first evening on Arbat with your first Kazakh dinner.",
     "weatherNote": "Sunset is 16:37, so it is dark by the time you reach the city. Evenings are around 0–3 °C: keep your jacket in your cabin bag.",
-    "bring": "Passport, printouts of return ticket + hotel booking, US$100–200 in clean notes (INR can’t be exchanged), Yandex Go + 2GIS + Google Translate (offline Russian) installed.",
-    "planB": "If immigration or the SIM queue is slow and you are tired, eat near the hotel and save Arbat for Sunday evening.",
+    "bring": "Passport, printouts of return ticket + hotel booking, US$100–200 in clean notes (INR can’t be exchanged), Yandex Go + 2GIS + Google Translate (offline Russian) installed. Airbnb check-in instructions saved offline.",
+    "planB": "If immigration or the SIM queue is slow and you are tired, just eat at Navat next door and save Arbat for another evening.",
     "events": [
       {
         "time": "09:30 AM",
@@ -464,24 +476,24 @@ export const itinerary = [
       {
         "time": "04:30 PM – 05:15 PM",
         "type": "transfer",
-        "title": "Yandex Go to your hotel",
+        "title": "Yandex Go to your Airbnb (near Dostyk Ave)",
         "description": "Order in the app and walk to the marked Yandex pickup zone outside Terminal 2. 25–45 min to the centre.",
         "cost": "Economy ~2,500–4,500 ₸ · Comfort ~3,500–6,000 ₸",
-        "tip": "Ignore drivers who approach you in arrivals (they ask 8,000–18,000 ₸ cash). Check the plate before getting in.",
+        "tip": "Ignore drivers who approach you in arrivals (they ask 8,000–18,000 ₸ cash). Check the plate before getting in. Message your Airbnb host your arrival time (~16:30) and get the check-in instructions before you fly.",
         "backup": "Official “Taxi Point” desk at exits A/B (fixed fare, ~9,000 ₸)."
       },
       {
         "time": "06:30 PM – 09:00 PM",
         "type": "evening",
-        "title": "Arbat stroll & first Kazakh dinner at Navat",
-        "description": "Walk the Zhibek Zholy pedestrian street (Arbat), then dinner at Navat chaikhana: plov, lagman, manti and baursak.",
-        "getThere": "Metro to Zhibek Zholy station (120 ₸, tap your Visa/Mastercard) or a short Yandex ride.",
+        "title": "First Kazakh dinner at Navat (walk from the Airbnb)",
+        "description": "Navat chaikhana on Dostyk Ave is a short walk from your Airbnb: plov, lagman, manti and baursak. Still fresh afterwards? Ride the metro from Almaly to Zhibek Zholy for the lit-up Arbat pedestrian street.",
+        "getThere": "Walk along Dostyk Ave. For Arbat: Almaly metro → Zhibek Zholy (120 ₸, tap your Visa/Mastercard).",
         "cost": "~5,000–8,000 ₸ per person",
         "tip": "Bills often include 10–15% service (“обслуживание”) — no extra tip needed then. Rakhat chocolate shop is at Zhibek Zholy × Kaldayakov.",
         "links": [
           {
-            "label": "Navat on Maps",
-            "href": "https://www.google.com/maps/search/?api=1&query=Navat+Abylai+Khan+58A+Almaty"
+            "label": "Navat Dostyk on Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=Navat+Dostyk+48+Almaty"
           }
         ]
       }
@@ -505,7 +517,7 @@ export const itinerary = [
         "time": "09:00 AM – 10:00 AM",
         "type": "breakfast",
         "title": "Brunch at Six Coffee+Wine",
-        "description": "Rated 5.0 on Yandex — reviewers call it the best coffee in Almaty. Flat white plus avocado-salmon toast.",
+        "description": "Rated 5.0 on Yandex — reviewers call it the best coffee in Almaty. Flat white plus avocado-salmon toast. Closer option: Nedelka, a few minutes from the Airbnb.",
         "cost": "~3,500–6,000 ₸",
         "links": [
           {
@@ -564,7 +576,7 @@ export const itinerary = [
         "type": "sunset",
         "title": "Kok Tobe cable car for sunset & city lights",
         "description": "Ride up about an hour before the 16:36 sunset, watch the mountains turn pink, stay for the city lights. Cafés and restaurants on top.",
-        "getThere": "Yandex to the lower station on Dostyk Ave by the Palace of the Republic (Dostyk 104B) — check the pin in 2GIS.",
+        "getThere": "From the Airbnb: ~15–20 min walk south along Dostyk Ave to the lower station by the Palace of the Republic (Dostyk 104B), or a short Yandex ride.",
         "tickets": "At the station: 10,000 ₸ return / 6,000 ₸ one way. Sun 10:00–22:00.",
         "tip": "Skip the mini-zoo. Taxis can’t drive up (25,000 ₸ car fee) — the park shuttle from Dostyk is 3,000 ₸ one way if the cable car is closed.",
         "backup": "Hazy or raining: swap with Thursday’s sunset and go to Akku café instead.",
@@ -597,7 +609,7 @@ export const itinerary = [
         "time": "08:30 AM – 09:15 AM",
         "type": "transfer",
         "title": "Yandex Go to the Medeu gondola station",
-        "description": "About 30–40 minutes up the Medeu valley.",
+        "description": "Straight up Dostyk Ave and the Medeu valley from your Airbnb — about 30–40 minutes.",
         "cost": "~2,000–4,000 ₸",
         "tip": "City buses (12/21) need an Onay card that you can only buy with cash, and foreign cards usually fail — a taxi is easier. The road beyond Medeu is closed to taxis until 30 Nov, so the gondola is the only way up."
       },
@@ -649,16 +661,16 @@ export const itinerary = [
     "title": "2-day tour, day 1: Charyn Canyon → yurt camp",
     "subtitle": "One 2-day tour instead of two day trips: Charyn is on the way to Kolsai, so you skip ~6–7 hours of repeated driving and get real time at each place.",
     "weatherNote": "Canyon around −2…+10 °C and windy; dark by ~16:30, so the walking happens around midday. Check the forecast on the evening of Nov 9 — the operator lets you reschedule.",
-    "bring": "Cash 15,000–20,000 ₸ for extras, power bank, warm layers, gloves, hat, grippy shoes, snacks, motion-sickness tablets, overnight bag and toiletries, passport.",
+    "bring": "Cash 15,000–20,000 ₸ for extras, power bank, warm layers, gloves, hat, grippy shoes, snacks, motion-sickness tablets, overnight bag and toiletries, passport. Leave your big luggage at the Airbnb (it’s yours for the night) and take only an overnight bag.",
     "planB": "Heavy snow forecast: switch to a 1-day Charyn-only trip and skip Kolsai, or start the 2-day tour on Nov 12 instead (it runs Nov 8, 10 and 12).",
     "events": [
       {
         "time": "07:00 AM",
         "type": "tour",
-        "title": "Hotel pickup: Kazakhstan Guided Tours (2 days)",
+        "title": "Pickup: Kazakhstan Guided Tours (2 days)",
         "description": "Rated 4.8 from 1,101 reviews. October reviewers: yurt “warm and cozy despite the cold”, heated showers, 2–3 h at each site.",
         "tickets": "Book on GetYourGuide (free cancellation up to 24 h). “Full package” ~₹15,239 incl. yurt with en-suite, meals and park fees.",
-        "tip": "Downsides from reviews: big groups (up to 32) and two bus breakdowns in the past year.",
+        "tip": "Downsides from reviews: big groups (up to 32) and two bus breakdowns in the past year. Pickup is from listed hotels — tell the operator you’re in an Airbnb near Dostyk Ave and confirm a meeting point (Hotel Kazakhstan on Dostyk is nearby).",
         "backup": "Prefer no overnight? Panda Travel 1-day all-in-one (₹5,619, 04:30 pickup, back ~20:30).",
         "links": [
           {
@@ -772,21 +784,29 @@ export const itinerary = [
     "date": "2026-11-12",
     "weekday": "Thursday",
     "city": "Almaty",
-    "title": "Slow day: brunch, Arasan baths, art & the spare slot",
-    "subtitle": "Recover after the tour. This is also the buffer day for anything the weather cancelled earlier.",
+    "title": "Airbnb checkout, Arasan baths, art & the spare slot",
+    "subtitle": "Check out of the Airbnb and move to your last 2 nights’ stay, then an easy indoor day. Also the buffer day for anything the weather cancelled.",
     "weatherNote": "Use this as your swap day: if Monday’s mountains were cloudy, go to Shymbulak today; if Sunday’s Kok Tobe was hazy, do its sunset today (open 10:00–22:00). Sunset 16:32.",
     "bring": "Flip-flops for the baths.",
     "planB": "Everything here is indoors, so it works in any weather.",
     "events": [
       {
-        "time": "10:00 AM – 11:30 AM",
+        "time": "10:30 AM – 11:30 AM",
+        "type": "checkin",
+        "icon": "🧳",
+        "title": "Check out of the Airbnb & move to your Nov 12–14 stay",
+        "description": "Your Airbnb is booked Nov 7–12. The nights of Nov 12 and 13 are not booked yet — a hotel with a 24/7 desk makes the 04:00 airport run on Nov 14 easy.",
+        "tip": "Check the checkout time in your Airbnb listing. Hotel Kazakhstan is in the same area; Renion and Voyage are better value near Panfilov Park."
+      },
+      {
+        "time": "11:30 AM – 12:30 PM",
         "type": "breakfast",
         "title": "Brunch at JumpinGoat or ProCoffee",
         "description": "JumpinGoat (Abay 35/37): specialty coffee and syrniki, order at the counter. ProCoffee (Dostyk 87A): sofas, big breakfasts (English breakfast 4,100 ₸).",
         "cost": "~3,000–5,000 ₸"
       },
       {
-        "time": "12:00 PM – 02:00 PM",
+        "time": "01:00 PM – 03:00 PM",
         "type": "spa",
         "title": "Arasan Wellness & SPA (1982 Soviet bathhouse)",
         "description": "Russian banya, hammam and plunge pools — reviewers call it the best way to warm up in Almaty. Separate men’s and women’s sections.",
@@ -799,7 +819,7 @@ export const itinerary = [
         ]
       },
       {
-        "time": "02:30 PM – 04:30 PM",
+        "time": "03:30 PM – 05:00 PM",
         "type": "museum",
         "icon": "🖼️",
         "title": "Almaty Museum of Arts (ALMA) or Kasteev Museum",
@@ -813,7 +833,7 @@ export const itinerary = [
         ]
       },
       {
-        "time": "05:00 PM – 06:30 PM",
+        "time": "05:15 PM – 06:30 PM",
         "type": "cafe",
         "icon": "☕",
         "title": "Akku — heritage Soviet-modernist café",
@@ -890,8 +910,8 @@ export const itinerary = [
         "time": "05:30 PM – 06:30 PM",
         "type": "checkin",
         "icon": "✅",
-        "title": "Online check-in, pack & settle the hotel bill",
-        "description": "Check in for KC907 online. Pay the hotel tonight, ask reception for a breakfast box, and book a backup taxi for 04:00 in writing."
+        "title": "Online check-in, pack & prepare for 04:00",
+        "description": "Check in for KC907 online. If you’re in a hotel: settle the bill tonight, ask for a breakfast box and have reception book a backup taxi for 04:00 in writing."
       },
       {
         "time": "07:00 PM – 09:00 PM",
@@ -920,7 +940,7 @@ export const itinerary = [
     "subtitle": "Leave the hotel at 04:00 for the 07:05 flight from Terminal 2. Back in Delhi before lunch.",
     "weatherNote": "The coldest morning of the trip (around −3…−8 °C). Wear your warm jacket to the airport.",
     "bring": "Passport, boarding pass on your phone, warm jacket.",
-    "planB": "If Yandex Go shows no cars, take the taxi reception booked last night.",
+    "planB": "If Yandex Go shows no cars, use the backup taxi you arranged last night.",
     "events": [
       {
         "time": "03:30 AM",

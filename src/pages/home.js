@@ -1,9 +1,9 @@
-import { tripMeta, flights, itinerary } from '../data/trip.js?v=31';
-import { formatDate, icon } from '../components/shared.js?v=31';
-import { packingGroups, getPackingChecked } from './packing.js?v=31';
-import { getConverterState } from './expenses.js?v=31';
-import { convertCurrency } from '../data/currency.js?v=31';
-import { getWeather, weatherLabel } from '../data/weather.js?v=31';
+import { tripMeta, flights, itinerary } from '../data/trip.js?v=32';
+import { formatDate, icon } from '../components/shared.js?v=32';
+import { packingGroups, getPackingChecked } from './packing.js?v=32';
+import { getConverterState } from './expenses.js?v=32';
+import { convertCurrency } from '../data/currency.js?v=32';
+import { getWeather, weatherLabel } from '../data/weather.js?v=32';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -69,6 +69,10 @@ function statusCard(today) {
           <a href="#travel" data-page="travel" class="status-todo-item ${changeDeadlinePassed ? '' : 'warn'}">
             <span>Ticket changes</span>
             <strong>${changeDeadlinePassed ? 'No longer allowed' : 'Until 7 Nov, 08:10 AM'}</strong>
+          </a>
+          <a href="#travel" data-page="travel" class="status-todo-item warn">
+            <span>Stay Nov 12–14</span>
+            <strong>Not booked yet</strong>
           </a>
         </div>
       </section>
@@ -158,7 +162,7 @@ export function renderHome() {
     <section class="quick-actions" aria-label="Quick actions">
       <a href="${hotelDirectionsUrl}" target="_blank" rel="noreferrer" class="quick-action">
         <span class="qa-icon" aria-hidden="true">🏨</span>
-        <span class="qa-text"><strong>Back to hotel</strong><small>Directions to the centre</small></span>
+        <span class="qa-text"><strong>Back to Airbnb</strong><small>Directions to Dostyk Ave (Nov 7–12)</small></span>
       </a>
       <a href="https://go.yandex/en_kz/" target="_blank" rel="noreferrer" class="quick-action">
         <span class="qa-icon" aria-hidden="true">🚕</span>

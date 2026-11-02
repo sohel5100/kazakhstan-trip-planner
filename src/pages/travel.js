@@ -1,6 +1,6 @@
-import { flights, tripMeta } from '../data/trip.js?v=31';
-import { pageHeader, icon } from '../components/shared.js?v=31';
-import { hotels } from '../data/guide.js?v=31';
+import { flights, tripMeta } from '../data/trip.js?v=32';
+import { pageHeader, icon } from '../components/shared.js?v=32';
+import { hotels } from '../data/guide.js?v=32';
 
 // Getting around Almaty: key facts first, so they're easy to scan on a phone
 const transportGuide = [
@@ -223,9 +223,9 @@ export function renderTravel() {
     <section class="travel-section" style="margin-top:32px;">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">WHERE TO STAY · 7 NIGHTS</p>
-          <h2>🏨 Hotels worth booking</h2>
-          <p class="muted">Best value is the Panfilov / Green Bazaar side of the centre; Dostyk hotels cost 47,000–77,000 ₸ a night.</p>
+          <p class="eyebrow">WHERE TO STAY</p>
+          <h2>🏨 Your stays</h2>
+          <p class="muted">Nov 7–12: your Airbnb near Dostyk Ave (request pending). <strong>Nov 12–14 (2 nights) is not booked yet</strong> — a hotel with a 24/7 desk makes the 04:00 airport run easy. Options with real reviews:</p>
         </div>
       </div>
       <div class="hotel-list">

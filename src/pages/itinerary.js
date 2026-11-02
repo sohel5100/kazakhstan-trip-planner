@@ -1,7 +1,7 @@
-import { itinerary, places, tripMeta } from '../data/trip.js?v=31';
-import { getItineraryPlaceIds } from '../data/itinerary-state.js?v=31';
-import { icon, formatDate } from '../components/shared.js?v=31';
-import { getWeather, forecastFor } from '../data/weather.js?v=31';
+import { itinerary, places, tripMeta } from '../data/trip.js?v=32';
+import { getItineraryPlaceIds } from '../data/itinerary-state.js?v=32';
+import { icon, formatDate } from '../components/shared.js?v=32';
+import { getWeather, forecastFor } from '../data/weather.js?v=32';
 
 // Which day is open. Defaults to today during the trip, otherwise Day 1.
 let selectedDay = null;
@@ -63,7 +63,7 @@ export function renderItinerary() {
   const dayPlaces = (day.placeIds || []).map(id => places.find(p => p.id === id)).filter(Boolean);
   const prev = itinerary.find(d => d.dayNumber === day.dayNumber - 1);
   const next = itinerary.find(d => d.dayNumber === day.dayNumber + 1);
-  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(tripMeta.stayAreaName)}`;
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${tripMeta.stayAreaCoordinates}`;
 
   return `
     <div class="itin-top">
@@ -71,7 +71,7 @@ export function renderItinerary() {
       <h1>Itinerary</h1>
       <a class="itin-base" href="${mapsUrl}" target="_blank" rel="noreferrer">
         <span aria-hidden="true">🏨</span>
-        <span><small>Staying at</small><strong>${tripMeta.stayAreaName}</strong></span>
+        <span><small>Staying at · Nov 7–12</small><strong>${tripMeta.stayAreaName}</strong></span>
         <b>Map ↗</b>
       </a>
     </div>
