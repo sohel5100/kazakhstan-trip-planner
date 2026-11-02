@@ -128,3 +128,67 @@ export const hotels = [
     map: maps('Hotel Kazakhstan Dostyk 52 Almaty')
   }
 ];
+
+// Bookings for the Home status list. No PNRs, IDs or names here — the site is public;
+// each button opens the official page where you enter your own reference.
+export const bookings = [
+  {
+    emoji: '🚆',
+    name: 'Train: Bhopal → Delhi (Rajdhani 22691, 3A)',
+    when: 'Fri 6 Nov, 21:05 → Sat 7 Nov, 05:30 (Hazrat Nizamuddin)',
+    status: 'Waitlisted (RLWL) — check until the chart is prepared',
+    tone: 'warn',
+    actions: [
+      { label: 'Check PNR status', href: 'https://www.indianrail.gov.in/enquiry/PNR/PnrEnquiry.html?locale=en' }
+    ]
+  },
+  {
+    emoji: '✈️',
+    name: 'Flights: Air Astana KC908 / KC907',
+    when: 'Sat 7 Nov DEL 12:10 → ALA · Sat 14 Nov ALA 07:05 → DEL',
+    status: 'Confirmed · check in online 24 h before',
+    tone: 'ok',
+    actions: [
+      { label: 'Air Astana (manage / check-in)', href: 'https://airastana.com/ind-en' }
+    ]
+  },
+  {
+    emoji: '🏠',
+    name: 'Airbnb near Dostyk Ave',
+    when: 'Sat 7 Nov → Thu 12 Nov (5 nights)',
+    status: 'Confirmed · ₹23,000 paid',
+    tone: 'ok',
+    actions: [
+      { label: 'Open Airbnb trips', href: 'https://www.airbnb.com/trips/v1' }
+    ]
+  },
+  {
+    emoji: '🚌',
+    name: 'JoinMe 2-day tour: Kaindy, Kolsai & Charyn',
+    when: 'Tue 10 → Wed 11 Nov · meet 05:30 at Circus car park, Abay 50',
+    status: 'Confirm your date & seat with JoinMe',
+    tone: 'warn',
+    actions: [
+      { label: 'Tour page', href: 'https://www.joinme.kz/en/tours/almaty-region/group-tours/kaindy-kolsai-2-days-early-start' },
+      { label: 'WhatsApp JoinMe', href: 'https://wa.me/77772999767' }
+    ]
+  },
+  {
+    emoji: '🏨',
+    name: 'Stay for Nov 12–14 (2 nights)',
+    when: 'Thu 12 Nov → Sat 14 Nov (leave 04:00 for the airport)',
+    status: 'Not booked yet',
+    tone: 'bad',
+    actions: [
+      { label: 'See hotel options', href: '#travel' }
+    ]
+  },
+  {
+    emoji: '🛡️',
+    name: 'Travel insurance',
+    when: 'Valid 7–14 Nov',
+    status: 'Paid',
+    tone: 'ok',
+    actions: []
+  }
+];

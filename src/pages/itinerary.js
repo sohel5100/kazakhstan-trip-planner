@@ -1,7 +1,7 @@
-import { itinerary, places, tripMeta } from '../data/trip.js?v=32';
-import { getItineraryPlaceIds } from '../data/itinerary-state.js?v=32';
-import { icon, formatDate } from '../components/shared.js?v=32';
-import { getWeather, forecastFor } from '../data/weather.js?v=32';
+import { itinerary, places, tripMeta } from '../data/trip.js?v=34';
+import { getItineraryPlaceIds } from '../data/itinerary-state.js?v=34';
+import { icon, formatDate } from '../components/shared.js?v=34';
+import { getWeather, forecastFor } from '../data/weather.js?v=34';
 
 // Which day is open. Defaults to today during the trip, otherwise Day 1.
 let selectedDay = null;
@@ -115,6 +115,7 @@ export function renderItinerary() {
                 <span class="event-tag">${ev.type}</span>
               </div>
               <h3>${ev.title}</h3>
+              ${ev.image ? `<img class="tl-photo" src="${ev.image}" alt="${ev.title}" loading="lazy" />` : ''}
               ${ev.description ? `<p>${ev.description}</p>` : ''}
               ${eventDetails(ev)}
             </div>

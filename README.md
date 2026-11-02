@@ -37,3 +37,12 @@ Place photos are from [Wikimedia Commons](https://commons.wikimedia.org/) under 
 - Charyn Canyon: `Charyn Canyon, Kazakhstan 03.jpg`
 - Kolsai Lakes: `First Kolsay lake 2023.jpg`
 - Zhibek Zholy: `Алматы, троллейбус на Жибек Жолы у базара (1).jpg`
+- Lake Kaindy: `Kaindy lake south-east Kazakhstan.jpg`
+- Shymbulak: `Shymbulak, Almaty (P1180181).jpg`
+- Talgar Pass: `Talgar Pass, Shymbulak, Almaty (P1180195-Pano).jpg`
+- Museum of Folk Instruments: `Museum of Folk Instruments, Almaty.jpg`
+- Black Canyon: `KZ Charyn Black Canyon.jpg`
+- Saty: `Saty KAZ 01.jpg`
+- Almaty Airport T2: `Terminal 2 Almaty International Airport.jpg`
+- Medeu: `Medeu dam.jpg`
+- Central State Museum: `Kazakhstan physical map in Almaty Central State Museum of Kazakhstan.jpg`

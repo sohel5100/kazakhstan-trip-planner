@@ -3515,3 +3515,132 @@ button {
     padding-right: 16px;
   }
 }
+
+/* Itinerary: place photo on key stops */
+.tl-photo {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center 40%;
+  border-radius: 12px;
+  margin: 8px 0 8px;
+  background: #e9ece6;
+}
+
+@media (min-width: 801px) {
+  .tl-photo {
+    height: 240px;
+  }
+}
+
+/* Home: bookings list */
+.bookings-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.bookings-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.bookings-head h2 {
+  font: 500 20px var(--serif);
+  margin: 0;
+}
+
+.bookings-head small {
+  font-size: 12px;
+  color: #7a837d;
+}
+
+.bookings-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.booking {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 11px;
+  background: #f8f7f3;
+  border-left: 4px solid #9fb7a2;
+}
+
+.booking.tone-warn {
+  border-left-color: #d9a25b;
+}
+
+.booking.tone-bad {
+  border-left-color: #c0392b;
+}
+
+.booking-emoji {
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.booking-body {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.booking-body strong {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.booking-body small {
+  font-size: 12px;
+  color: #7a837d;
+}
+
+.booking-status {
+  justify-self: start;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 20px;
+  background: #e7efe9;
+  color: #315a4b;
+}
+
+.tone-warn .booking-status {
+  background: #f8ead6;
+  color: #7a4f17;
+}
+
+.tone-bad .booking-status {
+  background: #fdecea;
+  color: #a5281c;
+}
+
+.booking-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.booking-actions a {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: #eaf0e8;
+  color: var(--green);
+}

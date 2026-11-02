@@ -1,11 +1,11 @@
-import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=32';
+import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=34';
 
 export {
   exchangeRates,
   currencySymbols,
   toINR,
   formatCurrency
-} from './currency.js?v=32';
+} from './currency.js?v=34';
 
 export const tripMeta = {
   title: 'Kazakhstan Adventure',
@@ -102,6 +102,18 @@ export const expenseCategories = [
 
 export const defaultExpenses = [
   {
+    "id": "exp-train-bpl-del",
+    "title": "Train: Rajdhani 22691 Bhopal → Delhi (3A)",
+    "amount": 2614,
+    "currency": "INR",
+    "category": "flights",
+    "status": "paid",
+    "paymentMethod": "Card",
+    "date": "2026-11-06",
+    "country": "India",
+    "note": "Fri 6 Nov 21:05 → Sat 7 Nov 05:30 (Nizamuddin); waitlisted at booking"
+  },
+  {
     "currency": "INR",
     "status": "paid",
     "paymentMethod": "Card",
@@ -112,6 +124,18 @@ export const defaultExpenses = [
     "category": "flights",
     "date": "2026-10-30",
     "note": "Direct Air Astana KC908 (DEL→ALA, 12:10) & KC907 (ALA→DEL, 07:05) · fare, taxes & booking fee (₹48,043 paid in total incl. insurance)"
+  },
+  {
+    "id": "exp-delhi-cab",
+    "title": "Cab: Nizamuddin → Delhi Airport T3",
+    "amount": 600,
+    "currency": "INR",
+    "category": "transport",
+    "status": "estimated",
+    "paymentMethod": "Card",
+    "date": "2026-11-07",
+    "country": "India",
+    "note": "Uber/Ola ~₹400–700"
   },
   {
     "currency": "INR",
@@ -127,15 +151,15 @@ export const defaultExpenses = [
   },
   {
     "id": "exp-airbnb",
-    "title": "Airbnb near Dostyk Ave, Nov 7–12 (5 nights) — add price",
-    "amount": 0,
-    "currency": "KZT",
+    "title": "Airbnb near Dostyk Ave, Nov 7–12 (5 nights)",
+    "amount": 23000,
+    "currency": "INR",
     "category": "stay",
-    "status": "estimated",
+    "status": "paid",
     "paymentMethod": "Card",
     "date": "2026-11-07",
-    "country": "Kazakhstan",
-    "note": "Request pending on Airbnb; replace with the total shown in your booking"
+    "country": "India",
+    "note": "Paid on Airbnb"
   },
   {
     "id": "exp-stay-nov12",
@@ -222,16 +246,16 @@ export const defaultExpenses = [
     "note": "~2,000–4,000 ₸ each way"
   },
   {
-    "currency": "INR",
+    "currency": "KZT",
     "status": "estimated",
     "paymentMethod": "Card",
     "country": "Kazakhstan",
     "id": "exp-charyn-kolsai-tour",
-    "title": "2-day tour: Charyn + Kolsai + Kaindy (Kazakhstan Guided Tours, full package)",
-    "amount": 15239,
+    "title": "JoinMe 2-day tour: Kaindy, Kolsai, Black Canyon & Charyn",
+    "amount": 30000,
     "category": "activities",
     "date": "2026-11-10",
-    "note": "GetYourGuide; yurt with en-suite, meals and park fees included"
+    "note": "From 30,000 ₸ per person: bus, guest house, meals, UAZ, eco fees, guide"
   },
   {
     "currency": "KZT",
@@ -239,8 +263,8 @@ export const defaultExpenses = [
     "paymentMethod": "Cash",
     "country": "Kazakhstan",
     "id": "exp-tour-cash",
-    "title": "Tour cash extras (Kaindy UAZ, lunch, eco-taxi, toilets)",
-    "amount": 15000,
+    "title": "Tour cash (snacks, optional horses, eco-taxi)",
+    "amount": 10000,
     "category": "activities",
     "date": "2026-11-11",
     "note": "Carry tenge"
@@ -437,15 +461,45 @@ export const itinerary = [
     "dayNumber": 1,
     "date": "2026-11-07",
     "weekday": "Saturday",
-    "city": "Delhi → Almaty",
-    "title": "Fly to Almaty & settle in",
-    "subtitle": "Land at 15:10, sort out SIM, cash and taxi at the airport, then an easy first evening on Arbat with your first Kazakh dinner.",
+    "city": "Bhopal → Delhi → Almaty",
+    "title": "Train to Delhi, fly to Almaty & settle in",
+    "subtitle": "Overnight Rajdhani from Bhopal into Hazrat Nizamuddin at 05:30, cab to Delhi T3, fly at 12:10 and land in Almaty at 15:10.",
     "weatherNote": "Sunset is 16:37, so it is dark by the time you reach the city. Evenings are around 0–3 °C: keep your jacket in your cabin bag.",
-    "bring": "Passport, printouts of return ticket + hotel booking, US$100–200 in clean notes (INR can’t be exchanged), Yandex Go + 2GIS + Google Translate (offline Russian) installed. Airbnb check-in instructions saved offline.",
-    "planB": "If immigration or the SIM queue is slow and you are tired, just eat at Navat next door and save Arbat for another evening.",
+    "bring": "Passport, printouts of return ticket + Airbnb booking, US$100–200 in clean notes (INR can’t be exchanged in Kazakhstan), Yandex Go + 2GIS + Google Translate (offline Russian), Airbnb check-in instructions saved offline.",
+    "planB": "Train still waitlisted when the chart is prepared (about 4 h before departure)? A waitlisted e-ticket is cancelled automatically and you can’t board. Have a backup ready for Fri 6 Nov: a daytime train or an evening flight to Delhi, then a night near the airport. Uber’s Alternate Travel Plan refunds 2× the fare for train. If Almaty immigration or the SIM queue is slow, eat at Navat next door.",
     "events": [
       {
-        "time": "09:30 AM",
+        "time": "Fri 6 Nov · 09:05 PM",
+        "type": "train",
+        "icon": "🚆",
+        "title": "Rajdhani Express 22691: Bhopal Jn → Hazrat Nizamuddin",
+        "description": "Overnight in 3A (8 h 25 min). Your ticket is waitlisted (RLWL) — check the status until the chart is prepared, about 4 hours before departure.",
+        "tip": "RLWL (remote-location waitlist) tickets confirm less often than regular waitlist. Keep the backup in Plan B ready.",
+        "links": [
+          {
+            "label": "Check PNR status",
+            "href": "https://www.indianrail.gov.in/enquiry/PNR/PnrEnquiry.html?locale=en"
+          }
+        ]
+      },
+      {
+        "time": "05:30 AM",
+        "type": "arrival",
+        "icon": "🚉",
+        "title": "Arrive Delhi Hazrat Nizamuddin",
+        "description": "Freshen up and have breakfast at or near the station. You have time: the flight is at 12:10.",
+        "tip": "Rajdhani trains can run late; even 2 h late still leaves enough time for the airport."
+      },
+      {
+        "time": "07:30 AM – 08:30 AM",
+        "type": "transfer",
+        "title": "Cab to Delhi Airport Terminal 3",
+        "description": "About 45–60 minutes from Nizamuddin depending on traffic.",
+        "cost": "Uber/Ola ~₹400–700",
+        "tip": "Aim to reach T3 by about 09:00 — 3 hours before an international flight."
+      },
+      {
+        "time": "09:00 AM",
         "type": "flight",
         "title": "Check-in at Delhi IGI Airport (T3)",
         "description": "Check in and clear emigration at Terminal 3 for Air Astana KC908.",
@@ -462,7 +516,8 @@ export const itinerary = [
         "type": "arrival",
         "title": "Immigration at ALA Terminal 2",
         "description": "Indian passports get 14 days visa-free. No registration needed for a 7-night stay — the hotel handles it.",
-        "tip": "Keep your passport on you all trip: police don’t accept photocopies."
+        "tip": "Keep your passport on you all trip: police don’t accept photocopies.",
+        "image": "./assets/places/almaty-airport.jpg"
       },
       {
         "time": "04:00 PM – 04:30 PM",
@@ -533,7 +588,8 @@ export const itinerary = [
         "description": "The 1907 wooden cathedral built without nails, in the middle of Panfilov Park. Free.",
         "getThere": "Yandex ~800–1,500 ₸, or metro to Zhibek Zholy then a 10-min walk.",
         "tickets": "Free · open 07:00–18:00",
-        "tip": "Women cover their heads; no flash photography inside."
+        "tip": "Women cover their heads; no flash photography inside.",
+        "image": "./assets/places/zenkov-cathedral.jpg"
       },
       {
         "time": "11:15 AM – 12:00 PM",
@@ -541,7 +597,8 @@ export const itinerary = [
         "icon": "🎻",
         "title": "Museum of Kazakh Folk Musical Instruments",
         "description": "A Lonely Planet top pick in a 1908 wooden building inside Panfilov Park. 30–45 minutes.",
-        "tickets": "~1,500 ₸ at the door · 10:00–19:00 · closed Mondays"
+        "tickets": "~1,500 ₸ at the door · 10:00–19:00 · closed Mondays",
+        "image": "./assets/places/music-museum.jpg"
       },
       {
         "time": "12:15 PM – 01:45 PM",
@@ -556,7 +613,8 @@ export const itinerary = [
             "label": "Green Bazaar on Maps",
             "href": "https://www.google.com/maps/search/?api=1&query=Green+Bazaar+Zhibek+Zholy+53+Almaty"
           }
-        ]
+        ],
+        "image": "./assets/places/green-bazaar.jpg"
       },
       {
         "time": "02:00 PM – 03:00 PM",
@@ -585,7 +643,8 @@ export const itinerary = [
             "label": "Kok Tobe station",
             "href": "https://www.google.com/maps/search/?api=1&query=Kok+Tobe+cable+car+lower+station+Dostyk+Almaty"
           }
-        ]
+        ],
+        "image": "./assets/places/kok-tobe.jpg"
       }
     ],
     "placeIds": [
@@ -617,7 +676,8 @@ export const itinerary = [
         "time": "09:15 AM – 09:45 AM",
         "type": "sight",
         "title": "Medeu dam viewpoint",
-        "description": "The famous ice rink is closed for reconstruction until about 2027, but the dam viewpoint is open. The ~842-step staircase is optional — skip it if icy."
+        "description": "The famous ice rink is closed for reconstruction until about 2027, but the dam viewpoint is open. The ~842-step staircase is optional — skip it if icy.",
+        "image": "./assets/places/medeu.jpg"
       },
       {
         "time": "09:45 AM – 02:30 PM",
@@ -625,7 +685,8 @@ export const itinerary = [
         "title": "Gondolas: Medeu → Shymbulak → Talgar Pass",
         "description": "Medeu to Shymbulak base (2,260 m), then Combi-1 and Combi-2 to Talgar Pass at 3,200 m. Glacier views, often sunny above the smog. Lunch at the Shymbulak base cafés.",
         "tickets": "Medeu ticket office or shymbulak.com: 12,000 ₸ return to Talgar Pass · 7,000 ₸ one way · 14,000 ₸ glass “360°” cabin.",
-        "tip": "Lifts reopened after maintenance on 1 Nov; no skiing until late November. If wind stops the top lifts, stay at Shymbulak base."
+        "tip": "Lifts reopened after maintenance on 1 Nov; no skiing until late November. If wind stops the top lifts, stay at Shymbulak base.",
+        "image": "./assets/places/talgar-pass.jpg"
       },
       {
         "time": "03:00 PM – 04:00 PM",
@@ -657,126 +718,123 @@ export const itinerary = [
     "dayNumber": 4,
     "date": "2026-11-10",
     "weekday": "Tuesday",
-    "city": "Charyn Canyon → Saty",
-    "title": "2-day tour, day 1: Charyn Canyon → yurt camp",
-    "subtitle": "One 2-day tour instead of two day trips: Charyn is on the way to Kolsai, so you skip ~6–7 hours of repeated driving and get real time at each place.",
-    "weatherNote": "Canyon around −2…+10 °C and windy; dark by ~16:30, so the walking happens around midday. Check the forecast on the evening of Nov 9 — the operator lets you reschedule.",
-    "bring": "Cash 15,000–20,000 ₸ for extras, power bank, warm layers, gloves, hat, grippy shoes, snacks, motion-sickness tablets, overnight bag and toiletries, passport. Leave your big luggage at the Airbnb (it’s yours for the night) and take only an overnight bag.",
-    "planB": "Heavy snow forecast: switch to a 1-day Charyn-only trip and skip Kolsai, or start the 2-day tour on Nov 12 instead (it runs Nov 8, 10 and 12).",
+    "city": "Kaindy & Kolsai → Saty",
+    "title": "JoinMe 2-day tour, day 1: Kaindy & Kolsai lakes",
+    "subtitle": "Early bus from Almaty to the mountain lakes: Kaindy’s sunken forest, lunch in Saty, then Kolsai. Night in a Saty guest house with a bonfire evening.",
+    "weatherNote": "Lakes start icing in November and walking on the ice is banned. Kaindy is a 2.5 km walk from the parking — trails can be snowy. Dark by ~16:30, so the walking happens before mid-afternoon.",
+    "bring": "Passport/ID, cash in tenge for snacks and optional horses or boats, power bank, warm layers, gloves, hat, grippy shoes, motion-sickness tablets for the UAZ, small overnight bag. Leave your big luggage at the Airbnb.",
+    "planB": "If the Kaindy road or trail is closed, the group spends longer at Kolsai and in Saty. Heavy snow forecast? Ask JoinMe on WhatsApp (+7 777 299 97 67) about moving dates.",
     "events": [
       {
-        "time": "07:00 AM",
-        "type": "tour",
-        "title": "Pickup: Kazakhstan Guided Tours (2 days)",
-        "description": "Rated 4.8 from 1,101 reviews. October reviewers: yurt “warm and cozy despite the cold”, heated showers, 2–3 h at each site.",
-        "tickets": "Book on GetYourGuide (free cancellation up to 24 h). “Full package” ~₹15,239 incl. yurt with en-suite, meals and park fees.",
-        "tip": "Downsides from reviews: big groups (up to 32) and two bus breakdowns in the past year. Pickup is from listed hotels — tell the operator you’re in an Airbnb near Dostyk Ave and confirm a meeting point (Hotel Kazakhstan on Dostyk is nearby).",
-        "backup": "Prefer no overnight? Panda Travel 1-day all-in-one (₹5,619, 04:30 pickup, back ~20:30).",
+        "time": "05:30 AM",
+        "type": "transfer",
+        "title": "Taxi to the meeting point: Circus car park, Abay 50",
+        "description": "About 10 minutes from the Airbnb by Yandex Go. Gathering 05:30–06:00; the bus leaves at 06:20 sharp — “no latecomers”.",
+        "cost": "~1,000–1,500 ₸",
         "links": [
           {
-            "label": "Book 2-day tour",
-            "href": "https://www.getyourguide.com/almaty-city-l1414/almaty-kolsai-kaindy-lakes-charyn-canyons-2-day-tour-t489855/"
-          },
-          {
-            "label": "1-day alternative",
-            "href": "https://www.getyourguide.com/almaty-city-l1414/almaty-charyn-canyon-kolsay-and-kaindy-lakes-day-trip-t565634/"
+            "label": "Meeting point",
+            "href": "https://www.google.com/maps/search/?api=1&query=Almaty+State+Circus+Abay+50"
           }
         ]
       },
       {
-        "time": "07:00 AM – 11:00 AM",
-        "type": "transfer",
-        "icon": "🚐",
-        "title": "Drive east across the steppe (~200 km)",
-        "description": "Toilet and snack stops on the way."
+        "time": "06:20 AM – 10:30 AM",
+        "type": "tour",
+        "title": "Bus to Saty village",
+        "description": "JoinMe group tour (up to 40 people, guide in English/Russian/Kazakh). Snack and toilet stops on the way.",
+        "tickets": "Booked on joinme.kz: from 30,000 ₸ per person — bus, guest house, all meals, UAZ to Kaindy, eco fees, guide and evening programme included.",
+        "links": [
+          {
+            "label": "Tour page",
+            "href": "https://www.joinme.kz/en/tours/almaty-region/group-tours/kaindy-kolsai-2-days-early-start"
+          }
+        ]
       },
       {
-        "time": "11:00 AM – 02:00 PM",
-        "type": "hike",
-        "title": "Valley of Castles walk to the Charyn river",
-        "description": "Walk down between the red rock towers to the river (about 30 min each way), or take the park eco-taxi.",
-        "cost": "Eco-taxi 500–1,800 ₸ (optional, cash)",
-        "tip": "Windy and slippery in places — keep to the path."
+        "time": "10:30 AM – 01:00 PM",
+        "type": "nature",
+        "icon": "🌲",
+        "title": "Lake Kaindy — the sunken forest",
+        "description": "UAZ 4x4 from Saty to the Kaindy parking (included), then a 2.5 km walk to the lake with its drowned spruce trunks.",
+        "tip": "Sit near the front of the UAZ — the road is very bumpy. Walking is safer than the optional horses.",
+        "image": "./assets/places/kaindy.jpg"
       },
       {
-        "time": "02:00 PM – 03:00 PM",
+        "time": "01:30 PM – 02:30 PM",
         "type": "food",
-        "title": "Lunch near the canyon",
-        "description": "Simple lunch stop; reviewers say it can be slow.",
-        "cost": "~5,000 ₸ cash if not included"
+        "title": "Lunch in Saty",
+        "description": "Included in the tour.",
+        "image": "./assets/places/saty.jpg"
       },
       {
-        "time": "03:30 PM – 06:00 PM",
-        "type": "transfer",
-        "icon": "🚐",
-        "title": "Drive to Saty and the yurt camp"
+        "time": "02:30 PM – 05:00 PM",
+        "type": "nature",
+        "icon": "🏞️",
+        "title": "Kolsai Lake 1",
+        "description": "Turquoise lake under snowy spruce slopes. Boats and catamarans are summer-only.",
+        "image": "./assets/places/kolsai-kaindy-lakes.jpg"
       },
       {
-        "time": "07:00 PM",
+        "time": "06:30 PM – 10:00 PM",
         "type": "evening",
-        "icon": "⛺",
-        "title": "Dinner & night in a heated yurt",
-        "description": "Expect patchy phone signal and power in Saty. Charge everything on the bus."
+        "icon": "🔥",
+        "title": "Guest house in Saty: dinner, bonfire & evening programme",
+        "description": "Expect basic rooms and patchy signal and power. Charge everything on the bus."
       }
     ],
     "placeIds": [
-      "charyn-canyon"
+      "kolsai-kaindy-lakes"
     ]
   },
   {
     "dayNumber": 5,
     "date": "2026-11-11",
     "weekday": "Wednesday",
-    "city": "Kolsai Lakes → Almaty",
-    "title": "2-day tour, day 2: Kolsai Lake (and Kaindy if open)",
-    "subtitle": "Morning at Kolsai Lake 1 in the spruce forest, Kaindy’s sunken forest if the road is open, then back to Almaty in the evening.",
-    "weatherNote": "The lakes start icing in November, and walking on the ice is banned. Kolsai Lake 1 is reachable all year; the Kaindy road is only partly paved and its trail was closed in Nov 2025 — treat Kaindy as a bonus.",
-    "bring": "Same as yesterday, plus motion-sickness tablets for the bumpy 4x4 to Kaindy and 100 ₸ coins for toilets.",
-    "planB": "Kaindy closed: longer walk at Kolsai and time in Saty village. The trail to Kolsai Lake 2 is icy — only with a guide and grips.",
+    "city": "Black Canyon & Charyn → Almaty",
+    "title": "JoinMe 2-day tour, day 2: Black Canyon & Charyn",
+    "subtitle": "Canyon day on the way home: Black Canyon, Moon Canyon and Charyn’s Valley of Castles, back in Almaty around 19:00.",
+    "weatherNote": "Canyon around −2…+10 °C and very windy at the rim. Dark by ~16:30; the bus leaves Charyn at 15:30.",
+    "bring": "Same as yesterday; windproof layer and sunglasses for the canyon.",
+    "planB": "Moon Canyon is often treated as a summer stop — if skipped, you get more time in the Valley of Castles.",
     "events": [
       {
-        "time": "08:00 AM",
+        "time": "08:00 AM – 09:00 AM",
         "type": "breakfast",
-        "title": "Breakfast at the camp"
+        "title": "Wake up & breakfast at the guest house"
       },
       {
-        "time": "09:00 AM – 11:00 AM",
-        "type": "nature",
-        "icon": "🏞️",
-        "title": "Kolsai Lake 1 lakeside walk",
-        "description": "Turquoise water under snowy spruce slopes. Boats run only in summer.",
-        "tickets": "Park fee included in the tour (otherwise 865 ₸, cashless)."
+        "time": "09:00 AM – 11:05 AM",
+        "type": "sight",
+        "icon": "🏔️",
+        "title": "Black Canyon & Moon Canyon",
+        "description": "Viewpoints over the dark gorges of the Charyn river system.",
+        "image": "./assets/places/black-canyon.jpg"
       },
       {
-        "time": "11:30 AM – 02:00 PM",
-        "type": "nature",
-        "icon": "🌲",
-        "title": "Lake Kaindy — the sunken forest",
-        "description": "Dead spruce trunks rising out of the lake. A 4x4 UAZ takes you most of the way, then a 1.5–2 km walk.",
-        "cost": "UAZ 1,000–2,000 ₸ each way (~$8), cash",
-        "tip": "Sit near the front of the UAZ. Walking is safer than the horses (a horse fall was reported in Oct 2026)."
+        "time": "11:50 AM – 03:30 PM",
+        "type": "hike",
+        "title": "Charyn Canyon: Valley of Castles",
+        "description": "Walk between the red rock towers down towards the river — the highlight of the tour.",
+        "cost": "Park eco-taxi 500–1,800 ₸ (optional)",
+        "tip": "Windy and slippery in places — keep to the path.",
+        "image": "./assets/places/charyn-canyon.jpg"
       },
       {
-        "time": "02:30 PM – 07:30 PM",
+        "time": "03:30 PM – 07:00 PM",
         "type": "transfer",
-        "icon": "🚐",
-        "title": "Drive back to Almaty (~5 h)"
+        "icon": "🚌",
+        "title": "Bus back to Almaty (Circus car park, Abay 50)"
       },
       {
-        "time": "08:00 PM",
+        "time": "07:30 PM",
         "type": "dinner",
-        "title": "Easy dinner at Bauyrdaq",
-        "description": "Budget, open 24/7: beshbarmak 4,390 ₸ and baursak burgers.",
-        "links": [
-          {
-            "label": "Maps",
-            "href": "https://www.google.com/maps/search/?api=1&query=Bauyrdaq+Abylai+Khan+Almaty"
-          }
-        ]
+        "title": "Easy dinner: Navat on Dostyk or Bauyrdaq",
+        "description": "Navat is next to the Airbnb; Bauyrdaq is budget and open 24/7 (beshbarmak 4,390 ₸)."
       }
     ],
     "placeIds": [
-      "kolsai-kaindy-lakes"
+      "charyn-canyon"
     ]
   },
   {
@@ -891,7 +949,8 @@ export const itinerary = [
         "title": "Central State Museum of Kazakhstan",
         "description": "Nomad history, the Golden Man replica and yurts. Its renovation finished in May 2026.",
         "getThere": "Samal-1, bldg 44 — Yandex ~1,500 ₸ from the centre.",
-        "tickets": "At the desk (until 17:30): foreigners 5,000 ₸, or 10,000 ₸ with an English tour. Closed Tuesdays."
+        "tickets": "At the desk (until 17:30): foreigners 5,000 ₸, or 10,000 ₸ with an English tour. Closed Tuesdays.",
+        "image": "./assets/places/central-museum.jpg"
       },
       {
         "time": "01:30 PM – 02:30 PM",
@@ -959,7 +1018,8 @@ export const itinerary = [
         "time": "04:30 AM – 06:20 AM",
         "type": "airport",
         "title": "Bag drop, security & passport control",
-        "description": "Air Astana counters close 40 minutes before departure (06:25); the gate closes at 06:50."
+        "description": "Air Astana counters close 40 minutes before departure (06:25); the gate closes at 06:50.",
+        "image": "./assets/places/almaty-airport.jpg"
       },
       {
         "time": "07:05 AM – 11:10 AM",

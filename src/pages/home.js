@@ -1,9 +1,10 @@
-import { tripMeta, flights, itinerary } from '../data/trip.js?v=32';
-import { formatDate, icon } from '../components/shared.js?v=32';
-import { packingGroups, getPackingChecked } from './packing.js?v=32';
-import { getConverterState } from './expenses.js?v=32';
-import { convertCurrency } from '../data/currency.js?v=32';
-import { getWeather, weatherLabel } from '../data/weather.js?v=32';
+import { tripMeta, flights, itinerary } from '../data/trip.js?v=34';
+import { formatDate, icon } from '../components/shared.js?v=34';
+import { packingGroups, getPackingChecked } from './packing.js?v=34';
+import { getConverterState } from './expenses.js?v=34';
+import { convertCurrency } from '../data/currency.js?v=34';
+import { bookings } from '../data/guide.js?v=34';
+import { getWeather, weatherLabel } from '../data/weather.js?v=34';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -70,9 +71,9 @@ function statusCard(today) {
             <span>Ticket changes</span>
             <strong>${changeDeadlinePassed ? 'No longer allowed' : 'Until 7 Nov, 08:10 AM'}</strong>
           </a>
-          <a href="#travel" data-page="travel" class="status-todo-item warn">
-            <span>Stay Nov 12–14</span>
-            <strong>Not booked yet</strong>
+          <a href="https://www.indianrail.gov.in/enquiry/PNR/PnrEnquiry.html?locale=en" target="_blank" rel="noreferrer" class="status-todo-item warn">
+            <span>Train to Delhi</span>
+            <strong>Waitlisted · check ↗</strong>
           </a>
         </div>
       </section>
@@ -145,6 +146,27 @@ export function renderHome() {
     </section>
 
     ${statusCard(today)}
+
+    <!-- Bookings: status + a button to check each one -->
+    <section class="bookings-card" aria-label="Bookings">
+      <div class="bookings-head">
+        <h2>🧾 Bookings</h2>
+        <small>Tap a button to check the latest status</small>
+      </div>
+      <ul class="bookings-list">
+        ${bookings.map(b => `
+          <li class="booking tone-${b.tone}">
+            <span class="booking-emoji" aria-hidden="true">${b.emoji}</span>
+            <div class="booking-body">
+              <strong>${b.name}</strong>
+              <small>${b.when}</small>
+              <span class="booking-status">${b.status}</span>
+              ${b.actions.length ? `<div class="booking-actions">${b.actions.map(a => `<a href="${a.href}" ${a.href.startsWith('#') ? 'data-page="travel"' : 'target="_blank" rel="noreferrer"'}>${a.label}${a.href.startsWith('#') ? ' →' : ' ↗'}</a>`).join('')}</div>` : ''}
+            </div>
+          </li>
+        `).join('')}
+      </ul>
+    </section>
 
     <!-- Live weather: Almaty city + Shymbulak, filled in by loadHomeWeather() -->
     <section class="weather-card" id="home-weather" aria-label="Almaty weather" aria-live="polite">

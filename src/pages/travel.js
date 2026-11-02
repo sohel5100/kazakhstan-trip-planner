@@ -1,6 +1,6 @@
-import { flights, tripMeta } from '../data/trip.js?v=32';
-import { pageHeader, icon } from '../components/shared.js?v=32';
-import { hotels } from '../data/guide.js?v=32';
+import { flights, tripMeta } from '../data/trip.js?v=34';
+import { pageHeader, icon } from '../components/shared.js?v=34';
+import { hotels } from '../data/guide.js?v=34';
 
 // Getting around Almaty: key facts first, so they're easy to scan on a phone
 const transportGuide = [
@@ -9,8 +9,8 @@ const transportGuide = [
     name: 'Yandex Go',
     useFor: 'Taxis, including the airport run',
     facts: [
-      ['Airport → hotel', '3,500 – 4,500 ₸ <small>≈ ₹735 – ₹945</small>'],
-      ['City ride', '800 – 1,500 ₸ <small>≈ ₹170 – ₹315</small>'],
+      ['Airport → hotel', '3,500 – 4,500 ₸'],
+      ['City ride', '800 – 1,500 ₸'],
       ['Pay', 'Card in the app, or cash']
     ],
     tip: 'Fare is fixed upfront, so no bargaining with drivers at the airport.',
@@ -32,7 +32,7 @@ const transportGuide = [
     name: 'Almaty Metro',
     useFor: 'Quick rides across the city centre',
     facts: [
-      ['Fare', '100 ₸ per ride <small>≈ ₹21</small>'],
+      ['Fare', '100 ₸ per ride'],
       ['Pay', 'Tap any contactless card at the gate']
     ],
     tip: 'Worth a ride just to see the marble and mosaic stations.'
@@ -225,7 +225,7 @@ export function renderTravel() {
         <div>
           <p class="eyebrow">WHERE TO STAY</p>
           <h2>🏨 Your stays</h2>
-          <p class="muted">Nov 7–12: your Airbnb near Dostyk Ave (request pending). <strong>Nov 12–14 (2 nights) is not booked yet</strong> — a hotel with a 24/7 desk makes the 04:00 airport run easy. Options with real reviews:</p>
+          <p class="muted">Nov 7–12: your Airbnb near Dostyk Ave (confirmed, ₹23,000 paid). <strong>Nov 12–14 (2 nights) is not booked yet</strong> — a hotel with a 24/7 desk makes the 04:00 airport run easy. Options with real reviews:</p>
         </div>
       </div>
       <div class="hotel-list">

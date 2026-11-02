@@ -1,4 +1,4 @@
-import { defaultExpenses, expenseCategories } from '../data/trip.js?v=32';
+import { defaultExpenses, expenseCategories } from '../data/trip.js?v=34';
 import {
   exchangeRates,
   currencySymbols,
@@ -8,10 +8,10 @@ import {
   toINR,
   formatCurrency,
   formatEquivalentINR
-} from '../data/currency.js?v=32';
-import { pageHeader, icon } from '../components/shared.js?v=32';
+} from '../data/currency.js?v=34';
+import { pageHeader, icon } from '../components/shared.js?v=34';
 
-export const expensesStorageKey = 'fieldnotes-kazakhstan-expenses-v5';
+export const expensesStorageKey = 'fieldnotes-kazakhstan-expenses-v7';
 
 // Older saved lists may hold booking IDs or the old ₹23,500 fare; drop them.
 try {
@@ -19,6 +19,8 @@ try {
   localStorage.removeItem('fieldnotes-kazakhstan-expenses-v2');
   localStorage.removeItem('fieldnotes-kazakhstan-expenses-v3');
   localStorage.removeItem('fieldnotes-kazakhstan-expenses-v4');
+  localStorage.removeItem('fieldnotes-kazakhstan-expenses-v5');
+  localStorage.removeItem('fieldnotes-kazakhstan-expenses-v6');
 } catch {
   // Ignore storage access issues
 }

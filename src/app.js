@@ -1,6 +1,7 @@
-import { getItineraryPlaceIds, saveItineraryPlaceIds } from './data/itinerary-state.js?v=32';
-import { itinerary } from './data/trip.js?v=32';
-import { getExchangeRate, convertCurrency } from './data/currency.js?v=32';
+import { addRupees } from './components/rupees.js?v=34';
+import { getItineraryPlaceIds, saveItineraryPlaceIds } from './data/itinerary-state.js?v=34';
+import { itinerary } from './data/trip.js?v=34';
+import { getExchangeRate, convertCurrency } from './data/currency.js?v=34';
 import {
   getConverterState,
   renderExpenses,
@@ -10,13 +11,13 @@ import {
   setActiveStatus,
   setConverterState,
   toggleAddForm
-} from './pages/expenses.js?v=32';
-import { renderHome, loadHomeWeather } from './pages/home.js?v=32';
-import { renderItinerary, setSelectedDay, loadItineraryWeather } from './pages/itinerary.js?v=32';
-import { renderPlaces, setActiveCategory as setPlaceCategory } from './pages/places.js?v=32';
-import { renderTravel } from './pages/travel.js?v=32';
-import { renderPacking, packingGroups, packingStorageKey, getPackingChecked } from './pages/packing.js?v=32';
-import { renderPrep, getEmergencyCity, setEmergencyCity, getPhraseCategory, setPhraseCategory } from './pages/prep.js?v=32';
+} from './pages/expenses.js?v=34';
+import { renderHome, loadHomeWeather } from './pages/home.js?v=34';
+import { renderItinerary, setSelectedDay, loadItineraryWeather } from './pages/itinerary.js?v=34';
+import { renderPlaces, setActiveCategory as setPlaceCategory } from './pages/places.js?v=34';
+import { renderTravel } from './pages/travel.js?v=34';
+import { renderPacking, packingGroups, packingStorageKey, getPackingChecked } from './pages/packing.js?v=34';
+import { renderPrep, getEmergencyCity, setEmergencyCity, getPhraseCategory, setPhraseCategory } from './pages/prep.js?v=34';
 
 const pages = {
   home: renderHome,
@@ -39,6 +40,7 @@ export function render(options = {}) {
   const page = currentPage();
   root.innerHTML = pages[page]();
 
+  if (page !== 'expenses') addRupees(root);
   if (page === 'home') loadHomeWeather();
   if (page === 'itinerary') loadItineraryWeather();
 
