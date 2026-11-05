@@ -1,4 +1,4 @@
-import { getExchangeRate } from '../data/currency.js?v=39';
+import { getExchangeRate } from '../data/currency.js?v=40';
 
 // Adds the rupee value in brackets after every tenge amount on the page,
 // e.g. "10,000 ₸" → "10,000 ₸ (≈₹2,100)" and "2,000–4,000 ₸" → "2,000–4,000 ₸ (≈₹420–840)".

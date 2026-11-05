@@ -54,3 +54,13 @@ _Re-checked tours, Shymbulak, glacier, SIM, exchange, mosque and food on 6 Nov 2
 - Corrections from public listings/reviews (Yandex, Tripadvisor, sxodim, Spinach, Wolt, bank.kz): Navat Dostyk is **south** of the Airbnb and MiG 2 is north (was "on the way"); TSUM is Abylai Khan **62**; Kishlak is on **Seifullin** Ave; Rakhat Arbat shop Zhibek Zholy 47 × Kaldayakov, factory store Zenkov 2; Kok Tobe Fri–Sun 10–24, Mon/Wed/Thu 10–23, Tue from 13:00; Central State Museum closing day (Mon vs Tue) and price (500–5,000 ₸) disputed; Folk Instruments Museum 500–1,500 ₸; Govinda's has no 2025–26 confirmation (backup Maharaja, Nazarbayev 229); Arasan at Tulebaev 78, 07:00–23:30, towels extra; Sandyq address listed as Alimzhanov 55 on Yandex.
 - Day 6 brunch moved to Bowler Coffee at the Green Bazaar (500 m from Renion) instead of JumpinGoat/ProCoffee (~3 km away).
 - Fixed site facts: Kaspi QR doesn't work without a Kazakh account; metro/bus 120 ₸ (not 100); airport taxi 2,500–4,500 ₸; Medeu rink possibly closed to 2028; the ₸→₹ converter mis-read decimals ("449.5 ₸" showed ≈₹1).
+
+## Food consensus (29 sources, added 6 Nov) — user is non-vegetarian
+- Dishes ranked by independent mentions: beshbarmak ~15, plov ~12, baursak ~12, kazy ~11, lagman ~11, manti ~10, shashlik / kuyrdak / tandoor samsa / kumys ~8, Dungan noodles with quail (AUYL) 5, Korean salads 5, kurt/irimshik 5, horse tartare 3.
+- Restaurants with consensus: Sandyq 12, Navat 11, AUYL 9 (1.01 km from the Medeu gondola), Qaimaq 6 (0.77 km from the Circus tour drop-off), Tarih 4, Bauyrdaq 4, Qaganat 3. Dropped for weak/old data: Kishlak, Gakku, Zheti Qazyna, Rumi, Tyubeteyka, Alasha.
+- Repeated tips: 10–15% service on the bill (legal requirement to state it), portions big — share, book Fri/Sat for Sandyq/AUYL/Qaimaq, cash at bazaars, don't eat beshbarmak at the bazaar, skip Kok Tobe restaurants.
+- Sources include meganstarr.com (Sep 2026), about-kazakhstan.com (Aug 2026), dev.to Reddit roundup (May 2026), digitalbusiness.kz, Yandex Eda Open Kitchen, t-j.ru (Sep 2026), Open Magazine (May 2026), sxodim, weproject, Yandex reviews for Sandyq/Navat/AUYL, Tengrinews guides.
+
+## Reviewer tips & lift timing (added 6 Nov)
+- Lift ride times: gondola 4.5 km ~15–20 min; Combi-1 ~10–13 min; Combi-2 ~5–8 min (2GIS, gorny-club.kz, Wikipedia, WildTicket). Guides: allow ≥3 h for the round trip; desk queues 30–40 min on busy days; app/online tickets cheaper; upper lifts close earlier (Combi-2 ~16:30).
+- Per-place tips (airport scams, Green Bazaar layout/bargaining, Kok Tobe queues & return ticket, Kaindy climb back, Charyn eco-shuttle, Arasan routine, BAL passport/eco-fee) taken only where ≥2 independent sources agree, single-source items labelled.

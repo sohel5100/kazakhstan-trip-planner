@@ -1,7 +1,7 @@
-import { places, itinerary } from '../data/trip.js?v=39';
-import { getItineraryPlaceIds, saveItineraryPlaceIds } from '../data/itinerary-state.js?v=39';
-import { pageHeader, icon } from '../components/shared.js?v=39';
-import { cafes, tourComparisons, foodGuide } from '../data/guide.js?v=39';
+import { places, itinerary } from '../data/trip.js?v=40';
+import { getItineraryPlaceIds, saveItineraryPlaceIds } from '../data/itinerary-state.js?v=40';
+import { pageHeader, icon } from '../components/shared.js?v=40';
+import { cafes, tourComparisons, foodGuide, restaurants } from '../data/guide.js?v=40';
 
 let activeCategoryFilter = 'all';
 
@@ -79,24 +79,42 @@ export function renderPlaces() {
       `).join('')}
     </section>
 
-    <!-- Local food, vegetarian status marked -->
-    <section class="food-guide" aria-label="Local food">
+    <!-- Must-try food, ranked by how many sources recommend it -->
+    <section class="food-guide" aria-label="Must-try food">
       <div class="cafe-head">
-        <h2>🥗 Local food</h2>
-        <small>🟢 vegetarian · 🟡 ask first · 🔴 meat</small>
+        <h2>🍽️ Must-try food</h2>
+        <small>Ranked by how many of 29 sources recommend it · 🍖 meat · 🟡 ask · 🟢 no meat</small>
       </div>
       <ul class="food-list">
         ${foodGuide.map(f => `
-          <li class="food-${f.veg}">
-            <span aria-hidden="true">${{ veg: '🟢', ask: '🟡', meat: '🔴' }[f.veg]}</span>
+          <li>
+            <span aria-hidden="true">${{ veg: '🟢', ask: '🟡', meat: '🍖' }[f.veg]}</span>
             <div>
-              <strong>${f.dish}</strong>
+              <strong>${f.dish} <em class="food-count">${f.sources} sources</em></strong>
+              <p>${f.what}</p>
               <small>📍 ${f.where}</small>
-              <p>${f.note}</p>
+              <small>💰 ${f.price}</small>
             </div>
           </li>
         `).join('')}
       </ul>
+
+      <div class="cafe-head food-sub">
+        <h2>⭐ Restaurants most reviewers agree on</h2>
+        <small>Where each one fits in your plan</small>
+      </div>
+      <div class="cafe-strip">
+        ${restaurants.map(r => `
+          <article class="cafe-card">
+            <strong>${r.name}</strong>
+            <span class="cafe-kind">${r.sources} sources · ${r.plan}</span>
+            <p class="cafe-order"><b>Order:</b> ${r.order}</p>
+            <p>${r.tip}</p>
+            <small>💰 ${r.price}</small>
+            <small>📍 ${r.area}</small>
+          </article>
+        `).join('')}
+      </div>
     </section>
 
     <h2 class="places-subhead">📍 Sights</h2>

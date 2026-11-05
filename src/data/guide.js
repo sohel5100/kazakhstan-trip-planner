@@ -228,7 +228,7 @@ export const tourComparisons = [
         price: 'From ₹7,545',
         rating: '4.8 (1,115)',
         format: '2 days · pickup at Hotel Kazakhstan, Holiday Inn Express, Novotel or Ibis Jetisu · back 20:00–21:00 day 2',
-        good: 'Day 1 Black Canyon + Kolsai, night in a yurt or guest house; day 2 Kaindy (3 h) + Charyn (2.5 h). Meals, park entry and bonfire included; vegetarian options. Strong reviews up to 2 Nov 2026.',
+        good: 'Day 1 Black Canyon + Kolsai, night in a yurt or guest house; day 2 Kaindy (3 h) + Charyn (2.5 h). Meals, park entry and bonfire included. Strong reviews up to 2 Nov 2026.',
         watch: 'Group size not stated; some reviewers wanted more time at key stops.',
         url: 'https://www.getyourguide.com/almaty-city-l1414/almaty-kolsai-kaindy-lakes-charyn-canyons-2-day-tour-t489855/'
       },
@@ -293,16 +293,33 @@ export const tourComparisons = [
   }
 ];
 
-// Local dishes: veg = always meatless, ask = can be meatless but check, meat = contains meat
+// Must-try dishes, ranked by how many independent sources recommend them (food sweep of 29 sources, 6 Nov 2026).
+// meat = contains meat, ask = usually meatless but check, veg = meatless. Details: research/08-nov6-update.md
 export const foodGuide = [
-  { dish: 'Pumpkin samsa', veg: 'veg', where: 'Kok Tobe restaurant (“mini samsa with pumpkin, no meat”); Extra Virgin', note: 'Most samsa is meat — say “s tykvoy” (with pumpkin).' },
-  { dish: 'Morkovcha (Korean carrot salad)', veg: 'ask', where: 'Korean-salad stalls in the Green Bazaar', note: 'Some salads use fish sauce or meat — ask “bez ryby, bez myasa?”.' },
-  { dish: 'Baursak (fried dough)', veg: 'ask', where: 'Navat, Tary, Sandyq', note: 'Traditionally fried in mutton or tail fat; modern kitchens often use vegetable oil. Ask every time.' },
-  { dish: 'Vegetable / mushroom shashlik', veg: 'veg', where: 'Kok Tobe restaurant; Nash Dvor', note: 'Grilled on the same grill as meat.' },
-  { dish: 'Lamb, beef or chicken shashlik', veg: 'meat', where: 'Navat, most chaikhanas', note: 'The classic skewers — meat only.' },
-  { dish: 'Vegan lagman, soup, grilled vegetables', veg: 'veg', where: 'Navat (Dostyk 48, next to the Airbnb)', note: 'Listed on HappyCow.' },
-  { dish: 'Falafel / veg wrap', veg: 'veg', where: 'Harissa; Coco Street Food; Hummus & Falafel (MEGA Park)', note: 'The big doner chains (Doner King, Rommi) have no falafel found.' },
-  { dish: 'Doner / shawarma', veg: 'meat', where: 'Street stalls everywhere', note: 'Meat only unless a stall lists falafel.' },
-  { dish: 'Salam Bro burgers & hot dogs', veg: 'meat', where: 'Halal chain, 40+ branches (e.g. Altynsarin 26) — find the nearest in 2GIS', note: 'No vegetarian item found; avg bill ~1,000 ₸.' },
-  { dish: 'Pure-veg Indian set meal', veg: 'veg', where: 'Govinda’s, Abylai Khan 39 (~12:00–20:00)', note: '~2,050 ₸; sells out by evening.' }
+  { dish: 'Beshbarmak', veg: 'meat', sources: 15, what: 'Boiled horse/lamb/beef on flat noodles with onion broth (sorpa) — the national dish.', where: 'Sandyq (most praised on Yandex), Qaimaq, AUYL, Bauyrdaq (cheapest, 4,390 ₸), Navat', price: '4,390–8,400 ₸ · portions are big, share one' },
+  { dish: 'Plov', veg: 'meat', sources: 12, what: 'Rice pilaf with carrots and meat; Navat does a horse-meat version.', where: 'Navat, AUYL (kazan plov), Qaganat canteen (2,410 ₸)', price: '1,500–3,500 ₸' },
+  { dish: 'Baursak', veg: 'ask', sources: 12, what: 'Fried dough puffs with tea, kaymak cream or honey; often free with tea.', where: 'Navat (free with tea), AUYL with balqaimaq, Tary, Qaimaq', price: '0–1,500 ₸' },
+  { dish: 'Kazy', veg: 'meat', sources: 11, what: 'Horse-rib sausage, usually served cold in platters.', where: 'Sandyq, Navat, Tarih; free samples at the Green Bazaar meat hall', price: 'in platters' },
+  { dish: 'Lagman', veg: 'meat', sources: 11, what: 'Uyghur/Dungan hand-pulled noodles — guyru (topped) or tsomyan (fried).', where: 'Navat guyru lagman, As-Kazan tsomyan (Gogol 13)', price: '1,500–3,500 ₸' },
+  { dish: 'Manti', veg: 'meat', sources: 10, what: 'Large steamed dumplings, lamb or beef (pumpkin version exists).', where: 'Navat, AUYL (hoshan manti), Kese', price: '2,290–4,500 ₸' },
+  { dish: 'Shashlik', veg: 'meat', sources: 8, what: 'Charcoal-grilled skewers of lamb, beef or chicken.', where: 'Navat, AUYL (layered horse), Na Kirova Shashlychnaya (Bogenbai Batyr 72)', price: '~1,500–3,000 ₸ a skewer' },
+  { dish: 'Kuyrdak', veg: 'meat', sources: 8, what: 'Fried meat, offal and tail fat with onion and potato.', where: 'Sandyq (7,790 ₸), Qaimaq (served in a pumpkin), Mura', price: '4,000–7,800 ₸' },
+  { dish: 'Tandoor samsa', veg: 'meat', sources: 8, what: 'Flaky pastry baked on the tandoor wall; pumpkin is the meatless version.', where: 'Navat (chicken or lamb), Green Bazaar tandoor stalls', price: '300–900 ₸' },
+  { dish: 'Kumys / shubat', veg: 'veg', sources: 8, what: 'Fermented mare’s milk / camel’s milk — sour and fizzy.', where: 'Sandyq kumys bar, AUYL', price: '500–1,500 ₸' },
+  { dish: 'Dungan noodles with quail', veg: 'meat', sources: 5, what: 'AUYL’s signature dish — almost every AUYL review mentions it.', where: 'AUYL (next to the Medeu gondola)', price: '~5,300 ₸' },
+  { dish: 'Horse tartare', veg: 'meat', sources: 3, what: 'The most-praised dish in AUYL’s Yandex reviews.', where: 'AUYL', price: '4,000–6,000 ₸' },
+  { dish: 'Korean salads (morkovcha)', veg: 'ask', sources: 5, what: 'Spicy carrot and other salads from the local Korean community.', where: 'Green Bazaar salad row', price: 'by weight' },
+  { dish: 'Kurt / irimshik', veg: 'veg', sources: 5, what: 'Salty dried cheese balls / sweet dried curd — divisive, try a sample first.', where: 'Green Bazaar dairy section, Tary', price: 'cheap' },
+  { dish: 'Rakhat chocolate & Aport apples', veg: 'veg', sources: 3, what: 'The classic edible souvenirs; Aport apples are in season in autumn.', where: 'Rakhat shop on Zhibek Zholy 47 or Zenkov 2; apples at the Green Bazaar', price: 'by weight' }
+];
+
+// Restaurants that several independent sources agree on (food sweep, 6 Nov 2026)
+export const restaurants = [
+  { name: 'Sandyq', sources: 12, area: 'Abylai Khan 55', order: 'Beshbarmak, kuyrdak, cheese baursaks, smoked horse, kumys', price: '6,000–10,000 ₸ + 15% service', tip: 'Book dinner; live music. Reviews: slow on busy nights, food sometimes arrives cold.', plan: 'Farewell dinner, Fri 13' },
+  { name: 'Navat', sources: 11, area: 'Dostyk 48 · Abylai Khan 58A', order: 'Beshbarmak, horse plov, guyru lagman, samsa, manti; baursaks free with tea', price: '3,500–8,000 ₸ + 10%', tip: 'Chain — quality varies by branch; noisy and slow when full.', plan: 'Sat 7 dinner · Fri 13 lunch' },
+  { name: 'AUYL', sources: 9, area: 'Next to the Medeu gondola (1 km)', order: 'Horse tartare, Dungan noodles with quail, beshbarmak, baursak with balqaimaq, kazan plov', price: '12,000–25,000 ₸', tip: 'Book ahead. Noisy, patchy service per reviews.', plan: 'Mon 9 after Shymbulak' },
+  { name: 'Qaimaq', sources: 6, area: 'Abay 46A (near the Circus)', order: 'Beshbarmak (share it), kuyrdak in a pumpkin, kaymak with bread', price: '~7,000 ₸', tip: 'Book at weekends; the priciest beshbarmak in one guide.', plan: 'Wed 11 after the tour' },
+  { name: 'Tarih', sources: 4, area: 'Abylai Khan 104', order: 'Tarih soup (horse broth, kazy), horse-meat ravioli, modern beshbarmak', price: '4,500–15,000 ₸', tip: 'Modern take on Kazakh food — “not traditional, but tastes as it should”.', plan: 'Thu 12 dinner' },
+  { name: 'Bauyrdaq', sources: 4, area: 'Several branches, 24/7', order: 'Beshbarmak 4,390 ₸, Nauryz kozhe, baursak burger with kazy', price: '~2,200 ₸', tip: 'Cheapest good beshbarmak; manti weaker.', plan: 'Backup any night' },
+  { name: 'Qaganat', sources: 3, area: 'Canteen chain, e.g. Dostyk 108 by Kok Tobe', order: 'Point-and-pay plov, cutlets, soups', price: '1,500–3,000 ₸, no service charge', tip: 'Cheap and fast; quality varies by branch.', plan: 'Sun 8 after Kok Tobe' }
 ];
