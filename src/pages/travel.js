@@ -1,6 +1,6 @@
-import { flights, tripMeta } from '../data/trip.js?v=36';
-import { pageHeader, icon } from '../components/shared.js?v=36';
-import { hotels } from '../data/guide.js?v=36';
+import { flights, tripMeta } from '../data/trip.js?v=37';
+import { pageHeader, icon } from '../components/shared.js?v=37';
+import { hotels } from '../data/guide.js?v=37';
 
 // Getting around Almaty: key facts first, so they're easy to scan on a phone
 const transportGuide = [
@@ -9,7 +9,7 @@ const transportGuide = [
     name: 'Yandex Go',
     useFor: 'Taxis, including the airport run',
     facts: [
-      ['Airport → hotel', '3,500 – 4,500 ₸'],
+      ['Airport → hotel', 'Economy ~2,500–4,500 ₸'],
       ['City ride', '800 – 1,500 ₸'],
       ['Pay', 'Card in the app, or cash']
     ],
@@ -32,7 +32,7 @@ const transportGuide = [
     name: 'Almaty Metro',
     useFor: 'Quick rides across the city centre',
     facts: [
-      ['Fare', '100 ₸ per ride'],
+      ['Fare', '120 ₸ per ride'],
       ['Pay', 'Tap any contactless card at the gate']
     ],
     tip: 'Worth a ride just to see the marble and mosaic stations.'
@@ -42,9 +42,9 @@ const transportGuide = [
     name: 'Medeu & Shymbulak',
     useFor: 'Getting up into the mountains',
     facts: [
-      ['Bus to Medeu', '#12 from Hotel Kazakhstan, Dostyk Ave'],
-      ['How often', 'About every 15 min · 100 ₸'],
-      ['Gondola', 'Medeu → Shymbulak → Talgar Pass (3,200m), 3 stages']
+      ['Easiest', 'Yandex Go to the Medeu gondola station, ~30–40 min, ~2,000–4,000 ₸'],
+      ['Bus 12', 'Up Dostyk Ave (stop by Hotel Kazakhstan), 120 ₸ — cashless Onay card only, bought with cash'],
+      ['Gondola', 'Medeu → Shymbulak → Talgar Pass (3,200m); the road above Medeu is closed to cars until 30 Nov']
     ],
     link: { label: 'Bus stop on Google Maps', href: 'https://www.google.com/maps/search/?api=1&query=Hotel+Kazakhstan+Dostyk+Avenue+Almaty' }
   }

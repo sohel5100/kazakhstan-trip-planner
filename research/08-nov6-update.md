@@ -48,3 +48,9 @@ _Re-checked tours, Shymbulak, glacier, SIM, exchange, mosque and food on 6 Nov 2
 - Central Mosque, Pushkin 16; free; hours conflict; avoid Fri 12:00–14:30; cover up, headscarf for women, shoes off.
 - Salam Bro: halal burgers/hot dogs, 40+ branches, no veg item found.
 - Veg: pumpkin samsa & vegetable shashlik on Kok Tobe menu; Navat vegan lagman/soup/grilled veg; morkovcha at Green Bazaar (ask about fish sauce); baursak may be fried in mutton fat; falafel at Harissa, Coco Street Food.
+
+## Routes & review check (added later on 6 Nov)
+- Every itinerary stop now has a "Getting there" line from the previous stop. Distances/times: OSRM via routing.openstreetmap.de (foot and car profiles), coordinates from Nominatim/Photon (OSM). Car times are free-flow, so ranges in the plan add Almaty traffic. Airbnb position is the approximate `stayAreaCoordinates`; Days 6–8 assume Renion (Kaldayakov 21), the top-pick hotel for the unbooked Nov 12–14 nights.
+- Corrections from public listings/reviews (Yandex, Tripadvisor, sxodim, Spinach, Wolt, bank.kz): Navat Dostyk is **south** of the Airbnb and MiG 2 is north (was "on the way"); TSUM is Abylai Khan **62**; Kishlak is on **Seifullin** Ave; Rakhat Arbat shop Zhibek Zholy 47 × Kaldayakov, factory store Zenkov 2; Kok Tobe Fri–Sun 10–24, Mon/Wed/Thu 10–23, Tue from 13:00; Central State Museum closing day (Mon vs Tue) and price (500–5,000 ₸) disputed; Folk Instruments Museum 500–1,500 ₸; Govinda's has no 2025–26 confirmation (backup Maharaja, Nazarbayev 229); Arasan at Tulebaev 78, 07:00–23:30, towels extra; Sandyq address listed as Alimzhanov 55 on Yandex.
+- Day 6 brunch moved to Bowler Coffee at the Green Bazaar (500 m from Renion) instead of JumpinGoat/ProCoffee (~3 km away).
+- Fixed site facts: Kaspi QR doesn't work without a Kazakh account; metro/bus 120 ₸ (not 100); airport taxi 2,500–4,500 ₸; Medeu rink possibly closed to 2028; the ₸→₹ converter mis-read decimals ("449.5 ₸" showed ≈₹1).

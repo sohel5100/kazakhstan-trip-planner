@@ -1,6 +1,6 @@
-import { pageHeader, icon } from '../components/shared.js?v=36';
-import { emergencyContacts } from '../data/emergency.js?v=36';
-import { handyPhrases, phraseCategories } from '../data/phrases.js?v=36';
+import { pageHeader, icon } from '../components/shared.js?v=37';
+import { emergencyContacts } from '../data/emergency.js?v=37';
+import { handyPhrases, phraseCategories } from '../data/phrases.js?v=37';
 
 const source = (href, label) => `<a class="source-link" href="${href}" target="_blank" rel="noreferrer">${label} <span aria-hidden="true">↗</span></a>`;
 
@@ -243,7 +243,7 @@ export function renderPrep() {
         <p class="eyebrow">CASH & PAYMENTS</p>
         <h2>Local Currency for Spending: Kazakhstani Tenge (KZT, ₸)</h2>
         <p>1 KZT ≈ ₹0.21 INR (roughly 1,000 ₸ ≈ ₹210 INR). Cards (Visa & Mastercard) are accepted almost everywhere in central Almaty supermarkets, cafes, and hotels. However, keep 20,000–30,000 ₸ cash for Green Bazaar stalls, rural park entry fees, and mountain road snacks.</p>
-        <p><strong>Where to exchange USD: MiG</strong> — an Almaty exchange chain (34 offices, 09:00–20:00) with one network-wide rate table on mig.kz (5 Nov: buy USD at 449.5 ₸). Nearest to the Airbnb: <strong>MiG 2, Dostyk 40 × Kabanbay Batyr</strong>; also MiG 12 (Satpayev 2 × Dostyk), MiG 15 (Tole Bi 24a × Dostyk), MiG 4 (Abay 40). Near the Green Bazaar: MiG 1 (Zheltoksan 88), MiG 11 (Gogol 87). Check hours in 2GIS, bring clean new-series $100 notes and your passport, count the cash at the window. Change only a little at the airport.</p>
+        <p><strong>Where to exchange USD: MiG</strong> — an Almaty exchange chain (34 offices, 09:00–20:00) with one network-wide rate table on mig.kz (5 Nov: buys USD at ₸449.5 per $1). Nearest to the Airbnb: <strong>MiG 2, Dostyk 40 × Kabanbay Batyr</strong>; also MiG 12 (Satpayev 2 × Dostyk), MiG 15 (Tole Bi 24a × Dostyk), MiG 4 (Abay 40). Near the Green Bazaar: MiG 1 (Zheltoksan 88), MiG 11 (Gogol 87). Check hours in 2GIS, bring clean new-series $100 notes and your passport, count the cash at the window. Change only a little at the airport.</p>
         <div class="rate-guide">
           <div>
             <h3>USD → KZT: is this rate good?</h3>

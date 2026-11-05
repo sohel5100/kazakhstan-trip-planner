@@ -143,7 +143,7 @@ export const handyPhrases = [
     kz: 'Картамен төлеуге бола ма?',
     ru: 'Можно оплатить картой?',
     pron: 'kahr-tah-MEN toh-lay-oo-GEH boh-lah mah?',
-    note: 'Kaspi QR and Visa/Mastercard are accepted in 95% of stores.',
+    note: 'Visa/Mastercard work almost everywhere in the centre. Kaspi QR needs a Kazakh bank account, so it won’t work for you — carry some cash for the bazaar and small stalls.',
     speak: 'Картамен төлеуге бола ма?'
   },
 
@@ -175,7 +175,7 @@ export const handyPhrases = [
     kz: 'Медеу / Шымбұлақ аспалы жолы',
     ru: 'Медеу / Канатная дорога Шымбулак',
     pron: 'meh-DEH-oo / shuhm-boo-LAHQ ahs-pah-LUH zhoh-LUH',
-    note: 'Bus #12 from Dostyk Hotel takes you direct to Medeu.',
+    note: 'Show this to your Yandex driver for the Medeu gondola station. (Bus 12 runs up Dostyk Ave but needs an Onay card bought with cash — a taxi is easier.)',
     speak: 'Медеу және Шымбұлақ'
   },
   {
