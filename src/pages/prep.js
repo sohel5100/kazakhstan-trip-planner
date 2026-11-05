@@ -1,6 +1,6 @@
-import { pageHeader, icon } from '../components/shared.js?v=34';
-import { emergencyContacts } from '../data/emergency.js?v=34';
-import { handyPhrases, phraseCategories } from '../data/phrases.js?v=34';
+import { pageHeader, icon } from '../components/shared.js?v=35';
+import { emergencyContacts } from '../data/emergency.js?v=35';
+import { handyPhrases, phraseCategories } from '../data/phrases.js?v=35';
 
 const source = (href, label) => `<a class="source-link" href="${href}" target="_blank" rel="noreferrer">${label} <span aria-hidden="true">↗</span></a>`;
 
@@ -227,8 +227,11 @@ export function renderPrep() {
         <div class="prep-task">
           <span class="task-marker">03</span>
           <div>
-            <h3>Local eSIM / Beeline / Kcell</h3>
-            <p>Get an Airalo / Nomad eSIM before flying or pick up a physical SIM card at Almaty Airport. High-speed 4G/5G data is affordable (~3,000–5,000 ₸ / ₹630–₹1,050 for 25GB).</p>
+            <h3>SIM card at the airport: Beeline first</h3>
+            <p><strong>Where:</strong> Beeline, Tele2, Kcell and Altel counters sit side by side in the arrivals hall (open when you land at 15:10). Buy at a counter branded with one operator, not a multi-brand kiosk. <strong>Bring your passport</strong> — it’s photographed to register the SIM.</p>
+            <p><strong>Beeline price:</strong> the 6,000 ₸ “40 GB unlimited” and 10,000 ₸ “unlimited” boards from the video are <em>not confirmed</em>. Beeline’s “unlimited” plans are capped and then slow to 256 Kbps. Ask: GB before slowdown? Hotspot allowed? Minutes/SMS? Validity? <strong>Fallback:</strong> Tele2 tourist pack ~5,590 ₸ (25 GB 4G + 25 GB 5G, 240 min, 30 days). Kcell/Activ has an official store after customs; its tourist price wasn’t found.</p>
+            <p><strong>IMEI:</strong> nothing to do for a 7-day trip — unregistered foreign phones are only blocked after 30 days.</p>
+            ${source('https://www.gov.uk/foreign-travel-advice/kazakhstan/entry-requirements', 'IMEI rule (UK FCDO)')}
           </div>
         </div>
       </article>
@@ -240,9 +243,11 @@ export function renderPrep() {
         <p class="eyebrow">CASH & PAYMENTS</p>
         <h2>Local Currency for Spending: Kazakhstani Tenge (KZT, ₸)</h2>
         <p>1 KZT ≈ ₹0.21 INR (roughly 1,000 ₸ ≈ ₹210 INR). Cards (Visa & Mastercard) are accepted almost everywhere in central Almaty supermarkets, cafes, and hotels. However, keep 20,000–30,000 ₸ cash for Green Bazaar stalls, rural park entry fees, and mountain road snacks.</p>
+        <p><strong>Where to exchange USD: MiG</strong> — an Almaty exchange chain (34 offices, 09:00–20:00) with one network-wide rate table on mig.kz (5 Nov: buy USD at 449.5 ₸). Nearest to the Airbnb: <strong>MiG 2, Dostyk 40 × Kabanbay Batyr</strong>; also MiG 12 (Satpayev 2 × Dostyk), MiG 15 (Tole Bi 24a × Dostyk), MiG 4 (Abay 40). Near the Green Bazaar: MiG 1 (Zheltoksan 88), MiG 11 (Gogol 87). Check hours in 2GIS, bring clean new-series $100 notes and your passport, count the cash at the window. Change only a little at the airport.</p>
         <div class="money-sources">
           ${source('https://nationalbank.kz/en', 'National Bank of Kazakhstan')}
           ${source('https://visitalmaty.kz/en/', 'Visit Almaty Official Tourism')}
+          ${source('https://mig.kz', 'MiG rates & branches')}
         </div>
       </div>
     </section>

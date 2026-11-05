@@ -46,3 +46,5 @@ Place photos are from [Wikimedia Commons](https://commons.wikimedia.org/) under 
 - Almaty Airport T2: `Terminal 2 Almaty International Airport.jpg`
 - Medeu: `Medeu dam.jpg`
 - Central State Museum: `Kazakhstan physical map in Almaty Central State Museum of Kazakhstan.jpg`
+- Central Mosque: `Almaty Central Mosque 03.jpg`
+- Big Almaty Lake: `Big Almaty Lake Winter.jpg`

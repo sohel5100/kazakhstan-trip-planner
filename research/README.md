@@ -11,6 +11,7 @@ Seven research passes behind the itinerary on the site. Each file lists sources 
 | [05-transport-and-tickets.md](05-transport-and-tickets.md) | Airport, SIM, metro/bus, Kok Tobe, Shymbulak, opening hours, departure timing |
 | [06-day-tours.md](06-day-tours.md) | Charyn/Kolsai/Kaindy tour formats and operators |
 | [07-cafes.md](07-cafes.md) | Best cafés for food and atmosphere |
+| [08-nov6-update.md](08-nov6-update.md) | 6 Nov re-check: forecast, tour comparison, Big Almaty Lake, Shymbulak & glacier, SIM, MiG exchange, mosque, veg food |
 
 ## Key changes made to the plan
 - Charyn + Kolsai as **one 2-day tour (Nov 10–11)** instead of two day trips.

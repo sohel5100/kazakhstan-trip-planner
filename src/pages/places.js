@@ -1,7 +1,7 @@
-import { places, itinerary } from '../data/trip.js?v=34';
-import { getItineraryPlaceIds, saveItineraryPlaceIds } from '../data/itinerary-state.js?v=34';
-import { pageHeader, icon } from '../components/shared.js?v=34';
-import { cafes } from '../data/guide.js?v=34';
+import { places, itinerary } from '../data/trip.js?v=35';
+import { getItineraryPlaceIds, saveItineraryPlaceIds } from '../data/itinerary-state.js?v=35';
+import { pageHeader, icon } from '../components/shared.js?v=35';
+import { cafes, tourComparisons, foodGuide } from '../data/guide.js?v=35';
 
 let activeCategoryFilter = 'all';
 
@@ -45,6 +45,58 @@ export function renderPlaces() {
           </a>
         `).join('')}
       </div>
+    </section>
+
+    <!-- Tours: one entry per destination, booking options under it -->
+    <section class="tour-compare" aria-label="Tour comparison">
+      <div class="cafe-head">
+        <h2>🎟️ Tours: compare & book</h2>
+        <small>Prices as shown on 6 Nov — not confirmed</small>
+      </div>
+      ${tourComparisons.map(t => `
+        <div class="tour-group">
+          <h3>${t.title} <span>${t.when}</span></h3>
+          <p class="tour-verdict">${t.verdict}</p>
+          <div class="hotel-list">
+            ${t.options.map(o => `
+              <article class="hotel-card">
+                <div class="hotel-top">
+                  <h3>${o.name}</h3>
+                  <span class="hotel-badge">${o.badge}</span>
+                </div>
+                <dl class="transport-facts">
+                  <div><dt>Price</dt><dd>${o.price}</dd></div>
+                  <div><dt>Reviews</dt><dd>${o.rating}</dd></div>
+                </dl>
+                <p class="hotel-area">🕒 ${o.format}</p>
+                <p class="hotel-note">👍 ${o.good}</p>
+                <p class="hotel-note warn">⚠️ ${o.watch}</p>
+                <a class="transport-link" href="${o.url}" target="_blank" rel="noreferrer">Booking page ↗</a>
+              </article>
+            `).join('')}
+          </div>
+        </div>
+      `).join('')}
+    </section>
+
+    <!-- Local food, vegetarian status marked -->
+    <section class="food-guide" aria-label="Local food">
+      <div class="cafe-head">
+        <h2>🥗 Local food</h2>
+        <small>🟢 vegetarian · 🟡 ask first · 🔴 meat</small>
+      </div>
+      <ul class="food-list">
+        ${foodGuide.map(f => `
+          <li class="food-${f.veg}">
+            <span aria-hidden="true">${{ veg: '🟢', ask: '🟡', meat: '🔴' }[f.veg]}</span>
+            <div>
+              <strong>${f.dish}</strong>
+              <small>📍 ${f.where}</small>
+              <p>${f.note}</p>
+            </div>
+          </li>
+        `).join('')}
+      </ul>
     </section>
 
     <h2 class="places-subhead">📍 Sights</h2>
