@@ -1,6 +1,6 @@
-import { pageHeader, icon } from '../components/shared.js?v=35';
-import { emergencyContacts } from '../data/emergency.js?v=35';
-import { handyPhrases, phraseCategories } from '../data/phrases.js?v=35';
+import { pageHeader, icon } from '../components/shared.js?v=36';
+import { emergencyContacts } from '../data/emergency.js?v=36';
+import { handyPhrases, phraseCategories } from '../data/phrases.js?v=36';
 
 const source = (href, label) => `<a class="source-link" href="${href}" target="_blank" rel="noreferrer">${label} <span aria-hidden="true">↗</span></a>`;
 
@@ -244,6 +244,38 @@ export function renderPrep() {
         <h2>Local Currency for Spending: Kazakhstani Tenge (KZT, ₸)</h2>
         <p>1 KZT ≈ ₹0.21 INR (roughly 1,000 ₸ ≈ ₹210 INR). Cards (Visa & Mastercard) are accepted almost everywhere in central Almaty supermarkets, cafes, and hotels. However, keep 20,000–30,000 ₸ cash for Green Bazaar stalls, rural park entry fees, and mountain road snacks.</p>
         <p><strong>Where to exchange USD: MiG</strong> — an Almaty exchange chain (34 offices, 09:00–20:00) with one network-wide rate table on mig.kz (5 Nov: buy USD at 449.5 ₸). Nearest to the Airbnb: <strong>MiG 2, Dostyk 40 × Kabanbay Batyr</strong>; also MiG 12 (Satpayev 2 × Dostyk), MiG 15 (Tole Bi 24a × Dostyk), MiG 4 (Abay 40). Near the Green Bazaar: MiG 1 (Zheltoksan 88), MiG 11 (Gogol 87). Check hours in 2GIS, bring clean new-series $100 notes and your passport, count the cash at the window. Change only a little at the airport.</p>
+        <div class="rate-guide">
+          <div>
+            <h3>USD → KZT: is this rate good?</h3>
+            <table>
+              <thead><tr><th>Rate per $1</th><th>Verdict</th></tr></thead>
+              <tbody>
+                <tr class="rate-best"><td>₸450–454</td><td>Excellent</td></tr>
+                <tr class="rate-good"><td>₸447–449</td><td>Good</td></tr>
+                <tr class="rate-ok"><td>₸444–446</td><td>Acceptable</td></tr>
+                <tr class="rate-warn"><td>₸440–443</td><td>Negotiate</td></tr>
+                <tr class="rate-bad"><td>Below ₸440</td><td>Avoid</td></tr>
+              </tbody>
+            </table>
+            <p><strong>Target: ₸452 per $1.</strong> $100 at ₸452 = ₸45,200; at ₸449 = ₸44,900.</p>
+            <p class="rate-note">Reality check: ₸452 is about the mid-market rate on 6 Nov (₸452.1), so offices rarely pay that much. MiG was buying dollars at ₸449.5 (5 Nov) — that counts as “Good”.</p>
+          </div>
+          <div>
+            <h3>INR → KZT: is this rate good?</h3>
+            <table>
+              <thead><tr><th>Rate per ₹1</th><th>Verdict</th></tr></thead>
+              <tbody>
+                <tr class="rate-best"><td>₸4.70–4.78</td><td>Excellent</td></tr>
+                <tr class="rate-good"><td>₸4.50–4.69</td><td>Good</td></tr>
+                <tr class="rate-ok"><td>₸4.20–4.49</td><td>Acceptable</td></tr>
+                <tr class="rate-warn"><td>₸3.75–4.19</td><td>Negotiate</td></tr>
+                <tr class="rate-bad"><td>Below ₸3.75</td><td>Avoid</td></tr>
+              </tbody>
+            </table>
+            <p><strong>Target: ₸4.50 or higher.</strong> ₹10,000 at ₸4.50 = ₸45,000; at ₸4.00 = ₸40,000; at ₸3.75 = ₸37,500.</p>
+            <p class="rate-note">Reality check: MiG’s rate board lists no rupees, and few Almaty exchangers take INR — plan on USD or a card at a Halyk/Kaspi ATM. If someone does offer to buy rupees, use this table (mid-market on 6 Nov was ₸4.78).</p>
+          </div>
+        </div>
         <div class="money-sources">
           ${source('https://nationalbank.kz/en', 'National Bank of Kazakhstan')}
           ${source('https://visitalmaty.kz/en/', 'Visit Almaty Official Tourism')}

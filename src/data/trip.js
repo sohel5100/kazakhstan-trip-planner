@@ -1,11 +1,11 @@
-import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=35';
+import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=36';
 
 export {
   exchangeRates,
   currencySymbols,
   toINR,
   formatCurrency
-} from './currency.js?v=35';
+} from './currency.js?v=36';
 
 export const tripMeta = {
   title: 'Kazakhstan Adventure',
@@ -572,7 +572,7 @@ export const itinerary = [
         "title": "Change USD at MiG 2 (Dostyk 40 × Kabanbay Batyr)",
         "description": "MiG is an Almaty exchange chain (34 offices). MiG 2 is the closest to the Airbnb and on the way to Navat. Other nearby branches: MiG 12 (Satpayev 2 × Dostyk), MiG 15 (Tole Bi 24a × Dostyk), MiG 4 (Abay 40 × Baitursynov).",
         "tickets": "Listed hours 09:00–20:00 daily — check in 2GIS before walking over. mig.kz publishes one network-wide rate table (5 Nov: USD buy 449.5 ₸); still compare the board with the rate in the app before you hand over notes.",
-        "tip": "Bring clean, new-series US$100 notes with no tears, and carry your passport. Count the tenge at the window and keep the receipt.",
+        "tip": "Is the rate good? Per $1: ₸450–454 excellent · 447–449 good · 444–446 acceptable · 440–443 negotiate · below 440 avoid (target ₸452; $100 → ~₸44,900–45,200). Full table, incl. INR, on the Prep page. Bring clean, new-series US$100 notes with no tears, and carry your passport. Count the tenge at the window and keep the receipt.",
         "links": [
           {
             "label": "MiG rates & branches",

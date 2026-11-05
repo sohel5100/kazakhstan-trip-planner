@@ -3719,3 +3719,59 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+/* Prep: exchange-rate guide */
+.rate-guide {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.rate-guide h3 {
+  font: 600 15px var(--serif);
+  margin: 0 0 8px;
+}
+
+.rate-guide table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.rate-guide th,
+.rate-guide td {
+  text-align: left;
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.rate-guide th {
+  font-size: 11px;
+  color: #7a837d;
+  font-weight: 700;
+}
+
+.rate-guide td:last-child {
+  font-weight: 600;
+}
+
+.rate-best td:last-child { color: #2e7d32; }
+.rate-good td:last-child { color: #558b2f; }
+.rate-ok td:last-child { color: #8d6232; }
+.rate-warn td:last-child { color: #c46a1a; }
+.rate-bad td:last-child { color: #b3261e; }
+
+.rate-guide p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 8px 0 0;
+}
+
+.rate-guide .rate-note {
+  color: #8d6232;
+}

@@ -1,4 +1,4 @@
-import { defaultExpenses, expenseCategories } from '../data/trip.js?v=35';
+import { defaultExpenses, expenseCategories } from '../data/trip.js?v=36';
 import {
   exchangeRates,
   currencySymbols,
@@ -8,8 +8,8 @@ import {
   toINR,
   formatCurrency,
   formatEquivalentINR
-} from '../data/currency.js?v=35';
-import { pageHeader, icon } from '../components/shared.js?v=35';
+} from '../data/currency.js?v=36';
+import { pageHeader, icon } from '../components/shared.js?v=36';
 
 export const expensesStorageKey = 'fieldnotes-kazakhstan-expenses-v7';
 
