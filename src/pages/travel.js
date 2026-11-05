@@ -1,6 +1,6 @@
-import { flights, tripMeta } from '../data/trip.js?v=37';
-import { pageHeader, icon } from '../components/shared.js?v=37';
-import { hotels } from '../data/guide.js?v=37';
+import { flights, tripMeta } from '../data/trip.js?v=38';
+import { pageHeader, icon } from '../components/shared.js?v=38';
+import { hotels } from '../data/guide.js?v=38';
 
 // Getting around Almaty: key facts first, so they're easy to scan on a phone
 const transportGuide = [

@@ -1,11 +1,11 @@
-import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=37';
+import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=38';
 
 export {
   exchangeRates,
   currencySymbols,
   toINR,
   formatCurrency
-} from './currency.js?v=37';
+} from './currency.js?v=38';
 
 export const tripMeta = {
   title: 'Kazakhstan Adventure',
@@ -22,8 +22,8 @@ export const tripMeta = {
   currencyCode: 'KZT',
   currencySymbol: '₸',
   stayAreaName: 'Airbnb near Dostyk Ave (Golden Square)',
-  stayAreaNote: 'Nov 7–12. Navat, Nedelka and Starbucks a short walk away; Kok Tobe cable car ~15–20 min walk south on Dostyk; Almaly and Abay metro ~10–15 min walk.',
-  stayAreaCoordinates: '43.2485,76.9585',
+  stayAreaNote: 'Nov 7–12, Golden Square between Zenkov St and Dostyk Ave. Walks: MiG 2 exchange 0.44 km, Navat 0.47 km, Kok Tobe cable car 0.91 km, Six Coffee 1.08 km, Panfilov Park 1.42 km, Abay metro 1.45 km, Green Bazaar 2.00 km.',
+  stayAreaCoordinates: '43.250,76.957',
   flightRoute: 'Delhi (DEL) ↔ Almaty (ALA) direct (Air Astana)',
   flightDuration: '3h 30m – 3h 35m direct'
 };
@@ -494,7 +494,7 @@ export const itinerary = [
     "subtitle": "Overnight Rajdhani from Bhopal into Hazrat Nizamuddin at 05:30, cab to Delhi T3, fly at 12:10 and land in Almaty at 15:10.",
     "weatherNote": "Sunset is 16:37, so it is dark by the time you reach the city. Forecast on 6 Nov: dry, about 16 °C by day and ~5 °C at night — keep a jacket in your cabin bag.",
     "bring": "Passport, printouts of return ticket + Airbnb booking, US$100–200 in clean notes (INR can’t be exchanged in Kazakhstan), Yandex Go + 2GIS + Google Translate (offline Russian), Airbnb check-in instructions saved offline.",
-    "planB": "Train still waitlisted when the chart is prepared (about 4 h before departure)? A waitlisted e-ticket is cancelled automatically and you can’t board. Have a backup ready for Fri 6 Nov: a daytime train or an evening flight to Delhi, then a night near the airport. Uber’s Alternate Travel Plan refunds 2× the fare for train. If Almaty immigration or the SIM queue is slow, eat at Navat next door.",
+    "planB": "Train still waitlisted when the chart is prepared (about 4 h before departure)? A waitlisted e-ticket is cancelled automatically and you can’t board. Have a backup ready for Fri 6 Nov: a daytime train or an evening flight to Delhi, then a night near the airport. Uber’s Alternate Travel Plan refunds 2× the fare for train. If Almaty immigration or the SIM queue is slow, eat at Navat (0.47 km from the Airbnb).",
     "events": [
       {
         "time": "Fri 6 Nov · 09:05 PM",
@@ -524,7 +524,7 @@ export const itinerary = [
         "time": "07:30 AM – 08:30 AM",
         "type": "transfer",
         "title": "Cab to Delhi Airport Terminal 3",
-        "getThere": "Book Uber/Ola from the station’s pickup area; ask for “T3 departures”.",
+        "getThere": "Hazrat Nizamuddin → Delhi T3: 24.8 km by road, ~30 min with no traffic, 45–60 min in the morning. Book Uber/Ola from the station’s pickup area; ask for “T3 departures”.",
         "description": "About 45–60 minutes from Nizamuddin depending on traffic.",
         "cost": "Uber/Ola ~₹400–700",
         "tip": "Aim to reach T3 by about 09:00 — 3 hours before an international flight."
@@ -567,7 +567,7 @@ export const itinerary = [
         "time": "04:30 PM – 05:15 PM",
         "type": "transfer",
         "title": "Yandex Go to your Airbnb (near Dostyk Ave)",
-        "getThere": "Order in Yandex Go and walk to the pickup point the app shows (exact spot not confirmed — one report says ~200 m away at short-term parking). Only get in a car whose plate matches the app. ~14 km, ~20 min with no traffic, 30–45 min at 17:00.",
+        "getThere": "Airport T2 → Airbnb: 14.1 km, ~17 min with no traffic, 30–45 min at 17:00. Order in Yandex Go and walk to the pickup point the app shows (exact spot not confirmed — one report says ~200 m away at short-term parking). Only get in a car whose plate matches the app.",
         "description": "Order in the app and walk to the marked Yandex pickup zone outside Terminal 2. 25–45 min to the centre.",
         "cost": "Economy ~2,500–4,500 ₸ · Comfort ~3,500–6,000 ₸",
         "tip": "Ignore drivers who approach you in arrivals (they ask 8,000–18,000 ₸ cash). Check the plate before getting in. Message your Airbnb host your arrival time (~16:30) and get the check-in instructions before you fly.",
@@ -578,7 +578,7 @@ export const itinerary = [
         "type": "setup",
         "icon": "💱",
         "title": "Change USD at MiG 2 (Dostyk 40 × Kabanbay Batyr)",
-        "getThere": "From the Airbnb: walk ~550 m north along Dostyk Ave to the Kabanbay Batyr corner, ~7 min. Then walk back south past the Airbnb to Navat, ~550 m, 7 min.",
+        "getThere": "Airbnb → MiG 2: walk 0.44 km, ~6 min, to Dostyk 40 at the Kabanbay Batyr corner.",
         "description": "MiG is an Almaty exchange chain (34 offices). MiG 2 is the closest branch to the Airbnb (a short detour north before dinner). It’s open 09:00–20:00 daily with no break. Other nearby branches: MiG 12 (Satpayev 2 × Dostyk), MiG 15 (Tole Bi 24a × Dostyk), MiG 4 (Abay 40 × Baitursynov).",
         "tickets": "Phone +7 727 341 00 69. mig.kz publishes one network-wide rate table (5 Nov: buys USD at ₸449.5 per $1); still compare the board with the rate in the app before you hand over notes.",
         "tip": "Is the rate good? Per $1: ₸450–454 excellent · 447–449 good · 444–446 acceptable · 440–443 negotiate · below 440 avoid (target ₸452; $100 → ~₸44,900–45,200). Full table, incl. INR, on the Prep page. Bring clean, new-series US$100 notes with no tears, and carry your passport. Count the tenge at the window and keep the receipt.",
@@ -598,7 +598,7 @@ export const itinerary = [
         "type": "evening",
         "title": "First Kazakh dinner at Navat (walk from the Airbnb)",
         "description": "Navat chaikhana (Dostyk 48, 10:00–00:00; Google 4.5 from ~4,500 reviews). 🥗 Vegetarian: vegan lagman, vegan soup, grilled vegetables (HappyCow); ask “bez myasa?” for baursak (sometimes fried in mutton fat). 🍖 Meat: plov, manti, kuyrdak. Still fresh afterwards? Take the metro to Zhibek Zholy for the lit-up Arbat pedestrian street (route below).",
-        "getThere": "From MiG 2: walk ~550 m south on Dostyk Ave, 7 min (from the Airbnb it’s only ~300 m, 4 min). For Arbat afterwards: walk 1 km (13 min) west to Abay metro, ride 2 stops north to Zhibek Zholy (120 ₸, tap Visa/Mastercard), exit onto the pedestrian street. Yandex back ~800–1,200 ₸.",
+        "getThere": "MiG 2 → Navat (Dostyk 48): walk 0.55 km south along Dostyk, ~7 min. Navat → Airbnb afterwards: 0.47 km, ~6 min. For the Arbat instead: walk 1.00 km (~13 min) from Navat to Abay metro, ride 2 stops north to Zhibek Zholy (120 ₸, tap Visa/Mastercard), exit onto the pedestrian street; Yandex back ~800–1,200 ₸.",
         "cost": "~5,000–8,000 ₸ per person",
         "tip": "Bills often include 10–15% service (“обслуживание”) — no extra tip needed then. Rakhat chocolate shop is at Zhibek Zholy 47 × Kaldayakov.",
         "links": [
@@ -628,7 +628,7 @@ export const itinerary = [
         "time": "09:00 AM – 10:00 AM",
         "type": "breakfast",
         "title": "Brunch at Six Coffee+Wine",
-        "getThere": "From the Airbnb: ~900 m, 12 min walk south-west to Abay Ave 17 (Nedelka is next door at Abay 19).",
+        "getThere": "Airbnb → Six Coffee (Abay 17): walk 1.08 km, ~14 min. Nedelka (Abay 19) is next door: 1.14 km, ~15 min.",
         "description": "Rated 5.0 on Yandex — reviewers call it the best coffee in Almaty. Flat white plus avocado-salmon toast. Closer option: Nedelka, a few minutes from the Airbnb.",
         "cost": "~3,500–6,000 ₸",
         "links": [
@@ -643,7 +643,7 @@ export const itinerary = [
         "type": "sight",
         "title": "28 Panfilov Guardsmen Park & Ascension (Zenkov) Cathedral",
         "description": "Walk the park first: the huge Panfilov Guardsmen war memorial and eternal flame at the east end, then the pastel 1907 Ascension Cathedral with its golden domes — built of wood without nails, in the middle of the park. Free.",
-        "getThere": "From Six Coffee: Yandex Go ~5–10 min (~800–1,200 ₸) to the park’s south entrance, or walk ~2 km north (26 min). Inside the park: the war memorial and eternal flame → cathedral is 250 m (3 min).",
+        "getThere": "Six Coffee → park’s war memorial: Yandex 3.2 km, ~5–10 min (~800–1,200 ₸), or walk 1.97 km, ~26 min. Memorial → cathedral: walk 0.25 km, ~3 min.",
         "tickets": "Free · open 07:00–18:00",
         "tip": "Women cover their heads; no flash photography inside.",
         "image": "./assets/places/zenkov-cathedral.jpg"
@@ -653,7 +653,7 @@ export const itinerary = [
         "type": "museum",
         "icon": "🎻",
         "title": "Museum of Kazakh Folk Musical Instruments",
-        "getThere": "From the cathedral: ~450 m, 6 min walk east through the park to Zenkov St 24a (the wooden building at the park’s east edge).",
+        "getThere": "Cathedral → museum (Zenkov 24a, east edge of the park): walk 0.44 km, ~6 min.",
         "description": "A Lonely Planet top pick in a 1908 wooden building inside Panfilov Park. 30–45 minutes.",
         "tickets": "At the door; price reports vary (500–1,500 ₸) · Tue–Sun 10:00–18:00 (some listings say 19:00) · closed Mondays",
         "image": "./assets/places/music-museum.jpg"
@@ -663,7 +663,7 @@ export const itinerary = [
         "type": "market",
         "title": "Green Bazaar (Kok Bazar) + coffee on the balcony",
         "description": "Dried fruit, nuts, honey, spices, kurt and kazy. 🥗 Vegetarian snack: morkovcha (Korean carrot salad) at the Korean-salad stalls — ask “bez ryby, bez myasa?”, some salads use fish sauce or meat. Upstairs, Bowler Coffee Roasters has a balcony view over the market floor.",
-        "getThere": "From the museum: ~700 m, 9 min walk north along Zenkov St to Zhibek Zholy 53.",
+        "getThere": "Museum → Green Bazaar (Zhibek Zholy 53): walk 0.71 km north, ~9 min.",
         "cost": "Bring cash; coffee ~1,500–2,000 ₸",
         "tip": "Closed Mondays — so today is the day. Bargain on dried fruit and souvenirs, watch for pickpockets, taste before buying. The Rakhat factory store (Zenkov 2) is nearby.",
         "links": [
@@ -679,7 +679,7 @@ export const itinerary = [
         "type": "sight",
         "icon": "🕌",
         "title": "Almaty Central Mosque (Pushkin St 16)",
-        "getThere": "From the Green Bazaar: ~700 m, 9 min walk north-west to Pushkin St 16 — the gold dome is visible from the bazaar.",
+        "getThere": "Green Bazaar → mosque: walk 0.68 km north-west, ~9 min — the gold dome is visible from the bazaar.",
         "description": "The white mosque with the big golden-blue dome, about a 5-minute walk from the Green Bazaar. Free; visitors are welcome between prayers.",
         "tickets": "Free. Published hours conflict (09:00–18:00 vs 05:00–22:00) — midday Sunday is safe; avoid Friday 12:00–14:30 (Juma prayer).",
         "tip": "Cover arms and legs; women bring their own headscarf (one source says none are lent). Shoes off before the prayer hall. Photos are fine in common areas — not of people praying.",
@@ -695,7 +695,7 @@ export const itinerary = [
         "time": "02:15 PM – 03:00 PM",
         "type": "food",
         "title": "Lunch at Tary (Kazakh-twist café)",
-        "getThere": "From the mosque: ~1.5 km, 20 min walk west, or Yandex ~5 min (~800–1,000 ₸) to Abylai Khan Ave 55.",
+        "getThere": "Mosque → Tary (Abylai Khan 55): walk 1.53 km west, ~20 min, or Yandex 1.5 km, ~5 min (~800–1,000 ₸).",
         "description": "🥗 Vegetarian: baursaks (ask if fried in vegetable oil), irimshik (sweet dried curd) and the signature tary (roasted-millet) cheesecake. 🍖 Meat: Sandyq next door for a full beshbarmak.",
         "cost": "~5,000 ₸",
         "links": [
@@ -710,7 +710,7 @@ export const itinerary = [
         "type": "sunset",
         "title": "Kok Tobe cable car for sunset & city lights",
         "description": "Ride up about an hour before the 16:36 sunset, watch the mountains turn pink, stay for the city lights. Cafés and restaurants on top.",
-        "getThere": "From Tary: Yandex ~10–15 min (~1,200–1,800 ₸) to the lower station at Dostyk 104B, opposite the Palace of the Republic (walking is 3.5 km, 47 min). Back to the Airbnb afterwards: ~750 m, 10 min walk north along Dostyk.",
+        "getThere": "Tary → Kok Tobe lower station (Dostyk 104B, opposite the Palace of the Republic): Yandex 4.2 km, ~10–15 min (~1,200–1,800 ₸); walking is 3.49 km, ~47 min. Station → Airbnb afterwards: walk 0.91 km north, ~12 min.",
         "tickets": "At the station: 10,000 ₸ return / 6,000 ₸ one way (confirmed 2 Nov 2026). Fri–Sun 10:00–00:00, Mon/Wed/Thu 10:00–23:00, Tue from 13:00 (morning maintenance). It closed for an overhaul in early–mid Nov 2025; no 2026 closure announced — check koktobe.com the day before.",
         "tip": "🥗 Kok Tobe’s restaurant menu (Aug 2025) lists meatless mini pumpkin samsa and vegetable shashlik — good dinner with a view. Skip the mini-zoo. Taxis can’t drive up (25,000 ₸ car fee) — the park shuttle from Dostyk is 3,000 ₸ one way if the cable car is closed.",
         "backup": "Hazy or raining: swap with Thursday’s sunset and go to Akku café instead.",
@@ -745,7 +745,7 @@ export const itinerary = [
         "time": "08:00 AM – 08:45 AM",
         "type": "transfer",
         "title": "Yandex Go to the Medeu gondola station",
-        "getThere": "From the Airbnb: Yandex ~15 km up Dostyk Ave and the Medeu road, ~30 min (35–45 min in morning traffic). Set the destination to “Канатная дорога Медеу” (Medeu cable car station) — the rink car park is fenced off until December.",
+        "getThere": "Airbnb → Medeu cable car station: Yandex 15.6 km up Dostyk Ave and the Medeu road, ~28 min with no traffic, 35–45 min in the morning. Set the destination to “Канатная дорога Медеу” — the rink car park is fenced off until December.",
         "description": "Straight up Dostyk Ave and the Medeu valley from your Airbnb — about 30–40 minutes. Leave by 08:00 if you booked the glacier walk (it meets at 09:00); otherwise 08:30 is fine.",
         "cost": "~2,000–4,000 ₸",
         "tip": "City buses (12/21) need an Onay card that you can only buy with cash, and foreign cards usually fail — a taxi is easier. The road beyond Medeu is closed to cars and taxis until 30 Nov, so the gondola is the only way up."
@@ -811,7 +811,7 @@ export const itinerary = [
         "time": "03:00 PM – 04:00 PM",
         "type": "transfer",
         "title": "Gondola down & taxi back to the city",
-        "getThere": "Shymbulak → Medeu gondola (~15 min), then Yandex from the Medeu cable car station back to the Airbnb, ~30–40 min. Expect a queue for the ride down late in the day.",
+        "getThere": "Shymbulak → Medeu by gondola (~15 min), then Yandex from the Medeu cable car station to the Airbnb: 15.6 km, ~30–40 min. Expect a queue for the ride down late in the day.",
         "description": "Order Yandex Go at the Medeu station; expect a short wait in the afternoon.",
         "cost": "~2,000–4,000 ₸"
       },
@@ -819,7 +819,7 @@ export const itinerary = [
         "time": "07:30 PM – 09:00 PM",
         "type": "dinner",
         "title": "Dinner at Qaimaq (meat) or Navat (veg options)",
-        "getThere": "Qaimaq (Abay 46A): Yandex from the Airbnb ~10–15 min (~1,000–1,500 ₸); 3.6 km, too far to walk. Navat: 300 m, 4 min walk from the Airbnb.",
+        "getThere": "Airbnb → Qaimaq (Abay 46A): Yandex 5.6 km, ~10–15 min (~1,000–1,500 ₸); walking is 3.75 km, ~50 min. Navat: walk 0.47 km, ~6 min.",
         "description": "🍖 Qaimaq (Abay 46A, rated 4.6): kuyrdak in a pumpkin, big beshbarmak (8,400 ₸) — few vegetarian mains. 🥗 Prefer vegetarian? Navat on Dostyk next to the Airbnb has vegan lagman, soup and grilled vegetables.",
         "cost": "~8,000–12,000 ₸ per person",
         "links": [
@@ -873,7 +873,7 @@ export const itinerary = [
         "time": "05:30 AM",
         "type": "transfer",
         "title": "Taxi to the meeting point: Circus car park, Abay 50 (JoinMe)",
-        "getThere": "JoinMe: Yandex from the Airbnb ~4.8 km west, ~10 min at 05:30 (~1,000–1,500 ₸); order 10 min before. GetYourGuide: walk ~600 m, 8 min south to Hotel Kazakhstan (Dostyk 52/2) — wait in the lobby.",
+        "getThere": "JoinMe: Airbnb → Circus (Abay 50) by Yandex 4.8 km, ~7–10 min at 05:30 (~1,000–1,500 ₸); order 10 min before. GetYourGuide: walk 0.75 km south to Hotel Kazakhstan (Dostyk 52/2), ~10 min — wait in the lobby.",
         "description": "About 10 minutes from the Airbnb by Yandex Go. JoinMe’s 2-day page says both 05:30 and 06:00 for gathering, bus at 06:20 sharp — ask them on WhatsApp which. Booked the GetYourGuide tour instead? Pickup is at Hotel Kazakhstan (Dostyk 52, a short walk), about 07:00 — confirm the time in your booking.",
         "cost": "~1,000–1,500 ₸",
         "links": [
@@ -887,7 +887,7 @@ export const itinerary = [
         "time": "06:20 AM – 10:30 AM",
         "type": "tour",
         "title": "Bus to Saty village",
-        "getThere": "On the tour bus (~4 h with stops).",
+        "getThere": "Almaty → Saty: 281 km by road, ~5 h with stops, on the tour bus.",
         "description": "Snack and toilet stops on the way. Guides speak English/Russian/Kazakh."
       },
       {
@@ -895,7 +895,7 @@ export const itinerary = [
         "type": "nature",
         "icon": "🌲",
         "title": "Lake Kaindy — the sunken forest",
-        "getThere": "Tour UAZ 4x4 from Saty to the Kaindy parking, then walk ~2.5 km to the lake.",
+        "getThere": "Saty → Kaindy: 16.3 km — tour UAZ 4x4 to the parking, then walk ~2.5 km to the lake.",
         "description": "UAZ 4x4 from Saty to the Kaindy parking (included), then a 2.5 km walk to the lake with its drowned spruce trunks.",
         "tip": "Sit near the front of the UAZ — the road is very bumpy. Walking is safer than the optional horses.",
         "image": "./assets/places/kaindy.jpg"
@@ -904,7 +904,7 @@ export const itinerary = [
         "time": "01:30 PM – 02:30 PM",
         "type": "food",
         "title": "Lunch in Saty",
-        "getThere": "Tour transport back to Saty village.",
+        "getThere": "Kaindy → Saty: tour UAZ back down, ~16 km.",
         "description": "Included in the tour.",
         "image": "./assets/places/saty.jpg"
       },
@@ -913,7 +913,7 @@ export const itinerary = [
         "type": "nature",
         "icon": "🏞️",
         "title": "Kolsai Lake 1",
-        "getThere": "Tour bus from Saty, ~15 min to the Kolsai-1 car park, then a short walk to the shore.",
+        "getThere": "Saty → Kolsai-1 car park: 11.8 km, ~20 min on the tour bus, then a short walk to the shore.",
         "description": "Turquoise lake under snowy spruce slopes. Boats and catamarans are summer-only.",
         "image": "./assets/places/kolsai-kaindy-lakes.jpg"
       },
@@ -922,7 +922,7 @@ export const itinerary = [
         "type": "evening",
         "icon": "🔥",
         "title": "Guest house in Saty: dinner, bonfire & evening programme",
-        "getThere": "Tour transport to the guest house in Saty.",
+        "getThere": "Kolsai-1 → Saty: 11.8 km, ~20 min on the tour bus.",
         "description": "Expect basic rooms and patchy signal and power. Charge everything on the bus."
       }
     ],
@@ -952,7 +952,7 @@ export const itinerary = [
         "type": "sight",
         "icon": "🏔️",
         "title": "Black Canyon & Moon Canyon",
-        "getThere": "Tour bus from Saty (~1 h).",
+        "getThere": "On the tour bus, on the way from Saty towards Charyn (the whole Saty → Charyn leg is 92.5 km, ~3.5 h with stops).",
         "description": "Viewpoints over the dark gorges of the Charyn river system.",
         "image": "./assets/places/black-canyon.jpg"
       },
@@ -971,13 +971,13 @@ export const itinerary = [
         "type": "transfer",
         "icon": "🚌",
         "title": "Bus back to Almaty (Circus car park, Abay 50)",
-        "getThere": "Tour bus, ~3.5 h. JoinMe drops at the Circus (Yandex to the Airbnb ~10–20 min, ~1,000–1,500 ₸); GetYourGuide drops at the hotels it picked up from."
+        "getThere": "Charyn → Almaty: 218 km, ~4 h on the tour bus. JoinMe drops at the Circus → Airbnb by Yandex 4.8 km, ~10–20 min (~1,000–1,500 ₸); GetYourGuide drops at the hotels it picked up from (Hotel Kazakhstan → Airbnb: walk 0.75 km, ~10 min)."
       },
       {
         "time": "07:30 PM",
         "type": "dinner",
         "title": "Easy dinner: Navat on Dostyk",
-        "getThere": "300 m, 4 min walk from the Airbnb.",
+        "getThere": "Airbnb → Navat: walk 0.47 km, ~6 min.",
         "description": "Next to the Airbnb. 🥗 Vegan lagman or grilled vegetables. (Bauyrdaq — budget, 24/7 — is meat-focused: beshbarmak 4,390 ₸.)"
       }
     ],
@@ -1001,7 +1001,7 @@ export const itinerary = [
         "type": "checkin",
         "icon": "🧳",
         "title": "Check out of the Airbnb & move to your Nov 12–14 stay",
-        "getThere": "Yandex with your bags. Times on this day assume Renion (Kaldayakov 21, old town) — ~2.5 km, ~10 min (~1,000–1,500 ₸). Leave the bags at reception if the room isn’t ready.",
+        "getThere": "Yandex with your bags. Times on this day assume Renion (Kaldayakov 21, old town): Airbnb → Renion 2.4 km, ~5–10 min (~1,000–1,500 ₸). Leave the bags at reception if the room isn’t ready.",
         "description": "Your Airbnb is booked Nov 7–12. The nights of Nov 12 and 13 are not booked yet — a hotel with a 24/7 desk makes the 04:00 airport run on Nov 14 easy.",
         "tip": "Check the checkout time in your Airbnb listing. Hotel Kazakhstan is in the same area; Renion and Voyage are better value near Panfilov Park."
       },
@@ -1009,7 +1009,7 @@ export const itinerary = [
         "time": "11:30 AM – 12:30 PM",
         "type": "breakfast",
         "title": "Brunch at Bowler Coffee (Green Bazaar balcony)",
-        "getThere": "From Renion: ~500 m, 7 min walk to the Green Bazaar (Zhibek Zholy 53); Bowler is on the balcony inside the main hall.",
+        "getThere": "Renion → Green Bazaar (Zhibek Zholy 53): walk 0.50 km, ~7 min; Bowler is on the balcony inside the main hall.",
         "description": "Specialty coffee looking down on the market floor (Tue–Sun 09:00–18:00); pick up pastries, dried fruit or a morkovcha salad from the stalls below. Reviews on Tripadvisor and Trip.com praise the coffee and the view; it’s small and noisy.",
         "cost": "Coffee ~1,500–2,000 ₸",
         "tip": "If you’re not staying in the old town: ProCoffee (Dostyk 87A, opens 07:00, Yandex 5.0) is ~1 km / 13 min walk from the Airbnb — brunch there before you check out."
@@ -1018,7 +1018,7 @@ export const itinerary = [
         "time": "01:00 PM – 03:00 PM",
         "type": "spa",
         "title": "Arasan Wellness & SPA (1982 Soviet bathhouse)",
-        "getThere": "From the Green Bazaar: ~1 km, 14 min walk south-west to Tulebaev 78 (from Renion it’s also ~1 km, 14 min).",
+        "getThere": "Green Bazaar → Arasan (Tulebaev 78): walk 1.03 km south-west, ~14 min.",
         "description": "Russian banya, hammam and plunge pools — reviewers call it the best way to warm up in Almaty. Separate men’s and women’s sections.",
         "tickets": "Tulebaev 78, 07:00–23:30. At the door: weekday 2 h ~3,800 ₸ (morning) / 4,500 ₸ (evening). Towel, sheet and slippers are extra (a few hundred ₸ each) — bring your own flip-flops and towel. Phone +7 727 390 10 10.",
         "links": [
@@ -1033,7 +1033,7 @@ export const itinerary = [
         "type": "museum",
         "icon": "🖼️",
         "title": "Central State Museum of Kazakhstan (or ALMA art museum)",
-        "getThere": "From Arasan: Yandex ~10–15 min (~1,200–1,500 ₸) south to Samal-1, bldg 44 (3 km uphill — not worth walking). ALMA instead: Yandex ~15 min to Al-Farabi 28, entrance on Nazarbayev Ave.",
+        "getThere": "Arasan → Central State Museum (Samal-1, bldg 44): Yandex 4.2 km, ~10–15 min (~1,200–1,500 ₸); walking is 3.00 km uphill, ~40 min. ALMA instead: Yandex 6.4 km, ~15 min, to Al-Farabi 28 (entrance on Nazarbayev Ave).",
         "description": "Moved here from Friday to free Friday for Big Almaty Lake. Central State Museum: nomad history, the Golden Man replica and yurts (Samal-1 bldg 44; ~10:00–18:00; sources disagree on the closing day — Monday or Tuesday — and on price, 500 ₸ to 5,000 ₸ for foreigners; Thursday is open either way; phone +7 727 264 26 80). Prefer art? ALMA, a new private museum rated 4.8 (Al-Farabi 28, 11:00–21:00, 3,000 ₸, timed tickets).",
         "tickets": "Central Museum: at the desk. ALMA: almaty.art (closed Mondays).",
         "links": [
@@ -1049,7 +1049,7 @@ export const itinerary = [
         "icon": "☕",
         "title": "Akku — heritage Soviet-modernist café",
         "description": "A cult park café, rebuilt with mosaics, panoramic windows and a library corner. Profiteroles (790 ₸), condensed-milk wafer tubes and Soviet-style ice cream.",
-        "getThere": "From the Central Museum: Yandex ~10 min (~1,000–1,300 ₸) to Panfilov 123 in the Astana Square park (2.2 km, 30 min on foot).",
+        "getThere": "Central Museum → Akku (Panfilov 123, Astana Square park): Yandex 2.9 km, ~10 min (~1,000–1,300 ₸); walking is 2.23 km, ~30 min.",
         "links": [
           {
             "label": "Maps",
@@ -1061,7 +1061,7 @@ export const itinerary = [
         "time": "07:30 PM – 09:00 PM",
         "type": "dinner",
         "title": "Dinner at Kishlak (Uzbek) or Govinda’s (pure veg)",
-        "getThere": "From Akku: Govinda’s (Abylai Khan 39) ~1.9 km, 25 min walk north or Yandex ~5–10 min; Kishlak (Seifullin Ave) Yandex ~10 min. Back to Renion: Yandex ~5–10 min (~800–1,200 ₸).",
+        "getThere": "Akku → Govinda’s (Abylai Khan 39): walk 1.85 km, ~25 min, or Yandex 2.1 km, ~5–10 min. Akku → Kishlak (Seifullin Ave): Yandex 3.4 km, ~10 min. Back to Renion: from Govinda’s 2.4 km, from Kishlak 5.1 km by Yandex (~800–1,500 ₸).",
         "description": "🍖 Kishlak (Seifullin Ave, 11:30–02:00): rated 4.3 from ~2,170 reviews for its plov and decor (plov is made with meat). 🥗 Vegetarian: an early pure-veg set meal at Govinda’s (Abylai Khan 39, set back from the street near Mametova; ~2,050 ₸; open to 20:00 — go by 18:30, it sells out). No 2025–26 review confirms Govinda’s is still open, so call +7 7272 71 32 35 first. Backup: Maharaja (Nazarbayev 229, 11:00–23:00, large veg menu).",
         "links": [
           {
@@ -1088,7 +1088,7 @@ export const itinerary = [
         "time": "08:15 AM – 08:45 AM",
         "type": "breakfast",
         "title": "Quick breakfast near your hotel",
-        "getThere": "Bon Bon (Abylai Khan 123) is ~2.8 km from Renion — Yandex ~10 min if you skip the lake.",
+        "getThere": "Skipping the lake? Renion → Bon Bon (Abylai Khan 123): Yandex 2.9 km, ~10 min, or walk 2.83 km, ~38 min.",
         "description": "Skipping the lake? Have a slow breakfast at Bon Bon (Abylai Khan 123) instead: the “Bohemian” breakfast or syrniki, ~3,500 ₸."
       },
       {
@@ -1097,7 +1097,7 @@ export const itinerary = [
         "icon": "🏔️",
         "title": "Option (not booked): Big Almaty Lake by car (Adam Hiking Tours)",
         "description": "Private cars are banned on the lake road, so go with a tour: authorised vehicles drive past the checkpoint (a short 300 m walk at the vehicle change), at the lake ~10:15. In November expect a frozen, snow-covered lake under the peaks rather than turquoise water. The Alma-Arasan hot-spring stop is often closed (rockfall risk) and swapped for Ayusai gorge.",
-        "getThere": "From Renion: Yandex ~10–15 min (~1,200–1,500 ₸) to the Abai Opera Theatre, Kabanbay Batyr 110 — groups meet at the fountain. Be there by 08:45; some operators don’t wait more than 15 min. Weekday departures only.",
+        "getThere": "Renion → Abai Opera Theatre (Kabanbay Batyr 110): Yandex 3.2 km, ~10–15 min (~1,200–1,500 ₸); walking is 2.43 km, ~32 min. Groups meet at the fountain — be there by 08:45; some operators don’t wait more than 15 min. Weekday departures only.",
         "tickets": "From ₹5,518 on GetYourGuide (shown 6 Nov) — eco fee, English guide, transfer, lunch, snacks and water included. 4.8 from 255 reviews. Check Fri 13 Nov is bookable.",
         "tip": "Choose by car, not on foot: the hiking option is ~14 km, runs Mondays only, and in fresh snow it isn’t worth the avalanche and ice risk. Skip the “apple orchard” tour link — it now opens a different Panda Travel 4-hour tour (4.5★) whose recent reviews mention closed springs and pricey photo add-ons, and apple harvest is over by November.",
         "links": [
@@ -1115,14 +1115,14 @@ export const itinerary = [
         "time": "02:15 PM – 03:00 PM",
         "type": "food",
         "title": "Late lunch (if the tour lunch was light)",
-        "getThere": "From the Opera Theatre (tour drop-off): Navat Abylai Khan 58A is ~1.9 km, 25 min walk north, or Yandex ~5–10 min.",
+        "getThere": "Opera Theatre (tour drop-off) → Navat (Abylai Khan 58A): walk 1.86 km north, ~25 min, or Yandex 2.4 km, ~5–10 min.",
         "description": "🥗 Navat on Abylai Khan 58A — vegan lagman or grilled vegetables. 🍖 Rumi (Abylai Khan 92) is a plov house rated 4.6, set menus from ~6,500 ₸ — plov is made with meat."
       },
       {
         "time": "03:15 PM – 05:00 PM",
         "type": "shopping",
         "title": "Souvenirs: TSUM crafts & Rakhat chocolate",
-        "getThere": "From Navat: TSUM (Abylai Khan 62) is 3 min walk. Then walk east along the pedestrian Zhibek Zholy (Arbat), ~1.4 km, 18 min, to the Rakhat shop at Zhibek Zholy 47 × Kaldayakov — 2 min from Renion.",
+        "getThere": "Navat → TSUM (Abylai Khan 62): walk 0.23 km, ~3 min. TSUM → Rakhat shop (Zhibek Zholy 47 × Kaldayakov): walk 1.36 km east along the pedestrian Arbat, ~18 min. Rakhat → Renion: 0.13 km, ~2 min.",
         "description": "Felt slippers (2,000–2,500 ₸), kalpak hats ($15–30) and felt crafts at TSUM (Abylai Khan 62, ~10:00–22:00). Kazakh chocolate at the Rakhat shop on the Arbat (Zhibek Zholy 47 × Kaldayakov) or the factory store (Zenkov 2, 09:00–20:00) — cheaper than supermarkets.",
         "tip": "Avoid airport and hotel shops — heavy mark-ups."
       },
@@ -1139,7 +1139,7 @@ export const itinerary = [
         "type": "dinner",
         "icon": "🎶",
         "title": "Farewell dinner at Sandyq",
-        "getThere": "From Renion: Yandex ~5–10 min (~800–1,200 ₸) or ~1.8 km, 24 min walk west along Zhibek Zholy. Yandex lists Sandyq as Alimzhanov St 55, others Abylai Khan 55 — use the app pin.",
+        "getThere": "Renion → Sandyq: walk 1.78 km west along Zhibek Zholy, ~24 min, or Yandex 2.0 km, ~5–10 min (~800–1,200 ₸). Yandex lists Sandyq as Alimzhanov St 55, others Abylai Khan 55 — use the app pin.",
         "description": "Neo-nomad restaurant with live music in the evenings and an English menu. 🍖 Signatures are meat (beshbarmak 7,990 ₸, kuyrdak 7,790 ₸); 🥗 ask for their vegetable dishes and baursaks, or book the 24/7 Tary next door for desserts.",
         "cost": "~10,000 ₸ per person",
         "tip": "Book ahead.",
@@ -1176,7 +1176,7 @@ export const itinerary = [
         "time": "04:00 AM – 04:30 AM",
         "type": "transfer",
         "title": "Taxi to ALA Terminal 2",
-        "getThere": "Yandex from Renion ~13.6 km, ~16–25 min at 04:00 (~2,500–4,500 ₸). Choose “International Terminal 2 / departures”.",
+        "getThere": "Renion → ALA Terminal 2: Yandex 13.6 km, ~16–25 min at 04:00 (~2,500–4,500 ₸). Choose “International Terminal 2 / departures”.",
         "description": "About 20–25 minutes at this hour.",
         "cost": "Yandex Go ~2,500–4,500 ₸",
         "tip": "Order 10–15 min before you go down and check the plate. The airport recommends arriving 3 hours before international flights — 04:45 would be too tight."
