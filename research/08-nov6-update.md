@@ -64,3 +64,18 @@ _Re-checked tours, Shymbulak, glacier, SIM, exchange, mosque and food on 6 Nov 2
 ## Reviewer tips & lift timing (added 6 Nov)
 - Lift ride times: gondola 4.5 km ~15–20 min; Combi-1 ~10–13 min; Combi-2 ~5–8 min (2GIS, gorny-club.kz, Wikipedia, WildTicket). Guides: allow ≥3 h for the round trip; desk queues 30–40 min on busy days; app/online tickets cheaper; upper lifts close earlier (Combi-2 ~16:30).
 - Per-place tips (airport scams, Green Bazaar layout/bargaining, Kok Tobe queues & return ticket, Kaindy climb back, Charyn eco-shuttle, Arasan routine, BAL passport/eco-fee) taken only where ≥2 independent sources agree, single-source items labelled.
+
+## Gap check & tour review (added 6 Nov, evening)
+**Tour review (GYG reviews read in full for KGT, JoinMe, KZVN, Panda, Adam BAL; Kazakh news):**
+- KGT (t489855) departs only Sun 8, Tue 10, Thu 12. Moved the 2-day tour to **Thu 12–Fri 13**: fresh snow from the 11th, dry day 2 for Kaindy/Charyn (vs ~80% rain on the 11th). Night 12 in the yurt → only **one** hotel night needed (13th) → Hotel Kazakhstan (pickup/drop-off point, 24/7 desk, 15.8 km to ALA).
+- KGT: 7 winter reviews say yurts heated; 6 breakdown reports (3 in Oct 2026) → ask for a newer bus. ~30 on a coach. Private yurt ~23,000 ₸ upsell disputes.
+- JoinMe Asia (t702822, 4.5/574): 66 poor reviews since Jun 2025 → backup only. KZVN unheated guesthouse (Oct 2026). Panda 2-day 3.8 → avoid.
+- Kaindy: new road reached the lake by Aug–Sep 2026 (review) though Kursiv (Jul 2026) said only 2.5 of 10 km paved; trail can close after snow. Horses ~1,000 ₸ return (Oct 2026).
+- **Big Almaty Lake dropped**: frozen, can't reach shore, "inferior" after Kolsai/Kaindy, springs often closed; sources conflict on whether tour cars can still drive up (airpress/dtf say ban covers all but service vehicles; tour reviews describe a vehicle change at the checkpoint).
+- Glacier: Sputnik8 private ice-cave trek 72,000 ₸ (Nov–Mar route), crampons requested 2 days ahead → book by Sat 7. The 35,000 ₸ group listing couldn't be re-verified.
+
+**Added experiences (≥2 sources unless noted):** Abai Opera — Giselle Sun 8 18:00 (playbill + Ticketon), from ~2,125 ₸ (option after Kok Tobe); Bar Fly 26th floor at Hotel Kazakhstan for city lights (3 nightlife guides; hours unverified); EverJazz (Zenkov 24) live jazz (Tengri guide; programme unverified); horse rides at Shymbulak from 3,500 ₸/15 min (sxodim). Considered and skipped for November: Medeu rink (closed to ~2028), skiing/tubing (season ~23–26 Nov), Assy/Turgen (season Apr–Oct, snow), Altyn-Emel (250 km each way), ethno-aul (Apr–Oct), Sunkar falcons (season conflicts, Mon closed, Tue/Wed slots used by city plan), Alma-Arasan springs (reconstruction, rustic), indoor ice rinks (weekends only, opening unconfirmed), Kok Zhailau hike (only 7–8 Nov dry; 7th is arrival, 8th is the city day).
+
+**Food gaps filled:** Georgian khinkali (Khachapuri Khinkalevich 0.08 km from the Airbnb; Patsatsina, Dadiani, Daredzhani), Uyghur guiru lagman/tsomyan (Paradise Dostyk 50 — single round-up source; Oral canteen in the Green Bazaar; Chapsan open to 05:00). Noted but not scheduled: Venetsiya/Smile/Shipudim shashlik, Abay restaurant on Kok Tobe, Rifugio del Monte splurge, family dinner (indyguide, from €50), cooking classes.
+
+**New day order:** Sun 8 city + Kok Tobe (+ Giselle option) · Mon 9 Shymbulak + AUYL · Tue 10 Arasan, Paradise lagman, ALMA, Bar Fly, khinkali, jazz · Wed 11 (rain) Central Museum, Akku, souvenirs, Sandyq farewell · Thu 12–Fri 13 tour · Sat 14 fly.

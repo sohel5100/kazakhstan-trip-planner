@@ -1,6 +1,6 @@
-import { flights, tripMeta } from '../data/trip.js?v=40';
-import { pageHeader, icon } from '../components/shared.js?v=40';
-import { hotels } from '../data/guide.js?v=40';
+import { flights, tripMeta } from '../data/trip.js?v=41';
+import { pageHeader, icon } from '../components/shared.js?v=41';
+import { hotels } from '../data/guide.js?v=41';
 
 // Getting around Almaty: key facts first, so they're easy to scan on a phone
 const transportGuide = [
@@ -225,7 +225,7 @@ export function renderTravel() {
         <div>
           <p class="eyebrow">WHERE TO STAY</p>
           <h2>🏨 Your stays</h2>
-          <p class="muted">Nov 7–12: your Airbnb near Dostyk Ave (confirmed, ₹23,000 paid). <strong>Nov 12–14 (2 nights) is not booked yet</strong> — a hotel with a 24/7 desk makes the 04:00 airport run easy. Options with real reviews:</p>
+          <p class="muted">Nov 7–12: your Airbnb near Dostyk Ave (confirmed, ₹23,000 paid). Nov 12: the tour’s heated yurt camp. <strong>Nov 13 (1 night) is not booked yet</strong> — Hotel Kazakhstan is the tour’s drop-off point and has a 24/7 desk for the 04:00 airport run. Options with real reviews:</p>
         </div>
       </div>
       <div class="hotel-list">

@@ -1,11 +1,11 @@
-import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=40';
+import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=41';
 
 export {
   exchangeRates,
   currencySymbols,
   toINR,
   formatCurrency
-} from './currency.js?v=40';
+} from './currency.js?v=41';
 
 export const tripMeta = {
   title: 'Kazakhstan Adventure',
@@ -163,15 +163,15 @@ export const defaultExpenses = [
   },
   {
     "id": "exp-stay-nov12",
-    "title": "Stay for Nov 12–13 (2 nights) — not booked yet",
-    "amount": 75200,
+    "title": "Hotel Kazakhstan, night of Nov 13 — not booked yet",
+    "amount": 50300,
     "currency": "KZT",
     "category": "stay",
     "status": "estimated",
     "paymentMethod": "Card",
-    "date": "2026-11-12",
+    "date": "2026-11-13",
     "country": "Kazakhstan",
-    "note": "Estimate at ~37,600 ₸/night (Renion); Voyage ~26,000 ₸, Hotel Kazakhstan ~50,300 ₸"
+    "note": "One night only (Nov 12 is in the tour yurt). Tour pickup/drop-off point; ask to store bags from Thu morning"
   },
   {
     "currency": "KZT",
@@ -254,8 +254,8 @@ export const defaultExpenses = [
     "title": "2-day tour: Kaindy, Kolsai, Black Canyon & Charyn (not booked)",
     "amount": 36000,
     "category": "activities",
-    "date": "2026-11-10",
-    "note": "Recommended GYG 2-day from ₹7,545 (~36,000 ₸); JoinMe from 30,000 ₸. Both include guest house, meals, UAZ, eco fees, guide"
+    "date": "2026-11-12",
+    "note": "Recommended: Kazakhstan Guided Tours on GYG, Thu 12–Fri 13, from ₹7,545 (~36,000 ₸) incl. heated yurt and meals; private yurt ~23,000 ₸ extra"
   },
   {
     "currency": "KZT",
@@ -266,8 +266,8 @@ export const defaultExpenses = [
     "title": "Tour cash (snacks, optional horses, eco-taxi)",
     "amount": 10000,
     "category": "activities",
-    "date": "2026-11-11",
-    "note": "Carry tenge"
+    "date": "2026-11-13",
+    "note": "Shuttles ~1,000 ₸, park fees ~700–1,000 ₸, Kaindy horse ~1,000 ₸, snacks — no ATMs near the lakes"
   },
   {
     "currency": "KZT",
@@ -278,7 +278,7 @@ export const defaultExpenses = [
     "title": "Arasan Wellness & SPA (2 h)",
     "amount": 4500,
     "category": "activities",
-    "date": "2026-11-12",
+    "date": "2026-11-10",
     "note": "Weekday rate"
   },
   {
@@ -290,7 +290,7 @@ export const defaultExpenses = [
     "title": "Almaty Museum of Arts (ALMA)",
     "amount": 3000,
     "category": "activities",
-    "date": "2026-11-12",
+    "date": "2026-11-10",
     "note": "Timed tickets at almaty.art"
   },
   {
@@ -302,8 +302,8 @@ export const defaultExpenses = [
     "title": "Central State Museum (foreigner ticket)",
     "amount": 5000,
     "category": "activities",
-    "date": "2026-11-12",
-    "note": "Closed Tuesdays; moved to Thu 12 Nov"
+    "date": "2026-11-11",
+    "note": "Price reports 500–5,000 ₸; Wed 11 Nov"
   },
   {
     "currency": "KZT",
@@ -338,7 +338,7 @@ export const defaultExpenses = [
     "title": "Souvenirs (felt crafts, Rakhat chocolate)",
     "amount": 20000,
     "category": "shopping",
-    "date": "2026-11-13",
+    "date": "2026-11-11",
     "note": "TSUM and Rakhat factory store"
   },
   {
@@ -347,7 +347,7 @@ export const defaultExpenses = [
     "paymentMethod": "Card",
     "country": "Kazakhstan",
     "id": "exp-airport-taxi-departure",
-    "title": "Yandex Go: Hotel → Airport (04:00)",
+    "title": "Yandex Go: Hotel Kazakhstan → Airport (04:00)",
     "amount": 4000,
     "category": "transport",
     "date": "2026-11-14",
@@ -470,7 +470,7 @@ export const places = [
   },
   {
     id: 'big-almaty-lake',
-    name: 'Big Almaty Lake (option)',
+    name: 'Big Almaty Lake (skip in November)',
     city: 'Ile-Alatau National Park',
     category: 'Alpine Lakes',
     shortDescription: 'Mountain reservoir at ~2,500 m under Soviet Peak, ~1 h from the city. Usually frozen and snow-covered from November.',
@@ -480,7 +480,7 @@ export const places = [
     lng: 76.9858,
     tags: ['Lake', 'Snow', 'Half day'],
     image: './assets/places/big-almaty-lake.jpg',
-    whyGo: 'The closest high-mountain lake to Almaty. In November you get a frozen white lake framed by snowy peaks rather than turquoise water.'
+    whyGo: 'Dropped from the plan: in November it is frozen and snow-covered, you can’t reach the shore (water reserve), and recent reviewers who had seen Kolsai and Kaindy called it inferior and pricey for the time. Worth it from June to October.'
   }
 ];
 
@@ -622,7 +622,7 @@ export const itinerary = [
     "subtitle": "All on foot in one compact old-town loop (Panfilov Park → Green Bazaar → Central Mosque are 5–15 min apart), then the cable car up Kok Tobe for sunset and city lights.",
     "weatherNote": "Forecast on 6 Nov: dry and mild (~5–16 °C) — a good Kok Tobe day. Go up only if the air is clear (check the IQAir app): smog can hide the view by afternoon. Sunset 16:36.",
     "bring": "Cash for the bazaar (5,000–10,000 ₸), clothes covering arms and legs plus a scarf (needed at the mosque; women also cover their heads at the cathedral), socks without holes (shoes off at the mosque), warm layers for Kok Tobe after dark.",
-    "planB": "Rain all day: Central State Museum (Yandex ~10 min from the old town; price reports 500–5,000 ₸) and Akku café, still do the Green Bazaar (indoor hall). Move Kok Tobe to Thursday.",
+    "planB": "Rain all day: Central State Museum (Yandex ~10 min from the old town; price reports 500–5,000 ₸) and Akku café, still do the Green Bazaar (indoor hall). Move Kok Tobe to Tuesday.",
     "events": [
       {
         "time": "09:00 AM – 10:00 AM",
@@ -662,7 +662,7 @@ export const itinerary = [
         "time": "12:15 PM – 01:30 PM",
         "type": "market",
         "title": "Green Bazaar (Kok Bazar) + coffee on the balcony",
-        "description": "Graze your way through for lunch, the way food writers recommend: free tastes of kazy and smoked horse in the meat hall at the back, hot tandoor samsa and fresh lepeshka bread from the stalls, a tub of Korean morkovcha from the salad row, kurt and irimshik in the dairy section. Don’t order beshbarmak here — one guide says the bazaar versions target tourists. Upstairs, Bowler Coffee Roasters has a balcony view over the market floor.",
+        "description": "Graze your way through for lunch, the way food writers recommend: free tastes of kazy and smoked horse in the meat hall at the back, hot tandoor samsa and fresh lepeshka bread from the stalls, a tub of Korean morkovcha from the salad row, kurt and irimshik in the dairy section. Don’t order beshbarmak here — one guide says the bazaar versions target tourists. Want a sit-down bowl? The Oral canteen up the stairs from the main entrance does Uyghur lagman for ~1,800–2,200 ₸ (10:00–18:00). Upstairs, Bowler Coffee Roasters has a balcony view over the market floor.",
         "getThere": "Museum → Green Bazaar (Zhibek Zholy 53): walk 0.71 km north, ~9 min.",
         "cost": "Bring cash; coffee ~1,500–2,000 ₸",
         "tip": "Closed Mondays — so today is the day. Bargain on dried fruit and souvenirs, watch for pickpockets, taste before buying. The Rakhat factory store (Zenkov 2) is nearby. How reviewers do it: enter the main hall from Zhibek Zholy — dried fruit, nuts and spices at the front, then the Korean salads, then dairy (kurt, irimshik). The newer central pavilion (entrance from Makataev St) has farm produce, honey and cheese, and is said to be 20–30% cheaper for some goods. Taste freely but don’t overdo it; opening prices are inflated, so bargain politely for 5–10% off. Bring cash.",
@@ -708,7 +708,7 @@ export const itinerary = [
         "getThere": "Tary → Kok Tobe lower station (Dostyk 104B, opposite the Palace of the Republic): Yandex 4.2 km, ~10–15 min (~1,200–1,800 ₸); walking is 3.49 km, ~47 min. ",
         "tickets": "At the station: 10,000 ₸ return / 6,000 ₸ one way (confirmed 2 Nov 2026). Fri–Sun 10:00–00:00, Mon/Wed/Thu 10:00–23:00, Tue from 13:00 (morning maintenance). It closed for an overhaul in early–mid Nov 2025; no 2026 closure announced — check koktobe.com the day before.",
         "tip": "Skip the restaurants at the top — several reviewers call them tourist-priced and mediocre; eat at the bottom instead (next stop). Skip the mini-zoo. Taxis can’t drive up (25,000 ₸ car fee) — the park shuttle from Dostyk is 3,000 ₸ one way if the cable car is closed. Reviewers repeat: it’s Sunday, so expect a queue (~20 min) — be at the station by ~15:30 for the 16:36 sunset. Buy a return: the walking path down has been closed since May 2026. Worth it at the top: the viewing decks and the Beatles bench; the TV tower is closed; food up there is mediocre.",
-        "backup": "Hazy or raining: swap with Thursday’s sunset and go to Akku café instead.",
+        "backup": "Hazy or raining: try Tuesday’s sunset instead (cable car opens 13:00 on Tuesdays), or see the city lights from Bar Fly on the 26th floor of Hotel Kazakhstan.",
         "links": [
           {
             "label": "Kok Tobe station",
@@ -716,6 +716,25 @@ export const itinerary = [
           }
         ],
         "image": "./assets/places/kok-tobe.jpg"
+      },
+      {
+        "time": "06:00 PM – 08:45 PM",
+        "type": "show",
+        "icon": "🩰",
+        "title": "Option: Giselle at the Abai Opera & Ballet Theatre",
+        "getThere": "Kok Tobe lower station → Abai Opera Theatre (Kabanbay Batyr 110): Yandex 2.8 km, ~5–10 min (~1,000 ₸), or walk 1.84 km, ~25 min. Afterwards → Airbnb: walk 1.37 km, ~18 min.",
+        "description": "Classic ballet in the grand Soviet-era hall — Giselle plays Sun 8 Nov at 18:00 (theatre playbill, checked 6 Nov). Leave Kok Tobe right after sunset (~17:15) to make it. If you go, skip the Qaganat dinner and eat after the show (Navat, 0.47 km from the Airbnb, is open to midnight).",
+        "tickets": "From ~2,125 ₸ on ticketon.kz or abaykazntob.kz.",
+        "links": [
+          {
+            "label": "Abai Opera playbill",
+            "href": "https://abaykazntob.kz/"
+          },
+          {
+            "label": "Ticketon",
+            "href": "https://ticketon.kz/almaty"
+          }
+        ]
       },
       {
         "time": "06:30 PM – 07:30 PM",
@@ -743,7 +762,7 @@ export const itinerary = [
     "subtitle": "Three lifts from Medeu up to 3,200 m, above the city smog, then an early dinner at AUYL next to the gondola. The forecast makes this the best mountain day of the week — and museums and the bazaar are shut on Mondays anyway.",
     "weatherNote": "Forecast on 6 Nov: dry, light wind, about −5…+5 °C at 3,200 m — the clearest mountain window of your trip (snow arrives Tue night/Wed). Trails are icy in the morning after the overnight refreeze. Combi-2 to Talgar Pass closed at 16:30 last winter (2026 hours not published) — be heading down by ~15:00. The official live page (shymbulak.com/live) needs a browser: check it in the morning, or ask at the Medeu ticket desk which lifts are running.",
     "bring": "Warm jacket, hat, gloves, sunglasses (snow glare), sunscreen, grippy boots (microspikes if you have them), water and a snack, passport, a card for lift tickets.",
-    "planB": "Lifts stopped by wind: Central State Museum (open Mondays) + Arasan baths, and do the mountains Thursday 12 or Friday 13 (fresh snow, but −10…−20 °C at the top). If the glacier guide cancels, just stay at Talgar Pass — do not walk to the glacier alone.",
+    "planB": "Lifts stopped by wind: swap with Tuesday 10 (Arasan baths and ALMA move to Monday — but ALMA is closed Mondays, so do Arasan + Central State Museum instead). If the glacier guide cancels, just stay at Talgar Pass — do not walk to the glacier alone.",
     "events": [
       {
         "time": "08:00 AM – 08:45 AM",
@@ -789,7 +808,7 @@ export const itinerary = [
         "title": "Talgar Pass: views, snow & a hot drink at 3,200 m",
         "getThere": "You’re at the Combi-2 top station; the viewpoints are a few minutes’ walk around it.",
         "description": "Take it slow for the first 30 minutes (altitude) and drink water. Walk the viewpoints around the top station towards the Tuyuksu glaciers, then warm up at Panorama Café or Bar 3200 next to Combi-2 (pricey, as reviewers note).",
-        "tip": "It’s about −5…+5 °C with wind up here — sunglasses and sunscreen even in November."
+        "tip": "It’s about −5…+5 °C with wind up here — sunglasses and sunscreen even in November. Horse rides are offered at Shymbulak from ~3,500 ₸ per 15 min (paid on the spot) if you want one at the base later."
       },
       {
         "time": "10:30 AM – 01:30 PM",
@@ -798,7 +817,7 @@ export const itinerary = [
         "title": "Option (not booked) instead: guided walk to the Bogdanovich Glacier viewpoint",
         "getThere": "Meet the guide where your booking says (Sputnik8: meets 09:00; the walk starts at the Combi-2 top station). From Talgar Pass a cairn-marked moraine path runs ~2 km south to the viewpoint (~3,370 m), 1–1.5 h each way.",
         "description": "Do it only with a guide — there are hidden crevasses under thin snow and avalanche slopes; the Emergencies Ministry logged 4 incidents on the route in 2025 and recommends a guide for beginners. Stay on the moraine viewpoint, not on the ice. If you do this, skip the 10:30–12:30 Talgar Pass slot.",
-        "tickets": "Sputnik8 guided walk: 35,000 ₸ — guide, crampons, helmet and poles included, lift ticket not. Back ~13:30. Book today for Monday; if they can’t run it, skip the glacier.",
+        "tickets": "Sputnik8 lists two options: a group walk at 35,000 ₸ (seen 6 Nov; not re-verified) and a private Bogdanovich ice-cave trek at 72,000 ₸ (5.0 from 6 reviews, a November–March route). Lift ticket not included. Crampons must be requested 2 days ahead — so book by Sat 7 Nov for Monday. If they can’t run it, skip the glacier.",
         "tip": "Register your walk (voluntary) on almatyhike.kz and mark your return afterwards. Rescue: 112. After the snowfall on 10–11 Nov, don’t attempt it on a later day.",
         "links": [
           {
@@ -851,212 +870,53 @@ export const itinerary = [
     "dayNumber": 4,
     "date": "2026-11-10",
     "weekday": "Tuesday",
-    "city": "Kaindy & Kolsai → Saty",
-    "title": "2-day tour, day 1: Kaindy & Kolsai lakes (not booked yet)",
-    "subtitle": "One 2-day trip covers Kaindy, Kolsai, Black Canyon and Charyn — the lakes are beyond Charyn on the same road, so separate day trips would repeat 6–7 h of driving. Night in Saty with a bonfire evening. Timings below follow JoinMe; booking options are in the first stop.",
-    "weatherNote": "Forecast on 6 Nov: Tue mostly dry with a chance of showers (~50%); Wed wetter (rain at Charyn, snow at altitude, ~17 cm forecast at Shymbulak). Tours still run in this — pack waterproofs. Lakes start icing in November and walking on the ice is banned. Kaindy is a 2.5 km walk from the parking — trails can be snowy. Dark by ~16:30.",
-    "bring": "Passport/ID, cash in tenge for snacks and optional horses or boats, power bank, warm layers, gloves, hat, grippy shoes, motion-sickness tablets for the UAZ, small overnight bag. Leave your big luggage at the Airbnb.",
-    "planB": "If the Kaindy road or trail is closed, the group spends longer at Kolsai and in Saty. If the operator moves the trip because of snow, swap with Thursday–Friday (12–13 Nov): the Nov 12 Airbnb checkout and the 04:00 airport run on the 14th still work if you’re back by ~21:00 on the 13th.",
-    "events": [
-      {
-        "time": "Book by Sun 8 Nov",
-        "type": "tour",
-        "icon": "🎟️",
-        "title": "Book ONE 2-day tour: Kaindy, Kolsai, Black Canyon & Charyn",
-        "getThere": "Book online today (links below); screenshot the voucher with the meeting point.",
-        "description": "Not booked yet — book today. ⭐ Recommended: Kazakhstan Guided Tours 2-day on GetYourGuide — 4.8 from 1,115 reviews (praise as recent as 2 Nov 2026), pickup at Hotel Kazakhstan near your Airbnb, guest house or yurt with meals, 2–3 h at each main site. Order: day 1 Black Canyon + Kolsai, day 2 Kaindy + Charyn; back 20:00–21:00. Cheaper alternative: JoinMe 2-day (the timeline below): bus of up to 40, guest house, all meals, UAZ and eco fees included, but no ratings shown and no November dates listed — confirm on WhatsApp.",
-        "tickets": "GetYourGuide: from ₹7,545 per person (shown 6 Nov, “likely to sell out”) — check that Tue 10 Nov is bookable and the cancellation terms. JoinMe: from 30,000 ₸ per person. ⚠️ The JoinMe link you saved (…early-start-14-09-2026) is the 14 Sep departure and is closed — use the general 2-day page. Day trips (17 h, 1–1.5 h per site, ~4:30 start, back ~20:30–22:30) are not recommended: rushed, and half of it is in the dark in November.",
-        "tip": "Meals are included on both 2-day tours — mention any food you don’t eat when booking. Carry cash: no ATMs near the lakes.",
-        "links": [
-          {
-            "label": "⭐ GYG 2-day (recommended)",
-            "href": "https://www.getyourguide.com/almaty-city-l1414/almaty-kolsai-kaindy-lakes-charyn-canyons-2-day-tour-t489855/"
-          },
-          {
-            "label": "JoinMe 2-day page",
-            "href": "https://www.joinme.kz/en/tours/almaty-region/group-tours/kaindy-kolsai-2-days-early-start"
-          },
-          {
-            "label": "WhatsApp JoinMe",
-            "href": "https://wa.me/77772999767"
-          }
-        ]
-      },
-      {
-        "time": "05:30 AM",
-        "type": "transfer",
-        "title": "Taxi to the meeting point: Circus car park, Abay 50 (JoinMe)",
-        "getThere": "JoinMe: Airbnb → Circus (Abay 50) by Yandex 4.8 km, ~7–10 min at 05:30 (~1,000–1,500 ₸); order 10 min before. GetYourGuide: walk 0.75 km south to Hotel Kazakhstan (Dostyk 52/2), ~10 min — wait in the lobby.",
-        "description": "About 10 minutes from the Airbnb by Yandex Go. JoinMe’s 2-day page says both 05:30 and 06:00 for gathering, bus at 06:20 sharp — ask them on WhatsApp which. Booked the GetYourGuide tour instead? Pickup is at Hotel Kazakhstan (Dostyk 52, a short walk), about 07:00 — confirm the time in your booking.",
-        "cost": "~1,000–1,500 ₸",
-        "links": [
-          {
-            "label": "Meeting point",
-            "href": "https://www.google.com/maps/search/?api=1&query=Almaty+State+Circus+Abay+50"
-          }
-        ]
-      },
-      {
-        "time": "06:20 AM – 10:30 AM",
-        "type": "tour",
-        "title": "Bus to Saty village",
-        "getThere": "Almaty → Saty: 281 km by road, ~5 h with stops, on the tour bus.",
-        "description": "Snack and toilet stops on the way. Guides speak English/Russian/Kazakh."
-      },
-      {
-        "time": "10:30 AM – 01:00 PM",
-        "type": "nature",
-        "icon": "🌲",
-        "title": "Lake Kaindy — the sunken forest",
-        "getThere": "Saty → Kaindy: 16.3 km — tour UAZ 4x4 to the parking, then walk ~2.5 km to the lake.",
-        "description": "UAZ 4x4 from Saty to the Kaindy parking (included), then a 2.5 km walk to the lake with its drowned spruce trunks.",
-        "tip": "Sit near the front of the UAZ — the road is very bumpy. Walking is safer than the optional horses. Repeated by many: going down to the lake is easy (15–30 min) but the way back is uphill, steep and muddy in places — wear boots with grip. Squat toilets only at the parking, none on the trail. No ATMs near the lakes and no mobile signal — carry cash (park fee ~700–1,000 ₸) and offline maps.",
-        "image": "./assets/places/kaindy.jpg"
-      },
-      {
-        "time": "01:30 PM – 02:30 PM",
-        "type": "food",
-        "title": "Lunch in Saty",
-        "getThere": "Kaindy → Saty: tour UAZ back down, ~16 km.",
-        "description": "Included in the tour.",
-        "image": "./assets/places/saty.jpg"
-      },
-      {
-        "time": "02:30 PM – 05:00 PM",
-        "type": "nature",
-        "icon": "🏞️",
-        "title": "Kolsai Lake 1",
-        "getThere": "Saty → Kolsai-1 car park: 11.8 km, ~20 min on the tour bus, then a short walk to the shore.",
-        "description": "Turquoise lake under snowy spruce slopes. Boats and catamarans are summer-only.",
-        "image": "./assets/places/kolsai-kaindy-lakes.jpg"
-      },
-      {
-        "time": "06:30 PM – 10:00 PM",
-        "type": "evening",
-        "icon": "🔥",
-        "title": "Guest house in Saty: dinner, bonfire & evening programme",
-        "getThere": "Kolsai-1 → Saty: 11.8 km, ~20 min on the tour bus.",
-        "description": "Expect basic rooms and patchy signal and power. Charge everything on the bus."
-      }
-    ],
-    "placeIds": [
-      "kolsai-kaindy-lakes"
-    ]
-  },
-  {
-    "dayNumber": 5,
-    "date": "2026-11-11",
-    "weekday": "Wednesday",
-    "city": "Black Canyon & Charyn → Almaty",
-    "title": "2-day tour, day 2: Black Canyon & Charyn",
-    "subtitle": "Canyon day on the way home: Black Canyon, Moon Canyon and Charyn’s Valley of Castles, back in Almaty around 19:00 (JoinMe) or 20:00–21:00 (GetYourGuide, which does Kaindy this morning instead).",
-    "weatherNote": "Forecast on 6 Nov: the wettest day of the trip — rain likely in the lowlands (~80%) and turning colder (city ~2–11 °C). Canyon paths get muddy and slippery in rain; keep to the main path and let the guide decide on the descent to the river. Dark by ~16:30.",
-    "bring": "Same as yesterday; waterproof jacket, windproof layer, a dry pair of socks.",
-    "planB": "Moon Canyon is often treated as a summer stop — if skipped, you get more time in the Valley of Castles.",
-    "events": [
-      {
-        "time": "08:00 AM – 09:00 AM",
-        "type": "breakfast",
-        "title": "Wake up & breakfast at the guest house",
-        "getThere": "At the guest house."
-      },
-      {
-        "time": "09:00 AM – 11:05 AM",
-        "type": "sight",
-        "icon": "🏔️",
-        "title": "Black Canyon & Moon Canyon",
-        "getThere": "On the tour bus, on the way from Saty towards Charyn (the whole Saty → Charyn leg is 92.5 km, ~3.5 h with stops).",
-        "description": "Viewpoints over the dark gorges of the Charyn river system.",
-        "image": "./assets/places/black-canyon.jpg"
-      },
-      {
-        "time": "11:50 AM – 03:30 PM",
-        "type": "hike",
-        "title": "Charyn Canyon: Valley of Castles",
-        "getThere": "Tour bus to the Charyn park entrance; walk down the Valley of Castles path (~30–40 min to the river), or take the park eco-taxi.",
-        "description": "Walk between the red rock towers down towards the river — the highlight of the tour.",
-        "cost": "Park eco-taxi 500–1,800 ₸ (optional)",
-        "tip": "Windy and slippery in places — keep to the path. How reviewers do it: walk down the Valley of Castles (~3 km) to the river, then take the eco-shuttle back up (~500 ₸, cash). After snow the shuttle may not run and steps can be icy.",
-        "image": "./assets/places/charyn-canyon.jpg"
-      },
-      {
-        "time": "03:30 PM – 07:00 PM",
-        "type": "transfer",
-        "icon": "🚌",
-        "title": "Bus back to Almaty (Circus car park, Abay 50)",
-        "getThere": "Charyn → Almaty: 218 km, ~4 h on the tour bus. JoinMe drops at the Circus → Airbnb by Yandex 4.8 km, ~10–20 min (~1,000–1,500 ₸); GetYourGuide drops at the hotels it picked up from (Hotel Kazakhstan → Airbnb: walk 0.75 km, ~10 min)."
-      },
-      {
-        "time": "07:15 PM – 08:45 PM",
-        "type": "dinner",
-        "title": "Dinner at Qaimaq (next to the drop-off)",
-        "getThere": "JoinMe drops at the Circus → Qaimaq (Abay 46A): walk 0.77 km, ~10 min. Then Qaimaq → Airbnb by Yandex 3.7 km, ~10 min (~1,000–1,500 ₸). With the GetYourGuide tour (back 20:00–21:00 at Hotel Kazakhstan): Navat Dostyk 48 instead, 0.47 km from the Airbnb.",
-        "description": "6 food sources recommend it. Share a beshbarmak (8,400 ₸ — big), and order the kuyrdak served in a pumpkin and kaymak cream with bread.",
-        "cost": "~7,000 ₸ per person",
-        "links": [
-          {
-            "label": "Qaimaq on Maps",
-            "href": "https://www.google.com/maps/search/?api=1&query=Qaimaq+Abay+46A+Almaty"
-          }
-        ]
-      }
-    ],
-    "placeIds": [
-      "charyn-canyon"
-    ]
-  },
-  {
-    "dayNumber": 6,
-    "date": "2026-11-12",
-    "weekday": "Thursday",
     "city": "Almaty",
-    "title": "Airbnb checkout, Arasan baths, Central Museum & the spare slot",
-    "subtitle": "Check out of the Airbnb and move to your last 2 nights’ stay, then an easy indoor day. Also the buffer day for anything the weather cancelled.",
-    "weatherNote": "Forecast on 6 Nov: cold and grey (city about −1…+4 °C, rain or sleet likely) and still snowing lightly in the mountains — a good indoor day. If Sunday’s Kok Tobe was hazy, its sunset can go here (open 10:00–22:00). Sunset 16:32.",
-    "bring": "Flip-flops for the baths.",
-    "planB": "Everything here is indoors, so it works in any weather.",
+    "title": "Arasan baths, guiru lagman, ALMA art & khinkali night",
+    "subtitle": "A relaxed city day while the weather turns: a Soviet bathhouse, the Uyghur noodles locals queue for, a modern art museum, a 26th-floor city view and Georgian khinkali next door to the Airbnb.",
+    "weatherNote": "Forecast on 6 Nov: mild (~9–17 °C) with a ~50% chance of showers — mostly indoor plans. Sunset 16:34.",
+    "bring": "Your own towel, flip-flops and a felt hat for the baths; cash for the venik (birch whisk).",
+    "planB": "Already mostly indoors. If you’re tired, skip ALMA and stay longer at the baths.",
     "events": [
       {
-        "time": "10:30 AM – 11:30 AM",
-        "type": "checkin",
-        "icon": "🧳",
-        "title": "Check out of the Airbnb & move to your Nov 12–14 stay",
-        "getThere": "Yandex with your bags. Times on this day assume Renion (Kaldayakov 21, old town): Airbnb → Renion 2.4 km, ~5–10 min (~1,000–1,500 ₸). Leave the bags at reception if the room isn’t ready.",
-        "description": "Your Airbnb is booked Nov 7–12. The nights of Nov 12 and 13 are not booked yet — a hotel with a 24/7 desk makes the 04:00 airport run on Nov 14 easy.",
-        "tip": "Check the checkout time in your Airbnb listing. Hotel Kazakhstan is in the same area; Renion and Voyage are better value near Panfilov Park."
-      },
-      {
-        "time": "11:30 AM – 12:30 PM",
+        "time": "09:30 AM – 10:30 AM",
         "type": "breakfast",
-        "title": "Brunch at Bowler Coffee (Green Bazaar balcony)",
-        "getThere": "Renion → Green Bazaar (Zhibek Zholy 53): walk 0.50 km, ~7 min; Bowler is on the balcony inside the main hall.",
-        "description": "Specialty coffee looking down on the market floor (Tue–Sun 09:00–18:00); pick up pastries, dried fruit or a morkovcha salad from the stalls below. Reviews on Tripadvisor and Trip.com praise the coffee and the view; it’s small and noisy.",
-        "cost": "Coffee ~1,500–2,000 ₸",
-        "tip": "If you’re not staying in the old town: ProCoffee (Dostyk 87A, opens 07:00, Yandex 5.0) is ~1 km / 13 min walk from the Airbnb — brunch there before you check out."
+        "title": "Breakfast at Six Coffee+Wine",
+        "getThere": "Airbnb → Six Coffee (Abay 17): walk 1.08 km, ~14 min.",
+        "description": "Flat white and a big breakfast; reviewers call it the best coffee in Almaty. Nedelka (Abay 19) next door is the cheaper alternative.",
+        "cost": "~3,500–6,000 ₸"
       },
       {
-        "time": "01:00 PM – 03:00 PM",
+        "time": "10:45 AM – 01:00 PM",
         "type": "spa",
         "title": "Arasan Wellness & SPA (1982 Soviet bathhouse)",
-        "tip": "First-timer pattern: pay at the desk → wristband (opens your locker; extras go on it and you pay on the way out). Women go left, men right. Charged by the hour, then per minute. Shower before every sauna or pool; no phones past the lockers. Bring your own towel, flip-flops and a felt hat; buy a venik (birch whisk) at the entrance, soak it, use it only in the Russian banya.",
-        "getThere": "Green Bazaar → Arasan (Tulebaev 78): walk 1.03 km south-west, ~14 min.",
-        "description": "Russian banya, hammam and plunge pools — reviewers call it the best way to warm up in Almaty. Separate men’s and women’s sections.",
-        "tickets": "Tulebaev 78, 07:00–23:30. At the door: weekday 2 h ~3,800 ₸ (morning) / 4,500 ₸ (evening). Towel, sheet and slippers are extra (a few hundred ₸ each) — bring your own flip-flops and towel. Phone +7 727 390 10 10.",
+        "getThere": "Six Coffee → Arasan (Tulebaev 78): Yandex 2.5 km, ~5–10 min (~800–1,200 ₸), or walk 2.09 km, ~28 min.",
+        "description": "Russian banya, Finnish sauna, hammam and plunge pools in a grand Soviet building — separate men’s and women’s sections. Weekday mornings are the quietest time.",
+        "tickets": "07:00–23:30. At the door, charged by the hour: weekday 2 h ~3,800 ₸ (morning). Towel, sheet and slippers cost extra. Phone +7 727 390 10 10.",
+        "tip": "First-timer routine repeated by reviewers: pay → wristband (opens your locker; extras are charged to it and paid on the way out). Women left, men right. Shower before every sauna or pool; no phones past the lockers. Buy a venik at the entrance, soak it, use it only in the Russian banya.",
         "links": [
           {
-            "label": "Maps",
-            "href": "https://www.google.com/maps/search/?api=1&query=Arasan+Wellness+SPA+Almaty"
+            "label": "Arasan on Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=Arasan+Wellness+SPA+Tulebaev+78+Almaty"
           }
         ]
       },
       {
-        "time": "03:30 PM – 05:00 PM",
+        "time": "01:15 PM – 02:15 PM",
+        "type": "food",
+        "icon": "🍜",
+        "title": "Lunch: guiru lagman at Paradise (Uyghur canteen)",
+        "getThere": "Arasan → Paradise (Dostyk 50): Yandex 2.3 km, ~5–10 min (~800–1,200 ₸).",
+        "description": "Family-run Uyghur canteen chain that an Almaty lagman round-up puts first; locals queue at weekends. Order guiru lagman (stir-fried topping) or tsomyan (chopped fried noodles).",
+        "cost": "~2,200–2,600 ₸"
+      },
+      {
+        "time": "02:45 PM – 04:45 PM",
         "type": "museum",
         "icon": "🖼️",
-        "title": "Central State Museum of Kazakhstan (or ALMA art museum)",
-        "getThere": "Arasan → Central State Museum (Samal-1, bldg 44): Yandex 4.2 km, ~10–15 min (~1,200–1,500 ₸); walking is 3.00 km uphill, ~40 min. ALMA instead: Yandex 6.4 km, ~15 min, to Al-Farabi 28 (entrance on Nazarbayev Ave).",
-        "description": "Moved here from Friday to free Friday for Big Almaty Lake. Central State Museum: nomad history, the Golden Man replica and yurts (Samal-1 bldg 44; ~10:00–18:00; sources disagree on the closing day — Monday or Tuesday — and on price, 500 ₸ to 5,000 ₸ for foreigners; Thursday is open either way; phone +7 727 264 26 80). Prefer art? ALMA, a new private museum rated 4.8 (Al-Farabi 28, 11:00–21:00, 3,000 ₸, timed tickets).",
-        "tickets": "Central Museum: at the desk. ALMA: almaty.art (closed Mondays).",
+        "title": "Almaty Museum of Arts (ALMA)",
+        "getThere": "Paradise → ALMA (Al-Farabi 28, entrance on Nazarbayev Ave): Yandex 5.5 km, ~10–15 min (~1,200–1,800 ₸).",
+        "description": "New private museum rated 4.8 — Central Asian modern and contemporary art in a striking building.",
+        "tickets": "Tue–Sun 11:00–20:00 (last entry 19:00), 3,000 ₸, timed slots — book on almaty.art.",
         "links": [
           {
             "label": "ALMA tickets",
@@ -1066,110 +926,240 @@ export const itinerary = [
       },
       {
         "time": "05:15 PM – 06:30 PM",
-        "type": "cafe",
-        "icon": "☕",
-        "title": "Akku — heritage Soviet-modernist café",
-        "description": "A cult park café, rebuilt with mosaics, panoramic windows and a library corner. Profiteroles (790 ₸), condensed-milk wafer tubes and Soviet-style ice cream.",
-        "getThere": "Central Museum → Akku (Panfilov 123, Astana Square park): Yandex 2.9 km, ~10 min (~1,000–1,300 ₸); walking is 2.23 km, ~30 min.",
-        "links": [
-          {
-            "label": "Maps",
-            "href": "https://www.google.com/maps/search/?api=1&query=Akku+cafe+Panfilov+123+Almaty"
-          }
-        ]
+        "type": "sunset",
+        "icon": "🌃",
+        "title": "City lights from Bar Fly (26th floor, Hotel Kazakhstan)",
+        "getThere": "ALMA → Hotel Kazakhstan (Dostyk 52/2): Yandex 4.7 km, ~10–15 min. Bar Fly is on the 26th floor.",
+        "description": "Several nightlife guides name it the best indoor view over the city lights and the mountains’ silhouette — the alternative to Kok Tobe on hazy nights.",
+        "tip": "Current opening hours aren’t confirmed — check Instagram or ask at the hotel desk. Smog can blur the view on still nights."
       },
       {
         "time": "07:00 PM – 08:30 PM",
         "type": "dinner",
-        "title": "Dinner at Tarih (modern Kazakh) or Na Kirova (shashlik)",
-        "getThere": "Akku → Tarih (Abylai Khan 104): walk 1.06 km, ~14 min. Tarih → Renion by Yandex 4.0 km, ~10 min. Or Akku → Na Kirova Shashlychnaya (Bogenbai Batyr 72): walk 1.58 km, ~21 min; then 1.31 km, ~17 min walk to Renion.",
-        "description": "Tarih (4 sources): Tarih soup with horse broth and kazy, horse-meat ravioli, a modern beshbarmak — a Reddit local’s verdict: “not traditional, but tastes as it should”. Prefer simple charcoal skewers? Na Kirova is a no-frills shashlychnaya praised for lamb and duck shashlik with cheap beer (single source).",
-        "cost": "Tarih ~4,500–15,000 ₸ · Na Kirova ~3,000–6,000 ₸",
-        "tip": "Book Tarih. Kishlak was dropped — its praise comes only from old reviews."
+        "icon": "🥟",
+        "title": "Georgian dinner: khinkali at Khachapuri Khinkalevich",
+        "getThere": "Bar Fly → Khachapuri Khinkalevich (Kabanbay Batyr 68/51): walk 0.84 km, ~11 min. It’s 0.08 km from the Airbnb.",
+        "description": "Georgian food is everywhere in Almaty (one guide lists 13 Georgian places) and the plan had none. Order khinkali (soup dumplings — bite, sip, eat; leave the knot), Adjarian khachapuri and mtsvadi skewers. Alternatives nearby: Patsatsina (Dostyk 42, 0.40 km, cheap) or Dadiani (Kabanbay Batyr 37, 0.71 km).",
+        "cost": "~4,000–6,000 ₸"
+      },
+      {
+        "time": "09:00 PM – 11:00 PM",
+        "type": "show",
+        "icon": "🎷",
+        "title": "Option: live jazz at EverJazz",
+        "getThere": "Khachapuri Khinkalevich → EverJazz (Zenkov 24, Officers’ House): walk 1.44 km, ~19 min. Back to the Airbnb: walk 1.37 km, ~18 min.",
+        "description": "Listed by Tengri’s guide among the music cafés tourists like. Tonight’s programme isn’t confirmed — check their Instagram before walking over."
       }
     ],
     "placeIds": []
   },
   {
-    "dayNumber": 7,
-    "date": "2026-11-13",
-    "weekday": "Friday",
+    "dayNumber": 5,
+    "date": "2026-11-11",
+    "weekday": "Wednesday",
     "city": "Almaty",
-    "title": "Big Almaty Lake (option), souvenirs & farewell dinner",
-    "subtitle": "If you want one more lake: a half-day car tour to the frozen, snow-framed Big Almaty Lake, back by 14:00. Then souvenirs, online check-in and an early farewell dinner.",
-    "weatherNote": "Forecast on 6 Nov: dry after Wednesday’s snow but cold — city about −2…+5 °C, around −10 °C at the lake (2,500 m). The tour itself warns that from November the lake is usually frozen and views aren’t guaranteed. Online check-in for KC907 opens about 24 h before (from ~07:05 today). Early night: your alarm is 03:30.",
-    "bring": "Passport (the lake is in a border zone — required), warmest layers, gloves, sunglasses, a shopping bag, cash for souvenirs.",
-    "planB": "Skipping the lake or the tour is cancelled: Shymbulak again for fresh snow (12,000 ₸ return, very cold at the top), or ALMA art museum and the Dostyk Plaza / Esentai malls.",
+    "title": "Rainy-day museum, souvenirs & farewell feast at Sandyq",
+    "subtitle": "The wettest day of the week — indoors in the city, last shopping, then the farewell dinner tonight because the tour fills Thursday and Friday. Early night: Airbnb checkout at 06:15.",
+    "weatherNote": "Forecast on 6 Nov: rain in the city (~80%), 2–11 °C; ~10–17 cm of snow falling in the mountains — the snow you’ll see at the lakes on Thursday.",
+    "bring": "Umbrella, passport (museums may ask), shopping bag, cash for souvenirs.",
+    "planB": "Central Museum closed or crowded: the metro art ride (Abay → Raiymbek Batyr stations) and the Dostyk Plaza mall.",
     "events": [
       {
-        "time": "07:45 AM – 08:15 AM",
+        "time": "10:00 AM – 11:00 AM",
         "type": "breakfast",
-        "title": "Quick breakfast near your hotel",
-        "getThere": "Skipping the lake? Renion → Bon Bon (Abylai Khan 123): Yandex 2.9 km, ~10 min, or walk 2.83 km, ~38 min.",
-        "description": "Skipping the lake? Have a slow breakfast at Bon Bon (Abylai Khan 123) instead: the “Bohemian” breakfast or syrniki, ~3,500 ₸."
+        "title": "Breakfast at Bon Bon",
+        "getThere": "Airbnb → Bon Bon (Abylai Khan 123): Yandex 2.0 km, ~5 min (~800–1,000 ₸), or walk 1.89 km, ~25 min.",
+        "description": "Locals’ breakfast go-to since 2002: the “Bohemian” breakfast or syrniki.",
+        "cost": "~3,500 ₸"
       },
       {
-        "time": "08:25 AM – 02:00 PM",
-        "type": "nature",
-        "icon": "🏔️",
-        "title": "Option (not booked): Big Almaty Lake by car (Adam Hiking Tours)",
-        "description": "Private cars are banned on the lake road, so go with a tour: authorised vehicles drive past the checkpoint (a short 300 m walk at the vehicle change), at the lake ~10:15. In November expect a frozen, snow-covered lake under the peaks rather than turquoise water. The Alma-Arasan hot-spring stop is often closed (rockfall risk) and swapped for Ayusai gorge.",
-        "getThere": "Renion → Abai Opera Theatre (Kabanbay Batyr 110): Yandex 3.2 km, ~10–15 min (~1,200–1,500 ₸); walking is 2.43 km, ~32 min. Groups meet at the fountain — be there by 08:45; some operators don’t wait more than 15 min. Weekday departures only.",
-        "tickets": "From ₹5,518 on GetYourGuide (shown 6 Nov) — eco fee, English guide, transfer, lunch, snacks and water included. 4.8 from 255 reviews. Check Fri 13 Nov is bookable.",
-        "tip": "Choose by car, not on foot: the hiking option is ~14 km, runs Mondays only, and in fresh snow it isn’t worth the avalanche and ice risk. Skip the “apple orchard” tour link — it now opens a different Panda Travel 4-hour tour (4.5★) whose recent reviews mention closed springs and pricey photo add-ons, and apple harvest is over by November. Leave the hotel by 08:25 to be at the fountain by 08:45. Bring your passport for the checkpoint; there’s an eco-fee (~650 ₸) if it isn’t included.",
-        "links": [
-          {
-            "label": "⭐ GYG: BAL by car (recommended)",
-            "href": "https://www.getyourguide.com/almaty-city-l1414/big-almaty-lake-choose-adventure-on-foot-or-by-car-t703808/"
-          },
-          {
-            "label": "GYG: BAL + Alma-Arasan (Panda)",
-            "href": "https://www.getyourguide.com/almaty-city-l1414/big-almaty-lake-and-legendary-almaty-apple-orchard-t950118/"
-          }
-        ]
+        "time": "11:15 AM – 01:15 PM",
+        "type": "museum",
+        "title": "Central State Museum of Kazakhstan",
+        "getThere": "Bon Bon → museum (Samal-1, bldg 44): Yandex 3.7 km, ~10 min (~1,000–1,500 ₸).",
+        "description": "Nomad history, the Golden Man replica and full yurts — the best single overview of the country.",
+        "tickets": "~10:00–18:00 (desk to 17:30). Sources disagree on the closed day (Mon or Tue — Wednesday is open either way) and on the foreigner price (500–5,000 ₸). Phone +7 727 264 26 80.",
+        "image": "./assets/places/central-museum.jpg"
       },
       {
-        "time": "02:30 PM – 03:15 PM",
-        "type": "food",
-        "title": "Late lunch (if the tour lunch was light)",
-        "getThere": "Opera Theatre (tour drop-off) → Navat (Abylai Khan 58A): walk 1.86 km north, ~25 min, or Yandex 2.4 km, ~5–10 min.",
-        "description": "Navat on Abylai Khan 58A: whatever you didn’t try on day 1 — manti, guyru lagman or horse plov. Cheaper: Bauyrdaq (24/7, beshbarmak 4,390 ₸)."
+        "time": "01:45 PM – 02:45 PM",
+        "type": "cafe",
+        "icon": "☕",
+        "title": "Akku — heritage Soviet-modernist café",
+        "getThere": "Museum → Akku (Panfilov 123, Astana Square park): Yandex 2.9 km, ~10 min (~1,000–1,300 ₸).",
+        "description": "Rebuilt cult park café with mosaics and panoramic windows (Yandex 4.8 from 207 ratings): chicken cutlets with buckwheat, profiteroles, condensed-milk wafer tubes.",
+        "cost": "~3,000–5,000 ₸"
       },
       {
-        "time": "03:20 PM – 05:00 PM",
+        "time": "03:00 PM – 04:30 PM",
         "type": "shopping",
-        "title": "Souvenirs: TSUM crafts & Rakhat chocolate",
-        "getThere": "Navat → TSUM (Abylai Khan 62): walk 0.23 km, ~3 min. TSUM → Rakhat shop (Zhibek Zholy 47 × Kaldayakov): walk 1.36 km east along the pedestrian Arbat, ~18 min. Rakhat → Renion: 0.13 km, ~2 min.",
-        "description": "Felt slippers (2,000–2,500 ₸), kalpak hats ($15–30) and felt crafts at TSUM (Abylai Khan 62, ~10:00–22:00). Kazakh chocolate at the Rakhat shop on the Arbat (Zhibek Zholy 47 × Kaldayakov) or the factory store (Zenkov 2, 09:00–20:00) — cheaper than supermarkets.",
+        "title": "Souvenirs: TSUM crafts, the Arbat & Rakhat chocolate",
+        "getThere": "Akku → TSUM (Abylai Khan 62): walk 1.15 km, ~15 min. TSUM → Rakhat shop (Zhibek Zholy 47 × Kaldayakov): walk 1.36 km east along the pedestrian Arbat, ~18 min.",
+        "description": "Felt slippers (2,000–2,500 ₸), kalpak hats ($15–30) and felt crafts at TSUM; Kazakh chocolate at the Rakhat shop — cheaper than supermarkets. Aport apples are in season if you want some.",
         "tip": "Avoid airport and hotel shops — heavy mark-ups."
       },
       {
-        "time": "05:30 PM – 06:30 PM",
+        "time": "04:45 PM – 06:30 PM",
         "type": "checkin",
-        "icon": "✅",
-        "title": "Online check-in, pack & prepare for 04:00",
-        "getThere": "At your hotel.",
-        "description": "Check in for KC907 online. If you’re in a hotel: settle the bill tonight, ask for a breakfast box and have reception book a backup taxi for 04:00 in writing."
+        "icon": "🧳",
+        "title": "Back to the Airbnb: pack for the tour & the flight",
+        "getThere": "Rakhat → Airbnb: Yandex 1.6 km, ~5 min, or walk 1.68 km, ~22 min.",
+        "description": "Pack a small overnight bag for the tour (warm layers, boots, power bank, cash, passport) and the big bag for Hotel Kazakhstan. Message the tour operator to confirm pickup time and place. Confirm your early self-checkout with the Airbnb host."
       },
       {
         "time": "07:00 PM – 09:00 PM",
         "type": "dinner",
         "icon": "🎶",
-        "title": "Farewell dinner at Sandyq",
-        "getThere": "Renion → Sandyq: walk 1.78 km west along Zhibek Zholy, ~24 min, or Yandex 2.0 km, ~5–10 min (~800–1,200 ₸). Yandex lists Sandyq as Alimzhanov St 55, others Abylai Khan 55 — use the app pin.",
-        "description": "The restaurant food sources agree on most (12 of 29; Yandex 5.0 from 4,282 ratings). Order the beshbarmak (7,990 ₸, its most-praised dish), kuyrdak (7,790 ₸), cheese baursaks and smoked horse, and try the kumys bar. Live music in the evenings and an English menu.",
+        "title": "Farewell feast at Sandyq (book)",
+        "getThere": "Airbnb → Sandyq (Abylai Khan 55; Yandex lists it as Alimzhanov 55 — use the app pin): Yandex 3.0 km, ~5–10 min (~1,000–1,500 ₸). Back the same way.",
+        "description": "The restaurant food sources agree on most (12 of 29; Yandex 5.0 from 4,282 ratings). Order the beshbarmak (its most-praised dish), kuyrdak, cheese baursaks and smoked horse, and try the kumys bar. Live music in the evenings and an English menu.",
         "cost": "~6,000–10,000 ₸ per person + 15% service",
-        "tip": "Book ahead. Repeated complaints: slow on busy nights and dishes sometimes arrive lukewarm — say so and they’ll fix it. The 15% service is on the bill, so no extra tip.",
+        "tip": "Book ahead. Repeated complaints: slow on busy nights and dishes sometimes arrive lukewarm — say so and they’ll fix it. The 15% service is on the bill, so no extra tip. Early night: alarm ~05:45.",
         "links": [
           {
-            "label": "Maps",
-            "href": "https://www.google.com/maps/search/?api=1&query=Sandyq+restaurant+Abylai+Khan+55+Almaty"
+            "label": "Sandyq on Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=Sandyq+restaurant+Almaty"
           }
         ]
       }
     ],
+    "placeIds": []
+  },
+  {
+    "dayNumber": 6,
+    "date": "2026-11-12",
+    "weekday": "Thursday",
+    "city": "Black Canyon & Kolsai → yurt camp",
+    "title": "2-day tour, day 1: Black & Moon canyons and Kolsai Lake (book now)",
+    "subtitle": "Early pickup, the long drive east, two canyon viewpoints, then Kolsai Lake in fresh snow. Night in a heated yurt camp. Timings follow the Kazakhstan Guided Tours itinerary.",
+    "weatherNote": "Forecast on 6 Nov: cold (city −1…+4 °C) with sleet early; the mountains have fresh snow from the 11th. Roads from Saty can hold snow — the operator decides on the Kaindy road. Sunset ~16:30, so Kolsai is the last stop before dark.",
+    "bring": "Passport, tenge cash (no ATMs; shuttles ~1,000 ₸, park fees ~700–1,000 ₸), warm layers, waterproof jacket, gloves, hat, boots with grip, power bank (bus sockets often don’t work), snacks and water (no toilet on the bus), earplugs for the yurt, head torch.",
+    "planB": "If the operator cancels for snow, swap to a city day (Shymbulak again for fresh snow, or the museums) and ask about Kaindy/Kolsai on a private driver.",
+    "events": [
+      {
+        "time": "Book by Sun 8 Nov",
+        "type": "tour",
+        "icon": "🎟️",
+        "title": "Book ONE 2-day tour: Kolsai, Kaindy, Black Canyon & Charyn",
+        "getThere": "Book online (links below) and screenshot the voucher with the pickup point.",
+        "description": "⭐ Recommended: Kazakhstan Guided Tours (GetYourGuide, 4.8 from 1,115 reviews). It departs only Sun 8, Tue 10 and Thu 12 — take <strong>Thu 12–Fri 13</strong>: fresh snow on the lakes and a dry day for Kaindy and Charyn, instead of the ~80% rain forecast for the 11th. Reviewers praise the guides and the heated yurts (7 winter reviews: “warm and cozy despite the cold”, heated showers).",
+        "tickets": "From ₹7,545 per person (shown 6 Nov). Before paying, message them to confirm (1) a newer bus — 3 breakdowns were reported in Oct 2026, one stranding a group for 4 h; (2) the yurt is heated; (3) the Kaindy road after the 11 Nov snow. If they won’t confirm the bus, a private driver (~320,000 ₸ for two) removes that risk.",
+        "tip": "Backup only if KGT is full: JoinMe (66 poor reviews since Jun 2025 — 40–45-seat coach, late-night arrivals, shared beds, extra charges). Avoid Panda’s 2-day (3.8, merged tours, no guide). Day trips (17 h, 1–1.5 h per site) aren’t worth it in November.",
+        "links": [
+          {
+            "label": "⭐ GYG 2-day (Kazakhstan Guided Tours)",
+            "href": "https://www.getyourguide.com/almaty-city-l1414/almaty-kolsai-kaindy-lakes-charyn-canyons-2-day-tour-t489855/"
+          },
+          {
+            "label": "JoinMe 2-day (backup)",
+            "href": "https://www.joinme.kz/en/tours/almaty-region/group-tours/kaindy-kolsai-2-days-early-start"
+          }
+        ]
+      },
+      {
+        "time": "06:15 AM – 06:45 AM",
+        "type": "checkin",
+        "icon": "🧳",
+        "title": "Check out of the Airbnb & drop bags at Hotel Kazakhstan",
+        "getThere": "Airbnb → Hotel Kazakhstan (Dostyk 52/2): walk 0.75 km, ~10 min, or Yandex 0.7 km, ~2 min with bags.",
+        "description": "Book Hotel Kazakhstan for the night of Fri 13 (one night only — you sleep in the yurt on the 12th). It’s the tour’s pickup and drop-off point, has a 24/7 desk for the 04:00 airport run, and can hold your big bag while you’re away — confirm luggage storage when you book.",
+        "tip": "Confirm the self-checkout time with your Airbnb host the day before."
+      },
+      {
+        "time": "07:00 AM – 11:30 AM",
+        "type": "tour",
+        "title": "Pickup & drive east",
+        "getThere": "Pickup at Hotel Kazakhstan (confirm the exact time in your booking). Almaty → Saty region is ~278 km; the canyons are on the way.",
+        "description": "Guide commentary in English; snack and toilet stops (bring tissue). Group of ~30 on a full-size coach."
+      },
+      {
+        "time": "~11:30 AM – 12:30 PM",
+        "type": "sight",
+        "icon": "🏔️",
+        "title": "Black Canyon & Moon Canyon viewpoints",
+        "getThere": "Short stops on the way (~20 min each).",
+        "description": "Dark gorges of the Charyn river system. Four reviewers wanted more time here — take your photos first, then look around.",
+        "image": "./assets/places/black-canyon.jpg"
+      },
+      {
+        "time": "~01:30 PM – 03:30 PM",
+        "type": "nature",
+        "icon": "🏞️",
+        "title": "Kolsai Lake 1 in fresh snow",
+        "getThere": "Tour bus to the Kolsai-1 car park (11.8 km from Saty), then a short walk to the shore.",
+        "description": "Turquoise lake under snowy spruce slopes — winter reviewers call the snow “magical”. About 2 hours here. Lake edges ice up in November: don’t walk on the ice.",
+        "image": "./assets/places/kolsai-kaindy-lakes.jpg"
+      },
+      {
+        "time": "~04:30 PM – 10:00 PM",
+        "type": "evening",
+        "icon": "🔥",
+        "title": "Yurt camp: dinner, bonfire & night",
+        "getThere": "Tour bus to the camp near Saty. One reviewer had a slippery 5-minute walk to the yurts in the dark — use a head torch.",
+        "description": "Heated yurts shared with ~4 people (a private yurt/room is an extra ~23,000 ₸ — agree the price before paying). Shared bathrooms with hot showers. Dinner and bonfire included.",
+        "tip": "Earplugs — yurts aren’t soundproof. No mobile signal; download offline maps."
+      }
+    ],
     "placeIds": [
-      "big-almaty-lake"
+      "kolsai-kaindy-lakes"
+    ]
+  },
+  {
+    "dayNumber": 7,
+    "date": "2026-11-13",
+    "weekday": "Friday",
+    "city": "Kaindy & Charyn → Almaty",
+    "title": "2-day tour, day 2: Kaindy sunken forest & Charyn Canyon",
+    "subtitle": "Kaindy in the morning light, the Valley of Castles in the afternoon, back at Hotel Kazakhstan around 20:00–21:00 for your last night.",
+    "weatherNote": "Forecast on 6 Nov: dry and cold (city −2…+5 °C) — the best weather of the tour. Snow on the trails: wear boots with grip. Online check-in for KC907 opens ~07:05 today — do it whenever you have signal.",
+    "bring": "Same as yesterday; sunglasses for the snow glare.",
+    "planB": "If the Kaindy road is closed by snow, the group spends longer at Kolsai or Charyn. If the bus breaks down, ask the guide for an ETA early and tell Hotel Kazakhstan you’ll arrive late.",
+    "events": [
+      {
+        "time": "07:30 AM – 08:15 AM",
+        "type": "breakfast",
+        "title": "Breakfast at the camp",
+        "getThere": "At the camp."
+      },
+      {
+        "time": "08:30 AM – 11:30 AM",
+        "type": "nature",
+        "icon": "🌲",
+        "title": "Lake Kaindy — the sunken forest",
+        "getThere": "Saty → Kaindy: 16.3 km. A new road reached Kaindy in 2026 (Sep 2026 review), so the bus may go further than the old UAZ stretch; then ~2.5 km on foot.",
+        "description": "Spruce trunks rising out of turquoise water. About 3 hours here.",
+        "tip": "Repeated by many: the walk down is easy (15–30 min), the climb back is steep and muddy or icy — ask the guide for the ride back if the slope is hard. Horses are ~1,000 ₸ return (Oct 2026), not the 8,000 ₸ some listings say. Squat toilets only at the parking.",
+        "image": "./assets/places/kaindy.jpg"
+      },
+      {
+        "time": "~01:30 PM – 04:00 PM",
+        "type": "hike",
+        "title": "Charyn Canyon: Valley of Castles",
+        "getThere": "Saty → Charyn park entrance: 92.5 km on the tour bus.",
+        "description": "Walk between the red rock towers down towards the river — about 2.5 hours here, finishing near sunset.",
+        "cost": "Eco-shuttle back up ~500–1,000 ₸ (cash)",
+        "tip": "How reviewers do it: walk down the Valley of Castles (~3 km), take the eco-shuttle back up. After snow the shuttle may not run and steps can be icy. The canyon cafés are cheaper than boxed lunches guides sell.",
+        "image": "./assets/places/charyn-canyon.jpg"
+      },
+      {
+        "time": "04:00 PM – 08:30 PM",
+        "type": "transfer",
+        "icon": "🚌",
+        "title": "Bus back to Almaty (Hotel Kazakhstan)",
+        "getThere": "Charyn → Almaty: 218 km, ~4 h on the tour bus.",
+        "description": "Check in for KC907 online on the way if you have signal."
+      },
+      {
+        "time": "08:30 PM – 09:30 PM",
+        "type": "dinner",
+        "title": "Check in at Hotel Kazakhstan & late dinner at Navat",
+        "getThere": "Hotel Kazakhstan → Navat (Dostyk 48): walk 0.30 km, ~4 min.",
+        "description": "Navat is open to midnight: manti, guyru lagman or horse plov, with free baursaks. At the hotel, settle the bill tonight, ask for a breakfast box and have reception book a backup taxi for 04:00 in writing.",
+        "cost": "~3,500–8,000 ₸ + 10%"
+      }
+    ],
+    "placeIds": [
+      "charyn-canyon"
     ]
   },
   {
@@ -1178,23 +1168,22 @@ export const itinerary = [
     "weekday": "Saturday",
     "city": "Almaty → Delhi",
     "title": "Fly home: Air Astana KC907",
-    "subtitle": "Leave the hotel at 04:00 for the 07:05 flight from Terminal 2. Back in Delhi before lunch.",
+    "subtitle": "Leave Hotel Kazakhstan at 04:00 for the 07:05 flight from Terminal 2. Back in Delhi before lunch.",
     "weatherNote": "One of the coldest mornings of the trip (forecast on 6 Nov: about −3 °C at 04:00). Wear your warm jacket to the airport.",
     "bring": "Passport, boarding pass on your phone, warm jacket.",
-    "planB": "If Yandex Go shows no cars, use the backup taxi you arranged last night.",
+    "planB": "If Yandex Go shows no cars, use the backup taxi reception booked last night.",
     "events": [
       {
         "time": "03:30 AM",
         "type": "morning",
         "title": "Wake up & grab the breakfast box",
-        "getThere": "At your hotel."
+        "getThere": "At Hotel Kazakhstan."
       },
       {
         "time": "04:00 AM – 04:30 AM",
         "type": "transfer",
         "title": "Taxi to ALA Terminal 2",
-        "getThere": "Renion → ALA Terminal 2: Yandex 13.6 km, ~16–25 min at 04:00 (~2,500–4,500 ₸). Choose “International Terminal 2 / departures”.",
-        "description": "About 20–25 minutes at this hour.",
+        "getThere": "Hotel Kazakhstan → ALA Terminal 2: Yandex 15.8 km, ~19–25 min at 04:00 (~2,500–4,500 ₸). Choose “International Terminal 2 / departures”.",
         "cost": "Yandex Go ~2,500–4,500 ₸",
         "tip": "Order 10–15 min before you go down and check the plate. The airport recommends arriving 3 hours before international flights — 04:45 would be too tight."
       },
@@ -1202,7 +1191,7 @@ export const itinerary = [
         "time": "04:30 AM – 06:20 AM",
         "type": "airport",
         "title": "Bag drop, security & passport control",
-        "getThere": "Air Astana check-in counters are in Terminal 2 departures hall.",
+        "getThere": "Air Astana check-in counters are in the Terminal 2 departures hall.",
         "description": "Air Astana counters close 40 minutes before departure (06:25); the gate closes at 06:50.",
         "image": "./assets/places/almaty-airport.jpg"
       },

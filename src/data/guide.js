@@ -98,8 +98,18 @@ export const cafes = [
 
 export const hotels = [
   {
+    name: 'Hotel Kazakhstan',
+    badge: 'Book this (Fri 13)',
+    area: 'Dostyk 52/2 · Golden Square',
+    price: '~50,300 ₸/night',
+    rating: 'Booking 8.2 (2,894)',
+    good: 'Pickup and drop-off point for the 2-day tour, 0.75 km from your Airbnb, 24/7 desk for the 04:00 airport run (15.8 km), Bar Fly on the 26th floor. Ask them to store your big bag from Thu 06:45.',
+    watch: 'Floors 11–13 are worn; busy front desk at peak times.',
+    map: maps('Hotel Kazakhstan Dostyk 52 Almaty')
+  },
+  {
     name: 'Renion Almaty Hotel',
-    badge: 'Top pick',
+    badge: 'Old-town alternative',
     area: 'Kaldayakov 21 · old town',
     price: '~37,600 ₸/night (7–14 Nov), room only',
     rating: 'Trip.com 9.4 (479) · Booking ~9.1',
@@ -116,16 +126,6 @@ export const hotels = [
     good: '200 m to Zhibek Zholy metro; staff packed a breakfast box for a 06:30 departure; free luggage storage.',
     watch: 'Dated rooms and thin walls — ask for a renovated, quiet room.',
     map: maps('Voyage hotel Furmanov 97A Almaty')
-  },
-  {
-    name: 'Hotel Kazakhstan',
-    badge: 'On Dostyk',
-    area: 'Dostyk 52/2 · Golden Square',
-    price: '~50,300 ₸/night',
-    rating: 'Booking 8.2 (2,894)',
-    good: 'Iconic tower with views; bus 12 to Medeu at the door; Kok Tobe cable car a short walk.',
-    watch: 'Floors 11–13 are worn; busy front desk at peak times.',
-    map: maps('Hotel Kazakhstan Dostyk 52 Almaty')
   }
 ];
 
@@ -164,40 +164,36 @@ export const bookings = [
   },
   {
     emoji: '🚌',
-    name: '2-day tour: Kaindy, Kolsai, Black Canyon & Charyn',
-    when: 'Tue 10 → Wed 11 Nov · GYG pickup ~07:00 at Hotel Kazakhstan, or JoinMe from Abay 50',
-    status: 'Not booked yet — book by Sun 8 Nov (GYG recommended)',
+    name: '2-day tour: Black Canyon, Kolsai, Kaindy & Charyn',
+    when: 'Thu 12 → Fri 13 Nov · pickup ~07:00 at Hotel Kazakhstan · back 20:00–21:00',
+    status: 'Not booked — book Kazakhstan Guided Tours by Sun 8; confirm a newer bus',
     tone: 'bad',
     actions: [
-      { label: 'GYG 2-day (recommended)', href: 'https://www.getyourguide.com/almaty-city-l1414/almaty-kolsai-kaindy-lakes-charyn-canyons-2-day-tour-t489855/' },
-      { label: 'JoinMe 2-day', href: 'https://www.joinme.kz/en/tours/almaty-region/group-tours/kaindy-kolsai-2-days-early-start' },
-      { label: 'WhatsApp JoinMe', href: 'https://wa.me/77772999767' }
+      { label: 'GYG 2-day (recommended)', href: 'https://www.getyourguide.com/almaty-city-l1414/almaty-kolsai-kaindy-lakes-charyn-canyons-2-day-tour-t489855/' }
     ]
   },
   {
     emoji: '🧊',
     name: 'Option: guided Bogdanovich Glacier walk',
-    when: 'Mon 9 Nov · meet 09:00, back ~13:30 · 35,000 ₸ + lift ticket',
-    status: 'Optional — book today if you want it',
+    when: 'Mon 9 Nov · crampons must be requested 2 days ahead',
+    status: 'Optional — book by Sat 7 if you want it',
     tone: 'warn',
     actions: [
-      { label: 'Sputnik8 tour', href: 'https://www.sputnik8.com/ru/almaty/activities/85679-po-tropam-shymbulaka-k-ledniku-i-oktyabrskoy-peschere' }
+      { label: 'Sputnik8 glacier tours', href: 'https://www.sputnik8.com/ru/almaty/activities/68029-pohod-v-oktyabrskuyu-pescheru-na-lednik-bogdanovicha' }
     ]
   },
   {
-    emoji: '🏔️',
-    name: 'Option: Big Almaty Lake by car',
-    when: 'Fri 13 Nov · 09:00–14:00 from Abai Opera Theatre',
-    status: 'Optional — not booked',
+    emoji: '🍽️',
+    name: 'Tables: AUYL (Mon 9) & Sandyq (Wed 11)',
+    when: 'AUYL early dinner ~15:30 · Sandyq 19:00',
+    status: 'Book ahead',
     tone: 'warn',
-    actions: [
-      { label: 'GYG tour', href: 'https://www.getyourguide.com/almaty-city-l1414/big-almaty-lake-choose-adventure-on-foot-or-by-car-t703808/' }
-    ]
+    actions: []
   },
   {
     emoji: '🏨',
-    name: 'Stay for Nov 12–14 (2 nights)',
-    when: 'Thu 12 Nov → Sat 14 Nov (leave 04:00 for the airport)',
+    name: 'Hotel Kazakhstan — night of Fri 13',
+    when: 'Fri 13 → Sat 14 Nov (one night; leave 04:00 for the airport) · ask to store bags from Thu 06:45',
     status: 'Not booked yet',
     tone: 'bad',
     actions: [
@@ -219,27 +215,27 @@ export const bookings = [
 export const tourComparisons = [
   {
     title: 'Kaindy, Kolsai, Black Canyon & Charyn',
-    when: 'Tue 10 – Wed 11 Nov',
-    verdict: 'Book one 2-day tour. The lakes are beyond Charyn on the same road, so a 17-hour day trip gives only 1–1.5 h per site with a 04:30 start and half the driving in the dark.',
+    when: 'Thu 12 – Fri 13 Nov',
+    verdict: 'Book one 2-day tour, on Thu 12–Fri 13 (fresh snow on the lakes, dry day for Kaindy and Charyn). The lakes are beyond Charyn on the same road, so a 17-hour day trip gives only 1–1.5 h per site with a 04:30 start and half the driving in the dark.',
     options: [
       {
         name: 'Kazakhstan Guided Tours — 2 days',
         badge: '⭐ Recommended',
         price: 'From ₹7,545',
         rating: '4.8 (1,115)',
-        format: '2 days · pickup at Hotel Kazakhstan, Holiday Inn Express, Novotel or Ibis Jetisu · back 20:00–21:00 day 2',
+        format: '2 days · departs only Sun 8, Tue 10, Thu 12 · pickup at Hotel Kazakhstan (also Holiday Inn Express, Novotel, Ibis Jetisu) · back 20:00–21:00 day 2 · ~30 on a full-size coach',
         good: 'Day 1 Black Canyon + Kolsai, night in a yurt or guest house; day 2 Kaindy (3 h) + Charyn (2.5 h). Meals, park entry and bonfire included. Strong reviews up to 2 Nov 2026.',
-        watch: 'Group size not stated; some reviewers wanted more time at key stops.',
+        watch: 'Old buses: 3 breakdowns reported in Oct 2026 (one group stranded 4 h) — ask for a newer bus. Private yurt is ~23,000 ₸ extra; agree the price first. 7 winter reviews say the yurts are heated.',
         url: 'https://www.getyourguide.com/almaty-city-l1414/almaty-kolsai-kaindy-lakes-charyn-canyons-2-day-tour-t489855/'
       },
       {
         name: 'JoinMe — 2 days, early start',
-        badge: 'Cheaper',
-        price: 'From 30,000 ₸',
-        rating: 'No ratings shown',
+        badge: 'Backup only',
+        price: 'From 30,000 ₸ (WhatsApp is ~1.5× cheaper than GYG)',
+        rating: '4.5 (574) on GYG',
         format: '2 days · bus from Circus car park, Abay 50 (05:30 or 06:00 meet, 06:20 departure) · back ~19:00 day 2 · up to 40 people',
         good: 'Day 1 Kaindy + Kolsai, guest house in Saty; day 2 Black, Moon and Charyn. All meals, UAZ to Kaindy, eco fees and guide included.',
-        watch: 'No November dates listed — confirm on WhatsApp. The link you saved is the closed 14 Sep departure.',
+        watch: '66 poor reviews since Jun 2025: 40–45-seat coach, some groups reaching the guest house at 01:30–03:30, strangers sharing beds, extra charges. The link you saved is the closed 14 Sep departure.',
         url: 'https://www.joinme.kz/en/tours/almaty-region/group-tours/kaindy-kolsai-2-days-early-start'
       },
       {
@@ -266,12 +262,12 @@ export const tourComparisons = [
   },
   {
     title: 'Big Almaty Lake',
-    when: 'Option for Fri 13 Nov',
-    verdict: 'If you go, take the car tour. In November the lake is usually frozen and snow-covered; private cars are banned, so only tour vehicles drive up. The apple-orchard link now opens a different 4-hour tour, and apple season is over.',
+    when: 'Dropped for November',
+    verdict: 'Skip it this trip. In November it is frozen and snow-covered, you can’t get near the shore (water reserve), and reviewers who had already done Kolsai and Kaindy called it inferior and pricey for the time. The springs stop is often closed and the autumn colours are gone by mid-November. Sources also conflict on whether tour cars can still drive up. The apple-orchard link now opens a different 4-hour tour.',
     options: [
       {
         name: 'Adam Hiking Tours — by car',
-        badge: '⭐ Recommended',
+        badge: 'Best if you go (Jun–Oct)',
         price: 'From ₹5,518',
         rating: '4.8 (255)',
         format: '5 h · 09:00–14:00 weekdays · meet at Abai Opera Theatre',
@@ -310,16 +306,20 @@ export const foodGuide = [
   { dish: 'Horse tartare', veg: 'meat', sources: 3, what: 'The most-praised dish in AUYL’s Yandex reviews.', where: 'AUYL', price: '4,000–6,000 ₸' },
   { dish: 'Korean salads (morkovcha)', veg: 'ask', sources: 5, what: 'Spicy carrot and other salads from the local Korean community.', where: 'Green Bazaar salad row', price: 'by weight' },
   { dish: 'Kurt / irimshik', veg: 'veg', sources: 5, what: 'Salty dried cheese balls / sweet dried curd — divisive, try a sample first.', where: 'Green Bazaar dairy section, Tary', price: 'cheap' },
+  { dish: 'Khinkali & khachapuri (Georgian)', veg: 'meat', sources: 4, what: 'Georgian soup dumplings and cheese bread — Georgian food is mainstream in Almaty.', where: 'Khachapuri Khinkalevich (next to the Airbnb), Patsatsina (Dostyk 42), Dadiani, Daredzhani', price: '~4,000–6,000 ₸' },
+  { dish: 'Guiru lagman & tsomyan', veg: 'meat', sources: 3, what: 'How locals order Uyghur lagman: guiru = stir-fried topping, tsomyan = chopped fried noodles.', where: 'Paradise (Dostyk 50), Oral canteen in the Green Bazaar, Chapsan (open to 05:00)', price: '~1,800–2,700 ₸' },
   { dish: 'Rakhat chocolate & Aport apples', veg: 'veg', sources: 3, what: 'The classic edible souvenirs; Aport apples are in season in autumn.', where: 'Rakhat shop on Zhibek Zholy 47 or Zenkov 2; apples at the Green Bazaar', price: 'by weight' }
 ];
 
 // Restaurants that several independent sources agree on (food sweep, 6 Nov 2026)
 export const restaurants = [
-  { name: 'Sandyq', sources: 12, area: 'Abylai Khan 55', order: 'Beshbarmak, kuyrdak, cheese baursaks, smoked horse, kumys', price: '6,000–10,000 ₸ + 15% service', tip: 'Book dinner; live music. Reviews: slow on busy nights, food sometimes arrives cold.', plan: 'Farewell dinner, Fri 13' },
-  { name: 'Navat', sources: 11, area: 'Dostyk 48 · Abylai Khan 58A', order: 'Beshbarmak, horse plov, guyru lagman, samsa, manti; baursaks free with tea', price: '3,500–8,000 ₸ + 10%', tip: 'Chain — quality varies by branch; noisy and slow when full.', plan: 'Sat 7 dinner · Fri 13 lunch' },
+  { name: 'Khachapuri Khinkalevich', sources: 2, area: 'Kabanbay Batyr 68/51 (0.08 km from the Airbnb)', order: 'Khinkali, Adjarian khachapuri, mtsvadi', price: '~4,000 ₸', tip: 'Georgian food is everywhere in Almaty; Daredzhani has the most mentions (4) but is further west.', plan: 'Tue 10 dinner' },
+  { name: 'Paradise (Uyghur canteen)', sources: 1, area: 'Dostyk 50', order: 'Guiru lagman, tsomyan', price: '~2,200–2,600 ₸', tip: 'Ranked first in a 2025 Almaty lagman round-up; weekend queues.', plan: 'Tue 10 lunch' },
+  { name: 'Sandyq', sources: 12, area: 'Abylai Khan 55', order: 'Beshbarmak, kuyrdak, cheese baursaks, smoked horse, kumys', price: '6,000–10,000 ₸ + 15% service', tip: 'Book dinner; live music. Reviews: slow on busy nights, food sometimes arrives cold.', plan: 'Farewell feast, Wed 11' },
+  { name: 'Navat', sources: 11, area: 'Dostyk 48 · Abylai Khan 58A', order: 'Beshbarmak, horse plov, guyru lagman, samsa, manti; baursaks free with tea', price: '3,500–8,000 ₸ + 10%', tip: 'Chain — quality varies by branch; noisy and slow when full.', plan: 'Sat 7 dinner · Fri 13 late dinner' },
   { name: 'AUYL', sources: 9, area: 'Next to the Medeu gondola (1 km)', order: 'Horse tartare, Dungan noodles with quail, beshbarmak, baursak with balqaimaq, kazan plov', price: '12,000–25,000 ₸', tip: 'Book ahead. Noisy, patchy service per reviews.', plan: 'Mon 9 after Shymbulak' },
-  { name: 'Qaimaq', sources: 6, area: 'Abay 46A (near the Circus)', order: 'Beshbarmak (share it), kuyrdak in a pumpkin, kaymak with bread', price: '~7,000 ₸', tip: 'Book at weekends; the priciest beshbarmak in one guide.', plan: 'Wed 11 after the tour' },
-  { name: 'Tarih', sources: 4, area: 'Abylai Khan 104', order: 'Tarih soup (horse broth, kazy), horse-meat ravioli, modern beshbarmak', price: '4,500–15,000 ₸', tip: 'Modern take on Kazakh food — “not traditional, but tastes as it should”.', plan: 'Thu 12 dinner' },
+  { name: 'Qaimaq', sources: 6, area: 'Abay 46A (5.6 km from the Airbnb)', order: 'Beshbarmak (share it), kuyrdak in a pumpkin, kaymak with bread', price: '~7,000 ₸', tip: 'Book at weekends; the priciest beshbarmak in one guide.', plan: 'Spare night option' },
+  { name: 'Tarih', sources: 4, area: 'Abylai Khan 104', order: 'Tarih soup (horse broth, kazy), horse-meat ravioli, modern beshbarmak', price: '4,500–15,000 ₸', tip: 'Modern take on Kazakh food — “not traditional, but tastes as it should”.', plan: 'Spare night option' },
   { name: 'Bauyrdaq', sources: 4, area: 'Several branches, 24/7', order: 'Beshbarmak 4,390 ₸, Nauryz kozhe, baursak burger with kazy', price: '~2,200 ₸', tip: 'Cheapest good beshbarmak; manti weaker.', plan: 'Backup any night' },
   { name: 'Qaganat', sources: 3, area: 'Canteen chain, e.g. Dostyk 108 by Kok Tobe', order: 'Point-and-pay plov, cutlets, soups', price: '1,500–3,000 ₸, no service charge', tip: 'Cheap and fast; quality varies by branch.', plan: 'Sun 8 after Kok Tobe' }
 ];

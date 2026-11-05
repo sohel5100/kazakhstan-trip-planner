@@ -1,7 +1,7 @@
-import { addRupees } from './components/rupees.js?v=40';
-import { getItineraryPlaceIds, saveItineraryPlaceIds } from './data/itinerary-state.js?v=40';
-import { itinerary } from './data/trip.js?v=40';
-import { getExchangeRate, convertCurrency } from './data/currency.js?v=40';
+import { addRupees } from './components/rupees.js?v=41';
+import { getItineraryPlaceIds, saveItineraryPlaceIds } from './data/itinerary-state.js?v=41';
+import { itinerary } from './data/trip.js?v=41';
+import { getExchangeRate, convertCurrency } from './data/currency.js?v=41';
 import {
   getConverterState,
   renderExpenses,
@@ -11,13 +11,13 @@ import {
   setActiveStatus,
   setConverterState,
   toggleAddForm
-} from './pages/expenses.js?v=40';
-import { renderHome, loadHomeWeather } from './pages/home.js?v=40';
-import { renderItinerary, setSelectedDay, loadItineraryWeather } from './pages/itinerary.js?v=40';
-import { renderPlaces, setActiveCategory as setPlaceCategory } from './pages/places.js?v=40';
-import { renderTravel } from './pages/travel.js?v=40';
-import { renderPacking, packingGroups, packingStorageKey, getPackingChecked } from './pages/packing.js?v=40';
-import { renderPrep, getEmergencyCity, setEmergencyCity, getPhraseCategory, setPhraseCategory } from './pages/prep.js?v=40';
+} from './pages/expenses.js?v=41';
+import { renderHome, loadHomeWeather } from './pages/home.js?v=41';
+import { renderItinerary, setSelectedDay, loadItineraryWeather } from './pages/itinerary.js?v=41';
+import { renderPlaces, setActiveCategory as setPlaceCategory } from './pages/places.js?v=41';
+import { renderTravel } from './pages/travel.js?v=41';
+import { renderPacking, packingGroups, packingStorageKey, getPackingChecked } from './pages/packing.js?v=41';
+import { renderPrep, getEmergencyCity, setEmergencyCity, getPhraseCategory, setPhraseCategory } from './pages/prep.js?v=41';
 
 const pages = {
   home: renderHome,
