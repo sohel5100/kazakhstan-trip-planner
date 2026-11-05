@@ -1,5 +1,5 @@
-import { tripMeta } from '../data/trip.js?v=38';
-import { formatDate, pageHeader, icon } from '../components/shared.js?v=38';
+import { tripMeta } from '../data/trip.js?v=39';
+import { formatDate, pageHeader, icon } from '../components/shared.js?v=39';
 
 export const packingStorageKey = 'fieldnotes-kazakhstan-packing-v1';
 

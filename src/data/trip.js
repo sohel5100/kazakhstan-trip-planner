@@ -1,11 +1,11 @@
-import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=38';
+import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=39';
 
 export {
   exchangeRates,
   currencySymbols,
   toINR,
   formatCurrency
-} from './currency.js?v=38';
+} from './currency.js?v=39';
 
 export const tripMeta = {
   title: 'Kazakhstan Adventure',
@@ -545,16 +545,16 @@ export const itinerary = [
         "description": "Lands at Almaty Terminal 2 (all international flights) at 15:10 local time (UTC+5, 30 min behind IST)."
       },
       {
-        "time": "03:10 PM – 04:00 PM",
+        "time": "03:10 PM – 04:10 PM",
         "type": "arrival",
         "title": "Immigration at ALA Terminal 2",
         "getThere": "Follow “Arrivals / Passport control” from the gate; baggage claim is after immigration.",
         "description": "Indian passports get 14 days visa-free. Stays up to 30 days need no migration registration, so nothing to file for 7 nights.",
-        "tip": "Keep your passport on you all trip: police don’t accept photocopies.",
+        "tip": "Keep your passport on you all trip: police don’t accept photocopies. No arrival card to fill in — they check your passport, take a photo and stamp you in. Several travellers say allow about an hour from landing to the kerb. QazETA (the new e-permit) is only a voluntary pilot until 1 Jul 2027 — not needed for this trip.",
         "image": "./assets/places/almaty-airport.jpg"
       },
       {
-        "time": "04:00 PM – 04:30 PM",
+        "time": "04:10 PM – 04:40 PM",
         "type": "setup",
         "icon": "📶",
         "title": "SIM card (Beeline first), a little cash & taxi app",
@@ -564,13 +564,13 @@ export const itinerary = [
         "tip": "No IMEI registration is needed: a foreign phone on a local SIM only gets blocked after 30 days. 25–40 GB is plenty for 7 days. Change only ~US$50 at the airport (rates are worse); do the rest at MiG on Dostyk (below). RuPay probably won’t work — use Visa/Mastercard."
       },
       {
-        "time": "04:30 PM – 05:15 PM",
+        "time": "04:40 PM – 05:30 PM",
         "type": "transfer",
         "title": "Yandex Go to your Airbnb (near Dostyk Ave)",
         "getThere": "Airport T2 → Airbnb: 14.1 km, ~17 min with no traffic, 30–45 min at 17:00. Order in Yandex Go and walk to the pickup point the app shows (exact spot not confirmed — one report says ~200 m away at short-term parking). Only get in a car whose plate matches the app.",
         "description": "Order in the app and walk to the marked Yandex pickup zone outside Terminal 2. 25–45 min to the centre.",
         "cost": "Economy ~2,500–4,500 ₸ · Comfort ~3,500–6,000 ₸",
-        "tip": "Ignore drivers who approach you in arrivals (they ask 8,000–18,000 ₸ cash). Check the plate before getting in. Message your Airbnb host your arrival time (~16:30) and get the check-in instructions before you fly.",
+        "tip": "Ignore drivers who approach you in arrivals (they ask 8,000–18,000 ₸ cash). Check the plate before getting in. Message your Airbnb host your arrival time (~16:30) and get the check-in instructions before you fly. Repeated warnings: never let a driver cancel the app booking and take you “privately”, and don’t follow anyone to an unmarked car. Link your card in the app before landing but carry tenge — several reports say foreign cards fail in Yandex Go. Free waiting is short, then it’s charged.",
         "backup": "Official “Taxi Point” desk at exits A/B (fixed fare, ~9,000 ₸)."
       },
       {
@@ -581,7 +581,7 @@ export const itinerary = [
         "getThere": "Airbnb → MiG 2: walk 0.44 km, ~6 min, to Dostyk 40 at the Kabanbay Batyr corner.",
         "description": "MiG is an Almaty exchange chain (34 offices). MiG 2 is the closest branch to the Airbnb (a short detour north before dinner). It’s open 09:00–20:00 daily with no break. Other nearby branches: MiG 12 (Satpayev 2 × Dostyk), MiG 15 (Tole Bi 24a × Dostyk), MiG 4 (Abay 40 × Baitursynov).",
         "tickets": "Phone +7 727 341 00 69. mig.kz publishes one network-wide rate table (5 Nov: buys USD at ₸449.5 per $1); still compare the board with the rate in the app before you hand over notes.",
-        "tip": "Is the rate good? Per $1: ₸450–454 excellent · 447–449 good · 444–446 acceptable · 440–443 negotiate · below 440 avoid (target ₸452; $100 → ~₸44,900–45,200). Full table, incl. INR, on the Prep page. Bring clean, new-series US$100 notes with no tears, and carry your passport. Count the tenge at the window and keep the receipt.",
+        "tip": "Is the rate good? Per $1: ₸450–454 excellent · 447–449 good · 444–446 acceptable · 440–443 negotiate · below 440 avoid (target ₸452; $100 → ~₸44,900–45,200). Full table, incl. INR, on the Prep page. Bring clean, new-series US$100 notes with no tears, and carry your passport. Count the tenge at the window and keep the receipt. Count the tenge before you leave the window — the one repeated exchange scam is a good rate on the board and less cash handed over.",
         "links": [
           {
             "label": "MiG rates & branches",
@@ -645,7 +645,7 @@ export const itinerary = [
         "description": "Walk the park first: the huge Panfilov Guardsmen war memorial and eternal flame at the east end, then the pastel 1907 Ascension Cathedral with its golden domes — built of wood without nails, in the middle of the park. Free.",
         "getThere": "Six Coffee → park’s war memorial: Yandex 3.2 km, ~5–10 min (~800–1,200 ₸), or walk 1.97 km, ~26 min. Memorial → cathedral: walk 0.25 km, ~3 min.",
         "tickets": "Free · open 07:00–18:00",
-        "tip": "Women cover their heads; no flash photography inside.",
+        "tip": "Women cover their heads; no flash photography inside. Morning light is best on the cathedral’s east side. Men take hats off inside; ask before photographing during a service. The eternal flame is in front of the black war memorial.",
         "image": "./assets/places/zenkov-cathedral.jpg"
       },
       {
@@ -665,7 +665,7 @@ export const itinerary = [
         "description": "Dried fruit, nuts, honey, spices, kurt and kazy. 🥗 Vegetarian snack: morkovcha (Korean carrot salad) at the Korean-salad stalls — ask “bez ryby, bez myasa?”, some salads use fish sauce or meat. Upstairs, Bowler Coffee Roasters has a balcony view over the market floor.",
         "getThere": "Museum → Green Bazaar (Zhibek Zholy 53): walk 0.71 km north, ~9 min.",
         "cost": "Bring cash; coffee ~1,500–2,000 ₸",
-        "tip": "Closed Mondays — so today is the day. Bargain on dried fruit and souvenirs, watch for pickpockets, taste before buying. The Rakhat factory store (Zenkov 2) is nearby.",
+        "tip": "Closed Mondays — so today is the day. Bargain on dried fruit and souvenirs, watch for pickpockets, taste before buying. The Rakhat factory store (Zenkov 2) is nearby. How reviewers do it: enter the main hall from Zhibek Zholy — dried fruit, nuts and spices at the front, then the Korean salads, then dairy (kurt, irimshik). The newer central pavilion (entrance from Makataev St) has farm produce, honey and cheese, and is said to be 20–30% cheaper for some goods. Taste freely but don’t overdo it; opening prices are inflated, so bargain politely for 5–10% off. Bring cash.",
         "links": [
           {
             "label": "Green Bazaar on Maps",
@@ -675,7 +675,7 @@ export const itinerary = [
         "image": "./assets/places/green-bazaar.jpg"
       },
       {
-        "time": "01:30 PM – 02:00 PM",
+        "time": "01:40 PM – 02:10 PM",
         "type": "sight",
         "icon": "🕌",
         "title": "Almaty Central Mosque (Pushkin St 16)",
@@ -692,7 +692,7 @@ export const itinerary = [
         "image": "./assets/places/central-mosque.jpg"
       },
       {
-        "time": "02:15 PM – 03:00 PM",
+        "time": "02:20 PM – 03:05 PM",
         "type": "food",
         "title": "Lunch at Tary (Kazakh-twist café)",
         "getThere": "Mosque → Tary (Abylai Khan 55): walk 1.53 km west, ~20 min, or Yandex 1.5 km, ~5 min (~800–1,000 ₸).",
@@ -706,13 +706,13 @@ export const itinerary = [
         ]
       },
       {
-        "time": "03:30 PM – 06:30 PM",
+        "time": "03:15 PM – 06:30 PM",
         "type": "sunset",
         "title": "Kok Tobe cable car for sunset & city lights",
         "description": "Ride up about an hour before the 16:36 sunset, watch the mountains turn pink, stay for the city lights. Cafés and restaurants on top.",
         "getThere": "Tary → Kok Tobe lower station (Dostyk 104B, opposite the Palace of the Republic): Yandex 4.2 km, ~10–15 min (~1,200–1,800 ₸); walking is 3.49 km, ~47 min. Station → Airbnb afterwards: walk 0.91 km north, ~12 min.",
         "tickets": "At the station: 10,000 ₸ return / 6,000 ₸ one way (confirmed 2 Nov 2026). Fri–Sun 10:00–00:00, Mon/Wed/Thu 10:00–23:00, Tue from 13:00 (morning maintenance). It closed for an overhaul in early–mid Nov 2025; no 2026 closure announced — check koktobe.com the day before.",
-        "tip": "🥗 Kok Tobe’s restaurant menu (Aug 2025) lists meatless mini pumpkin samsa and vegetable shashlik — good dinner with a view. Skip the mini-zoo. Taxis can’t drive up (25,000 ₸ car fee) — the park shuttle from Dostyk is 3,000 ₸ one way if the cable car is closed.",
+        "tip": "🥗 Kok Tobe’s restaurant menu (Aug 2025) lists meatless mini pumpkin samsa and vegetable shashlik — good dinner with a view. Skip the mini-zoo. Taxis can’t drive up (25,000 ₸ car fee) — the park shuttle from Dostyk is 3,000 ₸ one way if the cable car is closed. Reviewers repeat: it’s Sunday, so expect a queue (~20 min) — be at the station by ~15:30 for the 16:36 sunset. Buy a return: the walking path down has been closed since May 2026. Worth it at the top: the viewing decks and the Beatles bench; the TV tower is closed; food up there is mediocre.",
         "backup": "Hazy or raining: swap with Thursday’s sunset and go to Akku café instead.",
         "links": [
           {
@@ -746,26 +746,26 @@ export const itinerary = [
         "type": "transfer",
         "title": "Yandex Go to the Medeu gondola station",
         "getThere": "Airbnb → Medeu cable car station: Yandex 15.6 km up Dostyk Ave and the Medeu road, ~28 min with no traffic, 35–45 min in the morning. Set the destination to “Канатная дорога Медеу” — the rink car park is fenced off until December.",
-        "description": "Straight up Dostyk Ave and the Medeu valley from your Airbnb — about 30–40 minutes. Leave by 08:00 if you booked the glacier walk (it meets at 09:00); otherwise 08:30 is fine.",
+        "description": "Leave by 08:00. The whole Shymbulak round trip takes most of the day once you add ticket queues, three lifts, transfers and the ride down — guides say allow at least 3 hours even without stopping, and the upper lift closes ~16:30.",
         "cost": "~2,000–4,000 ₸",
-        "tip": "City buses (12/21) need an Onay card that you can only buy with cash, and foreign cards usually fail — a taxi is easier. The road beyond Medeu is closed to cars and taxis until 30 Nov, so the gondola is the only way up."
+        "tip": "Buy the lift ticket in the Shymbulak app or on shymbulak.com the night before — reviewers say it’s cheaper than the desk and skips the desk queue (30–40 min on busy days; Monday is among the quietest). Screenshot the QR. Bus 12 also goes to Medeu but needs an Onay card bought with cash — a taxi is easier. The road above Medeu is closed to cars until 30 Nov, so the gondola is the only way up."
       },
       {
-        "time": "08:45 AM – 09:00 AM",
+        "time": "08:45 AM – 09:15 AM",
         "type": "sight",
-        "title": "Medeu (quick look)",
-        "getThere": "The dam is right above the gondola station — view it from the station terrace; no extra transport.",
-        "description": "The ice rink is closed for reconstruction (possibly until 2028) and its car park is fenced off until December — just look at the dam from the gondola station. Whether the ~842-step dam staircase is open in 2026 is not reported; skip it if icy.",
+        "title": "Tickets at Medeu & a look at the dam",
+        "getThere": "Get out at the Medeu cable car lower station; the ticket desk and turnstiles are in the station building. The dam is visible from the terrace.",
+        "description": "Pick up or buy tickets (desk if you didn’t buy online), use the toilet — the next ones are at Shymbulak base — and look up at the Medeu dam. The ice rink is closed for reconstruction (possibly until 2028).",
         "image": "./assets/places/medeu.jpg"
       },
       {
-        "time": "09:00 AM – 10:00 AM",
+        "time": "09:15 AM – 10:30 AM",
         "type": "alpine",
-        "title": "Gondolas: Medeu → Shymbulak (2,260 m) → Combi-1 → Combi-2 → Talgar Pass (3,200 m)",
-        "getThere": "Buy the ticket at the Medeu lower station desk, ride to Shymbulak base, walk ~2 min across the base to Combi-1, then change to Combi-2 at its top station.",
-        "description": "Ride all three stages to the top. Glacier and peak views, usually sunny above the city haze.",
-        "tickets": "Buy at the Medeu ticket office or shymbulak.com. Adult 12,000 ₸ return Medeu ↔ Talgar Pass · 7,000 ₸ one way (prices from Sep 2026 news; confirm at the desk). The glass “360°” cabin price for 2026 is not published. Lifts reopened after maintenance on 2 Nov; the KKD-4 chairlift stays shut until 10 Nov (you don’t need it).",
-        "tip": "No skiing or snowboarding this trip: the 2026/27 season start hasn’t been announced and there’s no snow base yet. So no rental needed — “TUBE” near Shymbulak couldn’t be found in 2GIS or online (a shop called “Tobe”, @tobe.kz, may be what you saw). If the season opens later, on-mountain rental was from 8,000 ₸/day last winter.",
+        "title": "Up to Talgar Pass (3,200 m): gondola + Combi-1 + Combi-2",
+        "getThere": "① Gondola Medeu (1,690 m) → Shymbulak base (2,260 m): 4.5 km, ~15–20 min. ② Walk ~5–10 min across the base to the Combi-1 station (follow “Комби-1” signs). ③ Combi-1 to the mid station (~2,800 m): ~10–13 min. ④ Change to Combi-2 → Talgar Pass (3,200 m): ~5–8 min. Riding alone is ~35–40 min; with queues and transfers plan ~1 h 15 min.",
+        "description": "Glacier and peak views, usually sunny above the city haze.",
+        "tickets": "Adult 12,000 ₸ return Medeu ↔ Talgar Pass · 7,000 ₸ one way (Sep 2026 prices; the resort resets them each autumn — check the app). The glass “360°” cabin price for 2026 isn’t published. Lifts reopened after maintenance on 2 Nov; the KKD-4 chairlift stays shut until 10 Nov (you don’t need it).",
+        "tip": "Last rides up close early: last winter Combi-2 ran to 16:30, Combi-1 to 17:00, the gondola to 18:00 — a reviewer missed the last Combi-2 after sitting in a café. No skiing this trip (season not open) — “TUBE” rental couldn’t be found anywhere (maybe “Tobe”, @tobe.kz).",
         "links": [
           {
             "label": "Shymbulak live (lifts, webcams)",
@@ -779,15 +779,23 @@ export const itinerary = [
         "image": "./assets/places/talgar-pass.jpg"
       },
       {
-        "time": "10:00 AM – 01:30 PM",
+        "time": "10:30 AM – 12:30 PM",
+        "type": "alpine",
+        "icon": "🏔️",
+        "title": "Talgar Pass: views, snow & a hot drink at 3,200 m",
+        "getThere": "You’re at the Combi-2 top station; the viewpoints are a few minutes’ walk around it.",
+        "description": "Take it slow for the first 30 minutes (altitude) and drink water. Walk the viewpoints around the top station towards the Tuyuksu glaciers, then warm up at Panorama Café or Bar 3200 next to Combi-2 (pricey, as reviewers note).",
+        "tip": "It’s about −5…+5 °C with wind up here — sunglasses and sunscreen even in November."
+      },
+      {
+        "time": "10:30 AM – 01:30 PM",
         "type": "hike",
         "icon": "🧊",
-        "title": "Option (not booked): guided walk to the Bogdanovich Glacier viewpoint",
-        "getThere": "Meet the guide where your booking says (Sputnik8: 09:00, walk starts at the Combi-2 top station at 10:00).",
-        "description": "From Talgar Pass a cairn-marked moraine path runs ~2 km south to a viewpoint of the glacier’s ice wall (~3,370 m): 1–1.5 h each way, easy-to-moderate at altitude. Do it only with a guide — there are hidden crevasses under thin snow and avalanche slopes; the Emergencies Ministry logged 4 incidents on the route in 2025 and recommends a guide for beginners. Stay on the moraine viewpoint, not on the ice.",
-        "tickets": "Sputnik8 guided walk: 35,000 ₸ — guide, crampons, helmet and poles included, lift ticket not. Meets 09:00, walk starts at Combi-2 at 10:00, back ~13:30. Book today for Monday; if they can’t run it, skip the glacier.",
+        "title": "Option (not booked) instead: guided walk to the Bogdanovich Glacier viewpoint",
+        "getThere": "Meet the guide where your booking says (Sputnik8: meets 09:00; the walk starts at the Combi-2 top station). From Talgar Pass a cairn-marked moraine path runs ~2 km south to the viewpoint (~3,370 m), 1–1.5 h each way.",
+        "description": "Do it only with a guide — there are hidden crevasses under thin snow and avalanche slopes; the Emergencies Ministry logged 4 incidents on the route in 2025 and recommends a guide for beginners. Stay on the moraine viewpoint, not on the ice. If you do this, skip the 10:30–12:30 Talgar Pass slot.",
+        "tickets": "Sputnik8 guided walk: 35,000 ₸ — guide, crampons, helmet and poles included, lift ticket not. Back ~13:30. Book today for Monday; if they can’t run it, skip the glacier.",
         "tip": "Register your walk (voluntary) on almatyhike.kz and mark your return afterwards. Rescue: 112. After the snowfall on 10–11 Nov, don’t attempt it on a later day.",
-        "backup": "No guide: walk around Talgar Pass and the top station viewpoints instead — the glacier is visible from there.",
         "links": [
           {
             "label": "Sputnik8 glacier walk",
@@ -800,19 +808,19 @@ export const itinerary = [
         ]
       },
       {
-        "time": "01:30 PM – 03:00 PM",
+        "time": "12:30 PM – 02:30 PM",
         "type": "food",
-        "title": "Lunch & snow views at Shymbulak base (2,260 m)",
-        "getThere": "Combi-2 then Combi-1 down to the base; cafés are around the lower Combi-1 station.",
-        "description": "Ride Combi-2 and Combi-1 down to the base, eat at one of the resort cafés and wander the resort. Not booked glacier walk? Spend the extra time at the top first.",
-        "tip": "🥗 Mountain-café menus are meat-heavy — ask for “bez myasa” dishes (soups, salads, pastries) or carry a snack."
+        "title": "Down to Shymbulak base: lunch & a wander",
+        "getThere": "Combi-2 down (~5–8 min) → Combi-1 down (~10–13 min) to the base, ~30 min with the transfer.",
+        "description": "Lunch at one of the resort restaurants at the base, then wander the resort and the snowy slopes. (After the glacier walk: lunch ~14:00–15:00 instead.)",
+        "cost": "Mountain prices — ~6,000–10,000 ₸ per person"
       },
       {
-        "time": "03:00 PM – 04:00 PM",
+        "time": "02:30 PM – 04:00 PM",
         "type": "transfer",
         "title": "Gondola down & taxi back to the city",
-        "getThere": "Shymbulak → Medeu by gondola (~15 min), then Yandex from the Medeu cable car station to the Airbnb: 15.6 km, ~30–40 min. Expect a queue for the ride down late in the day.",
-        "description": "Order Yandex Go at the Medeu station; expect a short wait in the afternoon.",
+        "getThere": "Shymbulak base → Medeu by gondola, 4.5 km, ~15–20 min (allow 30 min with the queue). Then Yandex from the Medeu cable car station to the Airbnb: 15.6 km, ~30–40 min.",
+        "description": "Head down before ~15:00 — reviewers say the gondola gets crowded near closing. Order Yandex Go once you’re at Medeu; expect a short wait for a car.",
         "cost": "~2,000–4,000 ₸"
       },
       {
@@ -897,7 +905,7 @@ export const itinerary = [
         "title": "Lake Kaindy — the sunken forest",
         "getThere": "Saty → Kaindy: 16.3 km — tour UAZ 4x4 to the parking, then walk ~2.5 km to the lake.",
         "description": "UAZ 4x4 from Saty to the Kaindy parking (included), then a 2.5 km walk to the lake with its drowned spruce trunks.",
-        "tip": "Sit near the front of the UAZ — the road is very bumpy. Walking is safer than the optional horses.",
+        "tip": "Sit near the front of the UAZ — the road is very bumpy. Walking is safer than the optional horses. Repeated by many: going down to the lake is easy (15–30 min) but the way back is uphill, steep and muddy in places — wear boots with grip. Squat toilets only at the parking, none on the trail. No ATMs near the lakes and no mobile signal — carry cash (park fee ~700–1,000 ₸) and offline maps.",
         "image": "./assets/places/kaindy.jpg"
       },
       {
@@ -963,7 +971,7 @@ export const itinerary = [
         "getThere": "Tour bus to the Charyn park entrance; walk down the Valley of Castles path (~30–40 min to the river), or take the park eco-taxi.",
         "description": "Walk between the red rock towers down towards the river — the highlight of the tour.",
         "cost": "Park eco-taxi 500–1,800 ₸ (optional)",
-        "tip": "Windy and slippery in places — keep to the path.",
+        "tip": "Windy and slippery in places — keep to the path. How reviewers do it: walk down the Valley of Castles (~3 km) to the river, then take the eco-shuttle back up (~500 ₸, cash). After snow the shuttle may not run and steps can be icy.",
         "image": "./assets/places/charyn-canyon.jpg"
       },
       {
@@ -1018,6 +1026,7 @@ export const itinerary = [
         "time": "01:00 PM – 03:00 PM",
         "type": "spa",
         "title": "Arasan Wellness & SPA (1982 Soviet bathhouse)",
+        "tip": "First-timer pattern: pay at the desk → wristband (opens your locker; extras go on it and you pay on the way out). Women go left, men right. Charged by the hour, then per minute. Shower before every sauna or pool; no phones past the lockers. Bring your own towel, flip-flops and a felt hat; buy a venik (birch whisk) at the entrance, soak it, use it only in the Russian banya.",
         "getThere": "Green Bazaar → Arasan (Tulebaev 78): walk 1.03 km south-west, ~14 min.",
         "description": "Russian banya, hammam and plunge pools — reviewers call it the best way to warm up in Almaty. Separate men’s and women’s sections.",
         "tickets": "Tulebaev 78, 07:00–23:30. At the door: weekday 2 h ~3,800 ₸ (morning) / 4,500 ₸ (evening). Towel, sheet and slippers are extra (a few hundred ₸ each) — bring your own flip-flops and towel. Phone +7 727 390 10 10.",
@@ -1085,21 +1094,21 @@ export const itinerary = [
     "planB": "Skipping the lake or the tour is cancelled: Shymbulak again for fresh snow (12,000 ₸ return, very cold at the top), or ALMA art museum and the Dostyk Plaza / Esentai malls.",
     "events": [
       {
-        "time": "08:15 AM – 08:45 AM",
+        "time": "07:45 AM – 08:15 AM",
         "type": "breakfast",
         "title": "Quick breakfast near your hotel",
         "getThere": "Skipping the lake? Renion → Bon Bon (Abylai Khan 123): Yandex 2.9 km, ~10 min, or walk 2.83 km, ~38 min.",
         "description": "Skipping the lake? Have a slow breakfast at Bon Bon (Abylai Khan 123) instead: the “Bohemian” breakfast or syrniki, ~3,500 ₸."
       },
       {
-        "time": "09:00 AM – 02:00 PM",
+        "time": "08:25 AM – 02:00 PM",
         "type": "nature",
         "icon": "🏔️",
         "title": "Option (not booked): Big Almaty Lake by car (Adam Hiking Tours)",
         "description": "Private cars are banned on the lake road, so go with a tour: authorised vehicles drive past the checkpoint (a short 300 m walk at the vehicle change), at the lake ~10:15. In November expect a frozen, snow-covered lake under the peaks rather than turquoise water. The Alma-Arasan hot-spring stop is often closed (rockfall risk) and swapped for Ayusai gorge.",
         "getThere": "Renion → Abai Opera Theatre (Kabanbay Batyr 110): Yandex 3.2 km, ~10–15 min (~1,200–1,500 ₸); walking is 2.43 km, ~32 min. Groups meet at the fountain — be there by 08:45; some operators don’t wait more than 15 min. Weekday departures only.",
         "tickets": "From ₹5,518 on GetYourGuide (shown 6 Nov) — eco fee, English guide, transfer, lunch, snacks and water included. 4.8 from 255 reviews. Check Fri 13 Nov is bookable.",
-        "tip": "Choose by car, not on foot: the hiking option is ~14 km, runs Mondays only, and in fresh snow it isn’t worth the avalanche and ice risk. Skip the “apple orchard” tour link — it now opens a different Panda Travel 4-hour tour (4.5★) whose recent reviews mention closed springs and pricey photo add-ons, and apple harvest is over by November.",
+        "tip": "Choose by car, not on foot: the hiking option is ~14 km, runs Mondays only, and in fresh snow it isn’t worth the avalanche and ice risk. Skip the “apple orchard” tour link — it now opens a different Panda Travel 4-hour tour (4.5★) whose recent reviews mention closed springs and pricey photo add-ons, and apple harvest is over by November. Leave the hotel by 08:25 to be at the fountain by 08:45. Bring your passport for the checkpoint; there’s an eco-fee (~650 ₸) if it isn’t included.",
         "links": [
           {
             "label": "⭐ GYG: BAL by car (recommended)",
@@ -1112,14 +1121,14 @@ export const itinerary = [
         ]
       },
       {
-        "time": "02:15 PM – 03:00 PM",
+        "time": "02:30 PM – 03:15 PM",
         "type": "food",
         "title": "Late lunch (if the tour lunch was light)",
         "getThere": "Opera Theatre (tour drop-off) → Navat (Abylai Khan 58A): walk 1.86 km north, ~25 min, or Yandex 2.4 km, ~5–10 min.",
         "description": "🥗 Navat on Abylai Khan 58A — vegan lagman or grilled vegetables. 🍖 Rumi (Abylai Khan 92) is a plov house rated 4.6, set menus from ~6,500 ₸ — plov is made with meat."
       },
       {
-        "time": "03:15 PM – 05:00 PM",
+        "time": "03:20 PM – 05:00 PM",
         "type": "shopping",
         "title": "Souvenirs: TSUM crafts & Rakhat chocolate",
         "getThere": "Navat → TSUM (Abylai Khan 62): walk 0.23 km, ~3 min. TSUM → Rakhat shop (Zhibek Zholy 47 × Kaldayakov): walk 1.36 km east along the pedestrian Arbat, ~18 min. Rakhat → Renion: 0.13 km, ~2 min.",
