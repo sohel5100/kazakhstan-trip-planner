@@ -1,11 +1,11 @@
-import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=43';
+import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=44';
 
 export {
   exchangeRates,
   currencySymbols,
   toINR,
   formatCurrency
-} from './currency.js?v=43';
+} from './currency.js?v=44';
 
 export const tripMeta = {
   title: 'Kazakhstan Adventure',
@@ -775,11 +775,11 @@ export const itinerary = [
     "date": "2026-11-09",
     "weekday": "Monday",
     "city": "Almaty mountains",
-    "title": "Shymbulak & Talgar Pass (3,200 m) + optional guided Bogdanovich Glacier walk",
+    "title": "Shymbulak & Talgar Pass (3,200 m) by three lifts, then dinner at AUYL",
     "subtitle": "Three lifts from Medeu up to 3,200 m, above the city smog, then an early dinner at AUYL next to the gondola. The forecast makes this the best mountain day of the week — and museums and the bazaar are shut on Mondays anyway.",
     "weatherNote": "Forecast on 6 Nov: dry, light wind, about −5…+5 °C at 3,200 m — the clearest mountain window of your trip (snow arrives Tue night/Wed). Trails are icy in the morning after the overnight refreeze. Combi-2 to Talgar Pass closed at 16:30 last winter (2026 hours not published) — be heading down by ~15:00. The official live page (shymbulak.com/live) needs a browser: check it in the morning, or ask at the Medeu ticket desk which lifts are running.",
     "bring": "Warm jacket, hat, gloves, sunglasses (snow glare), sunscreen, grippy boots (microspikes if you have them), water and a snack, passport, a card for lift tickets.",
-    "planB": "Lifts stopped by wind: swap with Tuesday 10 (the horse ride moves to Monday if the operator has space). If the glacier guide cancels, just stay at Talgar Pass — do not walk to the glacier alone.",
+    "planB": "Lifts stopped by wind: swap with Tuesday 10 (the horse ride moves to Monday if the operator has space).",
     "events": [
       {
         "time": "08:00 AM – 08:45 AM",
@@ -828,31 +828,11 @@ export const itinerary = [
         "tip": "It’s about −5…+5 °C with wind up here — sunglasses and sunscreen even in November. Horse rides are offered at Shymbulak from ~3,500 ₸ per 15 min (paid on the spot) if you want one at the base later."
       },
       {
-        "time": "10:30 AM – 01:30 PM",
-        "type": "hike",
-        "icon": "🧊",
-        "title": "Option (not booked) instead: guided walk to the Bogdanovich Glacier viewpoint",
-        "getThere": "Meet the guide where your booking says (Sputnik8: meets 09:00; the walk starts at the Combi-2 top station). From Talgar Pass a cairn-marked moraine path runs ~2 km south to the viewpoint (~3,370 m), 1–1.5 h each way.",
-        "description": "Do it only with a guide — there are hidden crevasses under thin snow and avalanche slopes; the Emergencies Ministry logged 4 incidents on the route in 2025 and recommends a guide for beginners. Stay on the moraine viewpoint, not on the ice. If you do this, skip the 10:30–12:30 Talgar Pass slot.",
-        "tickets": "Sputnik8 lists two options: a group walk at 35,000 ₸ (seen 6 Nov; not re-verified) and a private Bogdanovich ice-cave trek at 72,000 ₸ (5.0 from 6 reviews, a November–March route). Lift ticket not included. Crampons must be requested 2 days ahead — so book by Sat 7 Nov for Monday. If they can’t run it, skip the glacier.",
-        "tip": "Register your walk (voluntary) on almatyhike.kz and mark your return afterwards. Rescue: 112. After the snowfall on 10–11 Nov, don’t attempt it on a later day.",
-        "links": [
-          {
-            "label": "Sputnik8 glacier walk",
-            "href": "https://www.sputnik8.com/ru/almaty/activities/85679-po-tropam-shymbulaka-k-ledniku-i-oktyabrskoy-peschere"
-          },
-          {
-            "label": "Register hike (almatyhike.kz)",
-            "href": "https://almatyhike.kz/ru"
-          }
-        ]
-      },
-      {
         "time": "12:30 PM – 02:30 PM",
         "type": "food",
         "title": "Down to Shymbulak base: lunch & a wander",
         "getThere": "Combi-2 down (~5–8 min) → Combi-1 down (~10–13 min) to the base, ~30 min with the transfer.",
-        "description": "A light lunch at a resort café at the base, then wander the resort and the snowy slopes — keep room for the early dinner at AUYL. (After the glacier walk: lunch ~14:00–15:00 instead.)",
+        "description": "A light lunch at a resort café at the base, then wander the resort and the snowy slopes — keep room for the early dinner at AUYL.",
         "cost": "Mountain prices — keep it light"
       },
       {

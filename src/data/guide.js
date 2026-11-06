@@ -151,16 +151,6 @@ export const bookings = [
     ]
   },
   {
-    emoji: '🧊',
-    name: 'Option: guided Bogdanovich Glacier walk',
-    when: 'Mon 9 Nov · crampons must be requested 2 days ahead',
-    status: 'Optional — book by Sat 7 if you want it',
-    tone: 'warn',
-    actions: [
-      { label: 'Sputnik8 glacier tours', href: 'https://www.sputnik8.com/ru/almaty/activities/68029-pohod-v-oktyabrskuyu-pescheru-na-lednik-bogdanovicha' }
-    ]
-  },
-  {
     emoji: '🐎',
     name: 'Horse ride in Ile-Alatau (Tue 10)',
     when: 'Hotel pickup ~08:30 · back ~14:00 · ₹4,913',

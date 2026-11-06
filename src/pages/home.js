@@ -1,10 +1,10 @@
-import { tripMeta, flights, itinerary } from '../data/trip.js?v=43';
-import { formatDate, icon } from '../components/shared.js?v=43';
-import { packingGroups, getPackingChecked } from './packing.js?v=43';
-import { getConverterState } from './expenses.js?v=43';
-import { convertCurrency } from '../data/currency.js?v=43';
-import { bookings } from '../data/guide.js?v=43';
-import { getWeather, weatherLabel } from '../data/weather.js?v=43';
+import { tripMeta, flights, itinerary } from '../data/trip.js?v=44';
+import { formatDate, icon } from '../components/shared.js?v=44';
+import { packingGroups, getPackingChecked } from './packing.js?v=44';
+import { getConverterState } from './expenses.js?v=44';
+import { convertCurrency } from '../data/currency.js?v=44';
+import { bookings } from '../data/guide.js?v=44';
+import { getWeather, weatherLabel } from '../data/weather.js?v=44';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -235,7 +235,7 @@ export function renderHome() {
       <div class="hero-copy">
         <p class="eyebrow light">14-DAY VISA-FREE (INDIAN PASSPORT)</p>
         <h2>From city spires<br />to 3,200m peaks.</h2>
-        <p>Almaty base, Medeu rink, Shymbulak glacier, Charyn Canyon, and Kolsai alpine lakes.</p>
+        <p>Almaty base, Shymbulak & Talgar Pass, Kolsai and Kaindy lakes, and Charyn Canyon.</p>
         <a href="#itinerary" class="hero-link" data-page="itinerary">
           Explore 8-day plan <span aria-hidden="true">→</span>
         </a>

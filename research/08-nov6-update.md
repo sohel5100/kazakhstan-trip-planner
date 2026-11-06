@@ -92,3 +92,4 @@ _Re-checked tours, Shymbulak, glacier, SIM, exchange, mosque and food on 6 Nov 2
 - **Wed 11:** Huns nomad village + Ak-Bulak (VOSTOK, GYG t470005) — 4.3/38, ₹13,780, 8 h, yurts/baursak class/horse show/plov; newest review May 2026 → confirm it runs; 50% refund <48 h. Fallback: slow city day (Bon Bon, Akku, TSUM, Rakhat).
 - Alternatives noted: private Issyk Lake scenic drive (Kazia, t1460574, ₹14,416, no reviews, ~10 min asphalt walk); Issyk + Turgen group trips (JoinMe t984508 4.4/328 runs Wed only; waterfall approach ~1.5 km incline).
 - Rejected: falcon show (season conflicts, "Apr–Oct" on one listing), Altyn-Emel (17 h), Tamgaly (archaeology + walking), Oi-Qaragai (between seasons), Alma-Arasan/Ayusai (walking, closures).
+- 6 Nov: user decided against the Bogdanovich Glacier walk — removed from Day 3 and bookings.
