@@ -1,11 +1,11 @@
-import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=41';
+import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=42';
 
 export {
   exchangeRates,
   currencySymbols,
   toINR,
   formatCurrency
-} from './currency.js?v=41';
+} from './currency.js?v=42';
 
 export const tripMeta = {
   title: 'Kazakhstan Adventure',
@@ -597,7 +597,7 @@ export const itinerary = [
         "time": "06:30 PM – 09:00 PM",
         "type": "evening",
         "title": "First Kazakh dinner at Navat (walk from the Airbnb)",
-        "description": "Navat chaikhana (Dostyk 48, 10:00–00:00; Google 4.5 from ~4,500 reviews) — recommended by 11 of the 29 food sources. Order what reviewers keep naming: horse plov, guyru lagman, chicken or lamb tandoor samsa and manti, with a pot of Tashkent tea — baursaks come free with tea. Save beshbarmak for Sandyq or AUYL later in the week. Still fresh afterwards? Take the metro to Zhibek Zholy for the lit-up Arbat pedestrian street (route below).",
+        "description": "Navat chaikhana (Dostyk 48, 10:00–00:00) — recommended by 11 of 29 food sources; 2GIS 4.9 from ~19,800 ratings. Save beshbarmak for Sandyq or AUYL later in the week. Still fresh afterwards? Take the metro to Zhibek Zholy for the lit-up Arbat pedestrian street (route below).",
         "getThere": "MiG 2 → Navat (Dostyk 48): walk 0.55 km south along Dostyk, ~7 min. Navat → Airbnb afterwards: 0.47 km, ~6 min. For the Arbat instead: walk 1.00 km (~13 min) from Navat to Abay metro, ride 2 stops north to Zhibek Zholy (120 ₸, tap Visa/Mastercard), exit onto the pedestrian street; Yandex back ~800–1,200 ₸.",
         "cost": "~5,000–8,000 ₸ per person",
         "tip": "Bills often include 10–15% service (“обслуживание”) — no extra tip needed then. Rakhat chocolate shop is at Zhibek Zholy 47 × Kaldayakov.",
@@ -606,7 +606,16 @@ export const itinerary = [
             "label": "Navat Dostyk on Maps",
             "href": "https://www.google.com/maps/search/?api=1&query=Navat+Dostyk+48+Almaty"
           }
-        ]
+        ],
+        "order": [
+          "Baursaks (free with tea)",
+          "Horse plov",
+          "Tandoor samsa",
+          "Guiru lagman",
+          "Manti",
+          "Tashkent tea"
+        ],
+        "orderNote": "Most-named dishes across Navat reviews (baursaks 8×, plov 7×, samsa 5×)."
       }
     ],
     "placeIds": [
@@ -629,14 +638,21 @@ export const itinerary = [
         "type": "breakfast",
         "title": "Brunch at Six Coffee+Wine",
         "getThere": "Airbnb → Six Coffee (Abay 17): walk 1.08 km, ~14 min. Nedelka (Abay 19) is next door: 1.14 km, ~15 min.",
-        "description": "Rated 5.0 on Yandex — reviewers call it the best coffee in Almaty. Flat white plus avocado-salmon toast. Closer option: Nedelka, a few minutes from the Airbnb.",
+        "description": "2GIS 4.9 from ~9,600 ratings; recommended by Spotted by Locals, weproject and Reddit locals. Busy at peak — expect a short wait.",
         "cost": "~3,500–6,000 ₸",
         "links": [
           {
             "label": "Maps",
             "href": "https://www.google.com/maps/search/?api=1&query=Six+Coffee+Wine+Abay+17+Almaty"
           }
-        ]
+        ],
+        "order": [
+          "Croissants",
+          "Cappuccino or flat white",
+          "Winter tea",
+          "Hot chocolate"
+        ],
+        "orderNote": "What reviewers name most often."
       },
       {
         "time": "10:00 AM – 11:15 AM",
@@ -661,10 +677,10 @@ export const itinerary = [
       {
         "time": "12:15 PM – 01:30 PM",
         "type": "market",
-        "title": "Green Bazaar (Kok Bazar) + coffee on the balcony",
-        "description": "Graze your way through for lunch, the way food writers recommend: free tastes of kazy and smoked horse in the meat hall at the back, hot tandoor samsa and fresh lepeshka bread from the stalls, a tub of Korean morkovcha from the salad row, kurt and irimshik in the dairy section. Don’t order beshbarmak here — one guide says the bazaar versions target tourists. Want a sit-down bowl? The Oral canteen up the stairs from the main entrance does Uyghur lagman for ~1,800–2,200 ₸ (10:00–18:00). Upstairs, Bowler Coffee Roasters has a balcony view over the market floor.",
+        "title": "Green Bazaar (Kok Bazar): graze your way through lunch",
+        "description": "Food writers’ advice: walk the market first, then taste — vendors offer kazy and smoked horse in the meat hall at the back, dried fruit and nuts at the front, Korean salads in the salad row, kurt and irimshik in the dairy section. Tandoor samsa and fresh lepeshka from the stalls make lunch. Don’t order beshbarmak here — one guide says the bazaar versions target tourists.",
         "getThere": "Museum → Green Bazaar (Zhibek Zholy 53): walk 0.71 km north, ~9 min.",
-        "cost": "Bring cash; coffee ~1,500–2,000 ₸",
+        "cost": "Bring cash — tastes are free; tandoor samsa ~300–900 ₸ each",
         "tip": "Closed Mondays — so today is the day. Bargain on dried fruit and souvenirs, watch for pickpockets, taste before buying. The Rakhat factory store (Zenkov 2) is nearby. How reviewers do it: enter the main hall from Zhibek Zholy — dried fruit, nuts and spices at the front, then the Korean salads, then dairy (kurt, irimshik). The newer central pavilion (entrance from Makataev St) has farm produce, honey and cheese, and is said to be 20–30% cheaper for some goods. Taste freely but don’t overdo it; opening prices are inflated, so bargain politely for 5–10% off. Bring cash.",
         "links": [
           {
@@ -672,7 +688,16 @@ export const itinerary = [
             "href": "https://www.google.com/maps/search/?api=1&query=Green+Bazaar+Zhibek+Zholy+53+Almaty"
           }
         ],
-        "image": "./assets/places/green-bazaar.jpg"
+        "image": "./assets/places/green-bazaar.jpg",
+        "order": [
+          "Kazy & smoked horse (free tastes)",
+          "Tandoor samsa",
+          "Lepeshka bread",
+          "Korean carrot salad (morkovcha)",
+          "Kurt & irimshik",
+          "Aport apples"
+        ],
+        "orderNote": "Repeated by Tengrinews, Andrew Zimmern, welcome.kz and Spotted by Locals."
       },
       {
         "time": "01:40 PM – 02:10 PM",
@@ -692,20 +717,26 @@ export const itinerary = [
         "image": "./assets/places/central-mosque.jpg"
       },
       {
-        "time": "02:20 PM – 03:05 PM",
+        "time": "02:20 PM – 03:00 PM",
         "type": "cafe",
-        "icon": "🫖",
-        "title": "Tea, baursaks & dessert at Tary",
-        "getThere": "Mosque → Tary (Abylai Khan 55): walk 1.53 km west, ~20 min, or Yandex 1.5 km, ~5 min (~800–1,000 ₸).",
-        "description": "Tary is the 24/7 café in the same building as Sandyq — dessert-focused, so it suits a stop after the bazaar grazing: baursaks with kaymak, irimshik and the signature tary (roasted-millet) cheesecake with Kazakh milk tea.",
-        "cost": "~3,000–5,000 ₸"
+        "icon": "🥐",
+        "title": "Coffee & pastry at Vanilla",
+        "getThere": "Mosque → Vanilla (Kurmangazy 54): Yandex 3.9 km, ~10 min (~1,000–1,300 ₸). Then Vanilla → Kok Tobe lower station: walk 1.38 km, ~18 min, or Yandex 1.9 km, ~5 min.",
+        "description": "Bakery-café recommended by 4 guides (European Coffee Trip, bucketlistly, Yandex Open Kitchen, sxodim); Yandex 5.0 from 334, 2GIS 4.8 from 1,600+. A warm sit-down before Kok Tobe.",
+        "order": [
+          "Croissants",
+          "Pastries",
+          "Matcha latte",
+          "Zucchini pancakes"
+        ],
+        "cost": "~2,500–4,000 ₸"
       },
       {
         "time": "03:15 PM – 06:30 PM",
         "type": "sunset",
         "title": "Kok Tobe cable car for sunset & city lights",
         "description": "Ride up about an hour before the 16:36 sunset, watch the mountains turn pink, stay for the city lights. Cafés and restaurants on top.",
-        "getThere": "Tary → Kok Tobe lower station (Dostyk 104B, opposite the Palace of the Republic): Yandex 4.2 km, ~10–15 min (~1,200–1,800 ₸); walking is 3.49 km, ~47 min. ",
+        "getThere": "Vanilla → Kok Tobe lower station (Dostyk 104B, opposite the Palace of the Republic): walk 1.38 km, ~18 min, or Yandex 1.9 km, ~5 min.",
         "tickets": "At the station: 10,000 ₸ return / 6,000 ₸ one way (confirmed 2 Nov 2026). Fri–Sun 10:00–00:00, Mon/Wed/Thu 10:00–23:00, Tue from 13:00 (morning maintenance). It closed for an overhaul in early–mid Nov 2025; no 2026 closure announced — check koktobe.com the day before.",
         "tip": "Skip the restaurants at the top — several reviewers call them tourist-priced and mediocre; eat at the bottom instead (next stop). Skip the mini-zoo. Taxis can’t drive up (25,000 ₸ car fee) — the park shuttle from Dostyk is 3,000 ₸ one way if the cable car is closed. Reviewers repeat: it’s Sunday, so expect a queue (~20 min) — be at the station by ~15:30 for the 16:36 sunset. Buy a return: the walking path down has been closed since May 2026. Worth it at the top: the viewing decks and the Beatles bench; the TV tower is closed; food up there is mediocre.",
         "backup": "Hazy or raining: try Tuesday’s sunset instead (cable car opens 13:00 on Tuesdays), or see the city lights from Bar Fly on the 26th floor of Hotel Kazakhstan.",
@@ -723,7 +754,7 @@ export const itinerary = [
         "icon": "🩰",
         "title": "Option: Giselle at the Abai Opera & Ballet Theatre",
         "getThere": "Kok Tobe lower station → Abai Opera Theatre (Kabanbay Batyr 110): Yandex 2.8 km, ~5–10 min (~1,000 ₸), or walk 1.84 km, ~25 min. Afterwards → Airbnb: walk 1.37 km, ~18 min.",
-        "description": "Classic ballet in the grand Soviet-era hall — Giselle plays Sun 8 Nov at 18:00 (theatre playbill, checked 6 Nov). Leave Kok Tobe right after sunset (~17:15) to make it. If you go, skip the Qaganat dinner and eat after the show (Navat, 0.47 km from the Airbnb, is open to midnight).",
+        "description": "Classic ballet in the grand Soviet-era hall — Giselle plays Sun 8 Nov at 18:00 (theatre playbill, checked 6 Nov). Leave Kok Tobe right after sunset (~17:15) to make it. If you go, skip Na Kirova (it sells out by late evening) and eat at Navat afterwards (0.47 km from the Airbnb, open to midnight).",
         "tickets": "From ~2,125 ₸ on ticketon.kz or abaykazntob.kz.",
         "links": [
           {
@@ -737,13 +768,21 @@ export const itinerary = [
         ]
       },
       {
-        "time": "06:30 PM – 07:30 PM",
+        "time": "06:15 PM – 07:45 PM",
         "type": "dinner",
-        "title": "Cheap dinner at Qaganat canteen (by the cable car)",
-        "getThere": "Kok Tobe lower station → Qaganat (Dostyk 108): walk 0.29 km, ~4 min. Afterwards Qaganat → Airbnb: walk 1.14 km north, ~15 min.",
-        "description": "Point-and-pay Kazakh canteen chain that food writers and Reddit locals use for a fast, cheap meal: plov (~2,410 ₸), cutlets, soups. No service charge.",
-        "tip": "Quality varies by branch — pick what looks fresh. Location from OpenStreetMap; check the pin in 2GIS before walking.",
-        "cost": "~1,500–3,000 ₸"
+        "icon": "🍢",
+        "title": "Shashlik dinner at Shashlychnaya na Kirova",
+        "getThere": "Kok Tobe lower station → Na Kirova (Bogenbay Batyr 72): walk 1.59 km, ~21 min, or Yandex 2.2 km, ~5 min. Afterwards → Airbnb: walk 0.97 km, ~13 min.",
+        "description": "The city’s cult no-frills shashlik house — 4 sources (Tengrinews, Digital Business, Saiga Tours, sxodim); Yandex 4.9 from ~2,500 and 2GIS 4.4 from ~7,600 ratings. Skewers from ~1,000 ₸ each.",
+        "order": [
+          "Lamb shashlik",
+          "Duck shashlik",
+          "Kidney or heart skewers",
+          "Achichuk (tomato-onion salad)"
+        ],
+        "orderNote": "The skewers reviewers name most.",
+        "tip": "Reviewers repeat: waits of 1–1.5 h at peak and it sells out — go straight after sunset (~18:00). Cramped and basic; cash handy.",
+        "cost": "~3,000–6,000 ₸"
       }
     ],
     "placeIds": [
@@ -835,8 +874,8 @@ export const itinerary = [
         "type": "food",
         "title": "Down to Shymbulak base: lunch & a wander",
         "getThere": "Combi-2 down (~5–8 min) → Combi-1 down (~10–13 min) to the base, ~30 min with the transfer.",
-        "description": "Lunch at one of the resort restaurants at the base, then wander the resort and the snowy slopes. (After the glacier walk: lunch ~14:00–15:00 instead.)",
-        "cost": "Mountain prices — ~6,000–10,000 ₸ per person"
+        "description": "A light lunch at a resort café at the base, then wander the resort and the snowy slopes — keep room for the early dinner at AUYL. (After the glacier walk: lunch ~14:00–15:00 instead.)",
+        "cost": "Mountain prices — keep it light"
       },
       {
         "time": "02:30 PM – 03:15 PM",
@@ -851,7 +890,7 @@ export const itinerary = [
         "icon": "🏔️",
         "title": "Early dinner at AUYL (book ahead)",
         "getThere": "Medeu station → AUYL: walk 1.01 km, ~13 min, or Yandex 1.1 km, ~3 min. Home afterwards: AUYL → Airbnb by Yandex 15.8 km, ~30–40 min (~2,000–4,000 ₸).",
-        "description": "Recommended by 9 of the 29 food sources and the natural pairing with a Medeu day. Order what the reviews keep naming: horse tartare (the most-praised dish on Yandex), Dungan noodles with quail, beshbarmak (8,300 ₸), baursaks with balqaimaq cream, kazan plov, and kumys if you’re curious.",
+        "description": "WhereToEat Kazakhstan 2025 #1 restaurant; recommended by 9 of 29 food sources; Yandex 5.0 from ~2,300 ratings — and next to the Medeu gondola.",
         "cost": "~12,000–25,000 ₸ per person",
         "tip": "Book a table (reviewers say days ahead at weekends; a Monday is easier). Repeated complaints: noisy, patchy service. Portions are big — share.",
         "links": [
@@ -859,7 +898,16 @@ export const itinerary = [
             "label": "AUYL on Maps",
             "href": "https://www.google.com/maps/search/?api=1&query=AUYL+restaurant+Medeu+Almaty"
           }
-        ]
+        ],
+        "order": [
+          "Horse tartare",
+          "Baursaks with balqaimaq",
+          "Beshbarmak",
+          "Marrow bones",
+          "Dungan noodles with quail",
+          "Kumys (to try)"
+        ],
+        "orderNote": "Horse tartare is the most-named dish in its reviews."
       }
     ],
     "placeIds": [
@@ -880,16 +928,23 @@ export const itinerary = [
       {
         "time": "09:30 AM – 10:30 AM",
         "type": "breakfast",
-        "title": "Breakfast at Six Coffee+Wine",
-        "getThere": "Airbnb → Six Coffee (Abay 17): walk 1.08 km, ~14 min.",
-        "description": "Flat white and a big breakfast; reviewers call it the best coffee in Almaty. Nedelka (Abay 19) next door is the cheaper alternative.",
-        "cost": "~3,500–6,000 ₸"
+        "title": "Breakfast at Nedelka",
+        "getThere": "Airbnb → Nedelka (Abay 19): walk 1.14 km, ~15 min.",
+        "description": "The most-recommended breakfast café in the sweep: 5 sources; 2GIS 4.9 from ~7,900 and Yandex 5.0 from ~3,400 ratings. Open to midnight.",
+        "cost": "~3,000–5,000 ₸",
+        "order": [
+          "Omelette",
+          "Porridge",
+          "Cakes",
+          "Cappuccino"
+        ],
+        "orderNote": "Reviewers also name the pizza and pasta for later in the day."
       },
       {
         "time": "10:45 AM – 01:00 PM",
         "type": "spa",
         "title": "Arasan Wellness & SPA (1982 Soviet bathhouse)",
-        "getThere": "Six Coffee → Arasan (Tulebaev 78): Yandex 2.5 km, ~5–10 min (~800–1,200 ₸), or walk 2.09 km, ~28 min.",
+        "getThere": "Nedelka → Arasan (Tulebaev 78): Yandex 2.6 km, ~5–10 min (~800–1,200 ₸), or walk 2.02 km, ~27 min.",
         "description": "Russian banya, Finnish sauna, hammam and plunge pools in a grand Soviet building — separate men’s and women’s sections. Weekday mornings are the quietest time.",
         "tickets": "07:00–23:30. At the door, charged by the hour: weekday 2 h ~3,800 ₸ (morning). Towel, sheet and slippers cost extra. Phone +7 727 390 10 10.",
         "tip": "First-timer routine repeated by reviewers: pay → wristband (opens your locker; extras are charged to it and paid on the way out). Women left, men right. Shower before every sauna or pool; no phones past the lockers. Buy a venik at the entrance, soak it, use it only in the Russian banya.",
@@ -901,20 +956,26 @@ export const itinerary = [
         ]
       },
       {
-        "time": "01:15 PM – 02:15 PM",
+        "time": "01:15 PM – 02:30 PM",
         "type": "food",
-        "icon": "🍜",
-        "title": "Lunch: guiru lagman at Paradise (Uyghur canteen)",
-        "getThere": "Arasan → Paradise (Dostyk 50): Yandex 2.3 km, ~5–10 min (~800–1,200 ₸).",
-        "description": "Family-run Uyghur canteen chain that an Almaty lagman round-up puts first; locals queue at weekends. Order guiru lagman (stir-fried topping) or tsomyan (chopped fried noodles).",
-        "cost": "~2,200–2,600 ₸"
+        "title": "Lunch at Qaimaq (beshbarmak)",
+        "getThere": "Arasan → Qaimaq (Abay 46A): Yandex 6.2 km, ~10–15 min (~1,200–1,800 ₸).",
+        "description": "6 food sources; Yandex 5.0 from ~2,000 ratings. Portions are big — one beshbarmak is enough for two.",
+        "order": [
+          "Beshbarmak (share)",
+          "Baursaks",
+          "Olivier with horse meat",
+          "Kuyrdak in a pumpkin"
+        ],
+        "orderNote": "Beshbarmak is the most-named dish (~7×).",
+        "cost": "~7,000 ₸ per person"
       },
       {
         "time": "02:45 PM – 04:45 PM",
         "type": "museum",
         "icon": "🖼️",
         "title": "Almaty Museum of Arts (ALMA)",
-        "getThere": "Paradise → ALMA (Al-Farabi 28, entrance on Nazarbayev Ave): Yandex 5.5 km, ~10–15 min (~1,200–1,800 ₸).",
+        "getThere": "Qaimaq → ALMA (Al-Farabi 28, entrance on Nazarbayev Ave): Yandex 4.5 km, ~10 min (~1,000–1,500 ₸).",
         "description": "New private museum rated 4.8 — Central Asian modern and contemporary art in a striking building.",
         "tickets": "Tue–Sun 11:00–20:00 (last entry 19:00), 3,000 ₸, timed slots — book on almaty.art.",
         "links": [
@@ -937,18 +998,17 @@ export const itinerary = [
         "time": "07:00 PM – 08:30 PM",
         "type": "dinner",
         "icon": "🥟",
-        "title": "Georgian dinner: khinkali at Khachapuri Khinkalevich",
-        "getThere": "Bar Fly → Khachapuri Khinkalevich (Kabanbay Batyr 68/51): walk 0.84 km, ~11 min. It’s 0.08 km from the Airbnb.",
-        "description": "Georgian food is everywhere in Almaty (one guide lists 13 Georgian places) and the plan had none. Order khinkali (soup dumplings — bite, sip, eat; leave the knot), Adjarian khachapuri and mtsvadi skewers. Alternatives nearby: Patsatsina (Dostyk 42, 0.40 km, cheap) or Dadiani (Kabanbay Batyr 37, 0.71 km).",
-        "cost": "~4,000–6,000 ₸"
-      },
-      {
-        "time": "09:00 PM – 11:00 PM",
-        "type": "show",
-        "icon": "🎷",
-        "title": "Option: live jazz at EverJazz",
-        "getThere": "Khachapuri Khinkalevich → EverJazz (Zenkov 24, Officers’ House): walk 1.44 km, ~19 min. Back to the Airbnb: walk 1.37 km, ~18 min.",
-        "description": "Listed by Tengri’s guide among the music cafés tourists like. Tonight’s programme isn’t confirmed — check their Instagram before walking over."
+        "title": "Georgian dinner at Daredzhani",
+        "getThere": "Bar Fly → Daredzhani (Kurmangazy 11): walk 0.45 km, ~6 min. Daredzhani → Airbnb: walk 0.77 km, ~10 min.",
+        "description": "Georgian food is mainstream in Almaty; Daredzhani is the locals’ default pick (4 sources incl. Reddit and a sxodim readers’ vote; Yandex 5.0 from ~1,100 ratings for this branch). Alternative with the biggest rating count: Dadiani (Kabanbay Batyr 37, 0.71 km from the Airbnb; 2GIS 4.9 from ~4,900) — book; loud live music upstairs.",
+        "order": [
+          "Adjarian khachapuri",
+          "Khinkali",
+          "Shkmeruli (chicken in garlic-milk sauce)",
+          "Chikhirtma soup"
+        ],
+        "orderNote": "Khachapuri 9× and khinkali 6× in reviews. Eat khinkali by hand: bite, sip the broth, leave the knot.",
+        "cost": "~5,000–7,000 ₸"
       }
     ],
     "placeIds": []
@@ -969,8 +1029,14 @@ export const itinerary = [
         "type": "breakfast",
         "title": "Breakfast at Bon Bon",
         "getThere": "Airbnb → Bon Bon (Abylai Khan 123): Yandex 2.0 km, ~5 min (~800–1,000 ₸), or walk 1.89 km, ~25 min.",
-        "description": "Locals’ breakfast go-to since 2002: the “Bohemian” breakfast or syrniki.",
-        "cost": "~3,500 ₸"
+        "description": "Locals’ breakfast institution since 2002 — 3 sources; 2GIS 4.9 from ~1,060 ratings. Weekend waits up to 40 min; a Wednesday is easier.",
+        "cost": "~3,500 ₸",
+        "order": [
+          "English breakfast",
+          "Potato pancakes with salmon",
+          "Syrniki",
+          "Croissants"
+        ]
       },
       {
         "time": "11:15 AM – 01:15 PM",
@@ -987,8 +1053,14 @@ export const itinerary = [
         "icon": "☕",
         "title": "Akku — heritage Soviet-modernist café",
         "getThere": "Museum → Akku (Panfilov 123, Astana Square park): Yandex 2.9 km, ~10 min (~1,000–1,300 ₸).",
-        "description": "Rebuilt cult park café with mosaics and panoramic windows (Yandex 4.8 from 207 ratings): chicken cutlets with buckwheat, profiteroles, condensed-milk wafer tubes.",
-        "cost": "~3,000–5,000 ₸"
+        "description": "Rebuilt cult park café with mosaics and panoramic windows — 4 sources; Yandex 4.8 from 207. Popular items sell out; slow at weekends.",
+        "cost": "~3,000–5,000 ₸",
+        "order": [
+          "Condensed-milk wafer tube (signature)",
+          "Mashed potato with chicken cutlet",
+          "Cheesecake"
+        ],
+        "orderNote": "The wafer tube is named in reviews far more than anything else."
       },
       {
         "time": "03:00 PM – 04:30 PM",
@@ -1012,7 +1084,7 @@ export const itinerary = [
         "icon": "🎶",
         "title": "Farewell feast at Sandyq (book)",
         "getThere": "Airbnb → Sandyq (Abylai Khan 55; Yandex lists it as Alimzhanov 55 — use the app pin): Yandex 3.0 km, ~5–10 min (~1,000–1,500 ₸). Back the same way.",
-        "description": "The restaurant food sources agree on most (12 of 29; Yandex 5.0 from 4,282 ratings). Order the beshbarmak (its most-praised dish), kuyrdak, cheese baursaks and smoked horse, and try the kumys bar. Live music in the evenings and an English menu.",
+        "description": "WhereToEat Kazakhstan 2025 Best Kazakh Restaurant; the place food sources agree on most (12 of 29); Yandex 5.0 from ~4,300 and 2GIS 4.9 from ~9,300 ratings. Live music in the evenings and an English menu.",
         "cost": "~6,000–10,000 ₸ per person + 15% service",
         "tip": "Book ahead. Repeated complaints: slow on busy nights and dishes sometimes arrive lukewarm — say so and they’ll fix it. The 15% service is on the bill, so no extra tip. Early night: alarm ~05:45.",
         "links": [
@@ -1020,7 +1092,15 @@ export const itinerary = [
             "label": "Sandyq on Maps",
             "href": "https://www.google.com/maps/search/?api=1&query=Sandyq+restaurant+Almaty"
           }
-        ]
+        ],
+        "order": [
+          "Beshbarmak",
+          "Baursaks stuffed with irimshik",
+          "Smoked horse & kazy",
+          "Kuyrdak",
+          "Kumys (from the kumys bar)"
+        ],
+        "orderNote": "Most-named in Sandyq reviews: beshbarmak and kumys (4× each), baursaks and smoked horse (3×)."
       }
     ],
     "placeIds": []
@@ -1154,8 +1234,15 @@ export const itinerary = [
         "type": "dinner",
         "title": "Check in at Hotel Kazakhstan & late dinner at Navat",
         "getThere": "Hotel Kazakhstan → Navat (Dostyk 48): walk 0.30 km, ~4 min.",
-        "description": "Navat is open to midnight: manti, guyru lagman or horse plov, with free baursaks. At the hotel, settle the bill tonight, ask for a breakfast box and have reception book a backup taxi for 04:00 in writing.",
-        "cost": "~3,500–8,000 ₸ + 10%"
+        "description": "Navat is open to midnight. At the hotel, settle the bill tonight, ask for a breakfast box and have reception book a backup taxi for 04:00 in writing.",
+        "cost": "~3,500–8,000 ₸ + 10%",
+        "order": [
+          "Manti",
+          "Guiru lagman",
+          "Beshbarmak",
+          "Baursaks"
+        ],
+        "orderNote": "Whatever you didn’t have on day 1."
       }
     ],
     "placeIds": [

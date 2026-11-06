@@ -1,7 +1,7 @@
-import { itinerary, places, tripMeta } from '../data/trip.js?v=41';
-import { getItineraryPlaceIds } from '../data/itinerary-state.js?v=41';
-import { icon, formatDate } from '../components/shared.js?v=41';
-import { getWeather, forecastFor } from '../data/weather.js?v=41';
+import { itinerary, places, tripMeta } from '../data/trip.js?v=42';
+import { getItineraryPlaceIds } from '../data/itinerary-state.js?v=42';
+import { icon, formatDate } from '../components/shared.js?v=42';
+import { getWeather, forecastFor } from '../data/weather.js?v=42';
 
 // Which day is open. Defaults to today during the trip, otherwise Day 1.
 let selectedDay = null;
@@ -33,6 +33,18 @@ const EVENT_ICONS = {
   dinner: '🍽️', breakfast: '☕', sunset: '🌇', alpine: '🚡', hike: '🥾', nature: '🌲',
   walk: '🚶', evening: '🌙', morning: '⏰', spa: '♨️', rest: '🛌', tour: '🚐', show: '🎶'
 };
+
+// Highlighted dishes to order at a food stop, with the place's evidence line
+function orderChips(ev) {
+  if (!ev.order || !ev.order.length) return '';
+  return `
+    <div class="ev-order">
+      <span class="ev-order-label"><span aria-hidden="true">🍴</span> Order this</span>
+      <ul>${ev.order.map(dish => `<li>${dish}</li>`).join('')}</ul>
+      ${ev.orderNote ? `<small>${ev.orderNote}</small>` : ''}
+    </div>
+  `;
+}
 
 // Practical rows under an event: getting there, tickets, cost, tips, bad-weather swap, links
 function eventDetails(ev) {
@@ -117,6 +129,7 @@ export function renderItinerary() {
               <h3>${ev.title}</h3>
               ${ev.image ? `<img class="tl-photo" src="${ev.image}" alt="${ev.title}" loading="lazy" />` : ''}
               ${ev.description ? `<p>${ev.description}</p>` : ''}
+              ${orderChips(ev)}
               ${eventDetails(ev)}
             </div>
           </li>

@@ -1,7 +1,7 @@
-import { places, itinerary } from '../data/trip.js?v=41';
-import { getItineraryPlaceIds, saveItineraryPlaceIds } from '../data/itinerary-state.js?v=41';
-import { pageHeader, icon } from '../components/shared.js?v=41';
-import { cafes, tourComparisons, foodGuide, restaurants } from '../data/guide.js?v=41';
+import { places, itinerary } from '../data/trip.js?v=42';
+import { getItineraryPlaceIds, saveItineraryPlaceIds } from '../data/itinerary-state.js?v=42';
+import { pageHeader, icon } from '../components/shared.js?v=42';
+import { cafes, tourComparisons, foodGuide, restaurants } from '../data/guide.js?v=42';
 
 let activeCategoryFilter = 'all';
 
@@ -30,7 +30,7 @@ export function renderPlaces() {
     <section class="cafe-section" aria-label="Best cafés">
       <div class="cafe-head">
         <h2>☕ Best cafés</h2>
-        <small>Picked from Yandex, Google & local reviews</small>
+        <small>Only places several guides agree on, with big rating counts</small>
       </div>
       <div class="cafe-strip">
         ${cafes.map(c => `
@@ -39,7 +39,7 @@ export function renderPlaces() {
             <strong>${c.name}</strong>
             <span class="cafe-kind">${c.kind}</span>
             <p>${c.why}</p>
-            <p class="cafe-order"><b>Order:</b> ${c.order}</p>
+            <div class="dish-chips">${c.order.map(d => `<span>${d}</span>`).join('')}</div>
             <small>⭐ ${c.rating} · ${c.hours}</small>
             <small>📍 ${c.area}</small>
           </a>
@@ -108,9 +108,9 @@ export function renderPlaces() {
           <article class="cafe-card">
             <strong>${r.name}</strong>
             <span class="cafe-kind">${r.sources} sources · ${r.plan}</span>
-            <p class="cafe-order"><b>Order:</b> ${r.order}</p>
+            <div class="dish-chips">${r.order.map(d => `<span>${d}</span>`).join('')}</div>
             <p>${r.tip}</p>
-            <small>💰 ${r.price}</small>
+            <small>⭐ ${r.rating}</small>
             <small>📍 ${r.area}</small>
           </article>
         `).join('')}

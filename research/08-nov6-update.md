@@ -79,3 +79,9 @@ _Re-checked tours, Shymbulak, glacier, SIM, exchange, mosque and food on 6 Nov 2
 **Food gaps filled:** Georgian khinkali (Khachapuri Khinkalevich 0.08 km from the Airbnb; Patsatsina, Dadiani, Daredzhani), Uyghur guiru lagman/tsomyan (Paradise Dostyk 50 — single round-up source; Oral canteen in the Green Bazaar; Chapsan open to 05:00). Noted but not scheduled: Venetsiya/Smile/Shipudim shashlik, Abay restaurant on Kok Tobe, Rifugio del Monte splurge, family dinner (indyguide, from €50), cooking classes.
 
 **New day order:** Sun 8 city + Kok Tobe (+ Giselle option) · Mon 9 Shymbulak + AUYL · Tue 10 Arasan, Paradise lagman, ALMA, Bar Fly, khinkali, jazz · Wed 11 (rain) Central Museum, Akku, souvenirs, Sandyq farewell · Thu 12–Fri 13 tour · Sat 14 fly.
+
+## Best-of-the-best pass (added 6 Nov, night)
+- **Tarih is closed** ("Shut down" on Yandex, last review Dec 2024) — removed.
+- Kept only places with ≥2–3 independent editorial sources AND large map rating counts (Yandex/2GIS, fetched 6 Nov): Sandyq (Y 5.0/4,282, 2G 4.9/9,300), Navat (2G 4.9/19,792), AUYL (Y 5.0/2,324), Qaimaq (Y 5.0/2,059), Shashlychnaya na Kirova (Y 4.9/2,473, 2G 4.4/7,609), Daredzhani Kurmangazy 11 (Y 5.0/1,098), Nedelka (2G 4.9/7,895), Six (2G 4.9/9,580), Bon Bon (2G 4.9/1,059), Akku (Y 4.8/207), Vanilla (2G 4.8/1,600+), Qulpynai (2G 4.9/2,646).
+- Removed as weak/single-source: Paradise, Qaganat, Tary (Y 4.9/454 but slow kitchen, 2 sources), Bowler (~70 ratings), Khachapuri Khinkalevich, Patsatsina, Chapsan, Oral, EverJazz, JumpinGoat, ProCoffee, Kishlak, Rumi.
+- Each food stop now shows "Order this" chips = dishes most often named in that place's reviews (counts noted where available).

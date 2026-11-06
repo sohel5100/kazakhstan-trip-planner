@@ -7,92 +7,70 @@ const maps = query => `https://www.google.com/maps/search/?api=1&query=${encodeU
 
 export const cafes = [
   {
-    name: 'Akku',
-    kind: 'Heritage café',
-    emoji: '🏛️',
-    area: 'Panfilov St 123',
-    why: 'Rebuilt cult Soviet-modernist park café: mosaics, panoramic windows, library corner.',
-    order: 'Profiteroles 790 ₸ · condensed-milk wafer tube 1,290 ₸ · Soviet-style ice cream',
-    rating: 'Yandex 4.8 (206)',
-    hours: 'to 23:00',
-    map: maps('Akku cafe Panfilov 123 Almaty')
+    name: 'Nedelka',
+    kind: 'Breakfast & all-day café',
+    emoji: '🍳',
+    area: 'Abay Ave 19 · 1.14 km from the Airbnb',
+    why: 'The most-recommended breakfast café (5 sources).',
+    order: ['Omelette', 'Porridge', 'Cakes', 'Cappuccino'],
+    rating: '2GIS 4.9 (7,895) · Yandex 5.0 (3,407)',
+    hours: 'to 24:00',
+    map: maps('Nedelka Abay 19 Almaty')
   },
   {
     name: 'Six Coffee+Wine',
     kind: 'Specialty coffee & brunch',
     emoji: '☕',
-    area: 'Abay Ave 17',
-    why: 'Reviewers call it the best coffee in Almaty; wine bar at night.',
-    order: 'Flat white · avocado-salmon toast 5,180 ₸ · tandoori chicken bowl 3,890 ₸',
-    rating: 'Yandex 5.0 (148)',
-    hours: 'Busy at peak times',
+    area: 'Abay Ave 17 · 1.08 km from the Airbnb',
+    why: 'Spotted by Locals, weproject and Reddit locals all name it.',
+    order: ['Croissants', 'Cappuccino', 'Winter tea', 'Hot chocolate'],
+    rating: '2GIS 4.9 (9,580) · Yandex 5.0 (1,421)',
+    hours: '08:00–01:00',
     map: maps('Six Coffee Wine Abay 17 Almaty')
   },
   {
-    name: 'Bowler Coffee Roasters',
-    kind: 'Coffee with a market view',
-    emoji: '🛒',
-    area: 'Balcony inside the Green Bazaar',
-    why: 'Dutch-founded roaster looking down on the market floor.',
-    order: 'Pour-over or flat white (~1,500–2,000 ₸)',
-    rating: 'Google 4.3 (73)',
-    hours: 'Tue–Sun 09:00–18:00 · closed Mon',
-    map: maps('Bowler coffee Green Bazaar Almaty')
-  },
-  {
-    name: 'Tary',
-    kind: 'Kazakh-twist café, 24/7',
-    emoji: '🌾',
-    area: 'Abylai Khan Ave 55',
-    why: 'Kazakh desserts and baursaks; a warm stop on a cold night.',
-    order: 'Tary cheesecake · pancakes with camel-milk cream · baursaks',
-    rating: 'Avg bill ~5,000 ₸',
-    hours: 'Open 24/7',
-    map: maps('Tary Abylai Khan 55 Almaty')
-  },
-  {
-    name: 'JumpinGoat Coffee',
-    kind: 'Specialty coffee',
-    emoji: '🐐',
-    area: 'Abay Ave 35/37',
-    why: 'Locals’ favourite downtown coffee shop; order at the counter.',
-    order: 'Syrniki · sea-buckthorn tea · cold brew',
-    rating: 'Google 4.6 (619)',
-    hours: '08:00–20:00',
-    map: maps('JumpinGoat Coffee Abay Almaty')
-  },
-  {
-    name: 'ProCoffee',
-    kind: 'Design café & brunch',
-    emoji: '🛋️',
-    area: 'Dostyk Ave 87A',
-    why: 'Sofas and sockets: the cosy spot for a smoggy or snowy day.',
-    order: 'English breakfast 4,100 ₸ · pancakes 4,200 ₸ · cappuccino 1,800 ₸',
-    rating: 'Yandex 5.0 (48)',
-    hours: 'to 01:00',
-    map: maps('ProCoffee Dostyk 87A Almaty')
+    name: 'Akku (Aqqu)',
+    kind: 'Heritage Soviet-modernist café',
+    emoji: '🏛️',
+    area: 'Panfilov St 123 (Astana Square park)',
+    why: 'Rebuilt cult park café: mosaics, panoramic windows (4 sources).',
+    order: ['Condensed-milk wafer tube', 'Mashed potato with chicken cutlet', 'Cheesecake'],
+    rating: 'Yandex 4.8 (207)',
+    hours: 'to 23:00',
+    map: maps('Akku cafe Panfilov 123 Almaty')
   },
   {
     name: 'Bon Bon',
-    kind: 'All-day breakfast',
+    kind: 'Breakfast institution since 2002',
     emoji: '🥞',
     area: 'Abylai Khan Ave 123',
-    why: 'Locals’ go-to for breakfast, served all day.',
-    order: '“Bohemian” breakfast · syrniki (~3,500 ₸)',
-    rating: 'Google 4.6 (435)',
-    hours: '~08:00–23:00',
+    why: 'Locals’ breakfast go-to (3 sources).',
+    order: ['English breakfast', 'Potato pancakes with salmon', 'Syrniki', 'Croissants'],
+    rating: '2GIS 4.9 (1,059) · Google 4.6 (435)',
+    hours: '08:00–23:00',
     map: maps('Bon Bon Abylai Khan 123 Almaty')
   },
   {
-    name: 'Nedelka',
-    kind: 'Breakfast & cakes',
+    name: 'Vanilla',
+    kind: 'Bakery-café',
+    emoji: '🥐',
+    area: 'Kurmangazy 54',
+    why: 'Recommended by 4 guides incl. European Coffee Trip.',
+    order: ['Croissants', 'Pastries', 'Matcha latte', 'Zucchini pancakes'],
+    rating: '2GIS 4.8 (1,600+) · Yandex 5.0 (334)',
+    hours: 'check 2GIS',
+    map: maps('Vanilla Kurmangazy 54 Almaty')
+  },
+  {
+    name: 'Qulpynai',
+    kind: 'Kazakh patisserie chain',
     emoji: '🍰',
-    area: 'Abay Ave 19',
-    why: 'Reliable and good value; cakes less sweet than usual.',
-    order: 'Salmon quiche · eggs with mushrooms · cake',
-    rating: 'Google 4.6 (2,703)',
-    hours: 'Breakfast to 12:00',
-    map: maps('Nedelka Abay 19 Almaty')
+    area: 'Tole Bi 75 + 25 branches',
+    why: 'Spotted by Locals plus big map ratings (3 sources).',
+    order: ['Borek', 'Samsa', 'Milk Girl cake', 'Eclairs'],
+    rating: '2GIS 4.9 (2,646, chain) · Yandex 5.0 (830)',
+    hours: 'check 2GIS for the nearest branch',
+    map: maps('Qulpynai Almaty')
   }
 ];
 
@@ -292,34 +270,30 @@ export const tourComparisons = [
 // Must-try dishes, ranked by how many independent sources recommend them (food sweep of 29 sources, 6 Nov 2026).
 // meat = contains meat, ask = usually meatless but check, veg = meatless. Details: research/08-nov6-update.md
 export const foodGuide = [
-  { dish: 'Beshbarmak', veg: 'meat', sources: 15, what: 'Boiled horse/lamb/beef on flat noodles with onion broth (sorpa) — the national dish.', where: 'Sandyq (most praised on Yandex), Qaimaq, AUYL, Bauyrdaq (cheapest, 4,390 ₸), Navat', price: '4,390–8,400 ₸ · portions are big, share one' },
-  { dish: 'Plov', veg: 'meat', sources: 12, what: 'Rice pilaf with carrots and meat; Navat does a horse-meat version.', where: 'Navat, AUYL (kazan plov), Qaganat canteen (2,410 ₸)', price: '1,500–3,500 ₸' },
-  { dish: 'Baursak', veg: 'ask', sources: 12, what: 'Fried dough puffs with tea, kaymak cream or honey; often free with tea.', where: 'Navat (free with tea), AUYL with balqaimaq, Tary, Qaimaq', price: '0–1,500 ₸' },
-  { dish: 'Kazy', veg: 'meat', sources: 11, what: 'Horse-rib sausage, usually served cold in platters.', where: 'Sandyq, Navat, Tarih; free samples at the Green Bazaar meat hall', price: 'in platters' },
-  { dish: 'Lagman', veg: 'meat', sources: 11, what: 'Uyghur/Dungan hand-pulled noodles — guyru (topped) or tsomyan (fried).', where: 'Navat guyru lagman, As-Kazan tsomyan (Gogol 13)', price: '1,500–3,500 ₸' },
-  { dish: 'Manti', veg: 'meat', sources: 10, what: 'Large steamed dumplings, lamb or beef (pumpkin version exists).', where: 'Navat, AUYL (hoshan manti), Kese', price: '2,290–4,500 ₸' },
-  { dish: 'Shashlik', veg: 'meat', sources: 8, what: 'Charcoal-grilled skewers of lamb, beef or chicken.', where: 'Navat, AUYL (layered horse), Na Kirova Shashlychnaya (Bogenbai Batyr 72)', price: '~1,500–3,000 ₸ a skewer' },
-  { dish: 'Kuyrdak', veg: 'meat', sources: 8, what: 'Fried meat, offal and tail fat with onion and potato.', where: 'Sandyq (7,790 ₸), Qaimaq (served in a pumpkin), Mura', price: '4,000–7,800 ₸' },
+  { dish: 'Beshbarmak', veg: 'meat', sources: 15, what: 'Boiled horse/lamb/beef on flat noodles with onion broth (sorpa) — the national dish.', where: 'Sandyq, AUYL, Qaimaq, Navat', price: '4,390–8,400 ₸ · portions are big, share one' },
+  { dish: 'Plov', veg: 'meat', sources: 12, what: 'Rice pilaf with carrots and meat; Navat does a horse-meat version.', where: 'Navat (horse plov), AUYL (kazan plov)', price: '1,500–3,500 ₸' },
+  { dish: 'Baursak', veg: 'ask', sources: 12, what: 'Fried dough puffs with tea, kaymak cream or honey; often free with tea.', where: 'Navat (free with tea), AUYL with balqaimaq, Sandyq (stuffed with irimshik), Qaimaq', price: '0–1,500 ₸' },
+  { dish: 'Kazy', veg: 'meat', sources: 11, what: 'Horse-rib sausage, usually served cold in platters.', where: 'Sandyq, Navat; free tastes at the Green Bazaar meat hall', price: 'in platters' },
+  { dish: 'Lagman', veg: 'meat', sources: 11, what: 'Uyghur/Dungan hand-pulled noodles — guyru (topped) or tsomyan (fried).', where: 'Navat (guiru lagman)', price: '1,500–3,500 ₸' },
+  { dish: 'Manti', veg: 'meat', sources: 10, what: 'Large steamed dumplings, lamb or beef (pumpkin version exists).', where: 'Navat, AUYL (hoshan manti)', price: '2,290–4,500 ₸' },
+  { dish: 'Shashlik', veg: 'meat', sources: 8, what: 'Charcoal-grilled skewers of lamb, beef or chicken.', where: 'Shashlychnaya na Kirova (Bogenbay Batyr 72), Navat, AUYL', price: '~1,500–3,000 ₸ a skewer' },
+  { dish: 'Kuyrdak', veg: 'meat', sources: 8, what: 'Fried meat, offal and tail fat with onion and potato.', where: 'Sandyq (7,790 ₸), Qaimaq (served in a pumpkin)', price: '4,000–7,800 ₸' },
   { dish: 'Tandoor samsa', veg: 'meat', sources: 8, what: 'Flaky pastry baked on the tandoor wall; pumpkin is the meatless version.', where: 'Navat (chicken or lamb), Green Bazaar tandoor stalls', price: '300–900 ₸' },
   { dish: 'Kumys / shubat', veg: 'veg', sources: 8, what: 'Fermented mare’s milk / camel’s milk — sour and fizzy.', where: 'Sandyq kumys bar, AUYL', price: '500–1,500 ₸' },
   { dish: 'Dungan noodles with quail', veg: 'meat', sources: 5, what: 'AUYL’s signature dish — almost every AUYL review mentions it.', where: 'AUYL (next to the Medeu gondola)', price: '~5,300 ₸' },
   { dish: 'Horse tartare', veg: 'meat', sources: 3, what: 'The most-praised dish in AUYL’s Yandex reviews.', where: 'AUYL', price: '4,000–6,000 ₸' },
   { dish: 'Korean salads (morkovcha)', veg: 'ask', sources: 5, what: 'Spicy carrot and other salads from the local Korean community.', where: 'Green Bazaar salad row', price: 'by weight' },
-  { dish: 'Kurt / irimshik', veg: 'veg', sources: 5, what: 'Salty dried cheese balls / sweet dried curd — divisive, try a sample first.', where: 'Green Bazaar dairy section, Tary', price: 'cheap' },
-  { dish: 'Khinkali & khachapuri (Georgian)', veg: 'meat', sources: 4, what: 'Georgian soup dumplings and cheese bread — Georgian food is mainstream in Almaty.', where: 'Khachapuri Khinkalevich (next to the Airbnb), Patsatsina (Dostyk 42), Dadiani, Daredzhani', price: '~4,000–6,000 ₸' },
-  { dish: 'Guiru lagman & tsomyan', veg: 'meat', sources: 3, what: 'How locals order Uyghur lagman: guiru = stir-fried topping, tsomyan = chopped fried noodles.', where: 'Paradise (Dostyk 50), Oral canteen in the Green Bazaar, Chapsan (open to 05:00)', price: '~1,800–2,700 ₸' },
+  { dish: 'Kurt / irimshik', veg: 'veg', sources: 5, what: 'Salty dried cheese balls / sweet dried curd — divisive, try a sample first.', where: 'Green Bazaar dairy section', price: 'cheap' },
+  { dish: 'Khinkali & khachapuri (Georgian)', veg: 'meat', sources: 4, what: 'Georgian soup dumplings and cheese bread — Georgian food is mainstream in Almaty.', where: 'Daredzhani (Kurmangazy 11), Dadiani (Kabanbay Batyr 37)', price: '~4,000–6,000 ₸' },
   { dish: 'Rakhat chocolate & Aport apples', veg: 'veg', sources: 3, what: 'The classic edible souvenirs; Aport apples are in season in autumn.', where: 'Rakhat shop on Zhibek Zholy 47 or Zenkov 2; apples at the Green Bazaar', price: 'by weight' }
 ];
 
 // Restaurants that several independent sources agree on (food sweep, 6 Nov 2026)
 export const restaurants = [
-  { name: 'Khachapuri Khinkalevich', sources: 2, area: 'Kabanbay Batyr 68/51 (0.08 km from the Airbnb)', order: 'Khinkali, Adjarian khachapuri, mtsvadi', price: '~4,000 ₸', tip: 'Georgian food is everywhere in Almaty; Daredzhani has the most mentions (4) but is further west.', plan: 'Tue 10 dinner' },
-  { name: 'Paradise (Uyghur canteen)', sources: 1, area: 'Dostyk 50', order: 'Guiru lagman, tsomyan', price: '~2,200–2,600 ₸', tip: 'Ranked first in a 2025 Almaty lagman round-up; weekend queues.', plan: 'Tue 10 lunch' },
-  { name: 'Sandyq', sources: 12, area: 'Abylai Khan 55', order: 'Beshbarmak, kuyrdak, cheese baursaks, smoked horse, kumys', price: '6,000–10,000 ₸ + 15% service', tip: 'Book dinner; live music. Reviews: slow on busy nights, food sometimes arrives cold.', plan: 'Farewell feast, Wed 11' },
-  { name: 'Navat', sources: 11, area: 'Dostyk 48 · Abylai Khan 58A', order: 'Beshbarmak, horse plov, guyru lagman, samsa, manti; baursaks free with tea', price: '3,500–8,000 ₸ + 10%', tip: 'Chain — quality varies by branch; noisy and slow when full.', plan: 'Sat 7 dinner · Fri 13 late dinner' },
-  { name: 'AUYL', sources: 9, area: 'Next to the Medeu gondola (1 km)', order: 'Horse tartare, Dungan noodles with quail, beshbarmak, baursak with balqaimaq, kazan plov', price: '12,000–25,000 ₸', tip: 'Book ahead. Noisy, patchy service per reviews.', plan: 'Mon 9 after Shymbulak' },
-  { name: 'Qaimaq', sources: 6, area: 'Abay 46A (5.6 km from the Airbnb)', order: 'Beshbarmak (share it), kuyrdak in a pumpkin, kaymak with bread', price: '~7,000 ₸', tip: 'Book at weekends; the priciest beshbarmak in one guide.', plan: 'Spare night option' },
-  { name: 'Tarih', sources: 4, area: 'Abylai Khan 104', order: 'Tarih soup (horse broth, kazy), horse-meat ravioli, modern beshbarmak', price: '4,500–15,000 ₸', tip: 'Modern take on Kazakh food — “not traditional, but tastes as it should”.', plan: 'Spare night option' },
-  { name: 'Bauyrdaq', sources: 4, area: 'Several branches, 24/7', order: 'Beshbarmak 4,390 ₸, Nauryz kozhe, baursak burger with kazy', price: '~2,200 ₸', tip: 'Cheapest good beshbarmak; manti weaker.', plan: 'Backup any night' },
-  { name: 'Qaganat', sources: 3, area: 'Canteen chain, e.g. Dostyk 108 by Kok Tobe', order: 'Point-and-pay plov, cutlets, soups', price: '1,500–3,000 ₸, no service charge', tip: 'Cheap and fast; quality varies by branch.', plan: 'Sun 8 after Kok Tobe' }
+  { name: 'Sandyq', sources: 12, area: 'Abylai Khan 55', order: ['Beshbarmak', 'Baursaks with irimshik', 'Smoked horse & kazy', 'Kuyrdak', 'Kumys'], rating: 'Yandex 5.0 (4,282) · 2GIS 4.9 (9,300) · WhereToEat 2025 Best Kazakh', tip: 'Book; live music. +15% service. Slow on busy nights.', plan: 'Farewell feast, Wed 11' },
+  { name: 'Navat', sources: 11, area: 'Dostyk 48 (0.47 km from the Airbnb)', order: ['Baursaks', 'Horse plov', 'Tandoor samsa', 'Guiru lagman', 'Manti'], rating: '2GIS 4.9 (19,792)', tip: 'Baursaks free with tea; +10% service; noisy when full.', plan: 'Sat 7 · Fri 13 dinners' },
+  { name: 'AUYL', sources: 9, area: '1 km from the Medeu gondola', order: ['Horse tartare', 'Baursaks with balqaimaq', 'Beshbarmak', 'Marrow bones', 'Dungan noodles with quail'], rating: 'Yandex 5.0 (2,324) · WhereToEat 2025 #1', tip: 'Book ahead; noisy, patchy service.', plan: 'Mon 9 after Shymbulak' },
+  { name: 'Qaimaq', sources: 6, area: 'Abay 46A', order: ['Beshbarmak (share)', 'Baursaks', 'Olivier with horse meat', 'Kuyrdak in a pumpkin'], rating: 'Yandex 5.0 (2,059) · 2GIS 4.6 (1,663)', tip: 'Big portions; book at weekends.', plan: 'Tue 10 lunch' },
+  { name: 'Shashlychnaya na Kirova', sources: 4, area: 'Bogenbay Batyr 72 (0.97 km from the Airbnb)', order: ['Lamb shashlik', 'Duck shashlik', 'Kidney or heart skewers', 'Achichuk salad'], rating: 'Yandex 4.9 (2,473) · 2GIS 4.4 (7,609)', tip: 'Waits 1–1.5 h at peak; sells out — go early.', plan: 'Sun 8 dinner' },
+  { name: 'Daredzhani (Georgian)', sources: 4, area: 'Kurmangazy 11 (0.77 km from the Airbnb)', order: ['Adjarian khachapuri', 'Khinkali', 'Shkmeruli', 'Chikhirtma'], rating: 'Yandex 5.0 (1,098)', tip: 'Locals’ default Georgian; crowded, check the bill.', plan: 'Tue 10 dinner' }
 ];
