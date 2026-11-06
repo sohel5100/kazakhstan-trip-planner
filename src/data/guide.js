@@ -11,8 +11,8 @@ export const cafes = [
     kind: 'Breakfast & all-day café',
     emoji: '🍳',
     area: 'Abay Ave 19 · 1.14 km from the Airbnb',
-    why: 'The most-recommended breakfast café (5 sources).',
-    order: ['Omelette + cappuccino'],
+    why: 'Much-reviewed café; reviewers praise its not-too-sweet cakes (bucketlistly, Google).',
+    order: ['Cake from the counter + cappuccino'],
     rating: '2GIS 4.9 (7,895) · Yandex 5.0 (3,407)',
     hours: 'to 24:00',
     map: maps('Nedelka Abay 19 Almaty')
@@ -23,7 +23,7 @@ export const cafes = [
     emoji: '☕',
     area: 'Abay Ave 17 · 1.08 km from the Airbnb',
     why: 'Spotted by Locals, weproject and Reddit locals all name it.',
-    order: ['Croissant + cappuccino'],
+    order: ['Flat white + something from the pastry counter'],
     rating: '2GIS 4.9 (9,580) · Yandex 5.0 (1,421)',
     hours: '08:00–01:00',
     map: maps('Six Coffee Wine Abay 17 Almaty')
@@ -34,7 +34,7 @@ export const cafes = [
     emoji: '🏛️',
     area: 'Panfilov St 123 (Astana Square park)',
     why: 'Rebuilt cult park café: mosaics, panoramic windows (4 sources).',
-    order: ['Condensed-milk wafer tube'],
+    order: ['Coffee + a cake from its own bakery'],
     rating: 'Yandex 4.8 (207)',
     hours: 'to 23:00',
     map: maps('Akku cafe Panfilov 123 Almaty')
@@ -51,23 +51,12 @@ export const cafes = [
     map: maps('Bon Bon Abylai Khan 123 Almaty')
   },
   {
-    name: 'Vanilla',
-    kind: 'Bakery-café',
-    emoji: '🥐',
-    area: 'Kurmangazy 54',
-    why: 'Recommended by 4 guides incl. European Coffee Trip.',
-    order: ['Zucchini pancakes'],
-    rating: '2GIS 4.8 (1,600+) · Yandex 5.0 (334)',
-    hours: 'check 2GIS',
-    map: maps('Vanilla Kurmangazy 54 Almaty')
-  },
-  {
     name: 'Qulpynai',
     kind: 'Kazakh patisserie chain',
     emoji: '🍰',
     area: 'Tole Bi 75 + 25 branches',
     why: 'Spotted by Locals plus big map ratings (3 sources).',
-    order: ['Borek'],
+    order: ['A cake slice, chosen at the counter'],
     rating: '2GIS 4.9 (2,646, chain) · Yandex 5.0 (830)',
     hours: 'check 2GIS for the nearest branch',
     map: maps('Qulpynai Almaty')
@@ -290,10 +279,10 @@ export const foodGuide = [
   { dish: 'Kuyrdak', veg: 'meat', sources: 8, what: 'Fried meat, offal and tail fat with onion and potato.', where: 'Sandyq (7,790 ₸), Qaimaq (served in a pumpkin)', price: '4,000–7,800 ₸' },
   { dish: 'Tandoor samsa', veg: 'meat', sources: 8, what: 'Flaky pastry baked on the tandoor wall; pumpkin is the meatless version.', where: 'Navat (chicken or lamb), Green Bazaar tandoor stalls', price: '300–900 ₸' },
   { dish: 'Kumys / shubat', veg: 'veg', sources: 8, what: 'Fermented mare’s milk / camel’s milk — sour and fizzy.', where: 'Sandyq kumys bar, AUYL', price: '500–1,500 ₸' },
-  { dish: 'Dungan noodles with quail', veg: 'meat', sources: 5, what: 'AUYL’s signature dish — named in almost every AUYL review.', where: 'AUYL (next to the Medeu gondola)', price: '~5,300 ₸' },
+  { dish: 'Dungan noodles', veg: 'meat', sources: 5, what: 'AUYL’s signature dish — named in almost every AUYL review.', where: 'AUYL (next to the Medeu gondola) — meat varies: quail, duck or horse', price: '~5,300 ₸' },
   { dish: 'Korean salads (morkovcha)', veg: 'ask', sources: 5, what: 'Spicy carrot and other salads from the local Korean community.', where: 'Green Bazaar salad row', price: 'by weight' },
   { dish: 'Kurt / irimshik', veg: 'veg', sources: 5, what: 'Salty dried cheese balls / sweet dried curd — divisive, try a sample first.', where: 'Green Bazaar dairy section', price: 'cheap' },
-  { dish: 'Khinkali & khachapuri (Georgian)', veg: 'meat', sources: 4, what: 'Georgian soup dumplings and cheese bread — Georgian food is mainstream in Almaty.', where: 'Daredzhani (Kurmangazy 11), Dadiani (Kabanbay Batyr 37)', price: '~4,000–6,000 ₸' },
+  { dish: 'Khinkali & khachapuri (Georgian)', veg: 'meat', sources: 4, what: 'Georgian soup dumplings and cheese bread — Georgian food is mainstream in Almaty.', where: 'Dadiani (Kabanbay Batyr 37), Daredzhani (Kunaev 85)', price: '~4,000–6,000 ₸' },
   { dish: 'Rakhat chocolate & Aport apples', veg: 'veg', sources: 3, what: 'The classic edible souvenirs; Aport apples are in season in autumn.', where: 'Rakhat shop on Zhibek Zholy 47 or Zenkov 2; apples at the Green Bazaar', price: 'by weight' }
 ];
 
@@ -301,8 +290,8 @@ export const foodGuide = [
 export const restaurants = [
   { name: 'Sandyq', sources: 12, area: 'Abylai Khan 55', order: ['Beshbarmak'], rating: 'Yandex 5.0 (4,282) · 2GIS 4.9 (9,300) · WhereToEat 2025 Best Kazakh', tip: 'Book; live music. +15% service. Slow on busy nights.', plan: 'Farewell feast, Wed 11' },
   { name: 'Navat', sources: 11, area: 'Dostyk 48 (0.47 km from the Airbnb)', order: ['Plov'], rating: '2GIS 4.9 (19,792)', tip: 'Baursaks free with tea; +10% service; noisy when full.', plan: 'Sat 7 · Fri 13 dinners' },
-  { name: 'AUYL', sources: 9, area: '1 km from the Medeu gondola', order: ['Dungan noodles with quail'], rating: 'Yandex 5.0 (2,324) · WhereToEat 2025 #1', tip: 'Book ahead; noisy, patchy service.', plan: 'Mon 9 after Shymbulak' },
+  { name: 'AUYL', sources: 9, area: '1 km from the Medeu gondola', order: ['Dungan noodles'], rating: 'Yandex 5.0 (2,324) · WhereToEat 2025 #1', tip: 'Book ahead; noisy, patchy service.', plan: 'Mon 9 after Shymbulak' },
   { name: 'Qaimaq', sources: 6, area: 'Abay 46A', order: ['Beshbarmak (share)'], rating: 'Yandex 5.0 (2,059) · 2GIS 4.6 (1,663)', tip: 'Big portions; book at weekends.', plan: 'Spare meal option' },
-  { name: 'Shashlychnaya na Kirova', sources: 4, area: 'Bogenbay Batyr 72 (0.97 km from the Airbnb)', order: ['Lamb shashlik'], rating: 'Yandex 4.9 (2,473) · 2GIS 4.4 (7,609)', tip: 'Waits 1–1.5 h at peak; sells out — go early.', plan: 'Sun 8 dinner' },
-  { name: 'Daredzhani (Georgian)', sources: 4, area: 'Kurmangazy 11 (0.77 km from the Airbnb)', order: ['Adjarian khachapuri'], rating: 'Yandex 5.0 (1,098)', tip: 'Locals’ default Georgian; crowded, check the bill.', plan: 'Tue 10 dinner' }
+  { name: 'Shashlychnaya na Kirova', sources: 4, area: 'Bogenbay Batyr 72 (0.97 km from the Airbnb)', order: ['Duck shashlik'], rating: 'Yandex 4.9 (2,473) · 2GIS 4.4 (7,609)', tip: 'Waits 1–1.5 h at peak; sells out — go early.', plan: 'Sun 8 dinner' },
+  { name: 'Dadiani (Georgian)', sources: 3, area: 'Kabanbay Batyr 37 (0.71 km from the Airbnb)', order: ['Khinkali'], rating: 'Yandex 5.0 (3,825) · khinkali 92% positive in 137 reviews', tip: 'Book; loud live music upstairs.', plan: 'Tue 10 dinner' }
 ];

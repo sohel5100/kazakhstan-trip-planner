@@ -1,7 +1,7 @@
-import { places, itinerary } from '../data/trip.js?v=45';
-import { getItineraryPlaceIds, saveItineraryPlaceIds } from '../data/itinerary-state.js?v=45';
-import { pageHeader, icon } from '../components/shared.js?v=45';
-import { cafes, tourComparisons, foodGuide, restaurants } from '../data/guide.js?v=45';
+import { places, itinerary } from '../data/trip.js?v=46';
+import { getItineraryPlaceIds, saveItineraryPlaceIds } from '../data/itinerary-state.js?v=46';
+import { pageHeader, icon } from '../components/shared.js?v=46';
+import { cafes, tourComparisons, foodGuide, restaurants } from '../data/guide.js?v=46';
 
 let activeCategoryFilter = 'all';
 

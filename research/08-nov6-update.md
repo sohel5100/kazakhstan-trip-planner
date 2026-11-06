@@ -94,3 +94,17 @@ _Re-checked tours, Shymbulak, glacier, SIM, exchange, mosque and food on 6 Nov 2
 - Rejected: falcon show (season conflicts, "Apr–Oct" on one listing), Altyn-Emel (17 h), Tamgaly (archaeology + walking), Oi-Qaragai (between seasons), Alma-Arasan/Ayusai (walking, closures).
 - 6 Nov: user decided against the Bogdanovich Glacier walk — removed from Day 3 and bookings.
 - 6 Nov: one signature dish per place (user can't try everything); horse tartare removed; Vanilla café stop replaced by a rest break at the Airbnb.
+
+## Independent verification of the one-dish picks (6 Nov, late)
+Two separate fact-checks, rule: ≥3 independent sources for the place and ≥2 for the dish.
+| Pick | Result | Change |
+|---|---|---|
+| Navat → plov | Confirmed (5 for dish; Megan Starr dissents on the place) | kept, framed as easy first-night dinner |
+| Navat → guiru lagman (day 7) | Weak (claim was for the Seifullina branch) | → **manti** (TripZilla 2026, sxodim, 2GIS roundup) |
+| AUYL → Dungan noodles with quail | Noodles confirmed (4); quail only 1 | → "Dungan noodles" (meat varies); open daily from 12:00 |
+| Sandyq → beshbarmak | Confirmed (5); WhereToEat 2025 Best Kazakh Cuisine confirmed | kept |
+| Na Kirova → lamb shashlik | Weak (lamb 1; duck 2) | → **duck shashlik (+ lamb)**; "sells out" removed (no evidence) |
+| Six → croissant + cappuccino | Weak (no source; one "not fresh") | Sunday breakfast → **Bon Bon syrniki** (confirmed) |
+| Green Bazaar → tandoor samsa | Weak (1) | → **kazy + Korean carrot salad** (3 + 3 sources) |
+| Daredzhani Kurmangazy 11 → khachapuri | Branch not found anywhere | → **Dadiani, Kabanbay Batyr 37 → khinkali** (Y 5.0/3,825; khinkali 92% of 137) |
+| Nedelka omelette / Akku wafer tube / Qulpynai borek | Weak / no reviewer mentions | changed to what reviewers praise (cakes, bakery, counter); Vanilla removed |

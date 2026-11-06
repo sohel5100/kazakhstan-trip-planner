@@ -1,11 +1,11 @@
-import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=45';
+import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=46';
 
 export {
   exchangeRates,
   currencySymbols,
   toINR,
   formatCurrency
-} from './currency.js?v=45';
+} from './currency.js?v=46';
 
 export const tripMeta = {
   title: 'Kazakhstan Adventure',
@@ -585,7 +585,7 @@ export const itinerary = [
         "time": "06:30 PM – 09:00 PM",
         "type": "evening",
         "title": "First Kazakh dinner at Navat (walk from the Airbnb)",
-        "description": "Navat chaikhana (Dostyk 48, 10:00–00:00) — recommended by 11 of 29 food sources; 2GIS 4.9 from ~19,800 ratings. Save beshbarmak for Sandyq or AUYL later in the week. Still fresh afterwards? Take the metro to Zhibek Zholy for the lit-up Arbat pedestrian street (route below).",
+        "description": "Navat chaikhana (Dostyk 48, 10:00–00:00) — backed by TripZilla 2026, two sxodim lists and big map ratings; one blogger (Megan Starr) prefers newer places, so treat this as an easy first-night dinner, not the week’s highlight. Still fresh afterwards? Take the metro to Zhibek Zholy for the lit-up Arbat pedestrian street (route below).",
         "getThere": "MiG 2 → Navat (Dostyk 48): walk 0.55 km south along Dostyk, ~7 min. Navat → Airbnb afterwards: 0.47 km, ~6 min. For the Arbat instead: walk 1.00 km (~13 min) from Navat to Abay metro, ride 2 stops north to Zhibek Zholy (120 ₸, tap Visa/Mastercard), exit onto the pedestrian street; Yandex back ~800–1,200 ₸.",
         "cost": "~5,000–8,000 ₸ per person",
         "tip": "Bills often include 10–15% service (“обслуживание”) — no extra tip needed then. Rakhat chocolate shop is at Zhibek Zholy 47 × Kaldayakov.",
@@ -598,7 +598,7 @@ export const itinerary = [
         "order": [
           "Plov"
         ],
-        "orderNote": "Navat’s most-named dish after the baursaks, which come free with tea anyway."
+        "orderNote": "Named by 5 independent sources (TripZilla 2026, sxodim ×2, Yandex reviews, a 2GIS roundup). Baursaks come free with tea."
       }
     ],
     "placeIds": [
@@ -617,29 +617,23 @@ export const itinerary = [
     "planB": "Rain all day: Central State Museum (Yandex ~10 min from the old town; price reports 500–5,000 ₸) and Akku café, still do the Green Bazaar (indoor hall). Move Kok Tobe to Tuesday.",
     "events": [
       {
-        "time": "09:00 AM – 10:00 AM",
+        "time": "08:45 AM – 09:45 AM",
         "type": "breakfast",
-        "title": "Brunch at Six Coffee+Wine",
-        "getThere": "Airbnb → Six Coffee (Abay 17): walk 1.08 km, ~14 min. Nedelka (Abay 19) is next door: 1.14 km, ~15 min.",
-        "description": "2GIS 4.9 from ~9,600 ratings; recommended by Spotted by Locals, weproject and Reddit locals. Busy at peak — expect a short wait.",
-        "cost": "~3,500–6,000 ₸",
-        "links": [
-          {
-            "label": "Maps",
-            "href": "https://www.google.com/maps/search/?api=1&query=Six+Coffee+Wine+Abay+17+Almaty"
-          }
-        ],
+        "title": "Breakfast at Bon Bon",
+        "getThere": "Airbnb → Bon Bon (Abylai Khan 123): Yandex 2.0 km, ~5 min (~800–1,000 ₸), or walk 1.89 km, ~25 min.",
+        "description": "Locals’ breakfast institution since 2002 — 4 sources (sxodim, weproject, Spotted by Locals, Wanderlog); 2GIS 4.9 from ~1,060 ratings, Google 4.6 from 435. Opens 08:00; weekend waits up to 40 min, so arrive early.",
         "order": [
-          "Croissant + cappuccino"
+          "Syrniki with sour cream"
         ],
-        "orderNote": "The croissants are what reviewers mention most (~7×)."
+        "orderNote": "Named by sxodim (Jan 2023) and Wanderlog tips — the one thing reviewers single out here.",
+        "cost": "~3,500 ₸"
       },
       {
         "time": "10:00 AM – 11:15 AM",
         "type": "sight",
         "title": "28 Panfilov Guardsmen Park & Ascension (Zenkov) Cathedral",
         "description": "Walk the park first: the huge Panfilov Guardsmen war memorial and eternal flame at the east end, then the pastel 1907 Ascension Cathedral with its golden domes — built of wood without nails, in the middle of the park. Free.",
-        "getThere": "Six Coffee → park’s war memorial: Yandex 3.2 km, ~5–10 min (~800–1,200 ₸), or walk 1.97 km, ~26 min. Memorial → cathedral: walk 0.25 km, ~3 min.",
+        "getThere": "Bon Bon → the park’s war memorial: Yandex 2.7 km, ~5–10 min (~800–1,200 ₸), or walk 2.34 km, ~31 min. Memorial → cathedral: walk 0.25 km, ~3 min.",
         "tickets": "Free · open 07:00–18:00",
         "tip": "Women cover their heads; no flash photography inside. Morning light is best on the cathedral’s east side. Men take hats off inside; ask before photographing during a service. The eternal flame is in front of the black war memorial.",
         "image": "./assets/places/zenkov-cathedral.jpg"
@@ -648,7 +642,7 @@ export const itinerary = [
         "time": "11:30 AM – 01:30 PM",
         "type": "market",
         "title": "Green Bazaar (Kok Bazar): graze your way through lunch",
-        "description": "Food writers’ advice: walk the market first, then taste — vendors offer kazy and smoked horse in the meat hall at the back, dried fruit and nuts at the front, Korean salads in the salad row, kurt and irimshik in the dairy section. Tandoor samsa and fresh lepeshka from the stalls make lunch. Don’t order beshbarmak here — one guide says the bazaar versions target tourists.",
+        "description": "Walk the market first, then taste. Vendors offer kazy and smoked horse in the meat hall at the back and Korean salads in the salad rows of the main (Winter) pavilion; dried fruit and nuts are at the front. Don’t order beshbarmak here — Megan Starr calls the bazaar versions tourist-targeted.",
         "getThere": "Cathedral → Green Bazaar (Zhibek Zholy 53): walk 0.82 km north, ~11 min.",
         "cost": "Bring cash — tastes are free; tandoor samsa ~300–900 ₸ each",
         "tip": "Closed Mondays — so today is the day. Bargain on dried fruit and souvenirs, watch for pickpockets, taste before buying. The Rakhat factory store (Zenkov 2) is nearby. How reviewers do it: enter the main hall from Zhibek Zholy — dried fruit, nuts and spices at the front, then the Korean salads, then dairy (kurt, irimshik). The newer central pavilion (entrance from Makataev St) has farm produce, honey and cheese, and is said to be 20–30% cheaper for some goods. Taste freely but don’t overdo it; opening prices are inflated, so bargain politely for 5–10% off. Bring cash.",
@@ -660,9 +654,9 @@ export const itinerary = [
         ],
         "image": "./assets/places/green-bazaar.jpg",
         "order": [
-          "Hot tandoor samsa"
+          "Kazy + Korean carrot salad with fresh flatbread"
         ],
-        "orderNote": "Eat it fresh from a stall; taste the kazy, nuts and dried fruit for free as you walk."
+        "orderNote": "Kazy: Andrew Zimmern (“one of the best things I tried”), Megan Starr, Tengrinews. Korean salads: Tengrinews, sxodim, The World. Ask for a taste before buying."
       },
       {
         "time": "01:40 PM – 02:10 PM",
@@ -712,7 +706,7 @@ export const itinerary = [
         "icon": "🩰",
         "title": "Option: Giselle at the Abai Opera & Ballet Theatre",
         "getThere": "Kok Tobe lower station → Abai Opera Theatre (Kabanbay Batyr 110): Yandex 2.8 km, ~5–10 min (~1,000 ₸), or walk 1.84 km, ~25 min. Afterwards → Airbnb: walk 1.37 km, ~18 min.",
-        "description": "Classic ballet in the grand Soviet-era hall — Giselle plays Sun 8 Nov at 18:00 (theatre playbill, checked 6 Nov). Leave Kok Tobe right after sunset (~17:15) to make it. If you go, skip Na Kirova (it sells out by late evening) and eat at Navat afterwards (0.47 km from the Airbnb, open to midnight).",
+        "description": "Classic ballet in the grand Soviet-era hall — Giselle plays Sun 8 Nov at 18:00 (theatre playbill, checked 6 Nov). Leave Kok Tobe right after sunset (~17:15) to make it. If you go, have the shashlik dinner afterwards — Na Kirova is open to midnight (Opera → Na Kirova: Yandex 2.4 km).",
         "tickets": "From ~2,125 ₸ on ticketon.kz or abaykazntob.kz.",
         "links": [
           {
@@ -733,10 +727,10 @@ export const itinerary = [
         "getThere": "Kok Tobe lower station → Na Kirova (Bogenbay Batyr 72): walk 1.59 km, ~21 min, or Yandex 2.2 km, ~5 min. Afterwards → Airbnb: walk 0.97 km, ~13 min.",
         "description": "The city’s cult no-frills shashlik house — 4 sources (Tengrinews, Digital Business, Saiga Tours, sxodim); Yandex 4.9 from ~2,500 and 2GIS 4.4 from ~7,600 ratings. Skewers from ~1,000 ₸ each.",
         "order": [
-          "Lamb shashlik"
+          "Duck shashlik (+ one lamb)"
         ],
-        "orderNote": "The house skewer every review mentions — add an achichuk tomato-onion salad on the side.",
-        "tip": "Reviewers repeat: waits of 1–1.5 h at peak and it sells out — go straight after sunset (~18:00). Cramped and basic; cash handy.",
+        "orderNote": "Saiga Tours singles out the duck (“skin and fat perfectly rendered”); WeProject (29 Oct 2026) reviewers praise duck and lamb. Add bread, sauce and a salad, as sxodim suggests.",
+        "tip": "Busy on weekend evenings with slow service (Tengrinews, Saiga Tours) — go straight after sunset. Open ~10:00–24:00 daily. Basic and cramped; cash handy.",
         "cost": "~3,000–6,000 ₸"
       }
     ],
@@ -825,9 +819,9 @@ export const itinerary = [
         "icon": "🏔️",
         "title": "Early dinner at AUYL (book ahead)",
         "getThere": "Medeu station → AUYL: walk 1.01 km, ~13 min, or Yandex 1.1 km, ~3 min. Home afterwards: AUYL → Airbnb by Yandex 15.8 km, ~30–40 min (~2,000–4,000 ₸).",
-        "description": "WhereToEat Kazakhstan 2025 #1 restaurant; recommended by 9 of 29 food sources; Yandex 5.0 from ~2,300 ratings — and next to the Medeu gondola.",
+        "description": "WhereToEat Kazakhstan 2025 #1 restaurant; backed by 7+ sources (Yandex Eda guides ×2, Megan Starr, Goya, International Traveller); Yandex 5.0 from ~2,300 ratings — and 1 km from the Medeu gondola. Open daily from 12:00 (auylrestaurant.com).",
         "cost": "~12,000–25,000 ₸ per person",
-        "tip": "Book a table (reviewers say days ahead at weekends; a Monday is easier). Repeated complaints: noisy, patchy service. Portions are big — share.",
+        "tip": "Book a table. Repeated complaints: noisy, patchy service. Portions are big.",
         "links": [
           {
             "label": "AUYL on Maps",
@@ -835,9 +829,9 @@ export const itinerary = [
           }
         ],
         "order": [
-          "Dungan noodles with quail"
+          "Dungan hand-pulled noodles"
         ],
-        "orderNote": "AUYL’s signature — named in almost every review of the place (5 food sources)."
+        "orderNote": "Named by 4 sources — the meat varies (quail, duck or horse); take whichever version is on the menu. Book: +7 705 586 77 11."
       }
     ],
     "placeIds": [
@@ -849,7 +843,7 @@ export const itinerary = [
     "date": "2026-11-10",
     "weekday": "Tuesday",
     "city": "Ile-Alatau foothills & Almaty",
-    "title": "Horseback ride in Ile-Alatau National Park, Arasan baths & Georgian dinner",
+    "title": "Horseback ride in Ile-Alatau National Park, Arasan baths & Georgian dinner at Dadiani",
     "subtitle": "A comfortable nature morning on calm horses in the mountains (pickup and drop-off at your door, picnic brunch included), then warm up in a Soviet bathhouse and finish with khachapuri and a 26th-floor city view.",
     "weatherNote": "Forecast on 6 Nov: mild (~9–17 °C) with a ~50% chance of showers — the better of the two free days for being outdoors; raincoats are provided on the ride. Sunset 16:34.",
     "bring": "Warm layers, long trousers, closed shoes with a heel, gloves, sunglasses; your own towel, flip-flops and a felt hat for the baths.",
@@ -897,21 +891,21 @@ export const itinerary = [
         "time": "05:30 PM – 07:00 PM",
         "type": "dinner",
         "icon": "🥟",
-        "title": "Georgian dinner at Daredzhani",
-        "getThere": "Arasan → Daredzhani (Kurmangazy 11): Yandex 2.1 km, ~5 min (~800–1,000 ₸).",
-        "description": "Georgian food is mainstream in Almaty; Daredzhani is the locals’ default pick (4 sources incl. Reddit and a sxodim readers’ vote; Yandex 5.0 from ~1,100 ratings for this branch). Alternative with the biggest rating count: Dadiani (Kabanbay Batyr 37; 2GIS 4.9 from ~4,900) — book; loud live music upstairs.",
+        "title": "Georgian dinner at Dadiani",
+        "getThere": "Arasan → Dadiani (Kabanbay Batyr 37): Yandex 2.2 km, ~5 min (~800–1,000 ₸). It’s 0.71 km from the Airbnb.",
+        "description": "The Georgian restaurant near Golden Square with the biggest review base: Yandex 5.0 from 3,825 ratings and 1,272 reviews; also on sxodim’s Georgian list and the Reddit roundup. Book a table; there’s loud live music upstairs, so ask for downstairs.",
         "order": [
-          "Adjarian khachapuri"
+          "Khinkali"
         ],
-        "orderNote": "The most-named dish in its reviews (9×): the boat-shaped cheese bread with an egg — stir it in and tear off the crust.",
-        "cost": "~5,000–7,000 ₸"
+        "orderNote": "Khinkali are 92% positive across 137 Yandex reviews that mention them. Eat by hand: bite, sip the broth, leave the knot.",
+        "cost": "~6,000–10,000 ₸"
       },
       {
         "time": "07:15 PM – 08:30 PM",
         "type": "sunset",
         "icon": "🌃",
         "title": "City lights from Bar Fly (26th floor, Hotel Kazakhstan)",
-        "getThere": "Daredzhani → Hotel Kazakhstan (Dostyk 52/2): walk 0.45 km, ~6 min. Afterwards → Airbnb: walk 0.76 km, ~10 min.",
+        "getThere": "Dadiani → Hotel Kazakhstan (Dostyk 52/2): Yandex 1.4 km, ~3 min, or walk 1.20 km, ~16 min. Afterwards → Airbnb: walk 0.76 km, ~10 min.",
         "description": "Several nightlife guides name it the best indoor view over the city lights — a calm end to the day.",
         "tip": "Opening hours aren’t confirmed — ask at the hotel desk first. Smog can blur the view on still nights."
       }
@@ -974,11 +968,11 @@ export const itinerary = [
         "icon": "🎶",
         "title": "Farewell feast at Sandyq (book)",
         "getThere": "Airbnb → Sandyq (Abylai Khan 55; Yandex lists it as Alimzhanov 55 — use the app pin): Yandex 3.0 km, ~5–10 min (~1,000–1,500 ₸). Back the same way.",
-        "description": "WhereToEat Kazakhstan 2025 Best Kazakh Restaurant; the place food sources agree on most (12 of 29); Yandex 5.0 from ~4,300 and 2GIS 4.9 from ~9,300 ratings. Live music in the evenings and an English menu.",
+        "description": "Won Best Kazakh Cuisine Restaurant at WhereToEat Kazakhstan 2025; backed by 6+ sources (Megan Starr ×2, Yandex Eda, Reddit r/Kazakhstan, QazMonitor); Yandex 5.0 from ~4,300 ratings. Live music in the evenings and an English menu.",
         "order": [
           "Beshbarmak"
         ],
-        "orderNote": "Kazakhstan’s national dish at the restaurant that won Best Kazakh Restaurant 2025 — its most-named dish. Portions are big.",
+        "orderNote": "Named by 5 sources (Megan Starr, Yandex Eda, Yandex reviews, Reddit) — served with crushed kurt, 7,990 ₸. Portions are big.",
         "cost": "~6,000–10,000 ₸ per person + 15% service",
         "tip": "Book ahead. Repeated complaints: slow on busy nights and dishes sometimes arrive lukewarm — say so and they’ll fix it. The 15% service is on the bill, so no extra tip. Early night: alarm ~05:45.",
         "links": [
@@ -1123,9 +1117,9 @@ export const itinerary = [
         "description": "Navat is open to midnight. At the hotel, settle the bill tonight, ask for a breakfast box and have reception book a backup taxi for 04:00 in writing.",
         "cost": "~3,500–8,000 ₸ + 10%",
         "order": [
-          "Guiru lagman"
+          "Manti"
         ],
-        "orderNote": "Navat’s lagman pick — something different from day 1’s plov."
+        "orderNote": "Named by TripZilla 2026, sxodim and a 2GIS roundup — something different from day 1’s plov."
       }
     ],
     "placeIds": [
