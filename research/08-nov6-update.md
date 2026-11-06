@@ -85,3 +85,10 @@ _Re-checked tours, Shymbulak, glacier, SIM, exchange, mosque and food on 6 Nov 2
 - Kept only places with ≥2–3 independent editorial sources AND large map rating counts (Yandex/2GIS, fetched 6 Nov): Sandyq (Y 5.0/4,282, 2G 4.9/9,300), Navat (2G 4.9/19,792), AUYL (Y 5.0/2,324), Qaimaq (Y 5.0/2,059), Shashlychnaya na Kirova (Y 4.9/2,473, 2G 4.4/7,609), Daredzhani Kurmangazy 11 (Y 5.0/1,098), Nedelka (2G 4.9/7,895), Six (2G 4.9/9,580), Bon Bon (2G 4.9/1,059), Akku (Y 4.8/207), Vanilla (2G 4.8/1,600+), Qulpynai (2G 4.9/2,646).
 - Removed as weak/single-source: Paradise, Qaganat, Tary (Y 4.9/454 but slow kitchen, 2 sources), Bowler (~70 ratings), Khachapuri Khinkalevich, Patsatsina, Chapsan, Oral, EverJazz, JumpinGoat, ProCoffee, Kishlak, Rumi.
 - Each food stop now shows "Order this" chips = dishes most often named in that place's reviews (counts noted where available).
+
+## Comfortable tours instead of museums (GYG live calendars, 6 Nov)
+- User prefers comfortable, unhurried, low-walking tours over museums. Removed ALMA, the Central State Museum and the folk-instrument museum.
+- **Tue 10:** Horseback riding in Ile-Alatau NP (Almaty Tourss, GYG t1298560) — 4.8/309, ₹4,913, hotel pickup, 2.5 h ride, picnic brunch, raincoats; reviews 2 & 4 Nov 2026 "calm, easy". Tue 10 bookable. Then Arasan baths, Daredzhani, Bar Fly.
+- **Wed 11:** Huns nomad village + Ak-Bulak (VOSTOK, GYG t470005) — 4.3/38, ₹13,780, 8 h, yurts/baursak class/horse show/plov; newest review May 2026 → confirm it runs; 50% refund <48 h. Fallback: slow city day (Bon Bon, Akku, TSUM, Rakhat).
+- Alternatives noted: private Issyk Lake scenic drive (Kazia, t1460574, ₹14,416, no reviews, ~10 min asphalt walk); Issyk + Turgen group trips (JoinMe t984508 4.4/328 runs Wed only; waterfall approach ~1.5 km incline).
+- Rejected: falcon show (season conflicts, "Apr–Oct" on one listing), Altyn-Emel (17 h), Tamgaly (archaeology + walking), Oi-Qaragai (between seasons), Alma-Arasan/Ayusai (walking, closures).

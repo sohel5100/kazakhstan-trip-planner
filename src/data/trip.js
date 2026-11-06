@@ -1,11 +1,11 @@
-import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=42';
+import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=43';
 
 export {
   exchangeRates,
   currencySymbols,
   toINR,
   formatCurrency
-} from './currency.js?v=42';
+} from './currency.js?v=43';
 
 export const tripMeta = {
   title: 'Kazakhstan Adventure',
@@ -214,18 +214,6 @@ export const defaultExpenses = [
     "status": "estimated",
     "paymentMethod": "Card",
     "country": "Kazakhstan",
-    "id": "exp-music-museum",
-    "title": "Folk Musical Instruments Museum",
-    "amount": 1500,
-    "category": "activities",
-    "date": "2026-11-08",
-    "note": "Panfilov Park; closed Mondays"
-  },
-  {
-    "currency": "KZT",
-    "status": "estimated",
-    "paymentMethod": "Card",
-    "country": "Kazakhstan",
     "id": "exp-shymbulak-medeu",
     "title": "Shymbulak gondolas: Medeu ↔ Talgar Pass (return)",
     "amount": 12000,
@@ -270,6 +258,30 @@ export const defaultExpenses = [
     "note": "Shuttles ~1,000 ₸, park fees ~700–1,000 ₸, Kaindy horse ~1,000 ₸, snacks — no ATMs near the lakes"
   },
   {
+    "id": "exp-horse-ride",
+    "title": "Horse ride in Ile-Alatau (GYG, not booked)",
+    "amount": 4913,
+    "currency": "INR",
+    "category": "activities",
+    "status": "estimated",
+    "paymentMethod": "Card",
+    "date": "2026-11-10",
+    "country": "Kazakhstan",
+    "note": "Almaty Tourss, 4.8 (309); pickup, 2.5 h ride, picnic brunch"
+  },
+  {
+    "id": "exp-huns-village",
+    "title": "Huns nomad village day (GYG, not booked)",
+    "amount": 13780,
+    "currency": "INR",
+    "category": "activities",
+    "status": "estimated",
+    "paymentMethod": "Card",
+    "date": "2026-11-11",
+    "country": "Kazakhstan",
+    "note": "VOSTOK, 4.3 (38); confirm it's running before paying"
+  },
+  {
     "currency": "KZT",
     "status": "estimated",
     "paymentMethod": "Card",
@@ -280,30 +292,6 @@ export const defaultExpenses = [
     "category": "activities",
     "date": "2026-11-10",
     "note": "Weekday rate"
-  },
-  {
-    "currency": "KZT",
-    "status": "estimated",
-    "paymentMethod": "Card",
-    "country": "Kazakhstan",
-    "id": "exp-alma-museum",
-    "title": "Almaty Museum of Arts (ALMA)",
-    "amount": 3000,
-    "category": "activities",
-    "date": "2026-11-10",
-    "note": "Timed tickets at almaty.art"
-  },
-  {
-    "currency": "KZT",
-    "status": "estimated",
-    "paymentMethod": "Card",
-    "country": "Kazakhstan",
-    "id": "exp-central-museum",
-    "title": "Central State Museum (foreigner ticket)",
-    "amount": 5000,
-    "category": "activities",
-    "date": "2026-11-11",
-    "note": "Price reports 500–5,000 ₸; Wed 11 Nov"
   },
   {
     "currency": "KZT",
@@ -628,7 +616,7 @@ export const itinerary = [
     "weekday": "Sunday",
     "city": "Almaty old town",
     "title": "Panfilov Park, Zenkov Cathedral, Green Bazaar, Central Mosque & Kok Tobe sunset",
-    "subtitle": "All on foot in one compact old-town loop (Panfilov Park → Green Bazaar → Central Mosque are 5–15 min apart), then the cable car up Kok Tobe for sunset and city lights.",
+    "subtitle": "One compact old-town loop on foot (Panfilov Park → Green Bazaar → Central Mosque are 0.7–0.8 km apart), a bakery stop, then the cable car up Kok Tobe for sunset and a shashlik dinner.",
     "weatherNote": "Forecast on 6 Nov: dry and mild (~5–16 °C) — a good Kok Tobe day. Go up only if the air is clear (check the IQAir app): smog can hide the view by afternoon. Sunset 16:36.",
     "bring": "Cash for the bazaar (5,000–10,000 ₸), clothes covering arms and legs plus a scarf (needed at the mosque; women also cover their heads at the cathedral), socks without holes (shoes off at the mosque), warm layers for Kok Tobe after dark.",
     "planB": "Rain all day: Central State Museum (Yandex ~10 min from the old town; price reports 500–5,000 ₸) and Akku café, still do the Green Bazaar (indoor hall). Move Kok Tobe to Tuesday.",
@@ -665,21 +653,11 @@ export const itinerary = [
         "image": "./assets/places/zenkov-cathedral.jpg"
       },
       {
-        "time": "11:15 AM – 12:00 PM",
-        "type": "museum",
-        "icon": "🎻",
-        "title": "Museum of Kazakh Folk Musical Instruments",
-        "getThere": "Cathedral → museum (Zenkov 24a, east edge of the park): walk 0.44 km, ~6 min.",
-        "description": "A Lonely Planet top pick in a 1908 wooden building inside Panfilov Park. 30–45 minutes.",
-        "tickets": "At the door; price reports vary (500–1,500 ₸) · Tue–Sun 10:00–18:00 (some listings say 19:00) · closed Mondays",
-        "image": "./assets/places/music-museum.jpg"
-      },
-      {
-        "time": "12:15 PM – 01:30 PM",
+        "time": "11:30 AM – 01:30 PM",
         "type": "market",
         "title": "Green Bazaar (Kok Bazar): graze your way through lunch",
         "description": "Food writers’ advice: walk the market first, then taste — vendors offer kazy and smoked horse in the meat hall at the back, dried fruit and nuts at the front, Korean salads in the salad row, kurt and irimshik in the dairy section. Tandoor samsa and fresh lepeshka from the stalls make lunch. Don’t order beshbarmak here — one guide says the bazaar versions target tourists.",
-        "getThere": "Museum → Green Bazaar (Zhibek Zholy 53): walk 0.71 km north, ~9 min.",
+        "getThere": "Cathedral → Green Bazaar (Zhibek Zholy 53): walk 0.82 km north, ~11 min.",
         "cost": "Bring cash — tastes are free; tandoor samsa ~300–900 ₸ each",
         "tip": "Closed Mondays — so today is the day. Bargain on dried fruit and souvenirs, watch for pickpockets, taste before buying. The Rakhat factory store (Zenkov 2) is nearby. How reviewers do it: enter the main hall from Zhibek Zholy — dried fruit, nuts and spices at the front, then the Korean salads, then dairy (kurt, irimshik). The newer central pavilion (entrance from Makataev St) has farm produce, honey and cheese, and is said to be 20–30% cheaper for some goods. Taste freely but don’t overdo it; opening prices are inflated, so bargain politely for 5–10% off. Bring cash.",
         "links": [
@@ -801,7 +779,7 @@ export const itinerary = [
     "subtitle": "Three lifts from Medeu up to 3,200 m, above the city smog, then an early dinner at AUYL next to the gondola. The forecast makes this the best mountain day of the week — and museums and the bazaar are shut on Mondays anyway.",
     "weatherNote": "Forecast on 6 Nov: dry, light wind, about −5…+5 °C at 3,200 m — the clearest mountain window of your trip (snow arrives Tue night/Wed). Trails are icy in the morning after the overnight refreeze. Combi-2 to Talgar Pass closed at 16:30 last winter (2026 hours not published) — be heading down by ~15:00. The official live page (shymbulak.com/live) needs a browser: check it in the morning, or ask at the Medeu ticket desk which lifts are running.",
     "bring": "Warm jacket, hat, gloves, sunglasses (snow glare), sunscreen, grippy boots (microspikes if you have them), water and a snack, passport, a card for lift tickets.",
-    "planB": "Lifts stopped by wind: swap with Tuesday 10 (Arasan baths and ALMA move to Monday — but ALMA is closed Mondays, so do Arasan + Central State Museum instead). If the glacier guide cancels, just stay at Talgar Pass — do not walk to the glacier alone.",
+    "planB": "Lifts stopped by wind: swap with Tuesday 10 (the horse ride moves to Monday if the operator has space). If the glacier guide cancels, just stay at Talgar Pass — do not walk to the glacier alone.",
     "events": [
       {
         "time": "08:00 AM – 08:45 AM",
@@ -918,36 +896,44 @@ export const itinerary = [
     "dayNumber": 4,
     "date": "2026-11-10",
     "weekday": "Tuesday",
-    "city": "Almaty",
-    "title": "Arasan baths, guiru lagman, ALMA art & khinkali night",
-    "subtitle": "A relaxed city day while the weather turns: a Soviet bathhouse, the Uyghur noodles locals queue for, a modern art museum, a 26th-floor city view and Georgian khinkali next door to the Airbnb.",
-    "weatherNote": "Forecast on 6 Nov: mild (~9–17 °C) with a ~50% chance of showers — mostly indoor plans. Sunset 16:34.",
-    "bring": "Your own towel, flip-flops and a felt hat for the baths; cash for the venik (birch whisk).",
-    "planB": "Already mostly indoors. If you’re tired, skip ALMA and stay longer at the baths.",
+    "city": "Ile-Alatau foothills & Almaty",
+    "title": "Horseback ride in Ile-Alatau National Park, Arasan baths & Georgian dinner",
+    "subtitle": "A comfortable nature morning on calm horses in the mountains (pickup and drop-off at your door, picnic brunch included), then warm up in a Soviet bathhouse and finish with khachapuri and a 26th-floor city view.",
+    "weatherNote": "Forecast on 6 Nov: mild (~9–17 °C) with a ~50% chance of showers — the better of the two free days for being outdoors; raincoats are provided on the ride. Sunset 16:34.",
+    "bring": "Warm layers, long trousers, closed shoes with a heel, gloves, sunglasses; your own towel, flip-flops and a felt hat for the baths.",
+    "planB": "Ride cancelled for weather: take the private Issyk Lake scenic drive instead (Kazia Tours, 4.5 h, car parks ~10 min on asphalt from the lake; new listing, no reviews yet) or simply do the baths in the morning and rest.",
     "events": [
       {
-        "time": "09:30 AM – 10:30 AM",
-        "type": "breakfast",
-        "title": "Breakfast at Nedelka",
-        "getThere": "Airbnb → Nedelka (Abay 19): walk 1.14 km, ~15 min.",
-        "description": "The most-recommended breakfast café in the sweep: 5 sources; 2GIS 4.9 from ~7,900 and Yandex 5.0 from ~3,400 ratings. Open to midnight.",
-        "cost": "~3,000–5,000 ₸",
-        "order": [
-          "Omelette",
-          "Porridge",
-          "Cakes",
-          "Cappuccino"
-        ],
-        "orderNote": "Reviewers also name the pizza and pasta for later in the day."
+        "time": "Book by Sun 8 Nov",
+        "type": "tour",
+        "icon": "🎟️",
+        "title": "Book: Horseback riding in Ile-Alatau National Park (Almaty Tourss)",
+        "getThere": "Book on GetYourGuide (link below); Tue 10 showed as available on 6 Nov.",
+        "description": "4.8 from 309 reviews, ₹4,913 per person. Hotel pickup, ~50 min drive to the Talgar side of the park, a 2.5 h ride on calm horses with a beginner briefing, then a 45-min picnic brunch. Park fees, helmets and raincoats included.",
+        "tip": "Reviews from 2 and 4 Nov 2026 call it “calm, easy and highly rewarding”; repeated praise for well-kept horses and changing scenery, repeated complaint: less attention per rider in big groups. Weight limit 120 kg. 2.5 h in the saddle is tiring for first-timers — ask for a short break mid-ride.",
+        "links": [
+          {
+            "label": "GYG horse ride",
+            "href": "https://www.getyourguide.com/almaty-city-l1414/-t1298560/"
+          }
+        ]
       },
       {
-        "time": "10:45 AM – 01:00 PM",
+        "time": "~08:30 AM – 02:00 PM",
+        "type": "nature",
+        "icon": "🐎",
+        "title": "Horse ride in the Ile-Alatau foothills + picnic brunch",
+        "getThere": "Pickup at the Airbnb (give the operator your address; confirm the time in the booking). ~50 min drive each way.",
+        "description": "Mountain views, autumn forest and the first snow on the peaks — from the saddle, with almost no walking. Eat light before pickup; brunch is included."
+      },
+      {
+        "time": "03:00 PM – 05:00 PM",
         "type": "spa",
         "title": "Arasan Wellness & SPA (1982 Soviet bathhouse)",
-        "getThere": "Nedelka → Arasan (Tulebaev 78): Yandex 2.6 km, ~5–10 min (~800–1,200 ₸), or walk 2.02 km, ~27 min.",
-        "description": "Russian banya, Finnish sauna, hammam and plunge pools in a grand Soviet building — separate men’s and women’s sections. Weekday mornings are the quietest time.",
-        "tickets": "07:00–23:30. At the door, charged by the hour: weekday 2 h ~3,800 ₸ (morning). Towel, sheet and slippers cost extra. Phone +7 727 390 10 10.",
-        "tip": "First-timer routine repeated by reviewers: pay → wristband (opens your locker; extras are charged to it and paid on the way out). Women left, men right. Shower before every sauna or pool; no phones past the lockers. Buy a venik at the entrance, soak it, use it only in the Russian banya.",
+        "getThere": "Airbnb → Arasan (Tulebaev 78): Yandex 1.8 km, ~5 min (~800–1,000 ₸), or walk 1.84 km, ~25 min.",
+        "description": "Russian banya, Finnish sauna, hammam and plunge pools in a grand Soviet building — the perfect way to warm up after the ride. Separate men’s and women’s sections.",
+        "tickets": "07:00–23:30. Charged by the hour (weekday 2 h ~3,800–4,500 ₸); towel, sheet and slippers extra. Phone +7 727 390 10 10.",
+        "tip": "First-timer routine repeated by reviewers: pay → wristband (opens your locker; extras are charged to it). Women left, men right. Shower before every sauna or pool; no phones past the lockers. Buy a venik at the entrance, soak it, use it only in the Russian banya.",
         "links": [
           {
             "label": "Arasan on Maps",
@@ -956,51 +942,12 @@ export const itinerary = [
         ]
       },
       {
-        "time": "01:15 PM – 02:30 PM",
-        "type": "food",
-        "title": "Lunch at Qaimaq (beshbarmak)",
-        "getThere": "Arasan → Qaimaq (Abay 46A): Yandex 6.2 km, ~10–15 min (~1,200–1,800 ₸).",
-        "description": "6 food sources; Yandex 5.0 from ~2,000 ratings. Portions are big — one beshbarmak is enough for two.",
-        "order": [
-          "Beshbarmak (share)",
-          "Baursaks",
-          "Olivier with horse meat",
-          "Kuyrdak in a pumpkin"
-        ],
-        "orderNote": "Beshbarmak is the most-named dish (~7×).",
-        "cost": "~7,000 ₸ per person"
-      },
-      {
-        "time": "02:45 PM – 04:45 PM",
-        "type": "museum",
-        "icon": "🖼️",
-        "title": "Almaty Museum of Arts (ALMA)",
-        "getThere": "Qaimaq → ALMA (Al-Farabi 28, entrance on Nazarbayev Ave): Yandex 4.5 km, ~10 min (~1,000–1,500 ₸).",
-        "description": "New private museum rated 4.8 — Central Asian modern and contemporary art in a striking building.",
-        "tickets": "Tue–Sun 11:00–20:00 (last entry 19:00), 3,000 ₸, timed slots — book on almaty.art.",
-        "links": [
-          {
-            "label": "ALMA tickets",
-            "href": "https://www.almaty.art/visit-and-tickets"
-          }
-        ]
-      },
-      {
-        "time": "05:15 PM – 06:30 PM",
-        "type": "sunset",
-        "icon": "🌃",
-        "title": "City lights from Bar Fly (26th floor, Hotel Kazakhstan)",
-        "getThere": "ALMA → Hotel Kazakhstan (Dostyk 52/2): Yandex 4.7 km, ~10–15 min. Bar Fly is on the 26th floor.",
-        "description": "Several nightlife guides name it the best indoor view over the city lights and the mountains’ silhouette — the alternative to Kok Tobe on hazy nights.",
-        "tip": "Current opening hours aren’t confirmed — check Instagram or ask at the hotel desk. Smog can blur the view on still nights."
-      },
-      {
-        "time": "07:00 PM – 08:30 PM",
+        "time": "05:30 PM – 07:00 PM",
         "type": "dinner",
         "icon": "🥟",
         "title": "Georgian dinner at Daredzhani",
-        "getThere": "Bar Fly → Daredzhani (Kurmangazy 11): walk 0.45 km, ~6 min. Daredzhani → Airbnb: walk 0.77 km, ~10 min.",
-        "description": "Georgian food is mainstream in Almaty; Daredzhani is the locals’ default pick (4 sources incl. Reddit and a sxodim readers’ vote; Yandex 5.0 from ~1,100 ratings for this branch). Alternative with the biggest rating count: Dadiani (Kabanbay Batyr 37, 0.71 km from the Airbnb; 2GIS 4.9 from ~4,900) — book; loud live music upstairs.",
+        "getThere": "Arasan → Daredzhani (Kurmangazy 11): Yandex 2.1 km, ~5 min (~800–1,000 ₸).",
+        "description": "Georgian food is mainstream in Almaty; Daredzhani is the locals’ default pick (4 sources incl. Reddit and a sxodim readers’ vote; Yandex 5.0 from ~1,100 ratings for this branch). Alternative with the biggest rating count: Dadiani (Kabanbay Batyr 37; 2GIS 4.9 from ~4,900) — book; loud live music upstairs.",
         "order": [
           "Adjarian khachapuri",
           "Khinkali",
@@ -1009,6 +956,15 @@ export const itinerary = [
         ],
         "orderNote": "Khachapuri 9× and khinkali 6× in reviews. Eat khinkali by hand: bite, sip the broth, leave the knot.",
         "cost": "~5,000–7,000 ₸"
+      },
+      {
+        "time": "07:15 PM – 08:30 PM",
+        "type": "sunset",
+        "icon": "🌃",
+        "title": "City lights from Bar Fly (26th floor, Hotel Kazakhstan)",
+        "getThere": "Daredzhani → Hotel Kazakhstan (Dostyk 52/2): walk 0.45 km, ~6 min. Afterwards → Airbnb: walk 0.76 km, ~10 min.",
+        "description": "Several nightlife guides name it the best indoor view over the city lights — a calm end to the day.",
+        "tip": "Opening hours aren’t confirmed — ask at the hotel desk first. Smog can blur the view on still nights."
       }
     ],
     "placeIds": []
@@ -1017,66 +973,53 @@ export const itinerary = [
     "dayNumber": 5,
     "date": "2026-11-11",
     "weekday": "Wednesday",
-    "city": "Almaty",
-    "title": "Rainy-day museum, souvenirs & farewell feast at Sandyq",
-    "subtitle": "The wettest day of the week — indoors in the city, last shopping, then the farewell dinner tonight because the tour fills Thursday and Friday. Early night: Airbnb checkout at 06:15.",
-    "weatherNote": "Forecast on 6 Nov: rain in the city (~80%), 2–11 °C; ~10–17 cm of snow falling in the mountains — the snow you’ll see at the lakes on Thursday.",
-    "bring": "Umbrella, passport (museums may ask), shopping bag, cash for souvenirs.",
-    "planB": "Central Museum closed or crowded: the metro art ride (Abay → Raiymbek Batyr stations) and the Dostyk Plaza mall.",
+    "city": "Huns nomad village & Almaty",
+    "title": "Nomad village day (yurts, baursak class, horsemanship show) & farewell feast at Sandyq",
+    "subtitle": "A culture-and-food day out of the city in and around yurts — little walking, lunch included — then the farewell dinner tonight, because the lakes tour fills Thursday and Friday. Early night: Airbnb checkout at 06:15.",
+    "weatherNote": "Forecast on 6 Nov: rain in the city (~80%), 2–11 °C; snow falling in the mountains (the snow you’ll see at the lakes on Thursday). Much of the village programme is inside yurts; the horse show may be shortened in rain.",
+    "bring": "Waterproof jacket, warm layers, cash for extras; pack for the tour tonight.",
+    "planB": "If the village isn’t running, make it a slow city day: breakfast at Bon Bon (Abylai Khan 123; Yandex 2.0 km), Akku café (Airbnb → Akku Yandex 1.6 km), souvenirs at TSUM (Abylai Khan 62) and the Rakhat shop on the Arbat (Zhibek Zholy 47; TSUM → Rakhat walk 1.36 km), back by 17:00 to pack.",
     "events": [
       {
-        "time": "10:00 AM – 11:00 AM",
-        "type": "breakfast",
-        "title": "Breakfast at Bon Bon",
-        "getThere": "Airbnb → Bon Bon (Abylai Khan 123): Yandex 2.0 km, ~5 min (~800–1,000 ₸), or walk 1.89 km, ~25 min.",
-        "description": "Locals’ breakfast institution since 2002 — 3 sources; 2GIS 4.9 from ~1,060 ratings. Weekend waits up to 40 min; a Wednesday is easier.",
-        "cost": "~3,500 ₸",
-        "order": [
-          "English breakfast",
-          "Potato pancakes with salmon",
-          "Syrniki",
-          "Croissants"
+        "time": "Book by Sun 8 Nov",
+        "type": "tour",
+        "icon": "🎟️",
+        "title": "Book: Huns nomad village (Kazakh aul) + Ak-Bulak (VOSTOK)",
+        "getThere": "Book on GetYourGuide (link below); Wed 11 showed as available on 6 Nov.",
+        "description": "4.3 from 38 reviews, ₹13,780 per person, 8 h. The newest review on the page is from May 2026 — message the operator before paying to confirm it is running this week and whether the horse show goes ahead in rain.",
+        "tip": "Cancellation: only 50% back if you cancel less than 48 h ahead — confirm first. Comfortable alternative on the same day: the private Issyk Lake drive (Kazia Tours), but snow on the mountain road makes Wednesday the worse day for it.",
+        "links": [
+          {
+            "label": "GYG Huns village day",
+            "href": "https://www.getyourguide.com/almaty-city-l1414/-t470005/"
+          },
+          {
+            "label": "Private Issyk Lake drive (alt.)",
+            "href": "https://www.getyourguide.com/almaty-city-l1414/-t1460574/"
+          }
         ]
       },
       {
-        "time": "11:15 AM – 01:15 PM",
-        "type": "museum",
-        "title": "Central State Museum of Kazakhstan",
-        "getThere": "Bon Bon → museum (Samal-1, bldg 44): Yandex 3.7 km, ~10 min (~1,000–1,500 ₸).",
-        "description": "Nomad history, the Golden Man replica and full yurts — the best single overview of the country.",
-        "tickets": "~10:00–18:00 (desk to 17:30). Sources disagree on the closed day (Mon or Tue — Wednesday is open either way) and on the foreigner price (500–5,000 ₸). Phone +7 727 264 26 80.",
-        "image": "./assets/places/central-museum.jpg"
-      },
-      {
-        "time": "01:45 PM – 02:45 PM",
-        "type": "cafe",
-        "icon": "☕",
-        "title": "Akku — heritage Soviet-modernist café",
-        "getThere": "Museum → Akku (Panfilov 123, Astana Square park): Yandex 2.9 km, ~10 min (~1,000–1,300 ₸).",
-        "description": "Rebuilt cult park café with mosaics and panoramic windows — 4 sources; Yandex 4.8 from 207. Popular items sell out; slow at weekends.",
-        "cost": "~3,000–5,000 ₸",
+        "time": "09:00 AM – 05:00 PM",
+        "type": "tour",
+        "icon": "🛖",
+        "title": "Huns ethno-village: welcome ritual, baursak cooking, yurts, horsemanship show",
+        "getThere": "Tour transfer from Almaty (pickup per the booking), ~2 h each way; back after 16:00.",
+        "description": "Arrive ~11:00 to a welcome ritual, a baursak-cooking class with tea, a yurt demonstration, a horsemanship show (dzhigitovka, kyz kuu), plov lunch and archery.",
         "order": [
-          "Condensed-milk wafer tube (signature)",
-          "Mashed potato with chicken cutlet",
-          "Cheesecake"
+          "Baursaks you fry yourself",
+          "Plov lunch",
+          "Kazakh tea with milk"
         ],
-        "orderNote": "The wafer tube is named in reviews far more than anything else."
+        "orderNote": "Meals are part of the programme."
       },
       {
-        "time": "03:00 PM – 04:30 PM",
-        "type": "shopping",
-        "title": "Souvenirs: TSUM crafts, the Arbat & Rakhat chocolate",
-        "getThere": "Akku → TSUM (Abylai Khan 62): walk 1.15 km, ~15 min. TSUM → Rakhat shop (Zhibek Zholy 47 × Kaldayakov): walk 1.36 km east along the pedestrian Arbat, ~18 min.",
-        "description": "Felt slippers (2,000–2,500 ₸), kalpak hats ($15–30) and felt crafts at TSUM; Kazakh chocolate at the Rakhat shop — cheaper than supermarkets. Aport apples are in season if you want some.",
-        "tip": "Avoid airport and hotel shops — heavy mark-ups."
-      },
-      {
-        "time": "04:45 PM – 06:30 PM",
+        "time": "05:00 PM – 06:30 PM",
         "type": "checkin",
         "icon": "🧳",
-        "title": "Back to the Airbnb: pack for the tour & the flight",
-        "getThere": "Rakhat → Airbnb: Yandex 1.6 km, ~5 min, or walk 1.68 km, ~22 min.",
-        "description": "Pack a small overnight bag for the tour (warm layers, boots, power bank, cash, passport) and the big bag for Hotel Kazakhstan. Message the tour operator to confirm pickup time and place. Confirm your early self-checkout with the Airbnb host."
+        "title": "Back at the Airbnb: pack for the tour & the flight",
+        "getThere": "Tour drop-off → Airbnb (ask to be dropped at your address or Hotel Kazakhstan, 0.75 km away).",
+        "description": "Pack a small overnight bag for the lakes tour (warm layers, boots, power bank, cash, passport) and the big bag for Hotel Kazakhstan. Message the tour operator to confirm Thursday’s pickup and your Airbnb host about the 06:15 checkout. Souvenirs you still want: felt crafts are also sold at the Green Bazaar (Sunday) and Rakhat chocolate at the airport is pricier — buy it in town if you can."
       },
       {
         "time": "07:00 PM – 09:00 PM",
@@ -1085,14 +1028,6 @@ export const itinerary = [
         "title": "Farewell feast at Sandyq (book)",
         "getThere": "Airbnb → Sandyq (Abylai Khan 55; Yandex lists it as Alimzhanov 55 — use the app pin): Yandex 3.0 km, ~5–10 min (~1,000–1,500 ₸). Back the same way.",
         "description": "WhereToEat Kazakhstan 2025 Best Kazakh Restaurant; the place food sources agree on most (12 of 29); Yandex 5.0 from ~4,300 and 2GIS 4.9 from ~9,300 ratings. Live music in the evenings and an English menu.",
-        "cost": "~6,000–10,000 ₸ per person + 15% service",
-        "tip": "Book ahead. Repeated complaints: slow on busy nights and dishes sometimes arrive lukewarm — say so and they’ll fix it. The 15% service is on the bill, so no extra tip. Early night: alarm ~05:45.",
-        "links": [
-          {
-            "label": "Sandyq on Maps",
-            "href": "https://www.google.com/maps/search/?api=1&query=Sandyq+restaurant+Almaty"
-          }
-        ],
         "order": [
           "Beshbarmak",
           "Baursaks stuffed with irimshik",
@@ -1100,7 +1035,15 @@ export const itinerary = [
           "Kuyrdak",
           "Kumys (from the kumys bar)"
         ],
-        "orderNote": "Most-named in Sandyq reviews: beshbarmak and kumys (4× each), baursaks and smoked horse (3×)."
+        "orderNote": "Most-named in Sandyq reviews: beshbarmak and kumys (4× each), baursaks and smoked horse (3×).",
+        "cost": "~6,000–10,000 ₸ per person + 15% service",
+        "tip": "Book ahead. Repeated complaints: slow on busy nights and dishes sometimes arrive lukewarm — say so and they’ll fix it. The 15% service is on the bill, so no extra tip. Early night: alarm ~05:45.",
+        "links": [
+          {
+            "label": "Sandyq on Maps",
+            "href": "https://www.google.com/maps/search/?api=1&query=Sandyq+restaurant+Almaty"
+          }
+        ]
       }
     ],
     "placeIds": []

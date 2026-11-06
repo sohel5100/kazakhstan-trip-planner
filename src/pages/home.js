@@ -1,10 +1,10 @@
-import { tripMeta, flights, itinerary } from '../data/trip.js?v=42';
-import { formatDate, icon } from '../components/shared.js?v=42';
-import { packingGroups, getPackingChecked } from './packing.js?v=42';
-import { getConverterState } from './expenses.js?v=42';
-import { convertCurrency } from '../data/currency.js?v=42';
-import { bookings } from '../data/guide.js?v=42';
-import { getWeather, weatherLabel } from '../data/weather.js?v=42';
+import { tripMeta, flights, itinerary } from '../data/trip.js?v=43';
+import { formatDate, icon } from '../components/shared.js?v=43';
+import { packingGroups, getPackingChecked } from './packing.js?v=43';
+import { getConverterState } from './expenses.js?v=43';
+import { convertCurrency } from '../data/currency.js?v=43';
+import { bookings } from '../data/guide.js?v=43';
+import { getWeather, weatherLabel } from '../data/weather.js?v=43';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 

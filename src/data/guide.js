@@ -161,6 +161,26 @@ export const bookings = [
     ]
   },
   {
+    emoji: '🐎',
+    name: 'Horse ride in Ile-Alatau (Tue 10)',
+    when: 'Hotel pickup ~08:30 · back ~14:00 · ₹4,913',
+    status: 'Not booked — 4.8 from 309 reviews',
+    tone: 'warn',
+    actions: [
+      { label: 'GYG horse ride', href: 'https://www.getyourguide.com/almaty-city-l1414/-t1298560/' }
+    ]
+  },
+  {
+    emoji: '🛖',
+    name: 'Huns nomad village day (Wed 11)',
+    when: '09:00–17:00 · ₹13,780 · confirm it is running first',
+    status: 'Not booked — 50% refund under 48 h',
+    tone: 'warn',
+    actions: [
+      { label: 'GYG Huns village', href: 'https://www.getyourguide.com/almaty-city-l1414/-t470005/' }
+    ]
+  },
+  {
     emoji: '🍽️',
     name: 'Tables: AUYL (Mon 9) & Sandyq (Wed 11)',
     when: 'AUYL early dinner ~15:30 · Sandyq 19:00',
