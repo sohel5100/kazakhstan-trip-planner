@@ -93,3 +93,4 @@ _Re-checked tours, Shymbulak, glacier, SIM, exchange, mosque and food on 6 Nov 2
 - Alternatives noted: private Issyk Lake scenic drive (Kazia, t1460574, ₹14,416, no reviews, ~10 min asphalt walk); Issyk + Turgen group trips (JoinMe t984508 4.4/328 runs Wed only; waterfall approach ~1.5 km incline).
 - Rejected: falcon show (season conflicts, "Apr–Oct" on one listing), Altyn-Emel (17 h), Tamgaly (archaeology + walking), Oi-Qaragai (between seasons), Alma-Arasan/Ayusai (walking, closures).
 - 6 Nov: user decided against the Bogdanovich Glacier walk — removed from Day 3 and bookings.
+- 6 Nov: one signature dish per place (user can't try everything); horse tartare removed; Vanilla café stop replaced by a rest break at the Airbnb.

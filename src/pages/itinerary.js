@@ -1,7 +1,7 @@
-import { itinerary, places, tripMeta } from '../data/trip.js?v=44';
-import { getItineraryPlaceIds } from '../data/itinerary-state.js?v=44';
-import { icon, formatDate } from '../components/shared.js?v=44';
-import { getWeather, forecastFor } from '../data/weather.js?v=44';
+import { itinerary, places, tripMeta } from '../data/trip.js?v=45';
+import { getItineraryPlaceIds } from '../data/itinerary-state.js?v=45';
+import { icon, formatDate } from '../components/shared.js?v=45';
+import { getWeather, forecastFor } from '../data/weather.js?v=45';
 
 // Which day is open. Defaults to today during the trip, otherwise Day 1.
 let selectedDay = null;

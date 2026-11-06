@@ -1,11 +1,11 @@
-import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=44';
+import { exchangeRates, currencySymbols, toINR, formatCurrency } from './currency.js?v=45';
 
 export {
   exchangeRates,
   currencySymbols,
   toINR,
   formatCurrency
-} from './currency.js?v=44';
+} from './currency.js?v=45';
 
 export const tripMeta = {
   title: 'Kazakhstan Adventure',
@@ -596,14 +596,9 @@ export const itinerary = [
           }
         ],
         "order": [
-          "Baursaks (free with tea)",
-          "Horse plov",
-          "Tandoor samsa",
-          "Guiru lagman",
-          "Manti",
-          "Tashkent tea"
+          "Plov"
         ],
-        "orderNote": "Most-named dishes across Navat reviews (baursaks 8×, plov 7×, samsa 5×)."
+        "orderNote": "Navat’s most-named dish after the baursaks, which come free with tea anyway."
       }
     ],
     "placeIds": [
@@ -635,12 +630,9 @@ export const itinerary = [
           }
         ],
         "order": [
-          "Croissants",
-          "Cappuccino or flat white",
-          "Winter tea",
-          "Hot chocolate"
+          "Croissant + cappuccino"
         ],
-        "orderNote": "What reviewers name most often."
+        "orderNote": "The croissants are what reviewers mention most (~7×)."
       },
       {
         "time": "10:00 AM – 11:15 AM",
@@ -668,14 +660,9 @@ export const itinerary = [
         ],
         "image": "./assets/places/green-bazaar.jpg",
         "order": [
-          "Kazy & smoked horse (free tastes)",
-          "Tandoor samsa",
-          "Lepeshka bread",
-          "Korean carrot salad (morkovcha)",
-          "Kurt & irimshik",
-          "Aport apples"
+          "Hot tandoor samsa"
         ],
-        "orderNote": "Repeated by Tengrinews, Andrew Zimmern, welcome.kz and Spotted by Locals."
+        "orderNote": "Eat it fresh from a stall; taste the kazy, nuts and dried fruit for free as you walk."
       },
       {
         "time": "01:40 PM – 02:10 PM",
@@ -695,26 +682,19 @@ export const itinerary = [
         "image": "./assets/places/central-mosque.jpg"
       },
       {
-        "time": "02:20 PM – 03:00 PM",
-        "type": "cafe",
-        "icon": "🥐",
-        "title": "Coffee & pastry at Vanilla",
-        "getThere": "Mosque → Vanilla (Kurmangazy 54): Yandex 3.9 km, ~10 min (~1,000–1,300 ₸). Then Vanilla → Kok Tobe lower station: walk 1.38 km, ~18 min, or Yandex 1.9 km, ~5 min.",
-        "description": "Bakery-café recommended by 4 guides (European Coffee Trip, bucketlistly, Yandex Open Kitchen, sxodim); Yandex 5.0 from 334, 2GIS 4.8 from 1,600+. A warm sit-down before Kok Tobe.",
-        "order": [
-          "Croissants",
-          "Pastries",
-          "Matcha latte",
-          "Zucchini pancakes"
-        ],
-        "cost": "~2,500–4,000 ₸"
+        "time": "02:20 PM – 03:15 PM",
+        "type": "rest",
+        "icon": "🛋️",
+        "title": "Rest & warm up at the Airbnb",
+        "getThere": "Mosque → Airbnb: Yandex 2.6 km, ~5–10 min (~800–1,200 ₸).",
+        "description": "A break before the evening: drop the bazaar shopping, warm up, add a layer for Kok Tobe after dark."
       },
       {
         "time": "03:15 PM – 06:30 PM",
         "type": "sunset",
         "title": "Kok Tobe cable car for sunset & city lights",
         "description": "Ride up about an hour before the 16:36 sunset, watch the mountains turn pink, stay for the city lights. Cafés and restaurants on top.",
-        "getThere": "Vanilla → Kok Tobe lower station (Dostyk 104B, opposite the Palace of the Republic): walk 1.38 km, ~18 min, or Yandex 1.9 km, ~5 min.",
+        "getThere": "Airbnb → Kok Tobe lower station (Dostyk 104B, opposite the Palace of the Republic): walk 0.91 km south along Dostyk, ~12 min, or Yandex 1.3 km, ~3 min.",
         "tickets": "At the station: 10,000 ₸ return / 6,000 ₸ one way (confirmed 2 Nov 2026). Fri–Sun 10:00–00:00, Mon/Wed/Thu 10:00–23:00, Tue from 13:00 (morning maintenance). It closed for an overhaul in early–mid Nov 2025; no 2026 closure announced — check koktobe.com the day before.",
         "tip": "Skip the restaurants at the top — several reviewers call them tourist-priced and mediocre; eat at the bottom instead (next stop). Skip the mini-zoo. Taxis can’t drive up (25,000 ₸ car fee) — the park shuttle from Dostyk is 3,000 ₸ one way if the cable car is closed. Reviewers repeat: it’s Sunday, so expect a queue (~20 min) — be at the station by ~15:30 for the 16:36 sunset. Buy a return: the walking path down has been closed since May 2026. Worth it at the top: the viewing decks and the Beatles bench; the TV tower is closed; food up there is mediocre.",
         "backup": "Hazy or raining: try Tuesday’s sunset instead (cable car opens 13:00 on Tuesdays), or see the city lights from Bar Fly on the 26th floor of Hotel Kazakhstan.",
@@ -753,12 +733,9 @@ export const itinerary = [
         "getThere": "Kok Tobe lower station → Na Kirova (Bogenbay Batyr 72): walk 1.59 km, ~21 min, or Yandex 2.2 km, ~5 min. Afterwards → Airbnb: walk 0.97 km, ~13 min.",
         "description": "The city’s cult no-frills shashlik house — 4 sources (Tengrinews, Digital Business, Saiga Tours, sxodim); Yandex 4.9 from ~2,500 and 2GIS 4.4 from ~7,600 ratings. Skewers from ~1,000 ₸ each.",
         "order": [
-          "Lamb shashlik",
-          "Duck shashlik",
-          "Kidney or heart skewers",
-          "Achichuk (tomato-onion salad)"
+          "Lamb shashlik"
         ],
-        "orderNote": "The skewers reviewers name most.",
+        "orderNote": "The house skewer every review mentions — add an achichuk tomato-onion salad on the side.",
         "tip": "Reviewers repeat: waits of 1–1.5 h at peak and it sells out — go straight after sunset (~18:00). Cramped and basic; cash handy.",
         "cost": "~3,000–6,000 ₸"
       }
@@ -858,14 +835,9 @@ export const itinerary = [
           }
         ],
         "order": [
-          "Horse tartare",
-          "Baursaks with balqaimaq",
-          "Beshbarmak",
-          "Marrow bones",
-          "Dungan noodles with quail",
-          "Kumys (to try)"
+          "Dungan noodles with quail"
         ],
-        "orderNote": "Horse tartare is the most-named dish in its reviews."
+        "orderNote": "AUYL’s signature — named in almost every review of the place (5 food sources)."
       }
     ],
     "placeIds": [
@@ -929,12 +901,9 @@ export const itinerary = [
         "getThere": "Arasan → Daredzhani (Kurmangazy 11): Yandex 2.1 km, ~5 min (~800–1,000 ₸).",
         "description": "Georgian food is mainstream in Almaty; Daredzhani is the locals’ default pick (4 sources incl. Reddit and a sxodim readers’ vote; Yandex 5.0 from ~1,100 ratings for this branch). Alternative with the biggest rating count: Dadiani (Kabanbay Batyr 37; 2GIS 4.9 from ~4,900) — book; loud live music upstairs.",
         "order": [
-          "Adjarian khachapuri",
-          "Khinkali",
-          "Shkmeruli (chicken in garlic-milk sauce)",
-          "Chikhirtma soup"
+          "Adjarian khachapuri"
         ],
-        "orderNote": "Khachapuri 9× and khinkali 6× in reviews. Eat khinkali by hand: bite, sip the broth, leave the knot.",
+        "orderNote": "The most-named dish in its reviews (9×): the boat-shaped cheese bread with an egg — stir it in and tear off the crust.",
         "cost": "~5,000–7,000 ₸"
       },
       {
@@ -987,11 +956,9 @@ export const itinerary = [
         "getThere": "Tour transfer from Almaty (pickup per the booking), ~2 h each way; back after 16:00.",
         "description": "Arrive ~11:00 to a welcome ritual, a baursak-cooking class with tea, a yurt demonstration, a horsemanship show (dzhigitovka, kyz kuu), plov lunch and archery.",
         "order": [
-          "Baursaks you fry yourself",
-          "Plov lunch",
-          "Kazakh tea with milk"
+          "The baursaks you fry yourself"
         ],
-        "orderNote": "Meals are part of the programme."
+        "orderNote": "Lunch (plov) is part of the programme."
       },
       {
         "time": "05:00 PM – 06:30 PM",
@@ -1009,13 +976,9 @@ export const itinerary = [
         "getThere": "Airbnb → Sandyq (Abylai Khan 55; Yandex lists it as Alimzhanov 55 — use the app pin): Yandex 3.0 km, ~5–10 min (~1,000–1,500 ₸). Back the same way.",
         "description": "WhereToEat Kazakhstan 2025 Best Kazakh Restaurant; the place food sources agree on most (12 of 29); Yandex 5.0 from ~4,300 and 2GIS 4.9 from ~9,300 ratings. Live music in the evenings and an English menu.",
         "order": [
-          "Beshbarmak",
-          "Baursaks stuffed with irimshik",
-          "Smoked horse & kazy",
-          "Kuyrdak",
-          "Kumys (from the kumys bar)"
+          "Beshbarmak"
         ],
-        "orderNote": "Most-named in Sandyq reviews: beshbarmak and kumys (4× each), baursaks and smoked horse (3×).",
+        "orderNote": "Kazakhstan’s national dish at the restaurant that won Best Kazakh Restaurant 2025 — its most-named dish. Portions are big.",
         "cost": "~6,000–10,000 ₸ per person + 15% service",
         "tip": "Book ahead. Repeated complaints: slow on busy nights and dishes sometimes arrive lukewarm — say so and they’ll fix it. The 15% service is on the bill, so no extra tip. Early night: alarm ~05:45.",
         "links": [
@@ -1160,12 +1123,9 @@ export const itinerary = [
         "description": "Navat is open to midnight. At the hotel, settle the bill tonight, ask for a breakfast box and have reception book a backup taxi for 04:00 in writing.",
         "cost": "~3,500–8,000 ₸ + 10%",
         "order": [
-          "Manti",
-          "Guiru lagman",
-          "Beshbarmak",
-          "Baursaks"
+          "Guiru lagman"
         ],
-        "orderNote": "Whatever you didn’t have on day 1."
+        "orderNote": "Navat’s lagman pick — something different from day 1’s plov."
       }
     ],
     "placeIds": [

@@ -1,7 +1,7 @@
-import { places, itinerary } from '../data/trip.js?v=44';
-import { getItineraryPlaceIds, saveItineraryPlaceIds } from '../data/itinerary-state.js?v=44';
-import { pageHeader, icon } from '../components/shared.js?v=44';
-import { cafes, tourComparisons, foodGuide, restaurants } from '../data/guide.js?v=44';
+import { places, itinerary } from '../data/trip.js?v=45';
+import { getItineraryPlaceIds, saveItineraryPlaceIds } from '../data/itinerary-state.js?v=45';
+import { pageHeader, icon } from '../components/shared.js?v=45';
+import { cafes, tourComparisons, foodGuide, restaurants } from '../data/guide.js?v=45';
 
 let activeCategoryFilter = 'all';
 
@@ -101,7 +101,7 @@ export function renderPlaces() {
 
       <div class="cafe-head food-sub">
         <h2>⭐ Restaurants most reviewers agree on</h2>
-        <small>Where each one fits in your plan</small>
+        <small>The one dish to order, and where it fits in your plan</small>
       </div>
       <div class="cafe-strip">
         ${restaurants.map(r => `
